@@ -6,9 +6,7 @@ The TABULAE ontology has been developped as an extension of the PeGaZus ontology
 
 ## Structure of the repository
 ```
-├── data                   <- Some datasets (TO BE ADDED)
-│   ├── gentilly           
-│   ├── lhay
+├── data                   
 │   ├── skos               <- SKOS Concept Scheme as csv              
 │
 ├── docs                   <- Widoco documentation
@@ -17,20 +15,16 @@ The TABULAE ontology has been developped as an extension of the PeGaZus ontology
 │   ├── ontology-land-registry.ttl   <- Turtle implementation
 │   ├── eng-documentation
 │       ├── geographical_entities
-│       ├── land_registry_documents_use
-│       ├── sources
 │       ├── taxpayers
 │       ├── temporal_evolution
+│       ├── land_registry_documents_use
+│       ├── sources
 │   ├── fr-documentation
 │       ├── entites_geographiques
 │       ├── contribuables
 │       ├── evolution_temporelle
 │       ├── fonctionnement_du_corpus
 │       ├── sources
-│
-├── scripts
-│   ├── kg-population        <- Implementation of the KG population algorithm specialized for the 19th century French land registry
-│   ├── skos-to-csv          <- Create to export taxonomies from CSV to TTL files.
 │
 ├── CITATION.cff
 ├── LICENCE.md
@@ -53,11 +47,6 @@ Each modelet documentation has 3 to 5 files:
  
 ### `docs` folder
 This folder contains the official documentation of the ontology generated with Widoco. It also contains the OOPS! report associated.
-
-### `scripts` folder
-This folder contains several usefull scripts : 
-* a script to populate the ontology with assertions from the land registry documents
-* a script to generate Turtle files for each SKOS Concet List.
 
 ## Used vocabularies
 Following the recommandations of the W3C, this ontology reused concepts and properties of several pre-existant ontologies. It is also and extension of the PeGazUs ontology.
