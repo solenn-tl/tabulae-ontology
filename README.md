@@ -62,7 +62,7 @@ This work was supported by the IGN and the AID.
 * Detail description of the Tabulae ontology as well as the kg population algorithm for the land registry.
 ```
 @phdthesis{tual:tel-05603252,
-  TITLE = {{Reconstitution automatique de la g{\'e}n{\'e}alogie des parcelles et des b{\^a}timents {\`a} partir de sources historiques}},
+  TITLE = {{Reconstitution automatique de la généalogie des parcelles et des bâtiments à partir de sources historiques}},
   AUTHOR = {Tual, Solenn},
   URL = {https://theses.hal.science/tel-05603252},
   NUMBER = {2025UEFL2118},
