@@ -1,0 +1,1408 @@
+<h2 id="overv" class="list">Ontologie TABULAE: Aper&ccedil;u <span class="backlink"> retour au <a href="#toc">sommaire</a></span></h2>
+<span class="markdown">
+Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#Address" title="https://w3id.org/PeGazUs#Address">Adresse</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#Attribute" title="https://w3id.org/PeGazUs#Attribute">Attribut</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#Change" title="https://w3id.org/PeGazUs#Change">Changement</a>
+   </li>
+   <li>
+      <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Changement sur le compte foncier</a>
+   </li>
+   <li>
+      <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Classe issue d'un processus d'annotation</a>
+   </li>
+   <li>
+      <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Contribuable</a>
+   </li>
+   <li>
+      <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Entité nommée</a>
+   </li>
+   <li>
+      <a href="#Nature" title="https://w3id.org/tabulae#Nature">Nature de parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#LandmarkRelation" title="https://w3id.org/PeGazUs#LandmarkRelation">Relation entre repères</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">SoftwareAgent</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#AttributeType" title="https://w3id.org/PeGazUs#AttributeType">Type d'attribut</a>
+   </li>
+   <li>
+      <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type d'évènement</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#ChangeType" title="https://w3id.org/PeGazUs#ChangeType">Type de changement</a>
+   </li>
+   <li>
+      <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type de classe d'annotation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#LandmarkType" title="https://w3id.org/PeGazUs#LandmarkType">Type de repère</a>
+   </li>
+   <li>
+      <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type de source</a>
+   </li>
+   <li>
+      <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Valeur spéciale des tables cadastrales</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Version de l'attribut</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#Event" title="https://w3id.org/PeGazUs#Event">Événément</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasClass" title="https://w3id.org/tabulae#hasClass">a pour classe</a>
+   </li>
+   <li>
+      <a href="#hasTaxpayer" title="https://w3id.org/tabulae#hasTaxpayer">a pour contribuable</a>
+   </li>
+   <li>
+      <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">a pour folio équivalent</a>
+   </li>
+   <li>
+      <a href="#hasPlotNature" title="https://w3id.org/tabulae#hasPlotNature">a pour nature de parcelle</a>
+   </li>
+   <li>
+      <a href="#sourcedFrom" title="https://w3id.org/tabulae#sourcedFrom">a pour source</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#hasTrace" title="https://w3id.org/PeGazUs#hasTrace">a pour trace</a>
+   </li>
+   <li>
+      <a href="#hasClassValue" title="https://w3id.org/tabulae#hasClassValue">a pour valeur de classe</a>
+   </li>
+   <li>
+      <a href="#hasPreviousVersionInSRCOrder"
+         title="https://w3id.org/tabulae#hasPreviousVersionInSRCOrder">a pour version précédente dans les documents</a>
+   </li>
+   <li>
+      <a href="#hasOverlappingVersionInSRCOrder"
+         title="https://w3id.org/tabulae#hasOverlappingVersionInSRCOrder">a pour version qui se chevauche dans les documents</a>
+   </li>
+   <li>
+      <a href="#hasNextVersionInSRCOrder"
+         title="https://w3id.org/tabulae#hasNextVersionInSRCOrder">a pour version suivante dans les documents</a>
+   </li>
+   <li>
+      <a href="#isAddressEntityOfTaxpayer"
+         title="https://w3id.org/tabulae#isAddressEntityOfTaxpayer">adresse (entité) du contribuable</a>
+   </li>
+   <li>
+      <a href="#isClassOf" title="https://w3id.org/tabulae#isClassOf">classe attribuée à</a>
+   </li>
+   <li>
+      <a href="#taxpayerHasAddressEntity"
+         title="https://w3id.org/tabulae#taxpayerHasAddressEntity">contribuable a pour adresse (entité)</a>
+   </li>
+   <li>
+      <a href="#isOverlappedByVersionInSRCOrder"
+         title="https://w3id.org/tabulae#isOverlappedByVersionInSRCOrder">est chevauchée par la version dans les documents</a>
+   </li>
+   <li>
+      <a href="#isPlotAddressOf" title="https://w3id.org/tabulae#isPlotAddressOf">est l'adresse associée à</a>
+   </li>
+   <li>
+      <a href="#isClassValueOf" title="https://w3id.org/tabulae#isClassValueOf">est la valeur de classe attribuée à</a>
+   </li>
+   <li>
+      <a href="#isTaxpayerOf" title="https://w3id.org/tabulae#isTaxpayerOf">est le contribuable associé à</a>
+   </li>
+   <li>
+      <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">est mentionné dans</a>
+   </li>
+   <li>
+      <a href="#isEventType" title="https://w3id.org/tabulae#isEventType">est un événement de type</a>
+   </li>
+   <li>
+      <a href="#isNamedEntityType" title="https://w3id.org/tabulae#isNamedEntityType">est une entité nommée de type</a>
+   </li>
+   <li>
+      <a href="#isPlotNatureOf" title="https://w3id.org/tabulae#isPlotNatureOf">est une nature de la parcelle</a>
+   </li>
+   <li>
+      <a href="#isSourceType" title="https://w3id.org/tabulae#isSourceType">est une source de type</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/PeGazUs#isTraceOf" title="https://w3id.org/PeGazUs#isTraceOf">est une trace de</a>
+   </li>
+   <li>
+      <a href="#mentions" title="https://w3id.org/tabulae#mentions">mentionne</a>
+   </li>
+   <li>
+      <a href="#hasPlotAddress" title="https://w3id.org/tabulae#hasPlotAddress">parcelle a pour adresse</a>
+   </li>
+   <li>
+      <a href="#hasNamedEntity" title="https://w3id.org/tabulae#hasNamedEntity">possède l'entité nommée</a>
+   </li>
+   <li>
+      <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">état ou folio précédent</a>
+   </li>
+   <li>
+      <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">état ou folio suivant</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasNumFolio" title="https://w3id.org/tabulae#hasNumFolio">a pour numéro de folio</a>
+   </li>
+   <li>
+      <a href="#hasAlternativeNumFolio" title="https://w3id.org/tabulae#hasAlternativeNumFolio">a pour numéro de folio alternatif</a>
+   </li>
+   <li>
+      <a href="#taxpayerActivity" title="https://w3id.org/tabulae#taxpayerActivity">activité du contribuable</a>
+   </li>
+   <li>
+      <a href="#taxpayerAddress" title="https://w3id.org/tabulae#taxpayerAddress">adresse du contribuable</a>
+   </li>
+   <li>
+      <a href="#coordinatesInImageSystem"
+         title="https://w3id.org/tabulae#coordinatesInImageSystem">coordonnées dans l'image</a>
+   </li>
+   <li>
+      <a href="#xywhCoordinates" title="https://w3id.org/tabulae#xywhCoordinates">coordonnées xywh dans l'image</a>
+   </li>
+   <li>
+      <a href="#TFNBGroup" title="https://w3id.org/tabulae#TFNBGroup">groupe TFNB</a>
+   </li>
+   <li>
+      <a href="#indexOfLastCharacter" title="https://w3id.org/tabulae#indexOfLastCharacter">index du dernier caractère</a>
+   </li>
+   <li>
+      <a href="#indexOfFirstCharacter" title="https://w3id.org/tabulae#indexOfFirstCharacter">index du premier caractère</a>
+   </li>
+   <li>
+      <a href="#taxpayerLabel" title="https://w3id.org/tabulae#taxpayerLabel">label de contribuable</a>
+   </li>
+   <li>
+      <a href="#taxpayerFullName" title="https://w3id.org/tabulae#taxpayerFullName">nom complet</a>
+   </li>
+   <li>
+      <a href="#taxpayerLastName" title="https://w3id.org/tabulae#taxpayerLastName">nom de famille</a>
+   </li>
+   <li>
+      <a href="#taxpayerBirthName" title="https://w3id.org/tabulae#taxpayerBirthName">nom de naissance</a>
+   </li>
+   <li>
+      <a href="#lineOrderInArea" title="https://w3id.org/tabulae#lineOrderInArea">ordre de ligne dans la zone</a>
+   </li>
+   <li>
+      <a href="#taxpayerFirstName" title="https://w3id.org/tabulae#taxpayerFirstName">prénom unique</a>
+   </li>
+   <li>
+      <a href="#taxpayerFirstNames" title="https://w3id.org/tabulae#taxpayerFirstNames">prénom(s)</a>
+   </li>
+   <li>
+      <a href="#taxpayerSpouseOrChildrenFirstNames"
+         title="https://w3id.org/tabulae#taxpayerSpouseOrChildrenFirstNames">prénom(s) de l'époux/épouse ou d'un enfant</a>
+   </li>
+   <li>
+      <a href="#taxpayerOrganisationName"
+         title="https://w3id.org/tabulae#taxpayerOrganisationName">raison sociale</a>
+   </li>
+   <li>
+      <a href="#taxpayerStatus" title="https://w3id.org/tabulae#taxpayerStatus">statut</a>
+   </li>
+   <li>
+      <a href="#taxpayerFamilyStatus" title="https://w3id.org/tabulae#taxpayerFamilyStatus">statut familial</a>
+   </li>
+   <li>
+      <a href="#taxpayerTitle" title="https://w3id.org/tabulae#taxpayerTitle">titre</a>
+   </li>
+   <li>
+      <a href="#transcription" title="https://w3id.org/tabulae#transcription">transcription</a>
+   </li>
+   <li>
+      <a href="#imageURL" title="https://w3id.org/tabulae#imageURL">URL d'image</a>
+   </li>
+   <li>
+      <a href="#IIIFImageUrl" title="https://w3id.org/tabulae#IIIFImageUrl">URL d'image IIIF</a>
+   </li>
+   <li>
+      <a href="#URL" title="https://w3id.org/tabulae#URL">url de la source</a>
+   </li>
+   <li>
+      <a href="#spanValue" title="https://w3id.org/tabulae#spanValue">valeur de la sous-chaîne</a>
+   </li>
+</ul><h4>Individus nomm&eacute;s</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Abreuvoir"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Abreuvoir">Abreuvoir</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/AdditionConstructionSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/AdditionConstructionSV">Addition à une construction</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/attributeType/PlotAddress"
+         title="https://w3id.org/tabulae/id/codes/attributeType/PlotAddress">Adresse de la parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Ajonc"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Ajonc">Ajonc</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Allee"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Allee">Allée</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/PreviousPlotNumber"
+         title="https://w3id.org/tabulae/id/codes/anclass/PreviousPlotNumber">Ancien numéro de parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/PreviousNature"
+         title="https://w3id.org/tabulae/id/codes/anclass/PreviousNature">Ancienne nature de la parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance"
+         title="https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance">Apparition d'un contribuable</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Appenti"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Appenti">Appenti</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/DocumentOutdated"
+         title="https://w3id.org/tabulae/id/codes/eventType/DocumentOutdated">Archivage d'un document</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Ardoisiere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Ardoisiere">Ardoisière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Argilliere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Argilliere">Argillière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Arrondissement"
+         title="https://w3id.org/tabulae/id/codes/landmarkType/Arrondissement">Arrondissement</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/ArticleDeClassement"
+         title="https://w3id.org/tabulae/id/codes/sourceType/ArticleDeClassement">Article de classement</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation"
+         title="https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation">Article de mutation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Atelier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Atelier">Atelier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Addition"
+         title="https://w3id.org/tabulae/id/codes/eventType/Addition">Augmentation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/AugmentationSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/AugmentationSV">Augmentation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Aulnaie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Aulnaie">Aulnaie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Barraque"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Barraque">Baraque</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Bassin"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Bassin">Bassin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Batterie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Batterie">Batterie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Bief"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Bief">Bief</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Bois"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Bois">Bois</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/BoisAgrement"
+         title="https://w3id.org/tabulae/id/codes/plotNature/BoisAgrement">Bois d'agrément</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Broussaille"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Broussaille">Brousaille</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Bruyere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Bruyere">Bruyère</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Buissiere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Buissiere">Buissières</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Batiment"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Batiment">Bâtiment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/BatimentRural"
+         title="https://w3id.org/tabulae/id/codes/plotNature/BatimentRural">Bâtiment rural</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/Cadastre"
+         title="https://w3id.org/tabulae/id/codes/sourceType/Cadastre">Cadastre</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/CadastreOutdated"
+         title="https://w3id.org/tabulae/id/codes/eventType/CadastreOutdated">Cadastre archivé</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Canal"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Canal">Canal</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/CanalAgrement"
+         title="https://w3id.org/tabulae/id/codes/plotNature/CanalAgrement">Canal d'agrément</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Canton"
+         title="https://w3id.org/tabulae/id/codes/landmarkType/Canton">Canton</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Carriere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Carriere">Carrière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/CelluleVide"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/CelluleVide">Cellule vide</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cerisaies"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Cerisaies">Cerisaies</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Chantier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Chantier">Chantier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Charmille"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Charmille">Charmille</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Chemin"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Chemin">Chemin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/ChemindeFer"
+         title="https://w3id.org/tabulae/id/codes/plotNature/ChemindeFer">Chemin de fer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cheneviere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Cheneviere">Chenevière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Chataigneraie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Chataigneraie">Châtaigneraies</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cimetiere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Cimetiere">Cimetiere</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Clos"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Clos">Clos</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/CompteFoncier"
+         title="https://w3id.org/tabulae/id/codes/sourceType/CompteFoncier">Compte foncier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/ConsideredAsRuined"
+         title="https://w3id.org/tabulae/id/codes/eventType/ConsideredAsRuined">Considéré comme en ruines</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Construction"
+         title="https://w3id.org/tabulae/id/codes/eventType/Construction">Construction d'un bâtiment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/ConstructionNouvelleSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/ConstructionNouvelleSV">Construction nouvelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer"
+         title="https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer">Contribuable</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cour"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Cour">Cour</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/CourCommune"
+         title="https://w3id.org/tabulae/id/codes/plotNature/CourCommune">Cour commune</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/CoursDEau"
+         title="https://w3id.org/tabulae/id/codes/plotNature/CoursDEau">Cours d'eau</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Courtil"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Courtil">Courtil</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/ETSCover"
+         title="https://w3id.org/tabulae/id/codes/anclass/ETSCover">Couverture décrivant une section dans un registre d'états de sections</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Crayere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Crayere">Crayère</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cressonniere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Cressonniere">Cressonnière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/DocumentCreation"
+         title="https://w3id.org/tabulae/id/codes/eventType/DocumentCreation">Création d'un document</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cuisine"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Cuisine">Cuisine</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/StartTime"
+         title="https://w3id.org/tabulae/id/codes/anclass/StartTime">Date d'entrée</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/EndTime"
+         title="https://w3id.org/tabulae/id/codes/anclass/EndTime">Date de sortie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Digue"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Digue">Digue</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Reduction"
+         title="https://w3id.org/tabulae/id/codes/eventType/Reduction">Diminution</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/DiminutionSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/DiminutionSV">Diminution</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance"
+         title="https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance">Disparition d'un contribuable</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Split"
+         title="https://w3id.org/tabulae/id/codes/eventType/Split">Division d'un objet</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/DoubleEmploiSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/DoubleEmploiSV">Double emploi</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/DoublePage"
+         title="https://w3id.org/tabulae/id/codes/anclass/DoublePage">Double page</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Douve"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Douve">Douve</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Dune"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Dune">Dune</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/DemolitionSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/DemolitionSV">Démolition</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Demotion"
+         title="https://w3id.org/tabulae/id/codes/eventType/Demotion">Démolition d'un bâtiment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Departement"
+         title="https://w3id.org/tabulae/id/codes/landmarkType/Departement">Département</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Dependance"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Dependance">Dépendance</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Eau"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Eau">Eau</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Ecluse"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Ecluse">Ecluse</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Ecurie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Ecurie">Ecurie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Eglise"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Eglise">Eglise</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/RuinesSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/RuinesSV">En ruines</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/TableHeader"
+         title="https://w3id.org/tabulae/id/codes/anclass/TableHeader">En-tête de tableau</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/EtablissementDeBains"
+         title="https://w3id.org/tabulae/id/codes/plotNature/EtablissementDeBains">Etablissement de bains</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Etang"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Etang">Etang</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/EtangEmpoissonne"
+         title="https://w3id.org/tabulae/id/codes/plotNature/EtangEmpoissonne">Etang empoissonné</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections"
+         title="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections">Etats de sections</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822"
+         title="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822">Etats de sections antérieurs à 1822</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822_Bati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822_Bati">Etats de sections antérieurs à 1822 (propriétés bâties)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822_NonBati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822_NonBati">Etats de sections antérieurs à 1822 (propriétés non bâties)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Scp_Seine_1835"
+         title="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Scp_Seine_1835">Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Ap_1822"
+         title="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Ap_1822">Etats de sections ultérieurs à 1822</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Etendoir"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Etendoir">Etendoir</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/EvaluationSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/EvaluationSV">Evaluation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/ChangeWithoutConstruction"
+         title="https://w3id.org/tabulae/id/codes/eventType/ChangeWithoutConstruction">Evolution de nature n'impliquant pas de bâtiment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/CadastralEvent"
+         title="https://w3id.org/tabulae/id/codes/eventType/CadastralEvent">Evènement cadastral</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/CadastreAdminEvent"
+         title="https://w3id.org/tabulae/id/codes/eventType/CadastreAdminEvent">Evènement concernant le cadastre et ses documents</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/PlotNatureEvent"
+         title="https://w3id.org/tabulae/id/codes/eventType/PlotNatureEvent">Evènement impliquant la nature d'une parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/BuiltPlotEvent"
+         title="https://w3id.org/tabulae/id/codes/eventType/BuiltPlotEvent">Evènement impliquant un bâtiment existant</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/PlotNatureChange"
+         title="https://w3id.org/tabulae/id/codes/eventType/PlotNatureChange">Evènement impliquant un changement de nature d'une parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/LandmarkEvent"
+         title="https://w3id.org/tabulae/id/codes/eventType/LandmarkEvent">Evènement impliquant un landmark (identité)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/EventMentionnedinFoliosColumns"
+         title="https://w3id.org/tabulae/id/codes/eventType/EventMentionnedinFoliosColumns">Evènement mentionné dans les colonnes dédiées aux folios</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Fabrique"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Fabrique">Fabrique</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Falaise"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Falaise">Falaise</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Fleur"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Fleur">Fleurs</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/Folio"
+         title="https://w3id.org/tabulae/id/codes/sourceType/Folio">Folio</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/FolioBati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/FolioBati">Folio (Bâti)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/FolioNonBati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/FolioNonBati">Folio (Non Bâti)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Fontaine"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Fontaine">Fontaine</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Fosse"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Fosse">Fossé</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Fougeraie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Fougeraie">Fougeraie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Four"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Four">Four</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Fournil"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Fournil">Fournil</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Fraisier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Fraisier">Fraisiers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Framboisier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Framboisier">Framboisiers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Friche"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Friche">Friche</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Merge"
+         title="https://w3id.org/tabulae/id/codes/eventType/Merge">Fusion d'objets entiers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/PartialMerge"
+         title="https://w3id.org/tabulae/id/codes/eventType/PartialMerge">Fusion impliquant la fusion d'objets entiers ou subdivisés</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Genet"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Genet">Genêt</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Graviere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Graviere">Gravière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Groseillier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Groseillier">Groseillier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Gue"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Gue">Gué</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Hangar"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Hangar">Hangar</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Herbage"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Herbage">Herbage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Houblonniere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Houblonniere">Houblonnière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/IdemSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/IdemSV">Idem</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/IdemPrecedentSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/IdemPrecedentSV">Idem à la valeur de la cellule précédente</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/IdemSuivantSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/IdemSuivantSV">Idem à la valeur de la cellule suivante</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/SectionIdentifier"
+         title="https://w3id.org/tabulae/id/codes/anclass/SectionIdentifier">Identifiant de section</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/CadastreCreation"
+         title="https://w3id.org/tabulae/id/codes/eventType/CadastreCreation">Initialisation d'un cadastre</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/FicheInventaire"
+         title="https://w3id.org/tabulae/id/codes/sourceType/FicheInventaire">Inventaire des archives</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Jardin"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Jardin">Jardin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/JardinDAgrement"
+         title="https://w3id.org/tabulae/id/codes/plotNature/JardinDAgrement">Jardin d'agrément</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/JardinMarais"
+         title="https://w3id.org/tabulae/id/codes/plotNature/JardinMarais">Jardin Marais</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/JardinMaraicher"
+         title="https://w3id.org/tabulae/id/codes/plotNature/JardinMaraicher">Jardin Maraîcher</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Jonc"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Jonc">Jonc</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Lac"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Lac">Lac</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Lagune"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Lagune">Lagune</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Lande"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Lande">Lande</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Lavande"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Lavande">Lavande</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Lavoir"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Lavoir">Lavoir</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/NamedPlace"
+         title="https://w3id.org/tabulae/id/codes/anclass/NamedPlace">Lieu-dit ou adresse</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/TableLine"
+         title="https://w3id.org/tabulae/id/codes/anclass/TableLine">Ligne de tableau</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/LigneEtatDeSection"
+         title="https://w3id.org/tabulae/id/codes/sourceType/LigneEtatDeSection">Ligne de tableau d'états de sections</a>
+   </li>
+   <li>
+      <a href="#AnnotationClassList" title="https://w3id.org/tabulae#AnnotationClassList">Liste de classes</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/MachineAVapeur"
+         title="https://w3id.org/tabulae/id/codes/plotNature/MachineAVapeur">Machine à vapeur</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Magasin"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Magasin">Magasin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Maison"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Maison">Maison</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Marniere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Marniere">Manière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Manufacture"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Manufacture">Manufacture</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Marais"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Marais">Marais</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/MaraisSalant"
+         title="https://w3id.org/tabulae/id/codes/plotNature/MaraisSalant">Marais salant</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Mare"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Mare">Mare</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Marecage"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Marecage">Marécage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale"
+         title="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale">Matrice cadastrale</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1807_1822_Bati_NonBati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1807_1822_Bati_NonBati">Matrice de rôles des propriétés bâties et non bâties (1807-1822)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1882_1911_Bati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1882_1911_Bati">Matrice des propriétés bâties (1882-1911)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1911_Renovation_Bati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1911_Renovation_Bati">Matrice des propriétés bâties (1911-rénovation)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1822_1914_NonBati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1822_1914_NonBati">Matrice des propriétés non bâties (1822-1914)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1914_Renovation_NonBati"
+         title="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1914_Renovation_NonBati">Matrice des propriétés non bâties (1914-rénovation)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Meloniere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Meloniere">Melonière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/attributeType/PlotMention"
+         title="https://w3id.org/tabulae/id/codes/attributeType/PlotMention">Mention de la parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Mine"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Mine">Mine</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Miniere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Miniere">Minière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Moulin"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Moulin">Moulin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/MoulinAEau"
+         title="https://w3id.org/tabulae/id/codes/plotNature/MoulinAEau">Moulin à eau</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/MoulinAVent"
+         title="https://w3id.org/tabulae/id/codes/plotNature/MoulinAVent">Moulin à vent</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/TaxpayerMutation"
+         title="https://w3id.org/tabulae/id/codes/eventType/TaxpayerMutation">Mutation de propriétaire</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/MATArticleDeClassement"
+         title="https://w3id.org/tabulae/id/codes/anclass/MATArticleDeClassement">NaN</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/MATArticleDeMutation"
+         title="https://w3id.org/tabulae/id/codes/anclass/MATArticleDeMutation">NaN</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/MATFolioArea"
+         title="https://w3id.org/tabulae/id/codes/anclass/MATFolioArea">NaN</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/Nature"
+         title="https://w3id.org/tabulae/id/codes/anclass/Nature">Nature</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/attributeType/PlotNature"
+         title="https://w3id.org/tabulae/id/codes/attributeType/PlotNature">Nature</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/OwnerNumber"
+         title="https://w3id.org/tabulae/id/codes/anclass/OwnerNumber">Numéro de folio du propriétaire</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/TaxpayerIndexNumber"
+         title="https://w3id.org/tabulae/id/codes/anclass/TaxpayerIndexNumber">Numéro de folio du propriétaire</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/PlotNumber"
+         title="https://w3id.org/tabulae/id/codes/anclass/PlotNumber">Numéro de parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Neant"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Neant">Néant</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement"
+         title="https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement">Objet d'agrément</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/OmissionSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/OmissionSV">Omission</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Omission"
+         title="https://w3id.org/tabulae/id/codes/eventType/Omission">Omission de déclaration qui entraine une réintégration a posteriori de l'article de classement dans un folio</a>
+   </li>
+   <li>
+      <a href="#" title="https://w3id.org/tabulae#">
+         <span>Ontologie TABULAE</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Ormaie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Ormaie">Ormaie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Oseraie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Oseraie">Oseraie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/Ouvrage"
+         title="https://w3id.org/tabulae/id/codes/sourceType/Ouvrage">Ouvrage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/PageDeRegistre"
+         title="https://w3id.org/tabulae/id/codes/sourceType/PageDeRegistre">Page de registre cadastral</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/MATMainTable"
+         title="https://w3id.org/tabulae/id/codes/anclass/MATMainTable">Page de tableau principal</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/Page" title="https://w3id.org/tabulae/id/codes/anclass/Page">Page simple</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/ETSBlankTab"
+         title="https://w3id.org/tabulae/id/codes/anclass/ETSBlankTab">Page vide</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Palus"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Palus">Palus</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Plot"
+         title="https://w3id.org/tabulae/id/codes/landmarkType/Plot">Parcelle</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Parterre"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Parterre">Parterre</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/PartieSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/PartieSV">Partie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Passage"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Passage">Passage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/VoiePubliqueSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/VoiePubliqueSV">Passé à la voie publique</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Peuplier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Peuplier">Peuplier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Pin"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Pin">Pin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/PieceDEau"
+         title="https://w3id.org/tabulae/id/codes/plotNature/PieceDEau">Pièce d'eau</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/PieceDEauAgrement"
+         title="https://w3id.org/tabulae/id/codes/plotNature/PieceDEauAgrement">Pièce d'eau d'agrément</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Plage"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Plage">Plage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/Plan"
+         title="https://w3id.org/tabulae/id/codes/sourceType/Plan">Plan</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/PlanVectorise"
+         title="https://w3id.org/tabulae/id/codes/sourceType/PlanVectorise">Plan géoréférencé</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaire"
+         title="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaire">Plan parcellaire</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireMinute"
+         title="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireMinute">Plan parcellaire : minute</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireFinal"
+         title="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireFinal">Plan parcellaire final</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireIssuDAtlas"
+         title="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireIssuDAtlas">Plan parcellaire issu d'atlas</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/PlanGeoreference"
+         title="https://w3id.org/tabulae/id/codes/sourceType/PlanGeoreference">Plan vectorisé</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Plantation"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Plantation">Plantation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Abricotier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Abricotier">Plantation d'abricotiers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Acacia"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Acacia">Plantation d'acacias</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Amandier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Amandier">Plantation d'amandiers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Asperges"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Asperges">Plantation d'asperges</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Olivier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Olivier">Plantation d'oliviers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Oranger"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Oranger">Plantation d'orangers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cassis"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Cassis">Plantation de cassis</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Citronnier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Citronnier">Plantation de citronnier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cedratiers"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Cedratiers">Plantation de cédratier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Figuier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Figuier">Plantation de figuiers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Murier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Murier">Plantation de mûriers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Noisetier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Noisetier">Plantation de noisetiers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Noyer"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Noyer">Plantation de noyers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Poirier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Poirier">Plantation de poiriers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Pecher"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Pecher">Plantation de pêchers</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Platriere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Platriere">Plâtrière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Pommeraie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Pommeraie">Pommeraie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/PassedTo"
+         title="https://w3id.org/tabulae/id/codes/anclass/PassedTo">Porté à</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Potager"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Potager">Potager</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Poudriere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Poudriere">Poudrière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Pre"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Pre">Pre</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/Owner" title="https://w3id.org/tabulae/id/codes/anclass/Owner">Propriétaire</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/Taxpayer"
+         title="https://w3id.org/tabulae/id/codes/anclass/Taxpayer">Propriétaire</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/PrePlante"
+         title="https://w3id.org/tabulae/id/codes/plotNature/PrePlante">Pré planté</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Patis"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Patis">Pâtis</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Paturage"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Paturage">Pâturage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Pature"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Pature">Pâture</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Pepiniere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Pepiniere">Pépinière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/RegistreCadastral"
+         title="https://w3id.org/tabulae/id/codes/sourceType/RegistreCadastral">Registre cadastral</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/ResteSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/ResteSV">Reste</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Rigole"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Rigole">Rigole</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Riziere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Riziere">Rizière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Rocher"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Rocher">Rocher</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Rosier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Rosier">Rosier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Routoir"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Routoir">Routoir</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Ruine"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Ruine">Ruine</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/ETSIntermediateSummary"
+         title="https://w3id.org/tabulae/id/codes/anclass/ETSIntermediateSummary">Récapitulatif intermédiaire (par page, par nature etc)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Reservoir"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Reservoir">Réservoir</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/ETSSummary"
+         title="https://w3id.org/tabulae/id/codes/anclass/ETSSummary">Résumé final d'une section</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Sabliere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Sabliere">Sablière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Salin"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Salin">Salin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Sapin"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Sapin">Sapin</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Saulaie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Saulaie">Saulaie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Section"
+         title="https://w3id.org/tabulae/id/codes/landmarkType/Section">Section</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Serre"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Serre">Serre</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Sol"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Sol">Sol</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/TextStyles"
+         title="https://w3id.org/tabulae/id/codes/anclass/TextStyles">Style du texte</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/SplitWithStay"
+         title="https://w3id.org/tabulae/id/codes/eventType/SplitWithStay">Subdivision d'une parcelle qui reste dans le compte foncier initial</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Sucession"
+         title="https://w3id.org/tabulae/id/codes/eventType/Sucession">Sucession</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Sechoir"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Sechoir">Séchoir</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/TableauAssemblage"
+         title="https://w3id.org/tabulae/id/codes/sourceType/TableauAssemblage">Tableau d'assemblage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/ETSTabP2"
+         title="https://w3id.org/tabulae/id/codes/anclass/ETSTabP2">Tableau principal d'état de section (deuxième page si double page)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/ETSTabP1"
+         title="https://w3id.org/tabulae/id/codes/anclass/ETSTabP1">Tableau principal d'état de section (première page si double page)</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Terrain"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Terrain">Terrain</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/TerrainDAgregemnt"
+         title="https://w3id.org/tabulae/id/codes/plotNature/TerrainDAgregemnt">Terrain d'agrément</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/TerrainABatir"
+         title="https://w3id.org/tabulae/id/codes/plotNature/TerrainABatir">Terrain à bâtir</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Terre"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Terre">Terre</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/TerreLabourable"
+         title="https://w3id.org/tabulae/id/codes/plotNature/TerreLabourable">Terre labourable</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/TerrePlantee"
+         title="https://w3id.org/tabulae/id/codes/plotNature/TerrePlantee">Terre plantée</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/TerreVaine"
+         title="https://w3id.org/tabulae/id/codes/plotNature/TerreVaine">Terre vaine</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/TerreAVigne"
+         title="https://w3id.org/tabulae/id/codes/plotNature/TerreAVigne">Terre à vigne</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/CrossedOut"
+         title="https://w3id.org/tabulae/id/codes/anclass/CrossedOut">Texte barré/rayé</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/TakenFrom"
+         title="https://w3id.org/tabulae/id/codes/anclass/TakenFrom">Tiré de</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Tourbiere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Tourbiere">Tourbière</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Truffiere"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Truffiere">Truffière</a>
+   </li>
+   <li>
+      <a href="#LandRegistryAttributeList"
+         title="https://w3id.org/tabulae#LandRegistryAttributeList">Type d'attributs spécifiques aux objets du cadastre</a>
+   </li>
+   <li>
+      <a href="#LandRegistryEventList" title="https://w3id.org/tabulae#LandRegistryEventList">Type d'événement</a>
+   </li>
+   <li>
+      <a href="#LandRegistryChangeList" title="https://w3id.org/tabulae#LandRegistryChangeList">Type de changements spécifiques au cadastre</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie">Type de nature bâtie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
+         title="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie">Type de nature non bâtie</a>
+   </li>
+   <li>
+      <a href="#NatureList" title="https://w3id.org/tabulae#NatureList">Type de natures de parcelles</a>
+   </li>
+   <li>
+      <a href="#LandRegistryLandmarkList"
+         title="https://w3id.org/tabulae#LandRegistryLandmarkList">Type de repère spécifiques au cadastre français</a>
+   </li>
+   <li>
+      <a href="#LandRegistrySourceList" title="https://w3id.org/tabulae#LandRegistrySourceList">Type de sources</a>
+   </li>
+   <li>
+      <a href="#SpecialCellValuesList" title="https://w3id.org/tabulae#SpecialCellValuesList">Type de valeurs spéciales</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/NamedEntityTypes"
+         title="https://w3id.org/tabulae/id/codes/anclass/NamedEntityTypes">Types d'entités</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/MATEntityTypes"
+         title="https://w3id.org/tabulae/id/codes/anclass/MATEntityTypes">Types d'entités présentes dans les matrices</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/ETSEntityTypes"
+         title="https://w3id.org/tabulae/id/codes/anclass/ETSEntityTypes">Types d'entités présentes dans les états de sections</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/DocumentsTypes"
+         title="https://w3id.org/tabulae/id/codes/anclass/DocumentsTypes">Types de document</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/anclass/PageClasses"
+         title="https://w3id.org/tabulae/id/codes/anclass/PageClasses">Types de pages</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/ValeurBarreeSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/ValeurBarreeSV">Valeur barrée</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/specialCellValue/InconnuSV"
+         title="https://w3id.org/tabulae/id/codes/specialCellValue/InconnuSV">Valeur inconnue</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/eventType/Sale"
+         title="https://w3id.org/tabulae/id/codes/eventType/Sale">Vente</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Verger"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Verger">Verger</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Vigne"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Vigne">Vigne</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/plotNature/Vivier"
+         title="https://w3id.org/tabulae/id/codes/plotNature/Vivier">Vivier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage"
+         title="https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage">Zone située dans une page de registre cadastral</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 

@@ -23,7 +23,7 @@ The TABULAE ontology has been developped as an extension of the PeGaZus ontology
 │       ├── entites_geographiques
 │       ├── contribuables
 │       ├── evolution_temporelle
-│       ├── fonctionnement_du_corpus
+│       ├── fonctionnement_du_corpus_cadastral
 │       ├── sources
 │
 ├── CITATION.cff
