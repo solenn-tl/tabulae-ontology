@@ -14,8 +14,6 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix igeo: <http://rdf.insee.fr/def/geo#> .
-@prefix ltype: <https://w3id.org/PeGazUs/id/codes/landmarkType/> .
 @prefix organization: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix peg: <https://w3id.org/PeGazUs#> .
@@ -637,7 +635,6 @@ tbl:isOverlappedByVersionInSRCOrder a owl:ObjectProperty ;
 #    rdfs:label "est la source de"@fr ,"is source of"@en ;
 #    owl:deprecated true .
 
-
 #tbl:fromSource a owl:ObjectProperty ;
 #    rdfs:domain owl:Thing ;
 #    rdfs:range owl:Thing ;
@@ -675,12 +672,15 @@ peg:isTraceOf a owl:ObjectProperty ;
     rdfs:comment "Décrit qu'un élément est la trace d'un autre élément"@fr, "Describes that an element is the trace of another element"@en ;
     owl:inverseOf peg:hasTrace.
 
-
 #################################################################
 #    Datatype properties
 #################################################################
 tbl:spanValue a owl:DatatypeProperty ;
-    rdfs:domain owl:Thing ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf ( owl:Thing
+                      tbl:NamedEntity
+                    )
+        ] ;
     rdfs:range xsd:string ;
     rdfs:comment "Cette propriété permet d'indiquer la valeur d'une sous-chaine de caractères."@fr,
                  "This property allows to indicate the value of a substring."@en ;
@@ -819,7 +819,8 @@ tbl:hasNumFolio a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:comment "Numéro de folio (associé à une page entière ou à une partie de page) "@fr, "folio number (associated to a mutation register page or part of page)"@en ;
     rdfs:label "a pour numéro de folio"@fr,
-               "has folio number"@en .
+               "has folio number"@en ;
+    owl:inverseOf tbl:isFolioNumberOf.
 
 tbl:hasAlternativeNumFolio a owl:DatatypeProperty ;
     rdfs:domain [ a owl:Class ;
@@ -829,17 +830,32 @@ tbl:hasAlternativeNumFolio a owl:DatatypeProperty ;
                   ] ;
     rdfs:range xsd:string ;
     rdfs:comment "Numéro de folio alternatif (ex: ancien numéro)"@fr, "Alternative folio number (e.g. former number)"@en;
-    rdfs:label "a pour numéro de folio alternatif"@fr, "has alternative folio number"@en .
+    rdfs:label "a pour numéro de folio alternatif"@fr, "has alternative folio number"@en ;
+    owl:inverseOf tbl:isAlternativeFolioNumberOf.
 
 tbl:transcription a owl:DatatypeProperty ;
   rdfs:domain [ a owl:Class ;
-        owl:unionOf ( rico:Instantiation tbl:NamedEntity )
+        owl:unionOf ( owl:Thing 
+                      rico:Instantiation )
     ] ;
   rdfs:range rdfs:Literal ;
   rdfs:label "transcription"@en, "transcription"@fr;
   skos:prefLabel "transcription"@en, "transcription"@fr ;
   rdfs:comment "Transcription d'une zone ou d'une entité obtenue automatiquement ou manuellement à partir d'un document (numérisé)."@fr,
-                "Transcription of an area or an entity obtained automatically or manually from a (scanned) document."@en.
+                "Transcription of an area or an entity obtained automatically or manually from a (scanned) document."@en;
+  owl:inverseOf tbl:isTranscriptionOf.
+
+tbl:isTranscriptionOf a owl:ObjectProperty ;
+  rdfs:domain [ a owl:Class ;
+        owl:unionOf ( owl:Thing 
+                      rico:Instantiation )
+    ] ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "est la transcription de"@en, "is transcription of"@fr;
+  skos:prefLabel "est la transcription de"@en, "is transcription of"@fr ;
+  rdfs:comment "Relie une zone ou une entité à sa transcription obtenue automatiquement ou manuellement à partir d'un document (numérisé)."@fr,
+                "Links an area or an entity to its transcription obtained automatically or manually from a (scanned) document."@en;
+  owl:inverseOf tbl:transcription.
 
 tbl:coordinatesInImageSystem a owl:DatatypeProperty ;
   rdfs:domain rico:Instantiation ;
@@ -881,11 +897,10 @@ tbl:URL a owl:DatatypeProperty ;
 
 # ---- Properties copied here to avoid imports ----
 #rdfs:label a owl:DatatypeProperty.
-#dcterms:identifier a owl:DatatypeProperty.
+dcterms:identifier a owl:DatatypeProperty.
 #pwikidata:P8422 a owl:DatatypeProperty;
 #    rdfs:label "identifiant Ldh/EHESS/Cassini"@fr.
-#igeo:codeINSEE  a owl:DatatypeProperty .
-#rico:identifier a owl:DatatypeProperty .
+rico:identifier a owl:DatatypeProperty .
 #rico:name a owl:DatatypeProperty .
 
 ##########################
@@ -968,6 +983,15 @@ tbl:SpecialCellValueList a owl:NamedIndividual,
 
 
 # ----- List of land registry landmarks (peg:Landmark) -----
+
+tblltype:UnregisteredLand a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:definition "A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest."@en,
+        "Entité géographique correspondant à un espace non cadastré, tel qu'une route, une rivière ou une forêt."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "Unregistered land"@en,
+        "Espace non cadastré"@fr .
 
 tblltype:Plot a owl:NamedIndividual,
         skos:Concept,

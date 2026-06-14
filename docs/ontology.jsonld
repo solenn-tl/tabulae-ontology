@@ -147,23 +147,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/PeGazUs#Address"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
-      "@id" : "https://w3id.org/PeGazUs#Landmark"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
-      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
-    }, {
-      "@id" : "https://w3id.org/tabulae#Taxpayer"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
@@ -187,17 +183,7 @@
     "@id" : "_:genid4"
   } ]
 }, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -209,7 +195,19 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
+    }, {
+      "@id" : "https://w3id.org/tabulae#Taxpayer"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -227,24 +225,32 @@
     "@value" : "CRH, EHESS-CNRS"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/PeGazUs#Address"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#Landmark"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
     }, {
-      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
-    }, {
-      "@id" : "https://w3id.org/tabulae#Taxpayer"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     } ]
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/tabulae#SpecialCellValue"
-    }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
@@ -271,7 +277,19 @@
     "@id" : "_:genid6"
   } ]
 }, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
+    }, {
+      "@id" : "https://w3id.org/tabulae#Taxpayer"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -283,20 +301,12 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+      "@id" : "https://w3id.org/tabulae#SpecialCellValue"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid57",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
@@ -311,13 +321,23 @@
     "@value" : "LRE, EPITA"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/tabulae#NamedEntity"
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
     }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "@id" : "https://w3id.org/tabulae#NamedEntity"
     } ]
   } ]
 }, {
@@ -395,6 +415,9 @@
 }, {
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/isReplacedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -1574,7 +1597,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasAlternativeNumFolio",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Alternative folio number (e.g. former number)"
@@ -1583,7 +1606,7 @@
     "@value" : "Numéro de folio alternatif (ex: ancien numéro)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid18"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -1594,6 +1617,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tabulae#isAlternativeFolioNumberOf"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasClass",
@@ -1655,7 +1681,7 @@
     "@value" : "This property allows to associate two land registry folios of the same taxpayer in the same municipality, one being the continuation of the other."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid21"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -1665,7 +1691,7 @@
     "@value" : "has equivalent folio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid21"
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasNamedEntity",
@@ -1718,7 +1744,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasNumFolio",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
     "@value" : "Numéro de folio (associé à une page entière ou à une partie de page) "
@@ -1727,7 +1753,7 @@
     "@value" : "folio number (associated to a mutation register page or part of page)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid57"
+    "@id" : "_:genid27"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -1738,6 +1764,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tabulae#isFolioNumberOf"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasOverlappingVersionInSRCOrder",
@@ -1786,7 +1815,7 @@
     "@value" : "parcelle a pour adresse"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid24"
+    "@id" : "_:genid30"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#isPlotAddressOf"
@@ -1970,6 +1999,9 @@
     "@id" : "https://w3id.org/tabulae#Taxpayer"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#isAlternativeFolioNumberOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "https://w3id.org/tabulae#isClassOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2021,6 +2053,9 @@
     "@id" : "https://w3id.org/tabulae#EventType"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#isFolioNumberOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "https://w3id.org/tabulae#isMentionnedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2028,7 +2063,7 @@
     "@value" : "Une entité (entité géographique, contribuable) est mentionnée dans une source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid28"
+    "@id" : "_:genid34"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -2038,7 +2073,7 @@
     "@value" : "is mentionned in"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid32"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#isNamedEntityType",
@@ -2093,7 +2128,7 @@
     "@value" : "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à une version d'attribut."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid35"
+    "@id" : "_:genid41"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -2188,6 +2223,39 @@
     "@value" : "is taxpayer of attribute version"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#isTranscriptionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an area or an entity to its transcription obtained automatically or manually from a (scanned) document."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relie une zone ou une entité à sa transcription obtenue automatiquement ou manuellement à partir d'un document (numérisé)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid45"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "est la transcription de"
+  }, {
+    "@language" : "fr",
+    "@value" : "is transcription of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tabulae#transcription"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "est la transcription de"
+  }, {
+    "@language" : "fr",
+    "@value" : "is transcription of"
+  } ]
+}, {
   "@id" : "https://w3id.org/tabulae#lineOrderInArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2221,7 +2289,7 @@
     "@value" : "Une source mentionne une ou plusieurs entités (entité géographique, contribuable)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid48"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -2231,7 +2299,7 @@
     "@value" : "mentions"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid42"
+    "@id" : "_:genid51"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#isMentionnedIn"
@@ -2250,7 +2318,7 @@
     "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid46"
+    "@id" : "_:genid55"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -2304,7 +2372,7 @@
     "@value" : "This property allows to indicate the value of a substring."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "_:genid66"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2337,7 +2405,7 @@
     "@value" : "état ou folio précédent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid50"
+    "@id" : "_:genid59"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -2689,7 +2757,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#transcription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
     "@value" : "Transcription d'une zone ou d'une entité obtenue automatiquement ou manuellement à partir d'un document (numérisé)."
@@ -2698,7 +2766,7 @@
     "@value" : "Transcription of an area or an entity obtained automatically or manually from a (scanned) document."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid60"
+    "@id" : "_:genid63"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4896,6 +4964,31 @@
   }, {
     "@language" : "fr",
     "@value" : "Section"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/PeGazUs#LandmarkType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest."
+  }, {
+    "@language" : "fr",
+    "@value" : "Entité géographique correspondant à un espace non cadastré, tel qu'une route, une rivière ou une forêt."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#LandRegistryLandmarkList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Espace non cadastré"
+  }, {
+    "@language" : "en",
+    "@value" : "Unregistered land"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Abreuvoir",
@@ -10739,4 +10832,7 @@
 }, {
   "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.ica.org/standards/RiC/ontology#identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 } ]

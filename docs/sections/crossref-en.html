@@ -342,7 +342,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is in domain of
    </dt>
    <dd>
-    <a href="#isNamedEntityType" title="https://w3id.org/tabulae#isNamedEntityType">is named entity type</a> <sup class="type-op" title="object property">op</sup>, <a href="#transcription" title="https://w3id.org/tabulae#transcription">transcription</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#isNamedEntityType" title="https://w3id.org/tabulae#isNamedEntityType">is named entity type</a> <sup class="type-op" title="object property">op</sup>, <a href="#spanValue" title="https://w3id.org/tabulae#spanValue">span value</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -556,7 +556,7 @@ This section provides details for each class and property defined by TABULAE Ont
     has members
    </dt>
    <dd>
-    <a href="#https://w3id.org/tabulae/id/codes/landmarkType/FrenchAdministrativeUnit" title="https://w3id.org/tabulae/id/codes/landmarkType/FrenchAdministrativeUnit">French Administrative Unit</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Arrondissement" title="https://w3id.org/tabulae/id/codes/landmarkType/Arrondissement">French Arrondissement</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Canton" title="https://w3id.org/tabulae/id/codes/landmarkType/Canton">French Canton</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Commune" title="https://w3id.org/tabulae/id/codes/landmarkType/Commune">French Commune</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Departement" title="https://w3id.org/tabulae/id/codes/landmarkType/Departement">French Departement</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Plot" title="https://w3id.org/tabulae/id/codes/landmarkType/Plot">Plot</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Section" title="https://w3id.org/tabulae/id/codes/landmarkType/Section">Section</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#https://w3id.org/tabulae/id/codes/landmarkType/FrenchAdministrativeUnit" title="https://w3id.org/tabulae/id/codes/landmarkType/FrenchAdministrativeUnit">French Administrative Unit</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Arrondissement" title="https://w3id.org/tabulae/id/codes/landmarkType/Arrondissement">French Arrondissement</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Canton" title="https://w3id.org/tabulae/id/codes/landmarkType/Canton">French Canton</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Commune" title="https://w3id.org/tabulae/id/codes/landmarkType/Commune">French Commune</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Departement" title="https://w3id.org/tabulae/id/codes/landmarkType/Departement">French Departement</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Plot" title="https://w3id.org/tabulae/id/codes/landmarkType/Plot">Plot</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/Section" title="https://w3id.org/tabulae/id/codes/landmarkType/Section">Section</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand" title="https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand">Unregistered land</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -596,9 +596,12 @@ This section provides details for each class and property defined by TABULAE Ont
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
+  <li><a href="#isTranscriptionOf" title="https://w3id.org/tabulae#isTranscriptionOf"> <span>est la transcription de</span> </a></li>
+  <li><a href="#hasAlternativeNumFolio" title="https://w3id.org/tabulae#hasAlternativeNumFolio"> <span>has alternative folio number</span> </a></li>
   <li><a href="#hasClass" title="https://w3id.org/tabulae#hasClass">has class</a></li>
   <li><a href="#hasClassValue" title="https://w3id.org/tabulae#hasClassValue">has class value</a></li>
   <li><a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a></li>
+  <li><a href="#hasNumFolio" title="https://w3id.org/tabulae#hasNumFolio"> <span>has folio number</span> </a></li>
   <li><a href="#hasNextVersionInSRCOrder" title="https://w3id.org/tabulae#hasNextVersionInSRCOrder">has next version in the source order</a></li>
   <li><a href="#hasOverlappingVersionInSRCOrder" title="https://w3id.org/tabulae#hasOverlappingVersionInSRCOrder">has overlapping version in the source order</a></li>
   <li><a href="#hasPlotAddress" title="https://w3id.org/tabulae#hasPlotAddress">has plot address</a></li>
@@ -624,7 +627,60 @@ This section provides details for each class and property defined by TABULAE Ont
   <li><a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or folio</a></li>
   <li><a href="#sourcedFrom" title="https://w3id.org/tabulae#sourcedFrom">sourced from</a></li>
   <li><a href="#taxpayerHasAddressEntity" title="https://w3id.org/tabulae#taxpayerHasAddressEntity">taxpayer has address (entity)</a></li>
+  <li><a href="#transcription" title="https://w3id.org/tabulae#transcription"> <span>transcription</span> </a></li>
  </ul>
+ <div class="entity" id="isTranscriptionOf">
+  <h3>est la transcription de<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/tabulae#isTranscriptionOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://www.ica.org/standards/RiC/ontology#Instantiation" target="_blank" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#transcription" title="https://w3id.org/tabulae#transcription">transcription</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#isTranscriptionOf">data property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAlternativeNumFolio">
+  <h3>has alternative folio number<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/tabulae#hasAlternativeNumFolio</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://www.ica.org/standards/RiC/ontology#Instantiation" target="_blank" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://www.ica.org/standards/RiC/ontology#RecordResource" target="_blank" title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="https://w3id.org/tabulae#isAlternativeFolioNumberOf" target="_blank" title="https://w3id.org/tabulae#isAlternativeFolioNumberOf">is Alternative Folio Number Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#hasAlternativeNumFolio">data property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasClass">
   <h3>has class<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasClass</p>
@@ -708,6 +764,32 @@ This section provides details for each class and property defined by TABULAE Ont
     </dt>
     <dd>
      <a href="https://www.ica.org/standards/RiC/ontology#Instantiation" target="_blank" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://www.ica.org/standards/RiC/ontology#RecordResource" target="_blank" title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasNumFolio">
+  <h3>has folio number<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/tabulae#hasNumFolio</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://www.ica.org/standards/RiC/ontology#Instantiation" target="_blank" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://www.ica.org/standards/RiC/ontology#RecordResource" target="_blank" title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="https://w3id.org/tabulae#isFolioNumberOf" target="_blank" title="https://w3id.org/tabulae#isFolioNumberOf">is Folio Number Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#hasNumFolio">data property</a>
     </dd>
    </dl>
   </div>
@@ -1373,16 +1455,43 @@ This section provides details for each class and property defined by TABULAE Ont
    </dl>
   </div>
  </div>
+ <div class="entity" id="transcription">
+  <h3>transcription<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/tabulae#transcription</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://www.ica.org/standards/RiC/ontology#Instantiation" target="_blank" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isTranscriptionOf" title="https://w3id.org/tabulae#isTranscriptionOf">est la transcription de</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#transcription">data property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#taxpayerBirthName" title="https://w3id.org/tabulae#taxpayerBirthName">birth name</a></li>
   <li><a href="#coordinatesInImageSystem" title="https://w3id.org/tabulae#coordinatesInImageSystem">coordinates in image</a></li>
+  <li><a href="#isTranscriptionOf" title="https://w3id.org/tabulae#isTranscriptionOf"> <span>est la transcription de</span> </a></li>
   <li><a href="#taxpayerFamilyStatus" title="https://w3id.org/tabulae#taxpayerFamilyStatus">family status</a></li>
   <li><a href="#taxpayerFirstNames" title="https://w3id.org/tabulae#taxpayerFirstNames">first name(s)</a></li>
   <li><a href="#taxpayerFullName" title="https://w3id.org/tabulae#taxpayerFullName">full name</a></li>
-  <li><a href="#hasAlternativeNumFolio" title="https://w3id.org/tabulae#hasAlternativeNumFolio">has alternative folio number</a></li>
-  <li><a href="#hasNumFolio" title="https://w3id.org/tabulae#hasNumFolio">has folio number</a></li>
+  <li><a href="#hasAlternativeNumFolio" title="https://w3id.org/tabulae#hasAlternativeNumFolio"> <span>has alternative folio number</span> </a></li>
+  <li><a href="#hasNumFolio" title="https://w3id.org/tabulae#hasNumFolio"> <span>has folio number</span> </a></li>
   <li><a href="#IIIFImageUrl" title="https://w3id.org/tabulae#IIIFImageUrl">IIIF image URL</a></li>
   <li><a href="#imageURL" title="https://w3id.org/tabulae#imageURL">image URL</a></li>
   <li><a href="#indexOfFirstCharacter" title="https://w3id.org/tabulae#indexOfFirstCharacter">index of first character</a></li>
@@ -1399,7 +1508,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <li><a href="#taxpayerLabel" title="https://w3id.org/tabulae#taxpayerLabel">taxpayer label</a></li>
   <li><a href="#TFNBGroup" title="https://w3id.org/tabulae#TFNBGroup">TFNB group</a></li>
   <li><a href="#taxpayerTitle" title="https://w3id.org/tabulae#taxpayerTitle">title</a></li>
-  <li><a href="#transcription" title="https://w3id.org/tabulae#transcription">transcription</a></li>
+  <li><a href="#transcription" title="https://w3id.org/tabulae#transcription"> <span>transcription</span> </a></li>
   <li><a href="#taxpayerFirstName" title="https://w3id.org/tabulae#taxpayerFirstName">unique first name</a></li>
   <li><a href="#xywhCoordinates" title="https://w3id.org/tabulae#xywhCoordinates">xywh coordinates in image</a></li>
  </ul>
@@ -1445,6 +1554,32 @@ This section provides details for each class and property defined by TABULAE Ont
     </dt>
     <dd>
      <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isTranscriptionOf">
+  <h3>est la transcription de<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/tabulae#isTranscriptionOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#transcription" title="https://w3id.org/tabulae#transcription">transcription</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#isTranscriptionOf">object property</a>
     </dd>
    </dl>
   </div>
@@ -1525,47 +1660,53 @@ This section provides details for each class and property defined by TABULAE Ont
   </div>
  </div>
  <div class="entity" id="hasAlternativeNumFolio">
-  <h3>has alternative folio number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>has alternative folio number<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasAlternativeNumFolio</p>
-  <div class="comment">
-   <span class="markdown">Alternative folio number (e.g. former number)</span>
-  </div>
   <div class="description">
    <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="https://www.ica.org/standards/RiC/ontology#Instantiation" target="_blank" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://www.ica.org/standards/RiC/ontology#RecordResource" target="_blank" title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="https://w3id.org/tabulae#isAlternativeFolioNumberOf" target="_blank" title="https://w3id.org/tabulae#isAlternativeFolioNumberOf">is Alternative Folio Number Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#hasAlternativeNumFolio">object property</a>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="hasNumFolio">
-  <h3>has folio number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>has folio number<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasNumFolio</p>
-  <div class="comment">
-   <span class="markdown">folio number (associated to a mutation register page or part of page)</span>
-  </div>
   <div class="description">
    <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="https://www.ica.org/standards/RiC/ontology#Instantiation" target="_blank" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://www.ica.org/standards/RiC/ontology#RecordResource" target="_blank" title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="https://w3id.org/tabulae#isFolioNumberOf" target="_blank" title="https://w3id.org/tabulae#isFolioNumberOf">is Folio Number Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#hasNumFolio">object property</a>
     </dd>
    </dl>
   </div>
@@ -1772,7 +1913,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has domain
     </dt>
     <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1951,24 +2092,27 @@ This section provides details for each class and property defined by TABULAE Ont
   </div>
  </div>
  <div class="entity" id="transcription">
-  <h3>transcription<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>transcription<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#transcription</p>
-  <div class="comment">
-   <span class="markdown">Transcription of an area or an entity obtained automatically or manually from a (scanned) document.</span>
-  </div>
   <div class="description">
    <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://www.ica.org/standards/RiC/ontology#Instantiation" target="_blank" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isTranscriptionOf" title="https://w3id.org/tabulae#isTranscriptionOf">est la transcription de</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#transcription">object property</a>
     </dd>
    </dl>
   </div>
@@ -2293,6 +2437,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <li><a href="#https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie" title="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie">Unbuild plot nature</a></li>
   <li><a href="#https://w3id.org/tabulae/id/codes/plotNature/Broussaille" title="https://w3id.org/tabulae/id/codes/plotNature/Broussaille">Undergrowth</a></li>
   <li><a href="#https://w3id.org/tabulae/id/codes/specialCellValue/InconnuSV" title="https://w3id.org/tabulae/id/codes/specialCellValue/InconnuSV">Unknown</a></li>
+  <li><a href="#https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand" title="https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand">Unregistered land</a></li>
   <li><a href="#https://w3id.org/tabulae/id/codes/plotNature/JardinMaraicher" title="https://w3id.org/tabulae/id/codes/plotNature/JardinMaraicher">Vegetable garden</a></li>
   <li><a href="#https://w3id.org/tabulae/id/codes/plotNature/Potager" title="https://w3id.org/tabulae/id/codes/plotNature/Potager">Vegetable garden</a></li>
   <li><a href="#https://w3id.org/tabulae/id/codes/plotNature/Vigne" title="https://w3id.org/tabulae/id/codes/plotNature/Vigne">Vineyard</a></li>
@@ -12431,6 +12576,42 @@ This section provides details for each class and property defined by TABULAE Ont
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Valeur inconnue"@fr</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand">
+  <h3>Unregistered land<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand</p>
+  <div class="comment">
+   <span class="markdown">A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#https://w3id.org/PeGazUs#LandmarkType" title="https://w3id.org/PeGazUs#LandmarkType">Type of landmark</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Entité géographique correspondant à un espace non cadastré, tel qu'une route, une rivière ou une forêt."@fr</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#LandRegistryLandmarkList" title="https://w3id.org/tabulae#LandRegistryLandmarkList">List of types of geographical features associated with the land registry</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Espace non cadastré"@fr</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Unregistered land"@en</span>
    </dd>
   </dl>
  </div>

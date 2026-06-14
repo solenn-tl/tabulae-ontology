@@ -552,6 +552,23 @@
     
 
 
+    <!-- https://w3id.org/tabulae#hasAlternativeNumFolio -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#hasAlternativeNumFolio">
+        <owl:inverseOf rdf:resource="https://w3id.org/tabulae#isAlternativeFolioNumberOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/tabulae#hasClass -->
 
 
@@ -634,6 +651,23 @@
         <rdfs:comment xml:lang="en">This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph.</rdfs:comment>
         <rdfs:label xml:lang="fr">a pour version suivante dans les documents</rdfs:label>
         <rdfs:label xml:lang="en">has next version in the source order</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#hasNumFolio -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#hasNumFolio">
+        <owl:inverseOf rdf:resource="https://w3id.org/tabulae#isFolioNumberOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -737,6 +771,13 @@
     
 
 
+    <!-- https://w3id.org/tabulae#isAlternativeFolioNumberOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#isAlternativeFolioNumberOf"/>
+    
+
+
     <!-- https://w3id.org/tabulae#isClassOf -->
 
 
@@ -771,6 +812,13 @@
         <rdfs:label xml:lang="fr">est un événement de type</rdfs:label>
         <rdfs:label xml:lang="en">is event type</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#isFolioNumberOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#isFolioNumberOf"/>
     
 
 
@@ -896,6 +944,23 @@
     
 
 
+    <!-- https://w3id.org/tabulae#isTranscriptionOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#isTranscriptionOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/tabulae#transcription"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/tabulae#mentions -->
 
 
@@ -1005,6 +1070,22 @@
     
 
 
+    <!-- https://w3id.org/tabulae#transcription -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#transcription">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1014,6 +1095,13 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
     
 
 
@@ -1081,19 +1169,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/tabulae#hasAlternativeNumFolio">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
-                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Alternative folio number (e.g. former number)</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Numéro de folio alternatif (ex: ancien numéro)</rdfs:comment>
-        <rdfs:label xml:lang="fr">a pour numéro de folio alternatif</rdfs:label>
-        <rdfs:label xml:lang="en">has alternative folio number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1102,19 +1178,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/tabulae#hasNumFolio">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
-                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="fr">Numéro de folio (associé à une page entière ou à une partie de page) </rdfs:comment>
-        <rdfs:comment xml:lang="en">folio number (associated to a mutation register page or part of page)</rdfs:comment>
-        <rdfs:label xml:lang="fr">a pour numéro de folio</rdfs:label>
-        <rdfs:label xml:lang="en">has folio number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1161,6 +1225,15 @@
     
 
 
+    <!-- https://w3id.org/tabulae#isTranscriptionOf -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/tabulae#isTranscriptionOf">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/tabulae#lineOrderInArea -->
 
 
@@ -1180,7 +1253,14 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/tabulae#spanValue">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    <rdf:Description rdf:about="https://w3id.org/tabulae#NamedEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="fr">Cette propriété permet d&apos;indiquer la valeur d&apos;une sous-chaine de caractères.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows to indicate the value of a substring.</rdfs:comment>
@@ -1379,21 +1459,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/tabulae#transcription">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/tabulae#NamedEntity"/>
-                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="fr">Transcription d&apos;une zone ou d&apos;une entité obtenue automatiquement ou manuellement à partir d&apos;un document (numérisé).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Transcription of an area or an entity obtained automatically or manually from a (scanned) document.</rdfs:comment>
-        <rdfs:label xml:lang="en">transcription</rdfs:label>
-        <rdfs:label xml:lang="fr">transcription</rdfs:label>
-        <skos:prefLabel xml:lang="en">transcription</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">transcription</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -1411,6 +1477,13 @@
         <skos:prefLabel xml:lang="fr">coordonnées xywh dans l&apos;image</skos:prefLabel>
         <skos:prefLabel xml:lang="en">xywh coordinates in image</skos:prefLabel>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.ica.org/standards/RiC/ontology#identifier"/>
     
 
 
@@ -3202,6 +3275,21 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryLandmarkList"/>
         <skos:prefLabel xml:lang="en">Section</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Section</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/PeGazUs#LandmarkType"/>
+        <skos:definition xml:lang="en">A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest.</skos:definition>
+        <skos:definition xml:lang="fr">Entité géographique correspondant à un espace non cadastré, tel qu&apos;une route, une rivière ou une forêt.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryLandmarkList"/>
+        <skos:prefLabel xml:lang="fr">Espace non cadastré</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Unregistered land</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -6598,6 +6686,46 @@
         <skos:prefLabel xml:lang="en">Passed to the public roads</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Passé à la voie publique</skos:prefLabel>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/tabulae#hasAlternativeNumFolio">
+        <rdfs:comment xml:lang="en">Alternative folio number (e.g. former number)</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Numéro de folio alternatif (ex: ancien numéro)</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour numéro de folio alternatif</rdfs:label>
+        <rdfs:label xml:lang="en">has alternative folio number</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/tabulae#hasNumFolio">
+        <rdfs:comment xml:lang="fr">Numéro de folio (associé à une page entière ou à une partie de page) </rdfs:comment>
+        <rdfs:comment xml:lang="en">folio number (associated to a mutation register page or part of page)</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour numéro de folio</rdfs:label>
+        <rdfs:label xml:lang="en">has folio number</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/tabulae#isTranscriptionOf">
+        <rdfs:comment xml:lang="en">Links an area or an entity to its transcription obtained automatically or manually from a (scanned) document.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relie une zone ou une entité à sa transcription obtenue automatiquement ou manuellement à partir d&apos;un document (numérisé).</rdfs:comment>
+        <rdfs:label xml:lang="en">est la transcription de</rdfs:label>
+        <rdfs:label xml:lang="fr">is transcription of</rdfs:label>
+        <skos:prefLabel xml:lang="en">est la transcription de</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">is transcription of</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/tabulae#transcription">
+        <rdfs:comment xml:lang="fr">Transcription d&apos;une zone ou d&apos;une entité obtenue automatiquement ou manuellement à partir d&apos;un document (numérisé).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Transcription of an area or an entity obtained automatically or manually from a (scanned) document.</rdfs:comment>
+        <rdfs:label xml:lang="en">transcription</rdfs:label>
+        <rdfs:label xml:lang="fr">transcription</rdfs:label>
+        <skos:prefLabel xml:lang="en">transcription</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">transcription</skos:prefLabel>
+    </rdf:Description>
 </rdf:RDF>
 
 
