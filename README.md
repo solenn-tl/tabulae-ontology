@@ -1,6 +1,6 @@
-# TABULAE Ontology : Temporal Attribute-Based Understanding of LAnd plot Evolution
+# TABULAE Ontology : Temporal Attribute-Based Understanding of LAnd plots Evolution
 
-This repository contains the documentation of the TABULAE ontology : <i>**T**emporal **A**ttribute-**B**ased **U**nderstanding of **LA**nd plot **E**volution</i>.
+This repository contains the documentation of the TABULAE ontology : <i>**T**emporal **A**ttribute-**B**ased **U**nderstanding of **LA**nd plots **E**volution</i>.
 This ontology has been developped following the SAMOD methodology to represent land plots and their evolution using information from the documents of the (historical) land registry.
 The TABULAE ontology has been developped as an extension of the PeGaZus ontology.
 
@@ -58,7 +58,7 @@ Following the recommandations of the W3C, this ontology reused concepts and prop
 ## Acknowledgements
 This work was supported by the IGN and the AID.
 
-## To cite this work
+## See also
 * Detail description of the Tabulae ontology as well as the kg population algorithm for the land registry.
 ```
 @phdthesis{tual:tel-05603252,

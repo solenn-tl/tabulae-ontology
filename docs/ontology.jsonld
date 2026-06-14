@@ -838,7 +838,7 @@
     "@value" : "2026-04-17"
   }, {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-06-07"
+    "@value" : "2026-06-14"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "_:genid16"
@@ -4878,6 +4878,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -4900,6 +4902,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -4929,6 +4933,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -4955,6 +4961,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -4987,6 +4995,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5013,6 +5023,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5042,6 +5054,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -5064,6 +5078,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5096,6 +5112,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5128,6 +5146,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5154,6 +5174,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -5173,6 +5195,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5195,6 +5219,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5221,6 +5247,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5243,6 +5271,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -5269,6 +5299,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5295,6 +5327,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5318,6 +5352,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5340,6 +5376,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5362,6 +5400,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Bois"
@@ -5389,6 +5429,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5415,6 +5457,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5441,6 +5485,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5463,6 +5509,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5482,6 +5530,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Canal"
@@ -5506,6 +5556,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5532,6 +5584,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Plantation"
@@ -5554,6 +5608,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5583,6 +5639,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5612,6 +5670,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5638,6 +5698,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5664,6 +5726,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5688,6 +5752,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5711,6 +5777,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5733,6 +5801,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5762,6 +5832,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -5781,6 +5853,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5807,6 +5881,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5826,6 +5902,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -5848,6 +5926,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Cour"
@@ -5867,6 +5947,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5896,6 +5978,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -5918,6 +6002,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5947,6 +6033,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5973,6 +6061,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -5992,6 +6082,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6014,6 +6106,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -6040,6 +6134,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6062,6 +6158,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6084,6 +6182,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6106,6 +6206,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6128,6 +6230,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6147,6 +6251,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6166,6 +6272,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6185,6 +6293,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6207,6 +6317,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Etang"
@@ -6226,6 +6338,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6251,6 +6365,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6274,6 +6390,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6296,6 +6414,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6325,6 +6445,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6354,6 +6476,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6376,6 +6500,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6398,6 +6524,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6420,6 +6548,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6442,6 +6572,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6464,6 +6596,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6490,6 +6624,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6516,6 +6652,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6538,6 +6676,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6560,6 +6700,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6586,6 +6728,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6615,6 +6759,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6637,6 +6783,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -6667,6 +6815,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6689,6 +6839,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6715,6 +6867,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6738,6 +6892,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Jardin"
@@ -6766,6 +6922,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Jardin"
@@ -6793,6 +6951,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Jardin"
@@ -6812,6 +6972,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6834,6 +6996,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6856,6 +7020,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6878,6 +7044,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -6900,6 +7068,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -6931,6 +7101,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6950,6 +7122,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6969,6 +7143,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -6991,6 +7167,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -7017,6 +7195,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -7039,6 +7219,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7064,6 +7246,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7086,6 +7270,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7108,6 +7294,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7130,6 +7318,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7156,6 +7346,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7175,6 +7367,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7197,6 +7391,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -7223,6 +7419,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -7242,6 +7440,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Moulin"
@@ -7261,6 +7461,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Moulin"
@@ -7280,6 +7482,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7306,6 +7510,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7326,6 +7532,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7346,6 +7554,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7366,6 +7576,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7392,6 +7604,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7420,6 +7634,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://w3id.org/tabulae#NatureList"
@@ -7436,6 +7652,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7462,6 +7680,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7491,6 +7711,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7517,6 +7739,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7539,6 +7763,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7564,6 +7790,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7586,6 +7814,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7610,6 +7840,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7637,6 +7869,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7664,6 +7898,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7693,6 +7929,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7722,6 +7960,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7746,6 +7986,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7768,6 +8010,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7790,6 +8034,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement"
@@ -7811,6 +8057,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7833,6 +8081,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7855,6 +8105,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -7877,6 +8129,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7906,6 +8160,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7938,6 +8194,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7967,6 +8225,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7993,6 +8253,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Batiment"
@@ -8012,6 +8274,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8034,6 +8298,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8058,6 +8324,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8080,6 +8348,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -8106,6 +8376,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8128,6 +8400,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -8154,6 +8428,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8180,6 +8456,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8203,6 +8481,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/Batiment"
@@ -8226,6 +8506,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8252,6 +8534,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8278,6 +8562,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -8304,6 +8590,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8330,6 +8618,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"
@@ -8355,6 +8645,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8383,6 +8675,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -8428,6 +8722,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8447,6 +8743,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8469,6 +8767,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8493,6 +8793,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8519,6 +8821,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8538,6 +8842,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8557,6 +8863,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8595,6 +8903,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8618,6 +8928,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8640,6 +8952,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8664,6 +8978,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8686,6 +9002,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8715,6 +9033,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Nature"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"
@@ -8737,6 +9057,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Article de mutation"
@@ -8766,13 +9088,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Cadastre"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
-    "@value" : "Cadastre napoléonien"
+    "@value" : "Corpus cadastral"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -8789,13 +9113,15 @@
     "@value" : "Cadastre"
   }, {
     "@language" : "en",
-    "@value" : "Land registry"
+    "@value" : "Land registry corpus"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/sourceType/CompteFoncier",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Compte foncier"
@@ -8825,6 +9151,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Etats de sections"
@@ -8854,6 +9182,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Etats de sections postérieurs à 1822"
@@ -8883,6 +9213,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Etats de sections antérieurs à 1822"
@@ -8912,6 +9244,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés bâties"
@@ -8941,6 +9275,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés non bâties"
@@ -8970,6 +9306,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)"
@@ -8999,6 +9337,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Inventaire des archives"
@@ -9029,6 +9369,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Folio"
@@ -9065,6 +9407,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Folio (Bâti)"
@@ -9094,6 +9438,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Folio (Non Bâti)"
@@ -9123,6 +9469,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Ligne de tableau d'états de sections"
@@ -9152,6 +9500,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Ligne de tableau d'une matrice"
@@ -9181,6 +9531,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Matrice cadastrale"
@@ -9210,6 +9562,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Matrice de rôles des propriétés bâties et non bâties (1807-1822)"
@@ -9243,6 +9597,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Matrice des propriétés non bâties (1822-1914)"
@@ -9276,6 +9632,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Matrice des propriétés bâties (1882-1911)"
@@ -9305,6 +9663,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Matrice des propriétés bâties (1911-rénovation)"
@@ -9334,6 +9694,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Matrice des propriétés non bâties (1914-rénovation)"
@@ -9363,6 +9725,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Ouvrage"
@@ -9389,6 +9753,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Page de registre cadastral"
@@ -9418,6 +9784,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Plan"
@@ -9447,6 +9815,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Plan vectorisé"
@@ -9476,6 +9846,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Plan parcellaire"
@@ -9505,6 +9877,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Plan parcellaire final"
@@ -9534,6 +9908,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Plan parcellaire issu d'atlas"
@@ -9563,6 +9939,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Plan parcellaire : minute"
@@ -9592,6 +9970,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Plan géoréférencé"
@@ -9621,6 +10001,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Registre cadastral"
@@ -9650,6 +10032,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Tableau d'assemblage"
@@ -9679,6 +10063,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Zone située dans une page de registre cadastral"

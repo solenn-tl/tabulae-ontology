@@ -36,7 +36,7 @@
         <terms:license rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-1.0"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-07-12</terms:modified>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-17</terms:modified>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-07</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-14</terms:modified>
         <terms:publisher rdf:nodeID="genid16"/>
         <terms:rights>Copyright 2024-2026, IGN</terms:rights>
         <terms:title xml:lang="fr">Ontologie TABULAE</terms:title>
@@ -3195,6 +3195,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Abreuvoir">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3209,6 +3210,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Abricotier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Abricotiers</skos:altLabel>
         <skos:altLabel xml:lang="en">Apricot</skos:altLabel>
@@ -3225,6 +3227,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Acacia">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:altLabel xml:lang="fr">Acacias</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Plantation"/>
@@ -3240,6 +3243,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Ajonc">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:altLabel xml:lang="fr">Ajoncs</skos:altLabel>
         <skos:altLabel xml:lang="en">Furze</skos:altLabel>
@@ -3257,6 +3261,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Allee">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>11</TFNBGroup>
         <skos:altLabel xml:lang="en">Path</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3272,6 +3277,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Amandier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="en">Almond</skos:altLabel>
         <skos:altLabel xml:lang="fr">Amandiers</skos:altLabel>
@@ -3288,6 +3294,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Appenti">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3302,6 +3309,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Ardoisiere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="fr">Ardoise</skos:altLabel>
         <skos:altLabel xml:lang="fr">Carrière d&apos;ardoise</skos:altLabel>
@@ -3319,6 +3327,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Argilliere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="fr">Argile</skos:altLabel>
         <skos:altLabel xml:lang="fr">Carrière d&apos;argile</skos:altLabel>
@@ -3336,6 +3345,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Asperges">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>1</TFNBGroup>
         <skos:altLabel xml:lang="fr">Asperge</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Plantation"/>
@@ -3351,6 +3361,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Atelier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Atelier</skos:prefLabel>
@@ -3364,6 +3375,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Aulnaie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3378,6 +3390,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Barraque">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:altLabel xml:lang="en">Shed</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
@@ -3393,6 +3406,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Bassin">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3407,6 +3421,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Batiment">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:hiddenLabel xml:lang="fr">Bat</skos:hiddenLabel>
         <skos:hiddenLabel xml:lang="fr">Bt</skos:hiddenLabel>
@@ -3422,6 +3437,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/BatimentRural">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:altLabel xml:lang="fr">Bâtiments ruraux</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
@@ -3437,6 +3453,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Batterie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:altLabel xml:lang="fr">Batterie de côte</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3451,6 +3468,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Bief">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>11</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3465,6 +3483,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Bois">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3479,6 +3498,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/BoisAgrement">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>13</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Bois"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement"/>
@@ -3495,6 +3515,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Broussaille">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:altLabel xml:lang="en">Bushes</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3510,6 +3531,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Bruyere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:altLabel xml:lang="fr">Bruyères</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3525,6 +3547,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Buissiere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3539,6 +3562,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Canal">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Canal</skos:prefLabel>
@@ -3552,6 +3576,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/CanalAgrement">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Canal"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Canal"/>
@@ -3567,6 +3592,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Carriere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="en">Pit</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3582,6 +3608,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Cassis">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Plantation"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3596,6 +3623,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Cedratiers">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="en">Citron tree</skos:altLabel>
         <skos:altLabel xml:lang="fr">Cédratier</skos:altLabel>
@@ -3612,6 +3640,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Cerisaies">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Cerise</skos:altLabel>
         <skos:altLabel xml:lang="fr">Plantation de cerises</skos:altLabel>
@@ -3628,6 +3657,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Chantier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>13</TFNBGroup>
         <skos:altLabel xml:lang="fr">Dépôt de marchandises</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3643,6 +3673,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Charmille">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>11</TFNBGroup>
         <skos:altLabel xml:lang="fr">Allée couverte</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3658,6 +3689,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Chataigneraie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <TFNBGroup>5</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3673,6 +3705,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Chemin">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:altLabel xml:lang="en">Walk</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3687,6 +3720,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/ChemindeFer">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>12</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3701,6 +3735,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Cheneviere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>1</TFNBGroup>
         <skos:altLabel xml:lang="fr">Champ de chanvre</skos:altLabel>
         <skos:altLabel xml:lang="fr">Chanvre</skos:altLabel>
@@ -3717,6 +3752,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Cimetiere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Cemetery</skos:prefLabel>
@@ -3730,6 +3766,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Citronnier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Citron</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Plantation"/>
@@ -3745,6 +3782,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Clos">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Clos</skos:prefLabel>
@@ -3758,6 +3796,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Cour">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>13</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3772,6 +3811,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/CourCommune">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Cour"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Cour commune</skos:prefLabel>
@@ -3785,6 +3825,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/CoursDEau">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:altLabel xml:lang="en">River</skos:altLabel>
         <skos:altLabel xml:lang="en">stream</skos:altLabel>
@@ -3801,6 +3842,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Courtil">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Jardin"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3815,6 +3857,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Crayere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="fr">Carrière de craie</skos:altLabel>
         <skos:altLabel xml:lang="fr">Craie</skos:altLabel>
@@ -3831,6 +3874,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Cressonniere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:altLabel xml:lang="fr">Cresson</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3846,6 +3890,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Cuisine">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Cuisine</skos:prefLabel>
@@ -3859,6 +3904,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Dependance">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3873,6 +3919,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Digue">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:altLabel xml:lang="en">Seawall</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -3888,6 +3935,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Douve">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3902,6 +3950,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Dune">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3916,6 +3965,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Eau">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3930,6 +3980,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Ecluse">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>12</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3944,6 +3995,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Ecurie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Ecurie</skos:prefLabel>
@@ -3957,6 +4009,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Eglise">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Church</skos:prefLabel>
@@ -3970,6 +4023,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/EtablissementDeBains">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Etablissement de bains</skos:prefLabel>
@@ -3983,6 +4037,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Etang">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -3997,6 +4052,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/EtangEmpoissonne">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Etang"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Etang empoissonné</skos:prefLabel>
@@ -4010,6 +4066,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Etendoir">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>13</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Sechoir"/>
@@ -4025,6 +4082,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Fabrique">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:altLabel xml:lang="fr">Manufacture</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4039,6 +4097,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Falaise">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4053,6 +4112,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Figuier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Figues</skos:altLabel>
         <skos:altLabel xml:lang="fr">Figuier</skos:altLabel>
@@ -4069,6 +4129,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Fleur">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:altLabel xml:lang="fr">Culture de fleurs</skos:altLabel>
         <skos:altLabel xml:lang="fr">Plantation de fleurs</skos:altLabel>
@@ -4085,6 +4146,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Fontaine">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4099,6 +4161,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Fosse">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4113,6 +4176,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Fougeraie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4127,6 +4191,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Four">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Fournil"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4141,6 +4206,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Fournil">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Four"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4155,6 +4221,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Fraisier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:altLabel xml:lang="fr">Plantation de fraisiers</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4170,6 +4237,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Framboisier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:altLabel xml:lang="fr">Plantation de framboisiers</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4185,6 +4253,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Friche">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4199,6 +4268,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Genet">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4213,6 +4283,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Graviere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="fr">Carrière de gravier</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4228,6 +4299,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Groseillier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:altLabel xml:lang="fr">Groseille</skos:altLabel>
         <skos:altLabel xml:lang="fr">Plantation de groseillier</skos:altLabel>
@@ -4244,6 +4316,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Gue">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4258,6 +4331,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Hangar">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:altLabel xml:lang="en">Hangar</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
@@ -4274,6 +4348,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Herbage">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>2</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4288,6 +4363,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Houblonniere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>1</TFNBGroup>
         <skos:altLabel xml:lang="fr">Houblon</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4303,6 +4379,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Jardin">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:hiddenLabel xml:lang="fr">J</skos:hiddenLabel>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4317,6 +4394,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/JardinDAgrement">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>11</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Jardin"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement"/>
@@ -4333,6 +4411,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/JardinMaraicher">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Jardin"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Plantation"/>
@@ -4349,6 +4428,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/JardinMarais">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Jardin"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4362,6 +4442,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Jonc">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4376,6 +4457,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Lac">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4390,6 +4472,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Lagune">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4404,6 +4487,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Lande">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4418,6 +4502,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Lavande">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>1</TFNBGroup>
         <TFNBGroup>6</TFNBGroup>
         <skos:altLabel xml:lang="fr">Culture de lavande</skos:altLabel>
@@ -4435,6 +4520,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Lavoir">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Lavoir</skos:prefLabel>
@@ -4448,6 +4534,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/MachineAVapeur">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Machine à vapeur</skos:prefLabel>
@@ -4461,6 +4548,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Magasin">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4475,6 +4563,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Maison">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:hiddenLabel xml:lang="fr">Mais</skos:hiddenLabel>
         <skos:hiddenLabel xml:lang="fr">Mon</skos:hiddenLabel>
@@ -4490,6 +4579,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Manufacture">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Fabrique"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4504,6 +4594,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Marais">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Palus"/>
@@ -4519,6 +4610,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/MaraisSalant">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4533,6 +4625,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Mare">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4547,6 +4640,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Marecage">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4561,6 +4655,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Marniere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="fr">Carrière de marne</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4576,6 +4671,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Meloniere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Melon plantation</skos:prefLabel>
@@ -4589,6 +4685,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Mine">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4603,6 +4700,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Miniere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="en">Open mine</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4618,6 +4716,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Moulin">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Mill</skos:prefLabel>
@@ -4631,6 +4730,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/MoulinAEau">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Moulin"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Moulin à eau</skos:prefLabel>
@@ -4644,6 +4744,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/MoulinAVent">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Moulin"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Moulin à vent</skos:prefLabel>
@@ -4657,6 +4758,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Murier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Mûrier</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Plantation"/>
@@ -4672,6 +4774,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:altLabel xml:lang="fr">Propriété bâtie</skos:altLabel>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Build plot nature</skos:prefLabel>
@@ -4685,6 +4788,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:altLabel xml:lang="fr">Propriété non bâtie</skos:altLabel>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Parcelle imposée au titre des propriétés no bâties</skos:prefLabel>
@@ -4698,6 +4802,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Neant">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:altLabel xml:lang="fr">Nul</skos:altLabel>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Nothing</skos:prefLabel>
@@ -4711,6 +4816,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Noisetier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Noisetier</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Plantation"/>
@@ -4726,6 +4832,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Noyer">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <TFNBGroup>5</TFNBGroup>
         <skos:altLabel xml:lang="fr">Noyer</skos:altLabel>
@@ -4742,6 +4849,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Objet d&apos;agrément</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Ornemental thing</skos:prefLabel>
@@ -4754,6 +4862,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Olivier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Olivier</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4769,6 +4878,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Oranger">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Orange</skos:altLabel>
         <skos:altLabel xml:lang="fr">Oranger</skos:altLabel>
@@ -4785,6 +4895,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Ormaie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:altLabel xml:lang="fr">Orme</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4800,6 +4911,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Oseraie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4814,6 +4926,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Palus">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Marais"/>
@@ -4829,6 +4942,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Parterre">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>11</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4843,6 +4957,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Passage">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>10</TFNBGroup>
         <TFNBGroup>13</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4858,6 +4973,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Patis">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Paturage"/>
@@ -4874,6 +4990,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Paturage">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>2</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Patis"/>
@@ -4890,6 +5007,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Pature">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>2</TFNBGroup>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4907,6 +5025,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Pecher">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Pêcher</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4923,6 +5042,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Pepiniere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>1</TFNBGroup>
         <TFNBGroup>9</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -4938,6 +5058,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Peuplier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4952,6 +5073,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/PieceDEau">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>11</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4966,6 +5088,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/PieceDEauAgrement">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/PieceDEau"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4980,6 +5103,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Pin">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -4994,6 +5118,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Plage">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5008,6 +5133,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Plantation">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/TerrainPlante"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5022,6 +5148,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Platriere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="fr">Carrière de gypse</skos:altLabel>
         <skos:altLabel xml:lang="fr">Gypse</skos:altLabel>
@@ -5038,6 +5165,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Poirier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Poire</skos:altLabel>
         <skos:altLabel xml:lang="fr">Poirier</skos:altLabel>
@@ -5055,6 +5183,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Pommeraie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Pommier</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5071,6 +5200,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Potager">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:altLabel xml:lang="fr">Jardin potager</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Jardin"/>
@@ -5086,6 +5216,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Poudriere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Gunpowder depot</skos:prefLabel>
@@ -5099,6 +5230,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Pre">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>2</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5113,6 +5245,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/PrePlante">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>2</TFNBGroup>
         <TFNBGroup>3</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5128,6 +5261,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Reservoir">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5142,6 +5276,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Rigole">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:altLabel xml:lang="en">Furrow</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5157,6 +5292,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Riziere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>1</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5171,6 +5307,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Rocher">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:altLabel xml:lang="en">Boulder</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5186,6 +5323,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Rosier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>9</TFNBGroup>
         <skos:altLabel xml:lang="fr">Plantation de rosiers</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5201,6 +5339,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Routoir">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:altLabel xml:lang="fr">Rouissoir</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5215,6 +5354,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Ruine">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Batiment"/>
         <skos:hiddenLabel xml:lang="fr">Ruines</skos:hiddenLabel>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5229,6 +5369,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Sabliere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:altLabel xml:lang="fr">Carrière de sable</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5244,6 +5385,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Salin">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:altLabel xml:lang="fr">Saline</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5259,6 +5401,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Sapin">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:altLabel xml:lang="en">Pine tree</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5274,6 +5417,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Saulaie">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>5</TFNBGroup>
         <skos:altLabel xml:lang="fr">Saussaie</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5289,6 +5433,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Sechoir">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>13</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureBatie"/>
         <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/Etendoir"/>
@@ -5304,6 +5449,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Serre">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>13</TFNBGroup>
         <TFNBGroup>9</TFNBGroup>
         <skos:altLabel xml:lang="fr">Forcerie</skos:altLabel>
@@ -5320,6 +5466,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Sol">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>13</TFNBGroup>
         <skos:altLabel xml:lang="en">House ground</skos:altLabel>
         <skos:altLabel xml:lang="fr">Superficie des bâtiments</skos:altLabel>
@@ -5341,6 +5488,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Terrain">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Piece of land</skos:prefLabel>
@@ -5354,6 +5502,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/TerrainABatir">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>10</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5368,6 +5517,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/TerrainDAgregemnt">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>11</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/ObjetDAgrement"/>
@@ -5383,6 +5533,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Terre">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>1</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:hiddenLabel xml:lang="fr">T</skos:hiddenLabel>
@@ -5398,6 +5549,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/TerreAVigne">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="fr">Terre à vigne</skos:prefLabel>
@@ -5411,6 +5563,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/TerreLabourable">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
         <skos:prefLabel xml:lang="en">Plowed land</skos:prefLabel>
@@ -5424,6 +5577,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/TerrePlantee">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>1</TFNBGroup>
         <TFNBGroup>3</TFNBGroup>
         <skos:altLabel xml:lang="fr">Terrain planté</skos:altLabel>
@@ -5443,6 +5597,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/TerreVaine">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>6</TFNBGroup>
         <skos:altLabel xml:lang="fr">Terre vague</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5457,6 +5612,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Tourbiere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>7</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5471,6 +5627,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Truffiere">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <TFNBGroup>5</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
@@ -5486,6 +5643,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Verger">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>3</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5500,6 +5658,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Vigne">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>4</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:hiddenLabel xml:lang="fr">V</skos:hiddenLabel>
@@ -5516,6 +5675,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/plotNature/Vivier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#Nature"/>
         <TFNBGroup>8</TFNBGroup>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/plotNature/NatureNonBatie"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#NatureList"/>
@@ -5530,6 +5690,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Article de mutation</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage"/>
         <skos:definition xml:lang="en">A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register.</skos:definition>
@@ -5546,13 +5707,14 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/Cadastre">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Cadastre</rdfs:label>
-        <skos:altLabel xml:lang="fr">Cadastre napoléonien</skos:altLabel>
+        <skos:altLabel xml:lang="fr">Corpus cadastral</skos:altLabel>
         <skos:definition xml:lang="en">A land registry comprising maps and registers, used for a certain period to calculate and collect property tax on plots of land within a municipality.</skos:definition>
         <skos:definition xml:lang="fr">Corpus cadastral composé de plans et de registres, utilisé pendant une certaine période pour le calcul et le prélèvement de l&apos;impôt foncier des parcelles d&apos;une commune.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistrySourceList"/>
         <skos:prefLabel xml:lang="fr">Cadastre</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Land registry</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Land registry corpus</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -5562,6 +5724,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/CompteFoncier">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Compte foncier</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale"/>
         <skos:definition xml:lang="en">A set of parcel records (lines) describing the plots of one or more successive related taxpayers. A land account may correspond ‘physically’ to a folio where the latter describes the details of one, and only one, taxpayer (or a list of successive taxpayers).</skos:definition>
@@ -5578,6 +5741,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Etats de sections</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/RegistreCadastral"/>
         <skos:definition xml:lang="en">Initial register detailing the initial status of plots within a municipality on a given date for a specific cadastral survey, prior to the completion of a cadastral map.</skos:definition>
@@ -5594,6 +5758,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Ap_1822">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Etats de sections postérieurs à 1822</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections"/>
         <skos:definition xml:lang="en">Initial registers created after 1822.</skos:definition>
@@ -5610,6 +5775,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Etats de sections antérieurs à 1822</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections"/>
         <skos:definition xml:lang="en">Initial register created before 1822. Sometimes, it contains a section describing the unbuilt plots and a section describing the buildings.</skos:definition>
@@ -5626,6 +5792,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822_Bati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés bâties</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822"/>
         <skos:definition xml:lang="en">Extract from an initial register created before 1822, dedicated to the description of built properties.</skos:definition>
@@ -5642,6 +5809,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822_NonBati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés non bâties</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Av_1822"/>
         <skos:definition xml:lang="en">Extract from an initial register created before 1822, dedicated to the description of unbuilt properties.</skos:definition>
@@ -5658,6 +5826,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections_Scp_Seine_1835">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/EtatsDeSections"/>
         <skos:definition xml:lang="en">Initial registers relating specifically to the attempt to update the land registry carried out between 1835 and 1845 in the department of Seine.</skos:definition>
@@ -5674,6 +5843,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/FicheInventaire">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Inventaire des archives</rdfs:label>
         <skos:altLabel xml:lang="fr">Inventaire</skos:altLabel>
         <skos:definition xml:lang="fr">Fiches d&apos;inventaire décrivant le contenu des archives localisées dans un service d&apos;archives.</skos:definition>
@@ -5690,6 +5860,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/Folio">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Folio</rdfs:label>
         <skos:altLabel xml:lang="fr">Article</skos:altLabel>
         <skos:altLabel xml:lang="fr">Case</skos:altLabel>
@@ -5708,6 +5879,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/FolioBati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Folio (Bâti)</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/Folio"/>
         <skos:definition xml:lang="fr">Folio dédié à des parcelles imposées au titre des propriétés bâties.</skos:definition>
@@ -5724,6 +5896,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/FolioNonBati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Folio (Non Bâti)</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/Folio"/>
         <skos:definition xml:lang="en">Account dedicated to land plots taxed as land without any buildings on it (unbuilt properties).</skos:definition>
@@ -5740,6 +5913,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/LigneEtatDeSection">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Ligne de tableau d&apos;états de sections</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage"/>
         <skos:definition xml:lang="en">A row in the main table of a section status register describing a parcel at the time of the cadastral survey’s initialisation.</skos:definition>
@@ -5756,6 +5930,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/LigneMatrice">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Ligne de tableau d&apos;une matrice</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage"/>
         <skos:definition xml:lang="en">A table row in a folio of a register describing the status of a plot of land.</skos:definition>
@@ -5772,6 +5947,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Matrice cadastrale</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/RegistreCadastral"/>
         <skos:definition xml:lang="en">A register containing all changes affecting the plots during its period of validity.</skos:definition>
@@ -5788,6 +5964,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1807_1822_Bati_NonBati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Matrice de rôles des propriétés bâties et non bâties (1807-1822)</rdfs:label>
         <skos:altLabel xml:lang="fr">Matrice des propriétés bâties et non bâties (1807-1822)</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale"/>
@@ -5805,6 +5982,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1822_1914_NonBati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Matrice des propriétés non bâties (1822-1914)</rdfs:label>
         <skos:altLabel xml:lang="fr">Matrice des propriétés foncières (1822-1914)</skos:altLabel>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale"/>
@@ -5822,6 +6000,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1882_1911_Bati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Matrice des propriétés bâties (1882-1911)</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale"/>
         <skos:definition xml:lang="fr">Matrice cadastrale utilisée à partir de 1882 pour décrire les propriétés bâties.</skos:definition>
@@ -5838,6 +6017,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1911_Renovation_Bati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Matrice des propriétés bâties (1911-rénovation)</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale"/>
         <skos:definition xml:lang="fr">Matrice cadastrale utilisée à partir de 1911 pour décrire les propriétés bâties.</skos:definition>
@@ -5854,6 +6034,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale1914_Renovation_NonBati">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Matrice des propriétés non bâties (1914-rénovation)</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale"/>
         <skos:definition xml:lang="fr">Matrice cadastrale utilisée à partir de 1914 pour décrire les propriétés non bâties</skos:definition>
@@ -5870,6 +6051,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/Ouvrage">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Ouvrage</rdfs:label>
         <skos:definition xml:lang="fr">Ouvrage (livre, article).</skos:definition>
         <skos:definition xml:lang="en">Publication (book, article).</skos:definition>
@@ -5885,6 +6067,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/PageDeRegistre">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Page de registre cadastral</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/RegistreCadastral"/>
         <skos:definition xml:lang="fr">Page issue d&apos;un registre.</skos:definition>
@@ -5901,6 +6084,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/Plan">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Plan</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/Cadastre"/>
         <skos:definition xml:lang="en">Map forming part of the land registry records.</skos:definition>
@@ -5917,6 +6101,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/PlanGeoreference">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Plan vectorisé</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/Plan"/>
         <skos:definition xml:lang="en">Georeferenced map (manually or automatically).</skos:definition>
@@ -5933,6 +6118,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaire">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Plan parcellaire</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/Plan"/>
         <skos:definition xml:lang="en">A map showing the lant plots within a section of a municipality (an entire section or part of a section), drawn to scales ranging from 1:1,250 to 1:5,000.</skos:definition>
@@ -5949,6 +6135,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireFinal">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Plan parcellaire final</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaire"/>
         <skos:definition xml:lang="en">Final version of a cadastral index map.</skos:definition>
@@ -5965,6 +6152,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireIssuDAtlas">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Plan parcellaire issu d&apos;atlas</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireFinal"/>
         <skos:definition xml:lang="en">Final version of a cadastral index map taken from a municipal or cantonal atlas.</skos:definition>
@@ -5981,6 +6169,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaireMinute">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Plan parcellaire : minute</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/PlanParcellaire"/>
         <skos:definition xml:lang="en">Draft version of a cadastral index map; may include building outlines, working notes or provisional plot numbering.</skos:definition>
@@ -5997,6 +6186,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/PlanVectorise">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Plan géoréférencé</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/Plan"/>
         <skos:definition xml:lang="fr">Plan vectorisé (manuellement ou automatiquement).</skos:definition>
@@ -6013,6 +6203,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/RegistreCadastral">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Registre cadastral</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/Cadastre"/>
         <skos:definition xml:lang="en">A register forming part of the land registry records.</skos:definition>
@@ -6029,6 +6220,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/TableauAssemblage">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Tableau d&apos;assemblage</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/Plan"/>
         <skos:definition xml:lang="en">A map drawn to the scale of a municipality, showing the compilation of cadastral index maps detailing the plots within the municipality.</skos:definition>
@@ -6045,6 +6237,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <rdfs:label>Zone située dans une page de registre cadastral</rdfs:label>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/PageDeRegistre"/>
         <skos:definition xml:lang="en">An area within a registry page.</skos:definition>

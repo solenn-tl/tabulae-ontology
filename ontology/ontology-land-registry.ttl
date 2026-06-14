@@ -138,7 +138,7 @@
     dcterms:issued "2024-01-24"^^xsd:date ;
     dcterms:modified "2025-07-12"^^xsd:date ;
     dcterms:modified "2026-04-17"^^xsd:date ;
-    dcterms:modified "2026-06-07"^^xsd:date ;
+    dcterms:modified "2026-06-14"^^xsd:date ;
     owl:versionInfo "2.0.0" ;
     # --- Licences and Rights ---
     dcterms:rights "Copyright 2024-2026, IGN" ;
@@ -1278,7 +1278,8 @@ tbletype:BuildingRelatedEvent a owl:NamedIndividual,
 # ----- List of plot natures (tbl:Nature) -----
 #
 pnature:Abreuvoir a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Water trough"@en,
@@ -1286,7 +1287,8 @@ pnature:Abreuvoir a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Abricotier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Apricot"@en,
         "Abricotiers"@fr ;
     skos:broader pnature:Plantation ;
@@ -1296,7 +1298,8 @@ pnature:Abricotier a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Acacia a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Acacias"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
@@ -1305,7 +1308,8 @@ pnature:Acacia a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Ajonc a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Furze"@en,
         "Whin"@en,
         "Ajoncs"@fr ;
@@ -1316,7 +1320,8 @@ pnature:Ajonc a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Allee a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Path"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1325,7 +1330,8 @@ pnature:Allee a owl:NamedIndividual,
     tbl:TFNBGroup "11" .
 
 pnature:Amandier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Almond"@en,
         "Amandiers"@fr ;
     skos:broader pnature:Plantation ;
@@ -1335,7 +1341,8 @@ pnature:Amandier a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Appenti a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Batiment ;
     skos:inScheme tbl:NatureList ;
@@ -1343,7 +1350,8 @@ pnature:Appenti a owl:NamedIndividual,
         "Appenti"@fr .
 
 pnature:Ardoisiere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Ardoise"@fr,
         "Carrière d'ardoise"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -1354,7 +1362,8 @@ pnature:Ardoisiere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Argilliere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Argile"@fr,
         "Carrière d'argile"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -1365,7 +1374,8 @@ pnature:Argilliere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Asperges a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Asperge"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
@@ -1374,14 +1384,16 @@ pnature:Asperges a owl:NamedIndividual,
     tbl:TFNBGroup "1" .
 
 pnature:Atelier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Workshop"@en,
         "Atelier"@fr .
 
 pnature:Aulnaie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Alder grove"@en,
@@ -1389,7 +1401,8 @@ pnature:Aulnaie a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Barraque a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Shed"@en ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Batiment ;
@@ -1398,7 +1411,8 @@ pnature:Barraque a owl:NamedIndividual,
         "Baraque"@fr .
 
 pnature:Bassin a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Basin"@en,
@@ -1406,7 +1420,8 @@ pnature:Bassin a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:BatimentRural a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Bâtiments ruraux"@fr ;
     skos:broader pnature:Batiment ;
     skos:inScheme tbl:NatureList ;
@@ -1415,7 +1430,8 @@ pnature:BatimentRural a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Batterie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Batterie de côte"@fr ;
     skos:broader pnature:Batiment ;
     skos:inScheme tbl:NatureList ;
@@ -1423,7 +1439,8 @@ pnature:Batterie a owl:NamedIndividual,
         "Batterie"@fr .
 
 pnature:Bief a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Millstream"@en,
@@ -1431,7 +1448,8 @@ pnature:Bief a owl:NamedIndividual,
     tbl:TFNBGroup "11" .
 
 pnature:BoisAgrement a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Bois,
         pnature:ObjetDAgrement ;
     skos:closeMatch pnature:Bois ;
@@ -1441,7 +1459,8 @@ pnature:BoisAgrement a owl:NamedIndividual,
     tbl:TFNBGroup "13" .
 
 pnature:Broussaille a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Bushes"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1450,7 +1469,8 @@ pnature:Broussaille a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Bruyere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Bruyères"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1459,7 +1479,8 @@ pnature:Bruyere a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Buissiere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Boxwood"@en,
@@ -1467,7 +1488,8 @@ pnature:Buissiere a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:CanalAgrement a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Canal,
         pnature:ObjetDAgrement ;
     skos:closeMatch pnature:Canal ;
@@ -1476,7 +1498,8 @@ pnature:CanalAgrement a owl:NamedIndividual,
         "Canal d'agrément"@fr .
 
 pnature:Cassis a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Blackcurrant"@en,
@@ -1484,7 +1507,8 @@ pnature:Cassis a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:Cedratiers a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Citron tree"@en,
         "Cédratier"@fr ;
     skos:broader pnature:Plantation ;
@@ -1494,7 +1518,8 @@ pnature:Cedratiers a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Cerisaies a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Cerise"@fr,
         "Plantation de cerises"@fr ;
     skos:broader pnature:Plantation ;
@@ -1504,7 +1529,8 @@ pnature:Cerisaies a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Chantier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Dépôt de marchandises"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1513,7 +1539,8 @@ pnature:Chantier a owl:NamedIndividual,
     tbl:TFNBGroup "13" .
 
 pnature:Charmille a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Allée couverte"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1522,7 +1549,8 @@ pnature:Charmille a owl:NamedIndividual,
     tbl:TFNBGroup "11" .
 
 pnature:Chataigneraie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Chestnut grove"@en,
@@ -1531,7 +1559,8 @@ pnature:Chataigneraie a owl:NamedIndividual,
         "5" .
 
 pnature:Chemin a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Walk"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1539,7 +1568,8 @@ pnature:Chemin a owl:NamedIndividual,
         "Chemin"@fr .
 
 pnature:ChemindeFer a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Railway"@en,
@@ -1547,7 +1577,8 @@ pnature:ChemindeFer a owl:NamedIndividual,
     tbl:TFNBGroup "12" .
 
 pnature:Cheneviere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Champ de chanvre"@fr,
         "Chanvre"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -1557,14 +1588,16 @@ pnature:Cheneviere a owl:NamedIndividual,
     tbl:TFNBGroup "1" .
 
 pnature:Cimetiere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Cemetery"@en,
         "Cimetiere"@fr .
 
 pnature:Citronnier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Citron"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
@@ -1573,21 +1606,24 @@ pnature:Citronnier a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Clos a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Fenced lot"@en,
         "Clos"@fr .
 
 pnature:CourCommune a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Cour ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Shared courtyard"@en,
         "Cour commune"@fr .
 
 pnature:CoursDEau a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "River"@en,
         "stream"@en ;
     skos:broader pnature:NatureNonBatie ;
@@ -1597,7 +1633,8 @@ pnature:CoursDEau a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Courtil a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Jardin ;
     skos:inScheme tbl:NatureList ;
@@ -1605,7 +1642,8 @@ pnature:Courtil a owl:NamedIndividual,
         "Courtil"@fr .
 
 pnature:Crayere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Carrière de craie"@fr,
         "Craie"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -1615,7 +1653,8 @@ pnature:Crayere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Cressonniere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Cresson"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1624,14 +1663,16 @@ pnature:Cressonniere a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:Cuisine a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Kitchen"@en,
         "Cuisine"@fr .
 
 pnature:Dependance a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Batiment ;
     skos:inScheme tbl:NatureList ;
@@ -1639,7 +1680,8 @@ pnature:Dependance a owl:NamedIndividual,
         "Dépendance"@fr .
 
 pnature:Digue a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Seawall"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1648,7 +1690,8 @@ pnature:Digue a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Douve a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Moat"@en,
@@ -1656,7 +1699,8 @@ pnature:Douve a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Dune a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Dune"@en,
@@ -1664,7 +1708,8 @@ pnature:Dune a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Eau a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Water"@en,
@@ -1672,7 +1717,8 @@ pnature:Eau a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Ecluse a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Lock"@en,
@@ -1680,35 +1726,40 @@ pnature:Ecluse a owl:NamedIndividual,
     tbl:TFNBGroup "12" .
 
 pnature:Ecurie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Stable"@en,
         "Ecurie"@fr .
 
 pnature:Eglise a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Church"@en,
         "Eglise"@fr .
 
 pnature:EtablissementDeBains a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Public baths"@en,
         "Etablissement de bains"@fr .
 
 pnature:EtangEmpoissonne a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Etang ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pond with fishes"@en,
         "Etang empoissonné"@fr .
 
 pnature:Falaise a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Cliff"@en,
@@ -1716,7 +1767,8 @@ pnature:Falaise a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Figuier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Figues"@fr,
         "Figuier"@fr ;
     skos:broader pnature:Plantation ;
@@ -1726,7 +1778,8 @@ pnature:Figuier a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Fleur a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Culture de fleurs"@fr,
         "Plantation de fleurs"@fr ;
     skos:broader pnature:Plantation ;
@@ -1736,7 +1789,8 @@ pnature:Fleur a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:Fontaine a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Fountain"@en,
@@ -1744,7 +1798,8 @@ pnature:Fontaine a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Fosse a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ditch"@en,
@@ -1752,7 +1807,8 @@ pnature:Fosse a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Fougeraie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ferny area"@en,
@@ -1760,7 +1816,8 @@ pnature:Fougeraie a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Fraisier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Plantation de fraisiers"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1769,7 +1826,8 @@ pnature:Fraisier a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:Framboisier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Plantation de framboisiers"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1778,7 +1836,8 @@ pnature:Framboisier a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:Friche a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Wasteland"@en,
@@ -1786,7 +1845,8 @@ pnature:Friche a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Genet a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Broom"@en,
@@ -1794,7 +1854,8 @@ pnature:Genet a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Graviere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Carrière de gravier"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1803,7 +1864,8 @@ pnature:Graviere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Groseillier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Groseille"@fr,
         "Plantation de groseillier"@fr ;
     skos:broader pnature:Plantation ;
@@ -1813,7 +1875,8 @@ pnature:Groseillier a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:Gue a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ford"@en,
@@ -1821,7 +1884,8 @@ pnature:Gue a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Hangar a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Hangar"@en ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Batiment ;
@@ -1831,7 +1895,8 @@ pnature:Hangar a owl:NamedIndividual,
         "Hangar"@fr .
 
 pnature:Herbage a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pasture"@en,
@@ -1839,7 +1904,8 @@ pnature:Herbage a owl:NamedIndividual,
     tbl:TFNBGroup "2" .
 
 pnature:Houblonniere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Houblon"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1848,7 +1914,8 @@ pnature:Houblonniere a owl:NamedIndividual,
     tbl:TFNBGroup "1" .
 
 pnature:JardinDAgrement a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Jardin,
         pnature:ObjetDAgrement ;
     skos:hiddenLabel "J d'ag"@fr ;
@@ -1858,7 +1925,8 @@ pnature:JardinDAgrement a owl:NamedIndividual,
     tbl:TFNBGroup "11" .
 
 pnature:JardinMaraicher a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Jardin ;
     skos:closeMatch pnature:Plantation,
         pnature:Potager ;
@@ -1868,14 +1936,16 @@ pnature:JardinMaraicher a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:JardinMarais a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Jardin ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Jardin Marais"@fr ;
     tbl:TFNBGroup "9" .
 
 pnature:Jonc a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Rush"@en,
@@ -1883,7 +1953,8 @@ pnature:Jonc a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Lac a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Lake"@en,
@@ -1891,7 +1962,8 @@ pnature:Lac a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Lagune a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Lagoon"@en,
@@ -1899,7 +1971,8 @@ pnature:Lagune a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Lande a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Heath"@en,
@@ -1907,7 +1980,8 @@ pnature:Lande a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Lavande a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Culture de lavande"@fr,
         "Plantation de lavande"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -1918,21 +1992,24 @@ pnature:Lavande a owl:NamedIndividual,
         "6" .
 
 pnature:Lavoir a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Washhouse"@en,
         "Lavoir"@fr .
 
 pnature:MachineAVapeur a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Steam engine"@en,
         "Machine à vapeur"@fr .
 
 pnature:Magasin a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Batiment ;
     skos:inScheme tbl:NatureList ;
@@ -1940,7 +2017,8 @@ pnature:Magasin a owl:NamedIndividual,
         "Magasin"@fr .
 
 pnature:Maison a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:hiddenLabel "Mais"@fr,
         "Mon"@fr ;
@@ -1949,7 +2027,8 @@ pnature:Maison a owl:NamedIndividual,
         "Maison"@fr .
 
 pnature:Manufacture a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Fabrique ;
     skos:inScheme tbl:NatureList ;
@@ -1957,7 +2036,8 @@ pnature:Manufacture a owl:NamedIndividual,
         "Manufacture"@fr .
 
 pnature:MaraisSalant a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Salt marsh"@en,
@@ -1965,7 +2045,8 @@ pnature:MaraisSalant a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Mare a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pond"@en,
@@ -1973,7 +2054,8 @@ pnature:Mare a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Marecage a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Marsh"@en,
@@ -1981,7 +2063,8 @@ pnature:Marecage a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Marniere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Carrière de marne"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -1990,14 +2073,16 @@ pnature:Marniere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Meloniere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Melon plantation"@en,
         "Melonière"@fr .
 
 pnature:Mine a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Mine"@en,
@@ -2005,7 +2090,8 @@ pnature:Mine a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Miniere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Open mine"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2014,21 +2100,24 @@ pnature:Miniere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:MoulinAEau a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Moulin ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Water mill"@en,
         "Moulin à eau"@fr .
 
 pnature:MoulinAVent a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Moulin ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Wind mill"@en,
         "Moulin à vent"@fr .
 
 pnature:Murier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Mûrier"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
@@ -2037,14 +2126,16 @@ pnature:Murier a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Neant a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Nul"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Nothing"@en,
         "Néant"@fr .
 
 pnature:Noisetier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Noisetier"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
@@ -2053,7 +2144,8 @@ pnature:Noisetier a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Noyer a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Noyer"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
@@ -2063,7 +2155,8 @@ pnature:Noyer a owl:NamedIndividual,
         "5" .
 
 pnature:Olivier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Olivier"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2072,7 +2165,8 @@ pnature:Olivier a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Oranger a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Orange"@fr,
         "Oranger"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -2082,7 +2176,8 @@ pnature:Oranger a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Ormaie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Orme"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2091,7 +2186,8 @@ pnature:Ormaie a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Oseraie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Wicker grove"@en,
@@ -2099,7 +2195,8 @@ pnature:Oseraie a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Parterre a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Flowerbed"@en,
@@ -2107,7 +2204,8 @@ pnature:Parterre a owl:NamedIndividual,
     tbl:TFNBGroup "11" .
 
 pnature:Passage a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Way"@en,
@@ -2116,7 +2214,8 @@ pnature:Passage a owl:NamedIndividual,
         "13" .
 
 pnature:Pecher a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Pêcher"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Verger ;
@@ -2126,7 +2225,8 @@ pnature:Pecher a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Pepiniere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Plant nursery"@en,
@@ -2135,7 +2235,8 @@ pnature:Pepiniere a owl:NamedIndividual,
         "9" .
 
 pnature:Peuplier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Poplar"@en,
@@ -2143,7 +2244,8 @@ pnature:Peuplier a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:PieceDEauAgrement a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:ObjetDAgrement,
         pnature:PieceDEau ;
     skos:inScheme tbl:NatureList ;
@@ -2151,7 +2253,8 @@ pnature:PieceDEauAgrement a owl:NamedIndividual,
         "Pièce d'eau d'agrément"@fr .
 
 pnature:Pin a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pine"@en,
@@ -2159,7 +2262,8 @@ pnature:Pin a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Plage a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Beach"@en,
@@ -2167,7 +2271,8 @@ pnature:Plage a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Platriere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Carrière de gypse"@fr,
         "Gypse"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -2177,7 +2282,8 @@ pnature:Platriere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Poirier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Poire"@fr,
         "Poirier"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -2188,7 +2294,8 @@ pnature:Poirier a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Pommeraie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Pommier"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Verger ;
@@ -2198,14 +2305,16 @@ pnature:Pommeraie a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Poudriere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Batiment ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Gunpowder depot"@en,
         "Poudrière"@fr .
 
 pnature:Pre a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Meadow"@en,
@@ -2213,7 +2322,8 @@ pnature:Pre a owl:NamedIndividual,
     tbl:TFNBGroup "2" .
 
 pnature:PrePlante a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Plated meadow"@en,
@@ -2222,7 +2332,8 @@ pnature:PrePlante a owl:NamedIndividual,
         "3" .
 
 pnature:Reservoir a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Water tank"@en,
@@ -2230,7 +2341,8 @@ pnature:Reservoir a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Rigole a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Furrow"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2239,7 +2351,8 @@ pnature:Rigole a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Riziere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Rice paddy"@en,
@@ -2247,7 +2360,8 @@ pnature:Riziere a owl:NamedIndividual,
     tbl:TFNBGroup "1" .
 
 pnature:Rocher a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Boulder"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2256,7 +2370,8 @@ pnature:Rocher a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Rosier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Plantation de rosiers"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2265,7 +2380,8 @@ pnature:Rosier a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:Routoir a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Rouissoir"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2273,7 +2389,8 @@ pnature:Routoir a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Ruine a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:Batiment ;
     skos:hiddenLabel "Ruines"@fr ;
     skos:inScheme tbl:NatureList ;
@@ -2281,7 +2398,8 @@ pnature:Ruine a owl:NamedIndividual,
         "Ruine"@fr .
 
 pnature:Sabliere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Carrière de sable"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2290,7 +2408,8 @@ pnature:Sabliere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Salin a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Saline"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2299,7 +2418,8 @@ pnature:Salin a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Sapin a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Pine tree"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2308,7 +2428,8 @@ pnature:Sapin a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Saulaie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Saussaie"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2317,7 +2438,8 @@ pnature:Saulaie a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Serre a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Forcerie"@fr ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2327,7 +2449,8 @@ pnature:Serre a owl:NamedIndividual,
         "9" .
 
 pnature:Sol a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "House ground"@en,
         "Superficie des bâtiments"@fr ;
     skos:broader pnature:NatureNonBatie ;
@@ -2342,14 +2465,16 @@ pnature:Sol a owl:NamedIndividual,
     tbl:TFNBGroup "13" .
 
 pnature:Terrain a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Piece of land"@en,
         "Terrain"@fr .
 
 pnature:TerrainABatir a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Piece of land for building"@en,
@@ -2357,7 +2482,8 @@ pnature:TerrainABatir a owl:NamedIndividual,
     tbl:TFNBGroup "10" .
 
 pnature:TerrainDAgregemnt a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie,
         pnature:ObjetDAgrement ;
     skos:inScheme tbl:NatureList ;
@@ -2366,7 +2492,8 @@ pnature:TerrainDAgregemnt a owl:NamedIndividual,
     tbl:TFNBGroup "11" .
 
 pnature:Terre a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:hiddenLabel "T"@fr ;
     skos:inScheme tbl:NatureList ;
@@ -2375,21 +2502,24 @@ pnature:Terre a owl:NamedIndividual,
     tbl:TFNBGroup "1" .
 
 pnature:TerreAVigne a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Vineyard land"@en,
         "Terre à vigne"@fr .
 
 pnature:TerreLabourable a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Plowed land"@en,
         "Terre labourable"@fr .
 
 pnature:TerrePlantee a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Terrain planté"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:hiddenLabel "T pt"@fr,
@@ -2402,7 +2532,8 @@ pnature:TerrePlantee a owl:NamedIndividual,
         "3" .
 
 pnature:TerreVaine a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Terre vague"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2410,7 +2541,8 @@ pnature:TerreVaine a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Tourbiere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Peatland"@en,
@@ -2418,7 +2550,8 @@ pnature:Tourbiere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Truffiere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Truffle patch"@en,
@@ -2427,7 +2560,8 @@ pnature:Truffiere a owl:NamedIndividual,
         "5" .
 
 pnature:Vigne a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:hiddenLabel "V"@fr,
         "Vig"@fr ;
@@ -2437,7 +2571,8 @@ pnature:Vigne a owl:NamedIndividual,
     tbl:TFNBGroup "4" .
 
 pnature:Vivier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Fishpond"@en,
@@ -2445,7 +2580,8 @@ pnature:Vivier a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Cour a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Courtyard"@en,
@@ -2453,7 +2589,8 @@ pnature:Cour a owl:NamedIndividual,
     tbl:TFNBGroup "13" .
 
 pnature:Etang a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pond"@en,
@@ -2461,7 +2598,8 @@ pnature:Etang a owl:NamedIndividual,
     tbl:TFNBGroup "8" .
 
 pnature:Etendoir a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Sechoir ;
     skos:inScheme tbl:NatureList ;
@@ -2470,7 +2608,8 @@ pnature:Etendoir a owl:NamedIndividual,
     tbl:TFNBGroup "13" .
 
 pnature:Fabrique a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Manufacture"@fr ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2478,7 +2617,8 @@ pnature:Fabrique a owl:NamedIndividual,
         "Fabrique"@fr .
 
 pnature:Four a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Fournil ;
     skos:inScheme tbl:NatureList ;
@@ -2486,7 +2626,8 @@ pnature:Four a owl:NamedIndividual,
         "Four"@fr .
 
 pnature:Fournil a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Four ;
     skos:inScheme tbl:NatureList ;
@@ -2494,7 +2635,8 @@ pnature:Fournil a owl:NamedIndividual,
         "Fournil"@fr .
 
 pnature:Marais a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Palus ;
     skos:inScheme tbl:NatureList ;
@@ -2503,7 +2645,8 @@ pnature:Marais a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Palus a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Marais ;
     skos:inScheme tbl:NatureList ;
@@ -2512,7 +2655,8 @@ pnature:Palus a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:PieceDEau a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Piece of water"@en,
@@ -2520,7 +2664,8 @@ pnature:PieceDEau a owl:NamedIndividual,
     tbl:TFNBGroup "11" .
 
 pnature:Potager a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Jardin potager"@fr ;
     skos:broader pnature:Jardin ;
     skos:inScheme tbl:NatureList ;
@@ -2529,7 +2674,8 @@ pnature:Potager a owl:NamedIndividual,
     tbl:TFNBGroup "9" .
 
 pnature:Sechoir a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Etendoir ;
     skos:inScheme tbl:NatureList ;
@@ -2538,7 +2684,8 @@ pnature:Sechoir a owl:NamedIndividual,
     tbl:TFNBGroup "13" .
 
 pnature:Bois a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Wood"@en,
@@ -2546,14 +2693,16 @@ pnature:Bois a owl:NamedIndividual,
     tbl:TFNBGroup "5" .
 
 pnature:Canal a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Canal"@en,
         "Canal"@fr .
 
 pnature:Carriere a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Pit"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
@@ -2562,14 +2711,16 @@ pnature:Carriere a owl:NamedIndividual,
     tbl:TFNBGroup "7" .
 
 pnature:Moulin a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Mill"@en,
         "Moulin"@fr .
 
 pnature:Patis a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Paturage,
         pnature:Pature ;
@@ -2579,7 +2730,8 @@ pnature:Patis a owl:NamedIndividual,
     tbl:TFNBGroup "6" .
 
 pnature:Paturage a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Patis,
         pnature:Pature ;
@@ -2589,7 +2741,8 @@ pnature:Paturage a owl:NamedIndividual,
     tbl:TFNBGroup "2" .
 
 pnature:Pature a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Patis,
         pnature:Paturage ;
@@ -2600,7 +2753,8 @@ pnature:Pature a owl:NamedIndividual,
         "6" .
 
 pnature:Verger a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Orchard"@en,
@@ -2608,7 +2762,8 @@ pnature:Verger a owl:NamedIndividual,
     tbl:TFNBGroup "3" .
 
 pnature:Jardin a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:hiddenLabel "J"@fr ;
     skos:inScheme tbl:NatureList ;
@@ -2616,13 +2771,15 @@ pnature:Jardin a owl:NamedIndividual,
         "Jardin"@fr .
 
 pnature:ObjetDAgrement a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ornemental thing"@en,
         "Objet d'agrément"@fr .
 
 pnature:Batiment a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureBatie ;
     skos:hiddenLabel "Bat"@fr,
         "Bt"@fr ;
@@ -2631,7 +2788,8 @@ pnature:Batiment a owl:NamedIndividual,
         "Bâtiment"@fr .
 
 pnature:Plantation a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:TerrainPlante ;
     skos:inScheme tbl:NatureList ;
@@ -2639,14 +2797,16 @@ pnature:Plantation a owl:NamedIndividual,
         "Plantation"@fr .
 
 pnature:NatureBatie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Propriété bâtie"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Build plot nature"@en,
         "Parcelle imposée au titre des propriétés bâties"@fr .
 
 pnature:NatureNonBatie a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:Nature ;
     skos:altLabel "Propriété non bâtie"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Unbuild plot nature"@en,
@@ -2655,7 +2815,8 @@ pnature:NatureNonBatie a owl:NamedIndividual,
 # ----- List of source types -----
 
 srctype:ArticleDeMutation a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Article de mutation" ;
     skos:broader srctype:ZoneDePage ;
     skos:definition "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."@en,
@@ -2665,7 +2826,8 @@ srctype:ArticleDeMutation a owl:NamedIndividual,
         "Article de mutation"@fr .
 
 srctype:CompteFoncier a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Compte foncier" ;
     skos:broader srctype:MatriceCadastrale ;
     skos:definition "A set of parcel records (lines) describing the plots of one or more successive related taxpayers. A land account may correspond ‘physically’ to a folio where the latter describes the details of one, and only one, taxpayer (or a list of successive taxpayers)."@en,
@@ -2675,7 +2837,8 @@ srctype:CompteFoncier a owl:NamedIndividual,
         "Compte foncier"@fr .
 
 srctype:EtatsDeSections_Ap_1822 a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Etats de sections postérieurs à 1822" ;
     skos:broader srctype:EtatsDeSections ;
     skos:definition "Initial registers created after 1822."@en,
@@ -2685,7 +2848,8 @@ srctype:EtatsDeSections_Ap_1822 a owl:NamedIndividual,
         "Etats de sections postérieurs à 1822"@fr .
 
 srctype:EtatsDeSections_Av_1822_Bati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés bâties" ;
     skos:broader srctype:EtatsDeSections_Av_1822 ;
     skos:definition "Extract from an initial register created before 1822, dedicated to the description of built properties."@en,
@@ -2695,7 +2859,8 @@ srctype:EtatsDeSections_Av_1822_Bati a owl:NamedIndividual,
         "Etats de sections antérieurs à 1822 (propriétés bâties)"@fr .
 
 srctype:EtatsDeSections_Av_1822_NonBati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés non bâties" ;
     skos:broader srctype:EtatsDeSections_Av_1822 ;
     skos:definition "Extract from an initial register created before 1822, dedicated to the description of unbuilt properties."@en,
@@ -2705,7 +2870,8 @@ srctype:EtatsDeSections_Av_1822_NonBati a owl:NamedIndividual,
         "Etats de sections antérieurs à 1822 (propriétés non bâties)"@fr .
 
 srctype:EtatsDeSections_Scp_Seine_1835 a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)" ;
     skos:broader srctype:EtatsDeSections ;
     skos:definition "Initial registers relating specifically to the attempt to update the land registry carried out between 1835 and 1845 in the department of Seine."@en,
@@ -2715,7 +2881,8 @@ srctype:EtatsDeSections_Scp_Seine_1835 a owl:NamedIndividual,
         "Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)"@fr .
 
 srctype:FicheInventaire a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Inventaire des archives" ;
     skos:altLabel "Inventaire"@fr ;
     skos:definition "Inventory records describing the contents of the archives held by an archive service."@en,
@@ -2725,7 +2892,8 @@ srctype:FicheInventaire a owl:NamedIndividual,
         "Inventaire des archives"@fr .
 
 srctype:FolioBati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Folio (Bâti)" ;
     skos:broader srctype:Folio ;
     skos:definition "Section dedicated to pland plots subject to tax as built property."@en,
@@ -2735,7 +2903,8 @@ srctype:FolioBati a owl:NamedIndividual,
         "Folio (Bâti)"@fr .
 
 srctype:FolioNonBati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Folio (Non Bâti)" ;
     skos:broader srctype:Folio ;
     skos:definition "Account dedicated to land plots taxed as land without any buildings on it (unbuilt properties)."@en,
@@ -2745,7 +2914,8 @@ srctype:FolioNonBati a owl:NamedIndividual,
         "Folio (Non Bâti)"@fr .
 
 srctype:LigneEtatDeSection a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Ligne de tableau d'états de sections" ;
     skos:broader srctype:ZoneDePage ;
     skos:definition "A row in the main table of a section status register describing a parcel at the time of the cadastral survey’s initialisation."@en,
@@ -2755,7 +2925,8 @@ srctype:LigneEtatDeSection a owl:NamedIndividual,
         "Ligne de tableau d'états de sections"@fr .
 
 srctype:LigneMatrice a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Ligne de tableau d'une matrice" ;
     skos:broader srctype:ZoneDePage ;
     skos:definition "A table row in a folio of a register describing the status of a plot of land."@en,
@@ -2765,7 +2936,8 @@ srctype:LigneMatrice a owl:NamedIndividual,
         "Ligne de tableau d'une matrice"@fr .
 
 srctype:MatriceCadastrale1807_1822_Bati_NonBati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Matrice de rôles des propriétés bâties et non bâties (1807-1822)" ;
     skos:altLabel "Matrice des propriétés bâties et non bâties (1807-1822)"@fr ;
     skos:broader srctype:MatriceCadastrale ;
@@ -2776,7 +2948,8 @@ srctype:MatriceCadastrale1807_1822_Bati_NonBati a owl:NamedIndividual,
         "Matrice de rôles des propriétés bâties et non bâties (1807-1822)"@fr .
 
 srctype:MatriceCadastrale1822_1914_NonBati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Matrice des propriétés non bâties (1822-1914)" ;
     skos:altLabel "Matrice des propriétés foncières (1822-1914)"@fr ;
     skos:broader srctype:MatriceCadastrale ;
@@ -2787,7 +2960,8 @@ srctype:MatriceCadastrale1822_1914_NonBati a owl:NamedIndividual,
         "Matrice des propriétés non bâties (1822-1914)"@fr .
 
 srctype:MatriceCadastrale1882_1911_Bati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Matrice des propriétés bâties (1882-1911)" ;
     skos:broader srctype:MatriceCadastrale ;
     skos:definition "Mutation register used from 1882 onwards to describe built properties."@en,
@@ -2797,7 +2971,8 @@ srctype:MatriceCadastrale1882_1911_Bati a owl:NamedIndividual,
         "Matrice des propriétés bâties (1882-1911)"@fr .
 
 srctype:MatriceCadastrale1911_Renovation_Bati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Matrice des propriétés bâties (1911-rénovation)" ;
     skos:broader srctype:MatriceCadastrale ;
     skos:definition "Mutation register used from 1911 onwards to describe built properties."@en,
@@ -2807,7 +2982,8 @@ srctype:MatriceCadastrale1911_Renovation_Bati a owl:NamedIndividual,
         "Matrice des propriétés bâties (1911-rénovation)"@fr .
 
 srctype:MatriceCadastrale1914_Renovation_NonBati a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Matrice des propriétés non bâties (1914-rénovation)" ;
     skos:broader srctype:MatriceCadastrale ;
     skos:definition "Mutation register used from 1914 onwards to describe unbuilt properties."@en,
@@ -2817,7 +2993,8 @@ srctype:MatriceCadastrale1914_Renovation_NonBati a owl:NamedIndividual,
         "Matrice des propriétés non bâties (1914-rénovation)"@fr .
 
 srctype:Ouvrage a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Ouvrage" ;
     skos:definition "Publication (book, article)."@en,
         "Ouvrage (livre, article)."@fr ;
@@ -2826,7 +3003,8 @@ srctype:Ouvrage a owl:NamedIndividual,
         "Ouvrage"@fr .
 
 srctype:PlanGeoreference a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Plan vectorisé" ;
     skos:broader srctype:Plan ;
     skos:definition "Georeferenced map (manually or automatically)."@en,
@@ -2836,7 +3014,8 @@ srctype:PlanGeoreference a owl:NamedIndividual,
         "Plan vectorisé"@fr .
 
 srctype:PlanParcellaireIssuDAtlas a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Plan parcellaire issu d'atlas" ;
     skos:broader srctype:PlanParcellaireFinal ;
     skos:definition "Final version of a cadastral index map taken from a municipal or cantonal atlas."@en,
@@ -2846,7 +3025,8 @@ srctype:PlanParcellaireIssuDAtlas a owl:NamedIndividual,
         "Plan parcellaire issu d'atlas"@fr .
 
 srctype:PlanParcellaireMinute a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Plan parcellaire : minute" ;
     skos:broader srctype:PlanParcellaire ;
     skos:definition "Draft version of a cadastral index map; may include building outlines, working notes or provisional plot numbering."@en,
@@ -2856,7 +3036,8 @@ srctype:PlanParcellaireMinute a owl:NamedIndividual,
         "Plan parcellaire : minute"@fr .
 
 srctype:PlanVectorise a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Plan géoréférencé" ;
     skos:broader srctype:Plan ;
     skos:definition "Vectorised plan (manually or automatically)."@en,
@@ -2866,7 +3047,8 @@ srctype:PlanVectorise a owl:NamedIndividual,
         "Plan géoréférencé"@fr .
 
 srctype:TableauAssemblage a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Tableau d'assemblage" ;
     skos:broader srctype:Plan ;
     skos:definition "A map drawn to the scale of a municipality, showing the compilation of cadastral index maps detailing the plots within the municipality."@en,
@@ -2876,7 +3058,8 @@ srctype:TableauAssemblage a owl:NamedIndividual,
         "Tableau d'assemblage"@fr .
 
 srctype:PageDeRegistre a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Page de registre cadastral" ;
     skos:broader srctype:RegistreCadastral ;
     skos:definition "Page taken from a register."@en,
@@ -2886,7 +3069,8 @@ srctype:PageDeRegistre a owl:NamedIndividual,
         "Page de registre cadastral"@fr .
 
 srctype:PlanParcellaireFinal a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Plan parcellaire final" ;
     skos:broader srctype:PlanParcellaire ;
     skos:definition "Final version of a cadastral index map."@en,
@@ -2896,17 +3080,19 @@ srctype:PlanParcellaireFinal a owl:NamedIndividual,
         "Plan parcellaire final"@fr .
 
 srctype:Cadastre a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Cadastre" ;
-    skos:altLabel "Cadastre napoléonien"@fr ;
+    skos:altLabel "Corpus cadastral"@fr ;
     skos:definition "A land registry comprising maps and registers, used for a certain period to calculate and collect property tax on plots of land within a municipality."@en,
         "Corpus cadastral composé de plans et de registres, utilisé pendant une certaine période pour le calcul et le prélèvement de l'impôt foncier des parcelles d'une commune."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Land registry"@en,
+    skos:prefLabel "Land registry corpus"@en,
         "Cadastre"@fr .
 
 srctype:EtatsDeSections_Av_1822 a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Etats de sections antérieurs à 1822" ;
     skos:broader srctype:EtatsDeSections ;
     skos:definition "Initial register created before 1822. Sometimes, it contains a section describing the unbuilt plots and a section describing the buildings."@en,
@@ -2916,7 +3102,8 @@ srctype:EtatsDeSections_Av_1822 a owl:NamedIndividual,
         "Etats de sections antérieurs à 1822"@fr .
 
 srctype:Folio a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Folio" ;
     skos:altLabel "Article"@fr,
         "Case"@fr ;
@@ -2928,7 +3115,8 @@ srctype:Folio a owl:NamedIndividual,
         "Folio"@fr .
 
 srctype:PlanParcellaire a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Plan parcellaire" ;
     skos:broader srctype:Plan ;
     skos:definition "A map showing the lant plots within a section of a municipality (an entire section or part of a section), drawn to scales ranging from 1:1,250 to 1:5,000."@en,
@@ -2938,7 +3126,8 @@ srctype:PlanParcellaire a owl:NamedIndividual,
         "Plan parcellaire"@fr .
 
 srctype:EtatsDeSections a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Etats de sections" ;
     skos:broader srctype:RegistreCadastral ;
     skos:definition "Initial register detailing the initial status of plots within a municipality on a given date for a specific cadastral survey, prior to the completion of a cadastral map."@en,
@@ -2948,7 +3137,8 @@ srctype:EtatsDeSections a owl:NamedIndividual,
         "Etats de sections"@fr .
 
 srctype:RegistreCadastral a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Registre cadastral" ;
     skos:broader srctype:Cadastre ;
     skos:definition "A register forming part of the land registry records."@en,
@@ -2958,7 +3148,8 @@ srctype:RegistreCadastral a owl:NamedIndividual,
         "Registre cadastral"@fr .
 
 srctype:Plan a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Plan" ;
     skos:broader srctype:Cadastre ;
     skos:definition "Map forming part of the land registry records."@en,
@@ -2968,7 +3159,8 @@ srctype:Plan a owl:NamedIndividual,
         "Plan"@fr .
 
 srctype:ZoneDePage a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Zone située dans une page de registre cadastral" ;
     skos:broader srctype:PageDeRegistre ;
     skos:definition "An area within a registry page."@en,
@@ -2978,7 +3170,8 @@ srctype:ZoneDePage a owl:NamedIndividual,
         "Zone située dans une page de registre cadastral"@fr .
 
 srctype:MatriceCadastrale a owl:NamedIndividual,
-        skos:Concept ;
+        skos:Concept,
+        tbl:SourceType ;
     rdfs:label "Matrice cadastrale" ;
     skos:broader srctype:RegistreCadastral ;
     skos:definition "A register containing all changes affecting the plots during its period of validity."@en,
