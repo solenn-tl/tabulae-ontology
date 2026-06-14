@@ -979,8 +979,8 @@ xsd:date rdf:type rdfs:Datatype .
 :TFNBGroup rdf:type owl:DatatypeProperty ;
            rdfs:domain owl:Thing ;
            rdfs:range xsd:string ;
-           rdfs:comment "Group of TFNB (Taxe Foncière sur les Propriétés Non Bâties) of a plot, as indicated in cadastral documents."@en ,
-                        "Groupe de TFNB (Taxe Foncière sur les Propriétés Non Bâties) d'une parcelle, tel qu'indiqué dans les documents cadastraux."@fr ;
+           rdfs:comment "Group of TFNB (Taxe Foncière sur les Propriétés Non Bâties) of a plot, as indicated in modern cadastral documents. The table who ispired this property is available at <a href='https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812'>this URL</a>"@en ,
+                        "Groupe de TFNB (Taxe Foncière sur les Propriétés Non Bâties) d'une parcelle, tel qu'indiqué dans les documents cadastraux. La table utilisée est disponible <a href='https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812'>cette URL</a>."@fr ;
            rdfs:label "TFNB group"@en ,
                       "groupe TFNB"@fr ;
            rdfs:seeAlso <https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812> ;

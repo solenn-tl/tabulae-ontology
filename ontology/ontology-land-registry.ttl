@@ -1042,7 +1042,8 @@ tbl:taxpayerTitle a owl:DatatypeProperty ;
 
 tbl:hasNumFolio a owl:DatatypeProperty ;
     owl:deprecated true ;
-    owl:backwardCompatibleWith tbl:hasFolioNumber .
+    owl:backwardCompatibleWith tbl:hasFolioNumber ;
+    rdfs:replacedBy tbl:hasFolioNumber .
 
 tbl:hasFolioNumber a owl:DatatypeProperty ;
     rdfs:domain [ a owl:Class ;
@@ -1057,7 +1058,8 @@ tbl:hasFolioNumber a owl:DatatypeProperty ;
 
 tbl:hasAlternativeNumFolio a owl:DatatypeProperty ;
     owl:deprecated true ;
-    owl:backwardCompatibleWith tbl:hasAlternativeFolioNumber .
+    owl:backwardCompatibleWith tbl:hasAlternativeFolioNumber ;
+    rdfs:replacedBy tbl:hasAlternativeFolioNumber .
 
 tbl:hasAlternativeFolioNumber a owl:DatatypeProperty ;
     rdfs:domain [ a owl:Class ;
@@ -1105,8 +1107,8 @@ tbl:TFNBGroup a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     skos:prefLabel "TFNB group"@en, "groupe TFNB"@fr;
     rdfs:label "TFNB group"@en, "groupe TFNB"@fr;
-    rdfs:comment "Groupe de TFNB (Taxe Foncière sur les Propriétés Non Bâties) d'une parcelle, tel qu'indiqué dans les documents cadastraux."@fr,
-                 "Group of TFNB (Taxe Foncière sur les Propriétés Non Bâties) of a plot, as indicated in cadastral documents."@en;
+    rdfs:comment "Groupe de TFNB (Taxe Foncière sur les Propriétés Non Bâties) d'une parcelle, tel qu'indiqué dans les documents cadastraux. La table utilisée est disponible <a href='https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812'>cette URL</a>."@fr,
+                 "Group of TFNB (Taxe Foncière sur les Propriétés Non Bâties) of a plot, as indicated in modern cadastral documents. The table who ispired this property is available at <a href='https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812'>this URL</a>"@en;
     rdfs:seeAlso <https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812>.
 
 tbl:URL a owl:DatatypeProperty ;

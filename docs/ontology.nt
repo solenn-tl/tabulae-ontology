@@ -946,8 +946,8 @@ _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Group of TFNB (Taxe Foncière sur les Propriétés Non Bâties) of a plot, as indicated in cadastral documents."@en .
-<https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Groupe de TFNB (Taxe Foncière sur les Propriétés Non Bâties) d'une parcelle, tel qu'indiqué dans les documents cadastraux."@fr .
+<https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Group of TFNB (Taxe Foncière sur les Propriétés Non Bâties) of a plot, as indicated in modern cadastral documents. The table who ispired this property is available at <a href='https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812'>this URL</a>"@en .
+<https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Groupe de TFNB (Taxe Foncière sur les Propriétés Non Bâties) d'une parcelle, tel qu'indiqué dans les documents cadastraux. La table utilisée est disponible <a href='https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812'>cette URL</a>."@fr .
 <https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#label> "TFNB group"@en .
 <https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#label> "groupe TFNB"@fr .
 <https://w3id.org/tabulae#TFNBGroup> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812> .
