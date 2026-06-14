@@ -3362,8 +3362,8 @@ anclass:MATArticleDeMutation a owl:NamedIndividual,
     skos:definition "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en,
         "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "List of sucessive taxpayers"@en,
-        "Liste de contribuables sucessifs"@fr .
+    skos:prefLabel "List of successive taxpayers"@en,
+        "Liste de contribuables successifs"@fr .
 
 anclass:MATCompteFoncier a owl:NamedIndividual,
         skos:Concept,
