@@ -382,16 +382,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                 "is trace of"@en .
 
 
-###  https://w3id.org/tabulae#hasAlternativeFolioNumber
-:hasAlternativeFolioNumber rdf:type owl:ObjectProperty ;
-                           owl:inverseOf :isAlternativeFolioNumberOf ;
-                           rdfs:domain [ rdf:type owl:Class ;
-                                         owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
-                                                       <https://www.ica.org/standards/RiC/ontology#RecordResource>
-                                                     )
-                                       ] .
-
-
 ###  https://w3id.org/tabulae#hasClass
 :hasClass rdf:type owl:ObjectProperty ;
           rdfs:domain owl:Thing ;
@@ -432,16 +422,6 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                     rdfs:label "a pour folio équivalent"@fr ,
                                "has equivalent folio"@en .
-
-
-###  https://w3id.org/tabulae#hasFolioNumber
-:hasFolioNumber rdf:type owl:ObjectProperty ;
-                owl:inverseOf :isFolioNumberOf ;
-                rdfs:domain [ rdf:type owl:Class ;
-                              owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
-                                            <https://www.ica.org/standards/RiC/ontology#RecordResource>
-                                          )
-                            ] .
 
 
 ###  https://w3id.org/tabulae#hasNamedEntity
@@ -546,17 +526,6 @@ xsd:date rdf:type rdfs:Datatype .
                                       "is address (entity) of a taxpayer"@en .
 
 
-###  https://w3id.org/tabulae#isAlternativeFolioNumberOf
-:isAlternativeFolioNumberOf rdf:type owl:ObjectProperty ;
-                            owl:inverseOf :hasAlternativeNumFolio ;
-                            rdfs:domain xsd:string ;
-                            rdfs:range [ rdf:type owl:Class ;
-                                         owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
-                                                       <https://www.ica.org/standards/RiC/ontology#RecordResource>
-                                                     )
-                                       ] .
-
-
 ###  https://w3id.org/tabulae#isClassOf
 :isClassOf rdf:type owl:ObjectProperty ;
            owl:inverseOf :hasClass ;
@@ -584,17 +553,6 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
              rdfs:label "est un événement de type"@fr ,
                         "is event type"@en .
-
-
-###  https://w3id.org/tabulae#isFolioNumberOf
-:isFolioNumberOf rdf:type owl:ObjectProperty ;
-                 owl:inverseOf :hasNumFolio ;
-                 rdfs:domain xsd:string ;
-                 rdfs:range [ rdf:type owl:Class ;
-                              owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
-                                            <https://www.ica.org/standards/RiC/ontology#RecordResource>
-                                          )
-                            ] .
 
 
 ###  https://w3id.org/tabulae#isMentionnedIn
@@ -701,22 +659,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                              "is taxpayer of attribute version"@en .
 
 
-###  https://w3id.org/tabulae#isTranscriptionOf
-:isTranscriptionOf rdf:type owl:ObjectProperty ;
-                   rdfs:domain rdfs:Literal ;
-                   rdfs:range [ rdf:type owl:Class ;
-                                owl:unionOf ( owl:Thing
-                                              <https://www.ica.org/standards/RiC/ontology#Instantiation>
-                                            )
-                              ] ;
-                   rdfs:comment "Links an area or an entity to its transcription obtained automatically or manually from a (scanned) document."@en ,
-                                "Relie une zone ou une entité à sa transcription obtenue automatiquement ou manuellement à partir d'un document (numérisé)."@fr ;
-                   rdfs:label "est la transcription de"@en ,
-                              "is transcription of"@fr ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "est la transcription de"@en ,
-                                                                   "is transcription of"@fr .
-
-
 ###  https://w3id.org/tabulae#mentions
 :mentions rdf:type owl:ObjectProperty ;
           owl:inverseOf :isMentionnedIn ;
@@ -799,16 +741,6 @@ xsd:date rdf:type rdfs:Datatype .
                           rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                           rdfs:label "contribuable a pour adresse (entité)"@fr ,
                                      "taxpayer has address (entity)"@en .
-
-
-###  https://w3id.org/tabulae#transcription
-:transcription rdf:type owl:ObjectProperty ;
-               owl:inverseOf :isTranscriptionOf ;
-               rdfs:domain [ rdf:type owl:Class ;
-                             owl:unionOf ( owl:Thing
-                                           <https://www.ica.org/standards/RiC/ontology#Instantiation>
-                                         )
-                           ] .
 
 
 ###  https://www.ica.org/standards/RiC/ontology#followsInTime
@@ -1028,6 +960,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.wikidata.org/prop/P8422
 <http://www.wikidata.org/prop/P8422> rdf:type owl:DatatypeProperty ;
+                                     rdfs:isDefinedBy <http://www.wikidata.org/prop/> ;
                                      rdfs:label "identifiant Ldh/EHESS/Cassini"@fr .
 
 
@@ -1079,20 +1012,42 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#hasAlternativeFolioNumber
 :hasAlternativeFolioNumber rdf:type owl:DatatypeProperty ;
-                           rdfs:range xsd:string .
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
+                                                       <https://www.ica.org/standards/RiC/ontology#RecordResource>
+                                                     )
+                                       ] ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Alternative folio number (e.g. former number)"@en ,
+                                        "Numéro de folio alternatif (ex: ancien numéro)"@fr ;
+                           rdfs:label "a pour numéro de folio alternatif"@fr ,
+                                      "has alternative folio number"@en .
 
 
 ###  https://w3id.org/tabulae#hasAlternativeNumFolio
-:hasAlternativeNumFolio rdf:type owl:DatatypeProperty .
+:hasAlternativeNumFolio rdf:type owl:DatatypeProperty ;
+                        owl:backwardCompatibleWith :hasAlternativeFolioNumber ;
+                        owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/tabulae#hasFolioNumber
 :hasFolioNumber rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:string .
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
+                                            <https://www.ica.org/standards/RiC/ontology#RecordResource>
+                                          )
+                            ] ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Numéro de folio (associé à une page entière ou à une partie de page) "@fr ,
+                             "folio number (associated to a mutation register page or part of page)"@en ;
+                rdfs:label "a pour numéro de folio"@fr ,
+                           "has folio number"@en .
 
 
 ###  https://w3id.org/tabulae#hasNumFolio
-:hasNumFolio rdf:type owl:DatatypeProperty .
+:hasNumFolio rdf:type owl:DatatypeProperty ;
+             owl:backwardCompatibleWith :hasFolioNumber ;
+             owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/tabulae#imageURL
@@ -1123,14 +1078,6 @@ xsd:date rdf:type rdfs:Datatype .
                                    "This property allows to indicate the index of the last character of a substring. Index starts from 0."@en ;
                       rdfs:label "index du dernier caractère"@fr ,
                                  "index of last character"@en .
-
-
-###  https://w3id.org/tabulae#isAlternativeFolioNumberOf
-:isAlternativeFolioNumberOf rdf:type owl:DatatypeProperty .
-
-
-###  https://w3id.org/tabulae#isFolioNumberOf
-:isFolioNumberOf rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/tabulae#lineOrderInArea
@@ -1293,7 +1240,14 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#transcription
 :transcription rdf:type owl:DatatypeProperty ;
-               rdfs:range rdfs:Literal .
+               rdfs:domain owl:Thing ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "Transcription d'une zone ou d'une entité obtenue automatiquement ou manuellement à partir d'un document (numérisé)."@fr ,
+                            "Transcription of an area or an entity obtained automatically or manually from a (scanned) document."@en ;
+               rdfs:label "transcription"@en ,
+                          "transcription"@fr ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "transcription"@en ,
+                                                               "transcription"@fr .
 
 
 ###  https://w3id.org/tabulae#xywhCoordinates
@@ -1324,8 +1278,7 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://purl.org/vocommons/voaf#Vocabulary
-<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class ;
-                                            rdfs:isDefinedBy <http://purl.org/vocommons/voaf#> .
+<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
@@ -5259,46 +5212,6 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 rdfs:seeAlso rdfs:isDefinedBy rdfs: .
-
-
-:hasAlternativeFolioNumber rdfs:comment "Alternative folio number (e.g. former number)"@en ,
-                                        "Numéro de folio alternatif (ex: ancien numéro)"@fr ;
-                           rdfs:label "a pour numéro de folio alternatif"@fr ,
-                                      "has alternative folio number"@en .
-
-
-:hasAlternativeNumFolio owl:backwardCompatibleWith :hasAlternativeFolioNumber ;
-                        owl:deprecated "true"^^xsd:boolean .
-
-
-:hasFolioNumber rdfs:comment "Numéro de folio (associé à une page entière ou à une partie de page) "@fr ,
-                             "folio number (associated to a mutation register page or part of page)"@en ;
-                rdfs:label "a pour numéro de folio"@fr ,
-                           "has folio number"@en .
-
-
-:hasNumFolio owl:backwardCompatibleWith :hasFolioNumber ;
-             owl:deprecated "true"^^xsd:boolean .
-
-
-:isAlternativeFolioNumberOf rdfs:comment "Alternative folio number (e.g. former number)"@en ,
-                                         "Numéro de folio alternatif (ex: ancien numéro)"@fr ;
-                            rdfs:label "est le numéro de folio alternatif de"@fr ,
-                                       "is alternative folio number of"@en .
-
-
-:isFolioNumberOf rdfs:comment "Numéro de folio (associé à une page entière ou à une partie de page) "@fr ,
-                              "folio number (associated to a mutation register page or part of page)"@en ;
-                 rdfs:label "est le numéro de folio de"@fr ,
-                            "is folio number of"@en .
-
-
-:transcription rdfs:comment "Transcription d'une zone ou d'une entité obtenue automatiquement ou manuellement à partir d'un document (numérisé)."@fr ,
-                            "Transcription of an area or an entity obtained automatically or manually from a (scanned) document."@en ;
-               rdfs:label "transcription"@en ,
-                          "transcription"@fr ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "transcription"@en ,
-                                                               "transcription"@fr .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

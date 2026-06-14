@@ -415,10 +415,6 @@ rico:Instantiation a owl:Class ;
          time and space."""@en ;
     rdfs:isDefinedBy rico: .
 
-#### Other 
-voaf:Vocabulary a owl:Class ;
-    rdfs:isDefinedBy voaf: .
-
 #################################################################
 #    Object Properties
 #################################################################
@@ -1057,20 +1053,7 @@ tbl:hasFolioNumber a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:comment "Numéro de folio (associé à une page entière ou à une partie de page) "@fr, "folio number (associated to a mutation register page or part of page)"@en ;
     rdfs:label "a pour numéro de folio"@fr,
-               "has folio number"@en ;
-    owl:inverseOf tbl:isFolioNumberOf.
-
-tbl:isFolioNumberOf a owl:DatatypeProperty ;
-    rdfs:domain xsd:string ;
-    rdfs:range [ a owl:Class ;
-                    owl:unionOf ( rico:Instantiation
-                                  rico:RecordResource
-                                )
-                  ] ;
-    rdfs:comment "Numéro de folio (associé à une page entière ou à une partie de page) "@fr, "folio number (associated to a mutation register page or part of page)"@en ;
-    rdfs:label "est le numéro de folio de"@fr,
-               "is folio number of"@en ;
-    owl:inverseOf tbl:hasNumFolio.
+               "has folio number"@en .
 
 tbl:hasAlternativeNumFolio a owl:DatatypeProperty ;
     owl:deprecated true ;
@@ -1084,43 +1067,15 @@ tbl:hasAlternativeFolioNumber a owl:DatatypeProperty ;
                   ] ;
     rdfs:range xsd:string ;
     rdfs:comment "Numéro de folio alternatif (ex: ancien numéro)"@fr, "Alternative folio number (e.g. former number)"@en;
-    rdfs:label "a pour numéro de folio alternatif"@fr, "has alternative folio number"@en ;
-    owl:inverseOf tbl:isAlternativeFolioNumberOf.
-
-tbl:isAlternativeFolioNumberOf a owl:DatatypeProperty ;
-    rdfs:domain xsd:string ;
-    rdfs:range [ a owl:Class ;
-                    owl:unionOf ( rico:Instantiation
-                                  rico:RecordResource
-                                )
-                  ] ;
-    rdfs:comment "Numéro de folio alternatif (ex: ancien numéro)"@fr, "Alternative folio number (e.g. former number)"@en;
-    rdfs:label "est le numéro de folio alternatif de"@fr, "is alternative folio number of"@en ;
-    owl:inverseOf tbl:hasAlternativeNumFolio.
+    rdfs:label "a pour numéro de folio alternatif"@fr, "has alternative folio number"@en .
 
 tbl:transcription a owl:DatatypeProperty ;
-  rdfs:domain [ a owl:Class ;
-        owl:unionOf ( owl:Thing 
-                      rico:Instantiation )
-    ] ;
+  rdfs:domain owl:Thing ;
   rdfs:range rdfs:Literal ;
   rdfs:label "transcription"@en, "transcription"@fr;
   skos:prefLabel "transcription"@en, "transcription"@fr ;
   rdfs:comment "Transcription d'une zone ou d'une entité obtenue automatiquement ou manuellement à partir d'un document (numérisé)."@fr,
-                "Transcription of an area or an entity obtained automatically or manually from a (scanned) document."@en;
-  owl:inverseOf tbl:isTranscriptionOf.
-
-tbl:isTranscriptionOf a owl:ObjectProperty ;
-  rdfs:domain rdfs:Literal ;
-  rdfs:range [ a owl:Class ;
-        owl:unionOf ( owl:Thing 
-                      rico:Instantiation )
-    ] ;
-  rdfs:label "est la transcription de"@en, "is transcription of"@fr;
-  skos:prefLabel "est la transcription de"@en, "is transcription of"@fr ;
-  rdfs:comment "Relie une zone ou une entité à sa transcription obtenue automatiquement ou manuellement à partir d'un document (numérisé)."@fr,
-                "Links an area or an entity to its transcription obtained automatically or manually from a (scanned) document."@en;
-  owl:inverseOf tbl:transcription.
+                "Transcription of an area or an entity obtained automatically or manually from a (scanned) document."@en.
 
 tbl:coordinatesInImageSystem a owl:DatatypeProperty ;
   rdfs:domain rico:Instantiation ;
@@ -1167,7 +1122,8 @@ dcterms:identifier a owl:DatatypeProperty;
     rdfs:isDefinedBy dcterms: .
 
 p:P8422 a owl:DatatypeProperty;
-    rdfs:label "identifiant Ldh/EHESS/Cassini"@fr.
+    rdfs:label "identifiant Ldh/EHESS/Cassini"@fr;
+    rdfs:isDefinedBy p: .
 
 rico:identifier a owl:DatatypeProperty ;
     rdfs:isDefinedBy rico: .
