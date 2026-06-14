@@ -20,7 +20,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix peg: <https://w3id.org/PeGazUs#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix pwikidata: <https://www.wikidata.org/wiki/Property:> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
