@@ -2018,7 +2018,7 @@
     "@value" : "est une entité nommée de type"
   }, {
     "@language" : "en",
-    "@value" : "is named entity of type"
+    "@value" : "is named entity type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/tabulae#AnnotationClass"
@@ -2746,7 +2746,7 @@
     "@value" : "Page vide"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/CrossedOut",
@@ -2864,7 +2864,7 @@
     "@value" : "Section page cover"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary",
@@ -2898,7 +2898,7 @@
     "@value" : "Récapitulatif intermédiaire"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary",
@@ -2932,7 +2932,7 @@
     "@value" : "Summary"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/ETSTab",
@@ -2946,7 +2946,7 @@
     "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/PageClasses"
   } ],
   "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/ETSTabP1"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2966,7 +2966,7 @@
     "@value" : "Tableau principal d'état de section"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1",
@@ -2980,7 +2980,7 @@
     "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/PageClasses"
   } ],
   "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/ETSTab"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/ETSTab"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3003,7 +3003,7 @@
     "@value" : "Tableau principal d'état de section (première page si double page)"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2",
@@ -3037,7 +3037,7 @@
     "@value" : "Tableau principal d'état de section (seconde page si double page)"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/EndTime",
@@ -3102,7 +3102,7 @@
     "@value" : "Table alphabétique"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation",
@@ -3127,10 +3127,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "List of sucessive taxpayers"
+    "@value" : "List of successive taxpayers"
   }, {
     "@language" : "fr",
-    "@value" : "Liste de contribuables sucessifs"
+    "@value" : "Liste de contribuables successifs"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier",
@@ -3196,7 +3196,7 @@
     "@value" : "Page correspondant à un ou plusieurs folios"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes",
@@ -3308,7 +3308,7 @@
     "@value" : "Types of simple pages"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Page"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/PassedTo",
@@ -3667,7 +3667,7 @@
     "@value" : "Activité"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress",
@@ -3691,7 +3691,7 @@
     "@value" : "Adresse"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName",
@@ -3715,7 +3715,7 @@
     "@value" : "Nom de naissance"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus",
@@ -3739,7 +3739,7 @@
     "@value" : "Statut familial"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames",
@@ -3763,7 +3763,7 @@
     "@value" : "Prénom.s"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName",
@@ -3787,7 +3787,7 @@
     "@value" : "Nom de famille"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerNumber",
@@ -3842,7 +3842,7 @@
     "@value" : "Raison sociale"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames",
@@ -3866,7 +3866,7 @@
     "@value" : "Prénom.s de l'époux/épouse ou des enfants"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle",
@@ -3890,7 +3890,7 @@
     "@value" : "Titre"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TextStyles",

@@ -469,7 +469,7 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#isNamedEntityType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tabulae#NamedEntity> .
 <https://w3id.org/tabulae#isNamedEntityType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tabulae#AnnotationClass> .
 <https://w3id.org/tabulae#isNamedEntityType> <http://www.w3.org/2000/01/rdf-schema#label> "est une entité nommée de type"@fr .
-<https://w3id.org/tabulae#isNamedEntityType> <http://www.w3.org/2000/01/rdf-schema#label> "is named entity of type"@en .
+<https://w3id.org/tabulae#isNamedEntityType> <http://www.w3.org/2000/01/rdf-schema#label> "is named entity type"@en .
 # 
 # https://w3id.org/tabulae#isOverlappedByVersionInSRCOrder
 <https://w3id.org/tabulae#isOverlappedByVersionInSRCOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1264,7 +1264,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/BlankPage> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/BlankPage> <http://www.w3.org/2004/02/skos/core#prefLabel> "Blank page"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/BlankPage> <http://www.w3.org/2004/02/skos/core#prefLabel> "Page vide"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/BlankPage> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/BlankPage> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/CrossedOut
 <https://w3id.org/tabulae/id/codes/annotationClass/CrossedOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1310,7 +1310,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSCover> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSCover> <http://www.w3.org/2004/02/skos/core#prefLabel> "Couverture décrivant une section dans un registre d'états de sections"@fr .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSCover> <http://www.w3.org/2004/02/skos/core#prefLabel> "Section page cover"@en .
-<https://w3id.org/tabulae/id/codes/annotationClass/ETSCover> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/ETSCover> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1323,7 +1323,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary> <http://www.w3.org/2004/02/skos/core#prefLabel> "Intermediate summary"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary> <http://www.w3.org/2004/02/skos/core#prefLabel> "Récapitulatif intermédiaire"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1336,34 +1336,34 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary> <http://www.w3.org/2004/02/skos/core#prefLabel> "Résumé final d'une section"@fr .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary> <http://www.w3.org/2004/02/skos/core#prefLabel> "Summary"@en .
-<https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/ETSTab
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tabulae#AnnotationClassType> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> .
-<https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/tabulae/id/codes/specialCellValue/ETSTabP1> .
+<https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#definition> "Main table page of an initial register containing a description of the plots listed in ascending order by number."@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#definition> "Page du tableau principal d'un registre d'états de sections contenant la description des parcelles listées dans l'ordre croissant des numéros."@fr .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#prefLabel> "Main table in an initial register"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tableau principal d'état de section"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tabulae#AnnotationClassType> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> .
-<https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/tabulae/id/codes/specialCellValue/ETSTab> .
+<https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#definition> "First page of the main table of an initial register containing a description of the plots listed in ascending order by number. Used only when the main table is display in a double-page. Mostly used for registers created before 1822."@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#definition> "Première page (sur deux) du tableau principal d'un registre d'état de sections contenant la description des parcelles listées dans l'ordre croissant de numéro identifiant. Classe utilisée uniquement quand le tableau principal couvre une double page. Ce type de page est principalement visible dans des registres créés avant 1822."@fr .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#hiddenLabel> "ets_tab_p1" .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#prefLabel> "First page of a main table in an initial register"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tableau principal d'état de section (première page si double page)"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1376,7 +1376,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2> <http://www.w3.org/2004/02/skos/core#prefLabel> "Second page of a main table in an initial register"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tableau principal d'état de section (seconde page si double page)"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/EndTime
 <https://w3id.org/tabulae/id/codes/annotationClass/EndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1401,7 +1401,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Alphabetical table"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Table alphabétique"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation
 <https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1411,8 +1411,8 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#definition> "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#definition> "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "List of sucessive taxpayers"@en .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste de contribuables sucessifs"@fr .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "List of successive taxpayers"@en .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste de contribuables successifs"@fr .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier
 <https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1437,7 +1437,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/MATMainTable> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATMainTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Page containing property accounts"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATMainTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Page correspondant à un ou plusieurs folios"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATMainTable> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATMainTable> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes
 <https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1481,7 +1481,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> <http://www.w3.org/2004/02/skos/core#prefLabel> "Types de pages"@fr .
 <https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> <http://www.w3.org/2004/02/skos/core#prefLabel> "Types of simple pages"@en .
-<https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+<https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/PassedTo
 <https://w3id.org/tabulae/id/codes/annotationClass/PassedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1621,7 +1621,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerActivity> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerActivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Activity"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerActivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Activité"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerActivity> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerActivity> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1631,7 +1631,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Address"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adresse"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1641,7 +1641,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Birth name"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nom de naissance"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1651,7 +1651,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "Family status"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "Statut familial"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1661,7 +1661,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames> <http://www.w3.org/2004/02/skos/core#prefLabel> "First name.s"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames> <http://www.w3.org/2004/02/skos/core#prefLabel> "Prénom.s"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1671,7 +1671,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Last name"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nom de famille"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerNumber
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1693,7 +1693,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerOrganisationName> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerOrganisationName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisation name"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerOrganisationName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Raison sociale"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerOrganisationName> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerOrganisationName> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1703,7 +1703,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames> <http://www.w3.org/2004/02/skos/core#prefLabel> "First name.s of the spouse or children"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames> <http://www.w3.org/2004/02/skos/core#prefLabel> "Prénom.s de l'époux/épouse ou des enfants"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1713,7 +1713,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle> <http://www.w3.org/2004/02/skos/core#prefLabel> "Title"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle> <http://www.w3.org/2004/02/skos/core#prefLabel> "Titre"@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+<https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/TextStyles
 <https://w3id.org/tabulae/id/codes/annotationClass/TextStyles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

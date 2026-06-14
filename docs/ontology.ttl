@@ -517,7 +517,7 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:domain :NamedEntity ;
                    rdfs:range :AnnotationClass ;
                    rdfs:label "est une entité nommée de type"@fr ,
-                              "is named entity of type"@en .
+                              "is named entity type"@en .
 
 
 ###  https://w3id.org/tabulae#isOverlappedByVersionInSRCOrder
@@ -1363,7 +1363,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Blank page"@en ,
                                                                                                               "Page vide"@fr ;
-                                                              <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                              <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/CrossedOut
@@ -1413,7 +1413,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Couverture décrivant une section dans un registre d'états de sections"@fr ,
                                                                                                              "Section page cover"@en ;
-                                                             <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                             <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/ETSIntermediateSummary
@@ -1427,7 +1427,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Intermediate summary"@en ,
                                                                                                                            "Récapitulatif intermédiaire"@fr ;
-                                                                           <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                                           <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/ETSSummary
@@ -1441,7 +1441,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Résumé final d'une section"@fr ,
                                                                                                                "Summary"@en ;
-                                                               <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                               <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/ETSTab
@@ -1449,13 +1449,13 @@ xsd:date rdf:type rdfs:Datatype .
                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                     :AnnotationClassType ;
                                                            <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> ;
-                                                           <http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/tabulae/id/codes/specialCellValue/ETSTabP1> ;
+                                                           <http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1> ;
                                                            <http://www.w3.org/2004/02/skos/core#definition> "Main table page of an initial register containing a description of the plots listed in ascending order by number."@en ,
                                                                                                             "Page du tableau principal d'un registre d'états de sections contenant la description des parcelles listées dans l'ordre croissant des numéros."@fr ;
                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Main table in an initial register"@en ,
                                                                                                            "Tableau principal d'état de section"@fr ;
-                                                           <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                           <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1
@@ -1463,14 +1463,14 @@ xsd:date rdf:type rdfs:Datatype .
                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                       :AnnotationClassType ;
                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/annotationClass/PageClasses> ;
-                                                             <http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/tabulae/id/codes/specialCellValue/ETSTab> ;
+                                                             <http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/tabulae/id/codes/annotationClass/ETSTab> ;
                                                              <http://www.w3.org/2004/02/skos/core#definition> "First page of the main table of an initial register containing a description of the plots listed in ascending order by number. Used only when the main table is display in a double-page. Mostly used for registers created before 1822."@en ,
                                                                                                               "Première page (sur deux) du tableau principal d'un registre d'état de sections contenant la description des parcelles listées dans l'ordre croissant de numéro identifiant. Classe utilisée uniquement quand le tableau principal couvre une double page. Ce type de page est principalement visible dans des registres créés avant 1822."@fr ;
                                                              <http://www.w3.org/2004/02/skos/core#hiddenLabel> "ets_tab_p1" ;
                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "First page of a main table in an initial register"@en ,
                                                                                                              "Tableau principal d'état de section (première page si double page)"@fr ;
-                                                             <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                             <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP2
@@ -1484,7 +1484,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Second page of a main table in an initial register"@en ,
                                                                                                              "Tableau principal d'état de section (seconde page si double page)"@fr ;
-                                                             <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                             <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/EndTime
@@ -1511,7 +1511,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Alphabetical table"@en ,
                                                                                                                        "Table alphabétique"@fr ;
-                                                                       <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                                       <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation
@@ -1522,8 +1522,8 @@ xsd:date rdf:type rdfs:Datatype .
                                                                          <http://www.w3.org/2004/02/skos/core#definition> "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en ,
                                                                                                                           "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr ;
                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
-                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "List of sucessive taxpayers"@en ,
-                                                                                                                         "Liste de contribuables sucessifs"@fr .
+                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "List of successive taxpayers"@en ,
+                                                                                                                         "Liste de contribuables successifs"@fr .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier
@@ -1550,7 +1550,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                  <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Page containing property accounts"@en ,
                                                                                                                  "Page correspondant à un ou plusieurs folios"@fr ;
-                                                                 <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                                 <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes
@@ -1598,7 +1598,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Types de pages"@fr ,
                                                                                                                 "Types of simple pages"@en ;
-                                                                <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Page> .
+                                                                <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Page> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/PassedTo
@@ -1750,7 +1750,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Activity"@en ,
                                                                                                                      "Activité"@fr ;
-                                                                     <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                     <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress
@@ -1761,7 +1761,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Address"@en ,
                                                                                                                     "Adresse"@fr ;
-                                                                    <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                    <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName
@@ -1772,7 +1772,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Birth name"@en ,
                                                                                                                       "Nom de naissance"@fr ;
-                                                                      <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                      <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus
@@ -1783,7 +1783,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Family status"@en ,
                                                                                                                          "Statut familial"@fr ;
-                                                                         <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                         <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames
@@ -1794,7 +1794,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "First name.s"@en ,
                                                                                                                        "Prénom.s"@fr ;
-                                                                       <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                       <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName
@@ -1805,7 +1805,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Last name"@en ,
                                                                                                                      "Nom de famille"@fr ;
-                                                                     <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                     <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerNumber
@@ -1829,7 +1829,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisation name"@en ,
                                                                                                                              "Raison sociale"@fr ;
-                                                                             <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                             <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames
@@ -1840,7 +1840,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "First name.s of the spouse or children"@en ,
                                                                                                                                        "Prénom.s de l'époux/épouse ou des enfants"@fr ;
-                                                                                       <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                                       <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle
@@ -1851,7 +1851,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Title"@en ,
                                                                                                                   "Titre"@fr ;
-                                                                  <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer> .
+                                                                  <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer> .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/TextStyles

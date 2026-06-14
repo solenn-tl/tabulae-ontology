@@ -791,7 +791,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/tabulae#NamedEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/tabulae#AnnotationClass"/>
         <rdfs:label xml:lang="fr">est une entité nommée de type</rdfs:label>
-        <rdfs:label xml:lang="en">is named entity of type</rdfs:label>
+        <rdfs:label xml:lang="en">is named entity type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1998,7 +1998,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Blank page</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Page vide</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2064,7 +2064,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="fr">Couverture décrivant une section dans un registre d&apos;états de sections</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Section page cover</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2082,7 +2082,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Intermediate summary</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Récapitulatif intermédiaire</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2100,7 +2100,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="fr">Résumé final d&apos;une section</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Summary</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2112,13 +2112,13 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/PageClasses"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/ETSTabP1"/>
+        <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/ETSTabP1"/>
         <skos:definition xml:lang="en">Main table page of an initial register containing a description of the plots listed in ascending order by number.</skos:definition>
         <skos:definition xml:lang="fr">Page du tableau principal d&apos;un registre d&apos;états de sections contenant la description des parcelles listées dans l&apos;ordre croissant des numéros.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Main table in an initial register</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Tableau principal d&apos;état de section</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2130,14 +2130,14 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
         <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/PageClasses"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/ETSTab"/>
+        <skos:closeMatch rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/ETSTab"/>
         <skos:definition xml:lang="en">First page of the main table of an initial register containing a description of the plots listed in ascending order by number. Used only when the main table is display in a double-page. Mostly used for registers created before 1822.</skos:definition>
         <skos:definition xml:lang="fr">Première page (sur deux) du tableau principal d&apos;un registre d&apos;état de sections contenant la description des parcelles listées dans l&apos;ordre croissant de numéro identifiant. Classe utilisée uniquement quand le tableau principal couvre une double page. Ce type de page est principalement visible dans des registres créés avant 1822.</skos:definition>
         <skos:hiddenLabel>ets_tab_p1</skos:hiddenLabel>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">First page of a main table in an initial register</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Tableau principal d&apos;état de section (première page si double page)</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2155,7 +2155,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Second page of a main table in an initial register</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Tableau principal d&apos;état de section (seconde page si double page)</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2190,7 +2190,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Alphabetical table</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Table alphabétique</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2205,8 +2205,8 @@
         <skos:definition xml:lang="en">Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account.</skos:definition>
         <skos:definition xml:lang="fr">Zone d&apos;image correspond à une liste de 1..n contribuables associés au même compte foncier.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">List of sucessive taxpayers</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Liste de contribuables sucessifs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">List of successive taxpayers</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Liste de contribuables successifs</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -2241,7 +2241,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Page containing property accounts</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Page correspondant à un ou plusieurs folios</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2305,7 +2305,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="fr">Types de pages</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Types of simple pages</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Page"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Page"/>
     </owl:NamedIndividual>
     
 
@@ -2505,7 +2505,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Activity</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Activité</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 
@@ -2520,7 +2520,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Adresse</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 
@@ -2535,7 +2535,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Birth name</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Nom de naissance</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 
@@ -2550,7 +2550,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Family status</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Statut familial</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 
@@ -2565,7 +2565,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">First name.s</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Prénom.s</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 
@@ -2580,7 +2580,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Last name</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Nom de famille</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 
@@ -2612,7 +2612,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Organisation name</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Raison sociale</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 
@@ -2627,7 +2627,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">First name.s of the spouse or children</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Prénom.s de l&apos;époux/épouse ou des enfants</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 
@@ -2642,7 +2642,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Title</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Titre</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/specialCellValue/Taxpayer"/>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
     </owl:NamedIndividual>
     
 

@@ -518,7 +518,7 @@ tbl:hasNamedEntity a owl:ObjectProperty ;
 tbl:isNamedEntityType a owl:ObjectProperty ;
     rdfs:subPropertyOf tbl:hasClassValue ;
     rdfs:label "est une entité nommée de type"@fr,
-                "is named entity of type"@en ;
+                "is named entity type"@en ;
     rdfs:domain tbl:NamedEntity ;
     rdfs:range tbl:AnnotationClass .
 
@@ -3216,7 +3216,6 @@ spval:IdemSV a owl:NamedIndividual,
         "Idem"@fr .
 
 # ----- List of annotation classes -----
-
 anclass:BlankPage a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
@@ -3227,7 +3226,7 @@ anclass:BlankPage a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Blank page"@en,
         "Page vide"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:CrossedOut a owl:NamedIndividual,
         skos:Concept,
@@ -3269,7 +3268,7 @@ anclass:ETSCover a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Section page cover"@en,
         "Couverture décrivant une section dans un registre d'états de sections"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:ETSIntermediateSummary a owl:NamedIndividual,
         skos:Concept,
@@ -3281,7 +3280,7 @@ anclass:ETSIntermediateSummary a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Intermediate summary"@en,
         "Récapitulatif intermédiaire"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:ETSSummary a owl:NamedIndividual,
         skos:Concept,
@@ -3293,32 +3292,32 @@ anclass:ETSSummary a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Summary"@en,
         "Résumé final d'une section"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:ETSTab a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:PageClasses ;
-    skos:closeMatch spval:ETSTabP1 ;
+    skos:closeMatch anclass:ETSTabP1 ;
     skos:definition "Main table page of an initial register containing a description of the plots listed in ascending order by number."@en,
         "Page du tableau principal d'un registre d'états de sections contenant la description des parcelles listées dans l'ordre croissant des numéros."@fr ;
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Main table in an initial register"@en,
         "Tableau principal d'état de section"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:ETSTabP1 a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:PageClasses ;
-    skos:closeMatch spval:ETSTab ;
+    skos:closeMatch anclass:ETSTab ;
     skos:definition "First page of the main table of an initial register containing a description of the plots listed in ascending order by number. Used only when the main table is display in a double-page. Mostly used for registers created before 1822."@en,
         "Première page (sur deux) du tableau principal d'un registre d'état de sections contenant la description des parcelles listées dans l'ordre croissant de numéro identifiant. Classe utilisée uniquement quand le tableau principal couvre une double page. Ce type de page est principalement visible dans des registres créés avant 1822."@fr ;
     skos:hiddenLabel "ets_tab_p1" ;
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "First page of a main table in an initial register"@en,
         "Tableau principal d'état de section (première page si double page)"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:ETSTabP2 a owl:NamedIndividual,
         skos:Concept,
@@ -3330,7 +3329,7 @@ anclass:ETSTabP2 a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Second page of a main table in an initial register"@en,
         "Tableau principal d'état de section (seconde page si double page)"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:EndTime a owl:NamedIndividual,
         skos:Concept,
@@ -3353,7 +3352,7 @@ anclass:MATAlphabeticTable a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Alphabetical table"@en,
         "Table alphabétique"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:MATArticleDeMutation a owl:NamedIndividual,
         skos:Concept,
@@ -3386,7 +3385,7 @@ anclass:MATMainTable a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Page containing property accounts"@en,
         "Page correspondant à un ou plusieurs folios"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:Nature a owl:NamedIndividual,
         skos:Concept,
@@ -3535,7 +3534,7 @@ anclass:TaxpayerActivity a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Activity"@en,
         "Activité"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TaxpayerAddress a owl:NamedIndividual,
         skos:Concept,
@@ -3544,7 +3543,7 @@ anclass:TaxpayerAddress a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Address"@en,
         "Adresse"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TaxpayerBirthName a owl:NamedIndividual,
         skos:Concept,
@@ -3553,7 +3552,7 @@ anclass:TaxpayerBirthName a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Birth name"@en,
         "Nom de naissance"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TaxpayerFamilyStatus a owl:NamedIndividual,
         skos:Concept,
@@ -3562,7 +3561,7 @@ anclass:TaxpayerFamilyStatus a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Family status"@en,
         "Statut familial"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TaxpayerFirstNames a owl:NamedIndividual,
         skos:Concept,
@@ -3571,7 +3570,7 @@ anclass:TaxpayerFirstNames a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "First name.s"@en,
         "Prénom.s"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TaxpayerLastName a owl:NamedIndividual,
         skos:Concept,
@@ -3580,7 +3579,7 @@ anclass:TaxpayerLastName a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Last name"@en,
         "Nom de famille"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TaxpayerNumber a owl:NamedIndividual,
         skos:Concept,
@@ -3600,7 +3599,7 @@ anclass:TaxpayerOrganisationName a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Organisation name"@en,
         "Raison sociale"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TaxpayerSpouseOrChildrenFirstNames a owl:NamedIndividual,
         skos:Concept,
@@ -3609,7 +3608,7 @@ anclass:TaxpayerSpouseOrChildrenFirstNames a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "First name.s of the spouse or children"@en,
         "Prénom.s de l'époux/épouse ou des enfants"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TaxpayerTitle a owl:NamedIndividual,
         skos:Concept,
@@ -3618,7 +3617,7 @@ anclass:TaxpayerTitle a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Title"@en,
         "Titre"@fr ;
-    skos:related spval:Taxpayer .
+    skos:related anclass:Taxpayer .
 
 anclass:TextStyles a owl:NamedIndividual,
         skos:Concept,
@@ -3635,7 +3634,7 @@ anclass:PageClasses a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Types of simple pages"@en,
         "Types de pages"@fr ;
-    skos:related spval:Page .
+    skos:related anclass:Page .
 
 anclass:NamedEntityTypes a owl:NamedIndividual,
         skos:Concept,
