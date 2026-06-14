@@ -27,16 +27,21 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/PeGazUs#Change" title="https://w3id.org/PeGazUs#Change">Change</a>
    </li>
    <li>
-      <a href="#https://w3id.org/PeGazUs#ChangeType" title="https://w3id.org/PeGazUs#ChangeType">Change Type</a>
-   </li>
-   <li>
       <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a>
    </li>
    <li>
-      <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Class type provided by an annotation process</a>
+      <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+         title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept scheme</a>
    </li>
    <li>
       <a href="#https://w3id.org/PeGazUs#Event" title="https://w3id.org/PeGazUs#Event">Event</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#Instantiation"
+         title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a>
    </li>
    <li>
       <a href="#https://w3id.org/PeGazUs#LandmarkRelation" title="https://w3id.org/PeGazUs#LandmarkRelation">Landmark relation</a>
@@ -51,6 +56,22 @@ This ontology has the following classes and properties.</span>
       <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property account change</a>
    </li>
    <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#Record"
+         title="https://www.ica.org/standards/RiC/ontology#Record">Record</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#RecordPart"
+         title="https://www.ica.org/standards/RiC/ontology#RecordPart">Record Part</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#RecordResource"
+         title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#RecordSet"
+         title="https://www.ica.org/standards/RiC/ontology#RecordSet">Record Set</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">SoftwareAgent</a>
    </li>
    <li>
@@ -58,6 +79,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a>
+   </li>
+   <li>
+      <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a>
    </li>
    <li>
       <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a>
@@ -68,16 +92,35 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a>
    </li>
+   <li>
+      <a href="#http://purl.org/vocommons/voaf#Vocabulary" title="http://purl.org/vocommons/voaf#Vocabulary">
+         <span>Vocabulary</span>
+      </a>
+   </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#isTranscriptionOf" title="https://w3id.org/tabulae#isTranscriptionOf">
-         <span>est la transcription de</span>
+      <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">
+         <span>broader</span>
       </a>
    </li>
    <li>
-      <a href="#hasAlternativeNumFolio" title="https://w3id.org/tabulae#hasAlternativeNumFolio">
+      <a href="#http://www.w3.org/2004/02/skos/core#closeMatch" title="http://www.w3.org/2004/02/skos/core#closeMatch">
+         <span>close Match</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isTranscriptionOf" title="https://w3id.org/tabulae#isTranscriptionOf">est la transcription de</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#exactMatch" title="http://www.w3.org/2004/02/skos/core#exactMatch">
+         <span>exact Match</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasAlternativeFolioNumber"
+         title="https://w3id.org/tabulae#hasAlternativeFolioNumber">
          <span>has alternative folio number</span>
       </a>
    </li>
@@ -91,13 +134,33 @@ This ontology has the following classes and properties.</span>
       <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a>
    </li>
    <li>
-      <a href="#hasNumFolio" title="https://w3id.org/tabulae#hasNumFolio">
+      <a href="#hasFolioNumber" title="https://w3id.org/tabulae#hasFolioNumber">
          <span>has folio number</span>
       </a>
    </li>
    <li>
       <a href="#hasNextVersionInSRCOrder"
          title="https://w3id.org/tabulae#hasNextVersionInSRCOrder">has next version in the source order</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadComponent"
+         title="https://www.ica.org/standards/RiC/ontology#hasOrHadComponent">has or had component</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent"
+         title="https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent">has or had constituent</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation"
+         title="https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation">has or had derived instantiation</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation"
+         title="https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation">has or had digital instantiation</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation"
+         title="https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation">has or had instantiation</a>
    </li>
    <li>
       <a href="#hasOverlappingVersionInSRCOrder"
@@ -123,8 +186,18 @@ This ontology has the following classes and properties.</span>
       <a href="#hasNamedEntity" title="https://w3id.org/tabulae#hasNamedEntity">includes named entity</a>
    </li>
    <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#includesOrIncluded"
+         title="https://www.ica.org/standards/RiC/ontology#includesOrIncluded">includes or included</a>
+   </li>
+   <li>
       <a href="#isAddressEntityOfTaxpayer"
          title="https://w3id.org/tabulae#isAddressEntityOfTaxpayer">is address (entity) of a taxpayer</a>
+   </li>
+   <li>
+      <a href="#isAlternativeFolioNumberOf"
+         title="https://w3id.org/tabulae#isAlternativeFolioNumberOf">
+         <span>is alternative folio number of</span>
+      </a>
    </li>
    <li>
       <a href="#isTaxpayerOf" title="https://w3id.org/tabulae#isTaxpayerOf">is associated taxpayer of</a>
@@ -139,13 +212,45 @@ This ontology has the following classes and properties.</span>
       <a href="#isEventType" title="https://w3id.org/tabulae#isEventType">is event type</a>
    </li>
    <li>
+      <a href="#isFolioNumberOf" title="https://w3id.org/tabulae#isFolioNumberOf">
+         <span>is folio number of</span>
+      </a>
+   </li>
+   <li>
       <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">is mentionned in</a>
+   </li>
+   <li>
+      <a href="#isNamedEntityOf" title="https://w3id.org/tabulae#isNamedEntityOf">is named entity of</a>
    </li>
    <li>
       <a href="#isNamedEntityType" title="https://w3id.org/tabulae#isNamedEntityType">is named entity type</a>
    </li>
    <li>
       <a href="#isPlotNatureOf" title="https://w3id.org/tabulae#isPlotNatureOf">is nature of plot</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf"
+         title="https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf">is or was component of</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf"
+         title="https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf">is or was constituent of</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation"
+         title="https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation">is or was derived from instantiation</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf"
+         title="https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf">is or was digital instantiation of</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn"
+         title="https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn">is or was included in</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf"
+         title="https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf">is or was instantiation of</a>
    </li>
    <li>
       <a href="#isOverlappedByVersionInSRCOrder"
@@ -164,10 +269,20 @@ This ontology has the following classes and properties.</span>
       <a href="#mentions" title="https://w3id.org/tabulae#mentions">mentions</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">
+         <span>narrower</span>
+      </a>
+   </li>
+   <li>
       <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or folio</a>
    </li>
    <li>
       <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or folio</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">
+         <span>related</span>
+      </a>
    </li>
    <li>
       <a href="#sourcedFrom" title="https://w3id.org/tabulae#sourcedFrom">sourced from</a>
@@ -181,6 +296,21 @@ This ontology has the following classes and properties.</span>
          <span>transcription</span>
       </a>
    </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">
+         <span>used</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#wasAssociatedWith" title="http://www.w3.org/ns/prov#wasAssociatedWith">
+         <span>was Associated With</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy">
+         <span>was Generated By</span>
+      </a>
+   </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -192,11 +322,6 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/tabulae#coordinatesInImageSystem">coordinates in image</a>
    </li>
    <li>
-      <a href="#isTranscriptionOf" title="https://w3id.org/tabulae#isTranscriptionOf">
-         <span>est la transcription de</span>
-      </a>
-   </li>
-   <li>
       <a href="#taxpayerFamilyStatus" title="https://w3id.org/tabulae#taxpayerFamilyStatus">family status</a>
    </li>
    <li>
@@ -206,13 +331,28 @@ This ontology has the following classes and properties.</span>
       <a href="#taxpayerFullName" title="https://w3id.org/tabulae#taxpayerFullName">full name</a>
    </li>
    <li>
-      <a href="#hasAlternativeNumFolio" title="https://w3id.org/tabulae#hasAlternativeNumFolio">
+      <a href="#hasAlternativeFolioNumber"
+         title="https://w3id.org/tabulae#hasAlternativeFolioNumber">
          <span>has alternative folio number</span>
       </a>
    </li>
    <li>
-      <a href="#hasNumFolio" title="https://w3id.org/tabulae#hasNumFolio">
+      <a href="#hasFolioNumber" title="https://w3id.org/tabulae#hasFolioNumber">
          <span>has folio number</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.wikidata.org/prop/P8422" title="http://www.wikidata.org/prop/P8422">identifiant Ldh/EHESS/Cassini</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">
+         <span>identifier</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#identifier"
+         title="https://www.ica.org/standards/RiC/ontology#identifier">
+         <span>identifier</span>
       </a>
    </li>
    <li>
@@ -229,6 +369,11 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#taxpayerLastName" title="https://w3id.org/tabulae#taxpayerLastName">last name</a>
+   </li>
+   <li>
+      <a href="#https://www.ica.org/standards/RiC/ontology#name" title="https://www.ica.org/standards/RiC/ontology#name">
+         <span>name</span>
+      </a>
    </li>
    <li>
       <a href="#taxpayerOrganisationName"
@@ -1141,6 +1286,10 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/tabulae/id/codes/attributeType/PlotNature">Plot Nature</a>
    </li>
    <li>
+      <a href="#https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer"
+         title="https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer">Plot Taxpayer</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/tabulae/id/codes/plotNature/TerreLabourable"
          title="https://w3id.org/tabulae/id/codes/plotNature/TerreLabourable">Plowed land</a>
    </li>
@@ -1312,10 +1461,6 @@ This ontology has the following classes and properties.</span>
       <a href="#" title="https://w3id.org/tabulae#">
          <span>TABULAE Ontology</span>
       </a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer"
-         title="https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer">Taxpayer</a>
    </li>
    <li>
       <a href="#https://w3id.org/tabulae/id/codes/plotNature/TerreVaine"

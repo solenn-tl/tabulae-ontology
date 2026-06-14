@@ -16,6 +16,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix organization: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix p: <http://www.wikidata.org/prop/> .
 @prefix peg: <https://w3id.org/PeGazUs#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -169,31 +170,53 @@
     <https://www.w3.org/TR/owl-time/>.
 
 # ---- Annotation properties ----
-#owl:maxQualifiedCardinality a owl:AnnotationProperty .
-#skos:altLabel a owl:AnnotationProperty .
-#skos:broader a owl:AnnotationProperty .
-#skos:definition a owl:AnnotationProperty .
-#skos:inScheme a owl:AnnotationProperty .
-#skos:prefLabel a owl:AnnotationProperty .
+owl:deprecated a owl:AnnotationProperty ;
+    rdfs:isDefinedBy owl: .
+skos:definition a owl:AnnotationProperty ;
+    rdfs:isDefinedBy skos: .
+skos:inScheme a owl:AnnotationProperty ;
+    rdfs:isDefinedBy skos: .
+skos:prefLabel a owl:AnnotationProperty ;
+    rdfs:isDefinedBy skos: .
+skos:altLabel a owl:AnnotationProperty ;
+    rdfs:isDefinedBy skos: .
+skos:broader a owl:ObjectProperty ;
+    rdfs:isDefinedBy skos: ;
+    owl:inverseOf skos:narrower .
+skos:narrower a owl:ObjectProperty ;
+    rdfs:isDefinedBy skos: ;
+    owl:inverseOf skos:broader .
+skos:closeMatch a owl:ObjectProperty ;
+    rdfs:isDefinedBy skos:.
+skos:exactMatch a owl:ObjectProperty ;
+    rdfs:isDefinedBy skos:.
+skos:related a owl:ObjectProperty ;
+    rdfs:isDefinedBy skos:.
+rdfs:seeAlso a owl:AnnotationProperty ;
+    rdfs:isDefinedBy rdfs: .
 
-# ---- Classes ----
-## ---- Classes defined in the ontology ----
+######################################
+######## ---- Classes ---- ###########
+######################################
+## ---- Classes defined in the TABULAE ontology ----
 tbl:AnnotationClass a owl:Class ;
     rdfs:label "Classe issue d'un processus d'annotation"@fr, "Class provided by an annotation process"@en;
     skos:prefLabel "Classe issue d'un processus d'annotation"@fr, "Class provided by an annotation process"@en ;
     skos:altLabel "Classe d'annotation"@fr, "Annotation class"@en ;
     rdfs:comment "Classe (au sens de l'annotation) utilisée pour caractériser pour un document ou un texte, résultant d'un processus d'annotation automatique ou manuel."@fr,
         "Class (in the sense of annotation) used to characterize a document or text, resulting from an automatic or manual annotation process."@en ;
-    owl:disjointWith tbl:EventType, tbl:NamedEntity, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:AnnotationClassType, tbl:PropertyAccountChange.
+    owl:disjointWith tbl:EventType, tbl:NamedEntity, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:AnnotationClassType, tbl:PropertyAccountChange;
+    rdfs:isDefinedBy tbl: .
 
 tbl:AnnotationClassType a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Type de classe d'annotation"@fr, 
-                "Class type provided by an annotation process"@en;
-    skos:prefLabel "Type de classe attribuée par un processus d'annotation"@fr, "Class type provided by an annotation process"@en ;
+                "Type of annotation class"@en;
+    skos:prefLabel "Type de classe d'annotation"@fr, "Type of annotation class"@en ;
     rdfs:comment "Type de classe attribuée manuellement ou automatiquement à une image (document) ou à un texte ou extrait de texte."@fr,
                 "Class type provided by an annotation process to an image (document) or to a text or excerpt of text, manually or automatically."@en ;
-    owl:disjointWith tbl:EventType, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:PropertyAccountChange, tbl:AnnotationClass.
+    owl:disjointWith tbl:EventType, tbl:NamedEntity, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:PropertyAccountChange, tbl:AnnotationClass;
+    rdfs:isDefinedBy tbl: .
 
 tbl:EventType a owl:Class ;
     rdfs:subClassOf skos:Concept ;
@@ -201,7 +224,8 @@ tbl:EventType a owl:Class ;
     skos:prefLabel "Type d'évènement"@fr, "Type of event"@en ;
     rdfs:comment "Un type d'évènement caractérise un évènement de nature spécifique."@fr,
                 "A specific type of event."@en ;
-    owl:disjointWith tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:NamedEntity, tbl:AnnotationClassType, tbl:PropertyAccountChange.
+    owl:disjointWith tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:NamedEntity, tbl:AnnotationClassType, tbl:PropertyAccountChange;
+    rdfs:isDefinedBy tbl: .
 
 tbl:PropertyAccountChange a owl:Class ;
     rdfs:subClassOf peg:Change ;
@@ -209,14 +233,16 @@ tbl:PropertyAccountChange a owl:Class ;
     skos:prefLabel "Changement sur le compte foncier"@fr, "Property account change"@en ;
     rdfs:comment "Un changement sur le compte foncier caractérise un changement affectant le compte foncier d'un contribuable."@fr,
                 "A change affecting the property account of a taxpayer."@en ;
-    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:NamedEntity, tbl:AnnotationClassType.
+    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:NamedEntity, tbl:AnnotationClassType;
+    rdfs:isDefinedBy tbl: .
 
 tbl:NamedEntity a owl:Class ;
     rdfs:label "Named entity"@en, "Entité nommée"@fr ;
     skos:prefLabel "Named entity"@en, "Entité nommée"@fr ;
     rdfs:comment "Entité nommée mentionnée dans une source transcrite (textuelle), identifiée par un processus manuel ou automatique. Une entité nommée peut contenir d'autres entités nommées imbriquées."@fr,
                 "Named entity mentioned in a transcribed source (text), identified by a manual or automatic process. A named entity may contain other named entities."@en ;
-    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:AnnotationClassType, tbl:PropertyAccountChange.
+    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:AnnotationClassType, tbl:PropertyAccountChange;
+    rdfs:isDefinedBy tbl: .
 
 tbl:Nature a owl:Class ;
     rdfs:subClassOf skos:Concept ;
@@ -224,14 +250,16 @@ tbl:Nature a owl:Class ;
     skos:prefLabel "Plot nature"@en, "Nature de parcelle"@fr ;
     rdfs:comment "La nature de parcelle correspond à une occupation ou un usage du sol."@fr ,
                 "A plot nature corresponds to a land use or occupation."@en ;
-    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:AnnotationClassType, tbl:PropertyAccountChange.
+    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:AnnotationClassType, tbl:PropertyAccountChange;
+    rdfs:isDefinedBy tbl: .
 
 tbl:SourceType a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Type de source"@fr, "Type of source"@en;
     skos:prefLabel "Type de source"@fr, "Type of source"@en ;
     rdfs:comment "Type d'une source dont est issue une information."@fr, "Type of a source from which information originates."@en ;
-    owl:disjointWith tbl:EventType, tbl:AnnotationClass,tbl:AnnotationClass, tbl:Nature, tbl:SpecialCellValue, tbl:Taxpayer, tbl:NamedEntity, tbl:AnnotationClassType, tbl:PropertyAccountChange.
+    owl:disjointWith tbl:EventType, tbl:AnnotationClass,tbl:AnnotationClass, tbl:Nature, tbl:SpecialCellValue, tbl:Taxpayer, tbl:NamedEntity, tbl:AnnotationClassType, tbl:PropertyAccountChange;
+    rdfs:isDefinedBy tbl: .
 
 tbl:SpecialCellValue a owl:Class;
     rdfs:subClassOf skos:Concept ;
@@ -239,7 +267,8 @@ tbl:SpecialCellValue a owl:Class;
     skos:prefLabel "Special cell value"@en, "Valeur spéciale"@fr ;
     rdfs:comment "Valeur spéciale liée au fonctionnement des documents cadastraux, par exemple les mentions de construction, destruction, augmentation de bâtiments indiquées dans les colonnes destinées aux numéros de folio."@fr,
                  "Special value related to the operation of cadastral documents, for example the mentions of construction, destruction, modifications of buildings indicated in the columns intended for folio numbers."@en;
-    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:Taxpayer, tbl:NamedEntity, tbl:AnnotationClassType, tbl:PropertyAccountChange.
+    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:Taxpayer, tbl:NamedEntity, tbl:AnnotationClassType, tbl:PropertyAccountChange;
+    rdfs:isDefinedBy tbl: .
 
 tbl:Taxpayer a owl:Class;
     rdfs:label "Taxpayer"@en, "Contribuable"@fr ;
@@ -247,25 +276,30 @@ tbl:Taxpayer a owl:Class;
     skos:altLabel "Owner"@en, "Propriétaire ou usufruitier"@fr ;
     rdfs:comment "Personne physique ou morale redevable de l'impôt foncier pour les terres dont elle a la pleine propriété ou l'usufruit."@fr ,
                 "Natural or legal person liable for property tax for land for which they have full ownership or usufruct."@en ;
-    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:NamedEntity, tbl:AnnotationClassType, tbl:PropertyAccountChange.
+    owl:disjointWith tbl:EventType, tbl:AnnotationClass, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:NamedEntity, tbl:AnnotationClassType, tbl:PropertyAccountChange;
+    rdfs:isDefinedBy tbl: .
 
 ## ------ Imported classes ------
-skos:Concept a owl:Class .
+skos:Concept a owl:Class ;
+    rdfs:isDefinedBy skos: ;
+    rdfs:label "Concept" .
 
-skos:ConceptScheme a owl:Class .
+skos:ConceptScheme a owl:Class ;
+    rdfs:isDefinedBy skos: ;
+    rdfs:label "Concept scheme"@en , "Schéma de concepts"@fr .
 
 ### PROV-O classes
 prov:Agent a owl:Class ;
-    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:isDefinedBy prov: ;
     rdfs:label "Agent" .
 
 prov:SoftwareAgent a owl:Class ;
-    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:isDefinedBy prov: ;
     rdfs:label "SoftwareAgent" ;
     rdfs:subClassOf prov:Agent  .
 
 prov:Activity a owl:Class ;
-    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:isDefinedBy prov: ;
     rdfs:label "Activity" ;
     owl:disjointWith prov:Entity .
 
@@ -276,7 +310,7 @@ peg:LandmarkType a owl:Class ;
         "Type of landmark"@en ;
     rdfs:comment "Un type de repère est une catégorie qui permet de classer les différents types de repères."@fr,
         "A type of landmark is a category that allows classifying the different types of landmarks."@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
+    rdfs:isDefinedBy peg: .
 
 peg:LandmarkRelation a owl:Class ;
     rdfs:label "Landmark relation"@en ,
@@ -292,68 +326,98 @@ peg:LandmarkRelation a owl:Class ;
     - hierarchical relations, for example when a landmark is the capital of another administrative entity;
     - as well as other domain-specific or contextual relations depending on the application needs.
     """@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
+    rdfs:isDefinedBy peg: .
 
 peg:Address a owl:Class ;
     rdfs:label "Address"@en ,
             "Adresse"@fr ;
     rdfs:comment "Une adresse définit une référence spatiale indirecte d'un lieu qui est la cible de l'adresse. La manière dont ce lieu est décrit se fait comme étant une séquence de segments d'adresse étant chacun une description de relations entre entités."@fr,
     "An address defines an indirect spatial reference to a location that is the target of the address. This location is described as a sequence of address segments, each of which describes the relationships between entities."@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
+    rdfs:isDefinedBy peg: .
 
 peg:AttributeVersion a owl:Class ;
     rdfs:label "Attribute version"@en ,
                 "Version de l'attribut"@fr ;
     rdfs:comment "Une version d'attribut est une version reliée à un attribut qui possède est définie par une valeur."@fr,
                 "An attribute version is a version of an attribute which has a specific value."@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
+    rdfs:isDefinedBy peg: .
 
 peg:Attribute rdf:type owl:Class ;
     rdfs:label "Attribut"@fr, "Attribute"@en ;
     rdfs:comment "Un attribut est une propriété d'une entité géographique."@fr,
                 "An attribute is a property of a geographic entity."@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
+    rdfs:isDefinedBy peg: .
 
 peg:AttributeType a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Type d'attribut"@fr, "Attribute type"@en ;
     rdfs:comment "Un type d'attribut est une catégorie d'attributs définie par des caractéristiques communes."@fr,
                 "An attribute type is a category of attributes defined by common characteristics."@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
+    rdfs:isDefinedBy peg: .
 
 peg:AttributeVersion a owl:Class ;
     rdfs:label "Attribute version"@en ,
                 "Version de l'attribut"@fr ;
     rdfs:comment "Une version d'attribut est une version reliée à un attribut qui possède est définie par une valeur."@fr,
                 "An attribute version is a version of an attribute which has a specific value."@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
+    rdfs:isDefinedBy peg: .
 
 peg:Change a owl:Class ;
     rdfs:label "Changement"@fr, "Change"@en ;
     rdfs:comment "Un changement est toute modification appliquée à une entité géographique ou à ses attributs ou bien à une relation entre entités."@fr,
                     "A change is any modification made to a geographic feature or its attributes, or to a relationship between features."@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#>.
-
-peg:ChangeType a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    rdfs:label "Type de changement"@fr, "Change Type"@en ;
-    rdfs:comment "Un type de changement est une catégorie de changements définie par des caractéristiques communes."@fr,
-                    "A change type is a category of changes defined by common characteristics."@en ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
-
+    rdfs:isDefinedBy peg:.
 
 peg:Event a owl:Class ;
     rdfs:comment "Un événément décrit une évolution impliquant une ou plusieurs ressources à un instant donné."@fr,
                 "Event describing a development involving one or more resources at a given time."@en ;
     rdfs:label "Event"@en ,
                 "Événément"@fr ;
-    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> .
+    rdfs:isDefinedBy peg: .
 
 ### RiC-O classes
-rico:RecordSet a owl:Class .
-rico:Record a owl:Class .
-rico:RecordPart a owl:Class .
-rico:Instantiation a owl:Class .
+rico:RecordResource a owl:Class ;
+    rdfs:label "Record Resource"@en,
+        "Ressource archivistique"@fr ;
+    rdfs:comment """Information produced or acquired and retained by an Agent in the
+         course of life or work activity."""@en ;
+    rdfs:isDefinedBy rico: .
+
+rico:RecordSet a owl:Class ;
+    rdfs:label "Record Set"@en, "Ensemble d’objets informationnels"@fr ;
+    rdfs:comment """One or more records that are grouped together by an Agent based on
+         the records sharing one or more attributes or relations."""@en ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:subClassOf rico:RecordResource .
+
+rico:Record a owl:Class ;
+    rdfs:label "Record"@en,
+        "Objet informationnel"@fr ;
+    rdfs:comment """Discrete information content formed and inscribed, at least once,
+         by any method on any carrier in any persistent, recoverable form by an Agent in the course
+         of life or work activity."""@en ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:subClassOf rico:RecordResource .
+
+rico:RecordPart a owl:Class ;
+    rdfs:label "Record Part"@en,
+        "Partie d’objet informationnel"@fr ;
+    rdfs:comment """Component of a Record with independent information content that
+         contributes to the intellectual completeness of the Record."""@en ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:subClassOf rico:RecordResource .
+
+rico:Instantiation a owl:Class ;
+    rdfs:label "Instantiation"@en,
+        "Instanciation"@fr ;
+    rdfs:comment """The inscription of information made by an Agent on a physical
+         carrier in any persistent, recoverable form as a means of communicating information through
+         time and space."""@en ;
+    rdfs:isDefinedBy rico: .
+
+#### Other 
+voaf:Vocabulary a owl:Class ;
+    rdfs:isDefinedBy voaf: .
 
 #################################################################
 #    Object Properties
@@ -367,7 +431,8 @@ tbl:hasPlotNature a owl:ObjectProperty ;
         "has plot nature"@en;
     owl:inverseOf tbl:isPlotNatureOf;
     rdfs:comment "Relie une version d'attribut à une nature de parcelle (correspondant à une occupation ou à un usage du sol)."@fr ,
-                    "Links an attribute version to a plot nature (corresponding to a land use or occupation)."@en .
+                    "Links an attribute version to a plot nature (corresponding to a land use or occupation)."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isPlotNatureOf a owl:ObjectProperty ;
     rdfs:domain tbl:Nature ;
@@ -376,7 +441,8 @@ tbl:isPlotNatureOf a owl:ObjectProperty ;
                 "is nature of plot"@en;
     owl:inverseOf tbl:hasPlotNature;
     rdfs:comment "Relie une nature de parcelle (correspondant à une occupation ou à un usage du sol) à une version d'attribut."@fr ,
-                    "Links a plot nature (corresponding to a land use or occupation) to an attribute version."@en .
+                    "Links a plot nature (corresponding to a land use or occupation) to an attribute version."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:hasTaxpayer a owl:ObjectProperty ;
     rdfs:domain peg:AttributeVersion ;
@@ -385,7 +451,8 @@ tbl:hasTaxpayer a owl:ObjectProperty ;
                 "has taxpayer"@en ;
     owl:inverseOf tbl:isTaxpayerOf;
     rdfs:comment "Relie une version d'attribut d'une parcelle à un contribuable redevable de l'impôt foncier pour celle-ci."@fr ,
-                "Links an attribute version of a plot to a taxpayer liable for the property tax for that plot."@en .
+                "Links an attribute version of a plot to a taxpayer liable for the property tax for that plot."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isTaxpayerOf a owl:ObjectProperty ;
     rdfs:domain tbl:Taxpayer ;
@@ -396,7 +463,8 @@ tbl:isTaxpayerOf a owl:ObjectProperty ;
                     "is taxpayer of attribute version"@en ;
     owl:inverseOf tbl:hasTaxpayer;
     rdfs:comment "Relie un contribuable à une version d'attribut d'une parcelle."@fr ,
-                "Links a taxpayer to an attribute version of a plot."@en .
+                "Links a taxpayer to an attribute version of a plot."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:hasPlotAddress a owl:ObjectProperty ;
     rdfs:domain peg:AttributeVersion ;
@@ -412,7 +480,8 @@ tbl:hasPlotAddress a owl:ObjectProperty ;
     skos:altLabel "has address of plot"@en, "a pour adresse de parcelle"@fr ;
     owl:inverseOf tbl:isPlotAddressOf;
     rdfs:comment "Relie une version d'attribut à une adresse ou une relation spatiale avec d'autres repères géographiques."@fr ,
-                    "Links an attribute version to an address or a spatial relation with other geographical landmarks."@en .
+                    "Links an attribute version to an address or a spatial relation with other geographical landmarks."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isPlotAddressOf a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
@@ -426,7 +495,8 @@ tbl:isPlotAddressOf a owl:ObjectProperty ;
                "is plot address of"@en ;
     owl:inverseOf tbl:hasPlotAddress;
     rdfs:comment "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à une version d'attribut."@fr ,
-                "Links an address or a spatial relation with other geographical landmarks to an attribute version."@en .
+                "Links an address or a spatial relation with other geographical landmarks to an attribute version."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:taxpayerHasAddressEntity a owl:ObjectProperty ;
     rdfs:domain tbl:Taxpayer ;
@@ -435,7 +505,8 @@ tbl:taxpayerHasAddressEntity a owl:ObjectProperty ;
                "taxpayer has address (entity)"@en ;
     owl:inverseOf tbl:isAddressEntityOfTaxpayer;
     rdfs:comment "Relie un contribuable à une adresse ou une relation spatiale avec d'autres repères géographiques. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."@fr ,
-                    "Links a taxpayer to an address or a spatial relation with other geographical landmarks. For the addresses provided as strings, see tbl:taxpayerAddress."@en .
+                    "Links a taxpayer to an address or a spatial relation with other geographical landmarks. For the addresses provided as strings, see tbl:taxpayerAddress."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isAddressEntityOfTaxpayer a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
@@ -444,9 +515,10 @@ tbl:isAddressEntityOfTaxpayer a owl:ObjectProperty ;
                "is address (entity) of a taxpayer"@en ;
     owl:inverseOf tbl:taxpayerHasAddressEntity;
     rdfs:comment "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à un contribuable. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."@fr ,
-                "Links an address or a spatial relation with other geographical landmarks to a taxpayer. For the addresses provided as strings, see tbl:taxpayerAddress."@en .
+                "Links an address or a spatial relation with other geographical landmarks to a taxpayer. For the addresses provided as strings, see tbl:taxpayerAddress."@en ;
+    rdfs:isDefinedBy tbl: .
 
-tbl:hasEquivalentFolio a owl:ObjectProperty ;
+tbl:hasEquivalentFolio a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:domain [ a owl:Class ;
                     owl:unionOf ( rico:Instantiation
                                   rico:RecordResource
@@ -460,7 +532,8 @@ tbl:hasEquivalentFolio a owl:ObjectProperty ;
     rdfs:label "a pour folio équivalent"@fr ,
                "has equivalent folio"@en ;
     rdfs:comment "Cette propriété permet d'attribuer d'associer deux comptes fonciers d'un même contribuable dans une même commune dont l'un est la continuation de l'autre."@fr,
-                "This property allows to associate two land registry folios of the same taxpayer in the same municipality, one being the continuation of the other."@en .
+                "This property allows to associate two land registry folios of the same taxpayer in the same municipality, one being the continuation of the other."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isSourceType a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
@@ -468,22 +541,30 @@ tbl:isSourceType a owl:ObjectProperty ;
     rdfs:label "est une source de type"@fr ,
                 "is source type"@en ;
     rdfs:comment "Cette propriété permet d'associer une source à un type de source."@fr,
-        "This property allows to associate a source to à source type."@en .
+        "This property allows to associate a source to à source type."@en ;
+    rdfs:isDefinedBy tbl: .
 
+#tbl:hasClasse a owl:ObjectProperty ;
+#    owl:deprecated true ;
+#    owl:backwardCompatibleWith tbl:hasClass ;
+#    rdfs:isDefinedBy tbl: .
+    
 tbl:hasClass a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range tbl:AnnotationClass ;
     rdfs:comment "Classe attribuée à un élément suivant un processus d'annotation manuellement ou automatique."@fr ,
     "Indicates that a document or a document area has at least one class assigned manually or automatically."@en ;
     rdfs:label "a pour classe"@fr ,
-                "has class"@en .
+                "has class"@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isClassOf a owl:ObjectProperty ;
     rdfs:domain tbl:AnnotationClass ;
     rdfs:range owl:Thing ;
     rdfs:label "classe attribuée à"@fr ,
                 "is class of"@en ;
-    owl:inverseOf tbl:hasClass .
+    owl:inverseOf tbl:hasClass ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:hasClassValue a owl:ObjectProperty ;
     rdfs:domain tbl:AnnotationClass ;
@@ -492,20 +573,23 @@ tbl:hasClassValue a owl:ObjectProperty ;
                  "Value of a class assigned to a document or a document area."@en ;
     rdfs:label "a pour valeur de classe"@fr ,
                 "has class value"@en ;
-    owl:inverseOf tbl:isClassValueOf.
+    owl:inverseOf tbl:isClassValueOf;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isClassValueOf a owl:ObjectProperty ;
     rdfs:domain tbl:AnnotationClassType ; 
     rdfs:range tbl:AnnotationClass ;
     rdfs:label "est la valeur de classe attribuée à"@fr ,
                 "is class value of"@en ;
-    owl:inverseOf tbl:hasClassValue .
+    owl:inverseOf tbl:hasClassValue ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isEventType a owl:ObjectProperty ;
     rdfs:domain peg:Event ;
     rdfs:range tbl:EventType ;
     rdfs:label "est un événement de type"@fr,
-               "is event type"@en .
+               "is event type"@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:hasNamedEntity a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
@@ -513,14 +597,26 @@ tbl:hasNamedEntity a owl:ObjectProperty ;
     rdfs:label "possède l'entité nommée"@fr,
                "includes named entity"@en ;
     rdfs:comment "Un texte contient une entité nommée identifiée par un processus manuel ou automatique."@fr,
-                "A text contains a named entity identified by a manual or automatic process."@en .
+                "A text contains a named entity identified by a manual or automatic process."@en ;
+    rdfs:isDefinedBy tbl: .
+
+tbl:isNamedEntityOf a owl:ObjectProperty ;
+    rdfs:domain tbl:NamedEntity ;
+    rdfs:range owl:Thing ;
+    rdfs:label "est une entité nommée de"@fr,
+               "is named entity of"@en ;
+    rdfs:comment "Une entité nommée est contenue dans un texte."@fr,
+                "A named entity is contained in a text."@en ;
+    owl:inverseOf tbl:hasNamedEntity;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isNamedEntityType a owl:ObjectProperty ;
     rdfs:subPropertyOf tbl:hasClassValue ;
     rdfs:label "est une entité nommée de type"@fr,
                 "is named entity type"@en ;
     rdfs:domain tbl:NamedEntity ;
-    rdfs:range tbl:AnnotationClass .
+    rdfs:range tbl:AnnotationClass ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:mentions a owl:ObjectProperty;
     rdfs:domain [ a owl:Class ;
@@ -537,7 +633,8 @@ tbl:mentions a owl:ObjectProperty;
     rdfs:comment "Une source mentionne une ou plusieurs entités (entité géographique, contribuable)."@fr;
     rdfs:label "mentionne"@fr,
                "mentions"@en ;
-    owl:inverseOf tbl:isMentionnedIn.
+    owl:inverseOf tbl:isMentionnedIn;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isMentionnedIn a owl:ObjectProperty;
     rdfs:domain [ a owl:Class ;
@@ -554,7 +651,8 @@ tbl:isMentionnedIn a owl:ObjectProperty;
             ] ;
     rdfs:comment "Une entité (entité géographique, contribuable) est mentionnée dans une source."@fr;
     rdfs:label "est mentionné dans"@fr,"is mentionned in"@en ;
-    owl:inverseOf tbl:mentions.
+    owl:inverseOf tbl:mentions;
+    rdfs:isDefinedBy tbl: .
 
 tbl:takenFrom a owl:ObjectProperty ;
     rdfs:domain peg:AttributeVersion ;
@@ -569,7 +667,8 @@ tbl:takenFrom a owl:ObjectProperty ;
     skos:prefLabel "état ou folio précédent"@fr, "previous state or folio"@en ;
     skos:altLabel "tiré de"@fr, "taken from"@en ;
     rdfs:comment "Folio où est décrit l'état de parcelle précédent OU information sur l'état précédent d'une parcelle."@fr ,
-                "Folio where the previous plot state is described OR other information about the previous state of a plot."@en .
+                "Folio where the previous plot state is described OR other information about the previous state of a plot."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:passedTo a owl:ObjectProperty;
     rdfs:domain peg:AttributeVersion ;
@@ -579,10 +678,13 @@ tbl:passedTo a owl:ObjectProperty;
                         tbl:SpecialCellValue
                     )
         ] ;
+    rdfs:label "état ou folio suivant"@fr,
+               "next state or folio"@en ;
     skos:prefLabel "état ou folio suivant"@fr, "next state or folio"@en ;
     skos:altLabel "passé à"@fr, "passed to"@en ;
     rdfs:comment "Folio où est décrit l'état de parcelle suivant OU autre information sur l'état suivant d'une parcelle."@fr,
-                "Folio where the following plot state is described OR other information about the previous or following state of a plot."@en .
+                "Folio where the following plot state is described OR other information about the previous or following state of a plot."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:sourcedFrom a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
@@ -590,7 +692,9 @@ tbl:sourcedFrom a owl:ObjectProperty ;
     rdfs:comment "Une affirmation est sourcée à partir d'une source ."@fr ;
     rdfs:label "a pour source"@fr, "sourced from"@en ;
     owl:deprecated true ;
-    dcterms:isReplacedBy peg:hasTrace.
+    dcterms:isReplacedBy peg:hasTrace;
+    owl:backwardCompatibleWith peg:hasTrace;
+    rdfs:isDefinedBy tbl: .
 
 tbl:hasPreviousVersionInSRCOrder a owl:ObjectProperty ;
     rdfs:label "a pour version précédente dans les documents"@fr,
@@ -599,7 +703,8 @@ tbl:hasPreviousVersionInSRCOrder a owl:ObjectProperty ;
     rdfs:range owl:Thing ;
     owl:inverseOf tbl:hasNextVersionInSRCOrder;
     rdfs:comment "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."@fr ;
-    rdfs:comment "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en .
+    rdfs:comment "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:hasNextVersionInSRCOrder a owl:ObjectProperty ;
     rdfs:label "a pour version suivante dans les documents"@fr,
@@ -608,7 +713,8 @@ tbl:hasNextVersionInSRCOrder a owl:ObjectProperty ;
     rdfs:range owl:Thing ;
     owl:inverseOf tbl:hasPreviousVersionInSRCOrder;
     rdfs:comment "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."@fr ;
-    rdfs:comment "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en .
+    rdfs:comment "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:hasOverlappingVersionInSRCOrder a owl:ObjectProperty ;
     rdfs:label "a pour version qui se chevauche dans les documents"@fr,
@@ -617,7 +723,8 @@ tbl:hasOverlappingVersionInSRCOrder a owl:ObjectProperty ;
     rdfs:range owl:Thing ;
     owl:inverseOf tbl:isOverlappedByVersionInSRCOrder;
     rdfs:comment "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."@fr ;
-    rdfs:comment "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en .
+    rdfs:comment "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en ;
+    rdfs:isDefinedBy tbl: .
 
 tbl:isOverlappedByVersionInSRCOrder a owl:ObjectProperty ;
     rdfs:label "est chevauchée par la version dans les documents"@fr,
@@ -626,7 +733,8 @@ tbl:isOverlappedByVersionInSRCOrder a owl:ObjectProperty ;
     rdfs:range owl:Thing ;
     owl:inverseOf tbl:hasOverlappingVersionInSRCOrder;
     rdfs:comment "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."@fr ;
-    rdfs:comment "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en .
+    rdfs:comment "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en ;
+    rdfs:isDefinedBy tbl: .
 
 #tbl:isSourceOf a owl:ObjectProperty ;
 #    rdfs:domain owl:Thing ;
@@ -643,25 +751,7 @@ tbl:isOverlappedByVersionInSRCOrder a owl:ObjectProperty ;
 #    owl:deprecated true .
 
 ## ------- Imported Object Properties --------
-#rico:hasCreationDate a owl:ObjectProperty .
-#rico:isCreationDateOf a owl:ObjectProperty .
-#rico:includesOrIncluded a owl:ObjectProperty .
-#rico:isOrWasIncludedIn a owl:ObjectProperty .
-#rico:hasOrHadComponent a owl:ObjectProperty .
-#rico:isOrWasComponentOf a owl:ObjectProperty  .
-#rico:hasOrHadInstantiation a owl:ObjectProperty .
-#rico:isOrWasInstantiationOf a owl:ObjectProperty .
-#rico:hasOrHadDigitalInstantiation a owl:ObjectProperty .
-#rico:isOrWasDigitalInstantiationOf a owl:ObjectProperty .
-#rico:hasOrHadComponent a owl:ObjectProperty .
-#rico:hasOrHadConstituent a owl:ObjectProperty  .
-#rico:isOrWasConstituentOf a owl:ObjectProperty .
-#rico:hasComponentTransitive a owl:ObjectProperty.
-#rico:hasConstituentTransitive a owl:ObjectProperty.
-#prov:wasAssociatedWith a owl:ObjectProperty .
-#prov:used a owl:ObjectProperty .
-#prov:wasGeneratedBy a owl:ObjectProperty .
-
+#### ------ PeGazUs object properties -------
 peg:hasTrace a owl:ObjectProperty ;
     rdfs:label "a pour trace"@fr, "has trace"@en ;
     rdfs:comment "Décrit qu'un élément a pour trace un autre élément"@fr, "Describes that an element has another element as its trace"@en ;
@@ -671,6 +761,150 @@ peg:isTraceOf a owl:ObjectProperty ;
     rdfs:label "est une trace de"@fr, "is trace of"@en ;
     rdfs:comment "Décrit qu'un élément est la trace d'un autre élément"@fr, "Describes that an element is the trace of another element"@en ;
     owl:inverseOf peg:hasTrace.
+
+#### Prov-O object properties
+prov:wasAssociatedWith a owl:ObjectProperty ;
+    rdfs:isDefinedBy prov: .
+    
+prov:used a owl:ObjectProperty ;
+    rdfs:isDefinedBy prov: .
+
+prov:wasGeneratedBy a owl:ObjectProperty ;
+    rdfs:isDefinedBy prov: .
+
+#### Records in Context Ontology (RiC-O) object properties
+
+rico:includesOrIncluded a owl:ObjectProperty ;
+    rdfs:label "includes or included"@en, "inclut ou a inclus"@fr ;
+    rdfs:comment """Connects a Record Set to a Record or Record Set it aggregates, or
+         aggregated in the past."""@en ;
+    rdfs:domain rico:RecordSet ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( rico:Record rico:RecordSet ) ] ;
+    rdfs:subPropertyOf rico:hasOrHadPart,
+        rico:isRecordResourceAssociatedWithRecordResource ;
+    owl:inverseOf rico:isOrWasIncludedIn .
+
+rico:isOrWasIncludedIn a owl:ObjectProperty ;
+    rdfs:label "is or was included in"@en, "est ou a été inclus dans"@fr ;
+    rdfs:comment "Inverse of 'includes or included' object property."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( rico:Record rico:RecordSet ) ] ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:RecordSet ;
+    rdfs:subPropertyOf rico:isOrWasPartOf,
+        rico:isRecordResourceAssociatedWithRecordResource ;
+    owl:inverseOf rico:includesOrIncluded.
+
+rico:hasOrHadConstituent a owl:ObjectProperty ;
+    rdfs:label "has or had constituent"@en, "a ou a eu pour constituant"@fr ;
+    rdfs:comment """Connects a Record or Record Part to a Record or Record part that
+         is or was a constituent of that Record or Record Part."""@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( rico:Record rico:RecordPart ) ] ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( rico:Record rico:RecordPart ) ] ;
+    rdfs:subPropertyOf rico:hasOrHadPart,
+        rico:isRecordResourceAssociatedWithRecordResource ;
+    owl:inverseOf rico:isOrWasConstituentOf .
+
+rico:isOrWasConstituentOf a owl:ObjectProperty ;
+    rdfs:label "is or was constituent of"@en, "est ou a été un constituant de"@fr ;
+    rdfs:comment """Inverse of 'has or had constituent' object
+         property."""@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( rico:Record rico:RecordPart ) ] ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( rico:Record rico:RecordPart ) ] ;
+    rdfs:subPropertyOf rico:isOrWasPartOf,
+        rico:isRecordResourceAssociatedWithRecordResource ;
+    owl:inverseOf rico:hasOrHadConstituent .
+
+rico:hasOrHadInstantiation a owl:ObjectProperty ;
+    rdfs:label "has or had instantiation"@en,
+        "tiene o tenía como instanciación"@es,
+        "a ou a eu pour instanciation"@fr ;
+    rdfs:comment """Connects a Record Resource to an Instantiation, which either may
+         exist or may have been lost or destroyed."""@en ;
+    rdfs:domain rico:RecordResource ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:Instantiation ;
+    rdfs:subPropertyOf rico:isRelatedTo ;
+    owl:inverseOf rico:isOrWasInstantiationOf .
+
+rico:isOrWasInstantiationOf a owl:ObjectProperty ;
+    rdfs:label "is or was instantiation of"@en,
+        "est ou a été une instanciation de"@fr ;
+    rdfs:comment """Inverse of 'has or had instantiation' object property."""@en ;
+    rdfs:domain rico:Instantiation ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:RecordResource ;
+    rdfs:subPropertyOf rico:isRelatedTo ;
+    owl:inverseOf rico:hasOrHadInstantiation .
+
+rico:hasOrHadComponent a owl:ObjectProperty ;
+    rdfs:label "has or had component"@en, "a ou a eu pour composant"@fr ;
+    rdfs:comment """Connects an Instantiation to one of its present or past component
+         instantiations."""@en ;
+    rdfs:domain rico:Instantiation ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:Instantiation ;
+    rdfs:subPropertyOf rico:hasOrHadPart,
+        rico:isInstantiationAssociatedWithInstantiation ;
+    owl:inverseOf rico:isOrWasComponentOf .
+
+rico:isOrWasComponentOf a owl:ObjectProperty ;
+    rdfs:label "is or was component of"@en, "est ou a été un composant de"@fr ;
+    rdfs:comment "Inverse of 'has or had component' object property."@en ;
+    rdfs:domain rico:Instantiation ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:Instantiation ;
+    rdfs:subPropertyOf rico:isInstantiationAssociatedWithInstantiation,
+        rico:isOrWasPartOf ;
+    owl:inverseOf rico:hasOrHadComponent .
+
+rico:hasOrHadDigitalInstantiation a owl:ObjectProperty ;
+    rdfs:label "has or had digital instantiation"@en, "a ou a eu pour instanciation numérique"@fr ;
+    rdfs:comment """Connects a record resource to one of its digital instantiations,
+         whether it exists or has been lost or destroyed."""@en ;
+    rdfs:domain rico:RecordResource ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:Instantiation ;
+    rdfs:subPropertyOf rico:hasOrHadInstantiation ;
+    owl:inverseOf rico:isOrWasDigitalInstantiationOf .
+
+rico:isOrWasDigitalInstantiationOf a owl:ObjectProperty ;
+    rdfs:label "is or was digital instantiation of"@en, "est ou a été une instanciation numérique de"@fr ;
+    rdfs:comment """Inverse of 'has or had digital instantiation' object property."""@en ;
+    rdfs:domain rico:Instantiation ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:RecordResource ;
+    rdfs:subPropertyOf rico:isOrWasInstantiationOf ;
+    owl:inverseOf rico:hasOrHadDigitalInstantiation .
+
+rico:hasOrHadDerivedInstantiation a owl:ObjectProperty ;
+    rdfs:label "has or had derived instantiation"@en, "a ou a eu pour instanciation dérivée"@fr ;
+    rdfs:comment """Connects an instantiation to an instantiation that is derived from
+         it, whether it exists or has been lost or destroyed."""@en ;
+    rdfs:domain rico:Instantiation ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:Instantiation ;
+    rdfs:subPropertyOf rico:isInstantiationAssociatedWithInstantiation,
+        rico:precedesInTime ;
+    owl:inverseOf rico:isOrWasDerivedFromInstantiation  .
+
+rico:isOrWasDerivedFromInstantiation a owl:ObjectProperty ;
+    rdfs:label "is or was derived from instantiation"@en, "est ou a été une instanciation dérivée de"@fr ;
+    rdfs:comment """Inverse of 'has or had derived instantiation' object property."""@en ;
+    rdfs:domain rico:Instantiation ;
+    rdfs:isDefinedBy rico: ;
+    rdfs:range rico:Instantiation ;
+    rdfs:subPropertyOf rico:followsInTime,
+        rico:isInstantiationAssociatedWithInstantiation ;
+    owl:inverseOf rico:hasOrHadDerivedInstantiation .
 
 #################################################################
 #    Datatype properties
@@ -711,7 +945,7 @@ tbl:imageURL a owl:DatatypeProperty ;
                  "URL of an image representing a document or part of a document."@en .
 
 tbl:IIIFImageUrl a owl:DatatypeProperty ;
-    owl:subPropertyOf tbl:imageURL ;
+    rdfs:subPropertyOf tbl:imageURL ;
     rdfs:domain rico:Instantiation ;
     rdfs:range xsd:anyURI ;
     rdfs:label "URL d'image IIIF"@fr, "IIIF image URL"@en ;
@@ -811,6 +1045,10 @@ tbl:taxpayerTitle a owl:DatatypeProperty ;
     rdfs:label "titre"@fr, "title"@en.
 
 tbl:hasNumFolio a owl:DatatypeProperty ;
+    owl:deprecated true ;
+    owl:backwardCompatibleWith tbl:hasFolioNumber .
+
+tbl:hasFolioNumber a owl:DatatypeProperty ;
     rdfs:domain [ a owl:Class ;
                     owl:unionOf ( rico:Instantiation
                                   rico:RecordResource
@@ -822,7 +1060,23 @@ tbl:hasNumFolio a owl:DatatypeProperty ;
                "has folio number"@en ;
     owl:inverseOf tbl:isFolioNumberOf.
 
+tbl:isFolioNumberOf a owl:DatatypeProperty ;
+    rdfs:domain xsd:string ;
+    rdfs:range [ a owl:Class ;
+                    owl:unionOf ( rico:Instantiation
+                                  rico:RecordResource
+                                )
+                  ] ;
+    rdfs:comment "Numéro de folio (associé à une page entière ou à une partie de page) "@fr, "folio number (associated to a mutation register page or part of page)"@en ;
+    rdfs:label "est le numéro de folio de"@fr,
+               "is folio number of"@en ;
+    owl:inverseOf tbl:hasNumFolio.
+
 tbl:hasAlternativeNumFolio a owl:DatatypeProperty ;
+    owl:deprecated true ;
+    owl:backwardCompatibleWith tbl:hasAlternativeFolioNumber .
+
+tbl:hasAlternativeFolioNumber a owl:DatatypeProperty ;
     rdfs:domain [ a owl:Class ;
                     owl:unionOf ( rico:Instantiation
                                   rico:RecordResource
@@ -832,6 +1086,17 @@ tbl:hasAlternativeNumFolio a owl:DatatypeProperty ;
     rdfs:comment "Numéro de folio alternatif (ex: ancien numéro)"@fr, "Alternative folio number (e.g. former number)"@en;
     rdfs:label "a pour numéro de folio alternatif"@fr, "has alternative folio number"@en ;
     owl:inverseOf tbl:isAlternativeFolioNumberOf.
+
+tbl:isAlternativeFolioNumberOf a owl:DatatypeProperty ;
+    rdfs:domain xsd:string ;
+    rdfs:range [ a owl:Class ;
+                    owl:unionOf ( rico:Instantiation
+                                  rico:RecordResource
+                                )
+                  ] ;
+    rdfs:comment "Numéro de folio alternatif (ex: ancien numéro)"@fr, "Alternative folio number (e.g. former number)"@en;
+    rdfs:label "est le numéro de folio alternatif de"@fr, "is alternative folio number of"@en ;
+    owl:inverseOf tbl:hasAlternativeNumFolio.
 
 tbl:transcription a owl:DatatypeProperty ;
   rdfs:domain [ a owl:Class ;
@@ -846,11 +1111,11 @@ tbl:transcription a owl:DatatypeProperty ;
   owl:inverseOf tbl:isTranscriptionOf.
 
 tbl:isTranscriptionOf a owl:ObjectProperty ;
-  rdfs:domain [ a owl:Class ;
+  rdfs:domain rdfs:Literal ;
+  rdfs:range [ a owl:Class ;
         owl:unionOf ( owl:Thing 
                       rico:Instantiation )
     ] ;
-  rdfs:range rdfs:Literal ;
   rdfs:label "est la transcription de"@en, "is transcription of"@fr;
   skos:prefLabel "est la transcription de"@en, "is transcription of"@fr ;
   rdfs:comment "Relie une zone ou une entité à sa transcription obtenue automatiquement ou manuellement à partir d'un document (numérisé)."@fr,
@@ -865,7 +1130,7 @@ tbl:coordinatesInImageSystem a owl:DatatypeProperty ;
   rdfs:comment "Coordonnées (référentiel image) d'une zone annotée (manuellement ou automatiquement) dans un document numérisé.".
 
 tbl:xywhCoordinates a owl:DatatypeProperty ;
-    owl:subPropertyOf tbl:coordinatesInImageSystem ;
+    rdfs:subPropertyOf tbl:coordinatesInImageSystem ;
     rdfs:domain rico:Instantiation ;
     rdfs:range rdfs:Literal ;
     skos:prefLabel "xywh coordinates in image"@en, "coordonnées xywh dans l'image"@fr;
@@ -886,7 +1151,8 @@ tbl:TFNBGroup a owl:DatatypeProperty ;
     skos:prefLabel "TFNB group"@en, "groupe TFNB"@fr;
     rdfs:label "TFNB group"@en, "groupe TFNB"@fr;
     rdfs:comment "Groupe de TFNB (Taxe Foncière sur les Propriétés Non Bâties) d'une parcelle, tel qu'indiqué dans les documents cadastraux."@fr,
-                 "Group of TFNB (Taxe Foncière sur les Propriétés Non Bâties) of a plot, as indicated in cadastral documents."@en.
+                 "Group of TFNB (Taxe Foncière sur les Propriétés Non Bâties) of a plot, as indicated in cadastral documents."@en;
+    rdfs:seeAlso <https://bofip.impots.gouv.fr/bofip/586-PGP.html/identifiant%3DBOI-ANNX-000256-20150812>.
 
 tbl:URL a owl:DatatypeProperty ;
   rdfs:domain owl:Thing ;
@@ -897,11 +1163,17 @@ tbl:URL a owl:DatatypeProperty ;
 
 # ---- Properties copied here to avoid imports ----
 #rdfs:label a owl:DatatypeProperty.
-dcterms:identifier a owl:DatatypeProperty.
-#pwikidata:P8422 a owl:DatatypeProperty;
-#    rdfs:label "identifiant Ldh/EHESS/Cassini"@fr.
-rico:identifier a owl:DatatypeProperty .
-#rico:name a owl:DatatypeProperty .
+dcterms:identifier a owl:DatatypeProperty;
+    rdfs:isDefinedBy dcterms: .
+
+p:P8422 a owl:DatatypeProperty;
+    rdfs:label "identifiant Ldh/EHESS/Cassini"@fr.
+
+rico:identifier a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rico: .
+
+rico:name a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rico: .
 
 ##########################
 #####  Individuals
@@ -1007,7 +1279,7 @@ tblltype:Plot a owl:NamedIndividual,
 tblltype:Arrondissement a owl:NamedIndividual,
         skos:Concept,
         peg:LandmarkType ;
-    rdf:seeAlso "https://fr.wikipedia.org/wiki/Arrondissement_fran%C3%A7ais" ;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q194203> ;
     skos:broader tblltype:Departement ;
     skos:definition "A geographical unit corresponding to the first level of subdivision within a department. Their administrative role has evolved since their creation, which means there are differences compared with the current definition of an arrondissement, although this does not alter the hierarchy of administrative geographical units."@en,
         "Entité géographique correspondant au premier niveau de sous-division des départements. Leur rôle administratif a évolué depuis leur création, ce qui implique des différences avec la définition actuelle de l'arrondissement sans que celà change la hiérarchie des entités géographiques administratives."@fr ;
@@ -1018,7 +1290,7 @@ tblltype:Arrondissement a owl:NamedIndividual,
 tblltype:Canton a owl:NamedIndividual,
         skos:Concept,
         peg:LandmarkType ;
-    rdf:seeAlso "https://fr.wikipedia.org/wiki/Canton_fran%C3%A7ais" ;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q184188> ;
     skos:altLabel "Canton officiel"@fr,
         "Justice de paix"@fr ;
     skos:broader tblltype:Arrondissement ;
@@ -1104,13 +1376,13 @@ tblatype:PlotNature a owl:NamedIndividual,
 tblatype:PlotTaxpayer a owl:NamedIndividual,
         skos:Concept,
         peg:AttributeType ;
-    skos:altLabel "Owner or usufructuary"@en,
-        "Propriétaire ou usufruitier"@fr ;
+    skos:altLabel "Taxpayer","Owner or usufructuary"@en,
+        "Contribuable","Propriétaire ou usufruitier"@fr ;
     skos:definition "A natural or legal person liable for council tax on the plot in question."@en,
         "Personne physique ou morale redevable de l'impôt foncier pour la parcelle concernée."@fr ;
     skos:inScheme tbl:PlotAttributeList ;
-    skos:prefLabel "Taxpayer"@en,
-        "Contribuable"@fr .
+    skos:prefLabel "Plot Taxpayer"@en,
+        "Contribuable associé à la parcelle"@fr .
 
 # ----- List of land registry events (peg:Event) -----
 tbletype:Addition a owl:NamedIndividual,
@@ -2923,7 +3195,7 @@ srctype:FicheInventaire a owl:NamedIndividual,
     skos:definition "Inventory records describing the contents of the archives held by an archive service."@en,
         "Fiches d'inventaire décrivant le contenu des archives localisées dans un service d'archives."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Archival Records Inventory"@en,
+    skos:prefLabel "Archival records inventory"@en,
         "Inventaire des archives"@fr .
 
 srctype:FolioBati a owl:NamedIndividual,
@@ -3223,7 +3495,7 @@ spval:CelluleVide a owl:NamedIndividual,
     skos:altLabel "EMPTY"@fr ;
     skos:definition "An empty cell with no meaning. This is different from cells left blank to indicate that their value is the same as another cell (Idem)."@en,
         "Cellule vide sans signification. Diffère des cellules laissées vides pour indiquer que leur valeur est identique à une autre cellule (Idem)."@fr ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Empty cell"@en,
         "Cellule vide"@fr .
 
@@ -3238,7 +3510,7 @@ spval:ConstructionNouvelleSV a owl:NamedIndividual,
         "Conston nouvelle",
         "Construction nouvelle",
         "Nouvelle construction" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "New building"@en,
         "Construction nouvelle"@fr .
 
@@ -3251,7 +3523,7 @@ spval:DemolitionSV a owl:NamedIndividual,
         "Démolie",
         "Démolition",
         "Détruite" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Demolition"@en,
         "Démolition"@fr .
 
@@ -3263,7 +3535,7 @@ spval:DiminutionSV a owl:NamedIndividual,
     skos:hiddenLabel "Dim",
         "Diminution",
         "Dton" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Reduction"@en,
         "Diminution"@fr .
 
@@ -3273,7 +3545,7 @@ spval:DoubleEmploiSV a owl:NamedIndividual,
     skos:definition "! To be defined in accordance with the tax authorities’ guidelines."@en,
         "! A définir au sens de l'administration fiscale."@fr ;
     skos:hiddenLabel "Double emploi" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Double employement"@en,
         "Double emploi"@fr .
 
@@ -3284,7 +3556,7 @@ spval:EvaluationSV a owl:NamedIndividual,
         "Indique une évaluation ou réévaluation fiscale d'une parcelle."@fr ;
     skos:hiddenLabel "Eval",
         "Evaluation" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Evaluation"@en,
         "Evaluation"@fr .
 
@@ -3302,7 +3574,7 @@ spval:IdemPrecedentSV a owl:NamedIndividual,
         "idem",
         "§",
         "Ø" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Idem as previous cell"@en,
         "Idem au précédent"@fr .
 
@@ -3320,7 +3592,7 @@ spval:IdemSuivantSV a owl:NamedIndividual,
         "idem",
         "§",
         "☼" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Idem as next cell"@en,
         "Idem au précédent"@fr .
 
@@ -3329,7 +3601,7 @@ spval:InconnuSV a owl:NamedIndividual,
         tbl:SpecialCellValue ;
     skos:definition "Indicates that the cell meaning has not been specified or understanded."@en,
         "Valeur de cellule dont le sens n'a pas été explicité."@fr ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Unknown"@en,
         "Valeur inconnue"@fr .
 
@@ -3342,7 +3614,7 @@ spval:OmissionSV a owl:NamedIndividual,
     skos:hiddenLabel "Omission",
         "Omission depuis",
         "OmissionSV{{date}}" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Omission"@en,
         "Omission"@fr .
 
@@ -3354,7 +3626,7 @@ spval:PartieSV a owl:NamedIndividual,
     skos:hiddenLabel "Partie",
         "Ptie",
         "p" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Part of"@en,
         "Partie"@fr .
 
@@ -3364,7 +3636,7 @@ spval:ResteSV a owl:NamedIndividual,
     skos:definition "Indicates that the plot is the remnant of a plot from the same land account that was subdivided and bore the same identifier as the plot in question."@en,
         "Indique que la parcelle est le résidu d'une parcelle du même compte foncier qui a été divisée et qui portait le même identiant que la parcelle considérée."@fr ;
     skos:hiddenLabel "Reste" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Left-over"@en,
         "Reste"@fr .
 
@@ -3376,7 +3648,7 @@ spval:RuinesSV a owl:NamedIndividual,
     skos:hiddenLabel "En ruine",
         "En ruines",
         "Ruines" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Ruined"@en,
         "En ruines"@fr .
 
@@ -3387,7 +3659,7 @@ spval:ValeurBarreeSV a owl:NamedIndividual,
     skos:definition "Indicates that the text is crossed out in the document."@en,
         "Indique que le texte est barré dans le document."@fr ;
     skos:hiddenLabel "~~~~" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Crossed out"@en,
         "Valeur barrée"@fr .
 
@@ -3398,7 +3670,7 @@ spval:VoiePubliqueSV a owl:NamedIndividual,
         "Indique d'une partie de la parcelle est passée à la voie publique."@fr ;
     skos:hiddenLabel "Voie publique",
         "Vp" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Passed to the public roads"@en,
         "Passé à la voie publique"@fr .
 
@@ -3411,7 +3683,7 @@ spval:AdditionConstructionSV a owl:NamedIndividual,
     skos:hiddenLabel "add",
         "add C",
         "addition" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Expension"@en,
         "Addition à une construction"@fr .
 
@@ -3425,7 +3697,7 @@ spval:AugmentationSV a owl:NamedIndividual,
         "Augon",
         "Augtion",
         "Augton" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Enhancement"@en,
         "Augmentation"@fr .
 
@@ -3441,7 +3713,7 @@ spval:IdemSV a owl:NamedIndividual,
         "Les mêmes",
         "idem",
         "§" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Idem"@en,
         "Idem"@fr .
 
