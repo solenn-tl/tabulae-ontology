@@ -530,20 +530,31 @@ tbl:mentions a owl:ObjectProperty;
                           rico:Instantiation
                         )
             ] ;
-    rdfs:range owl:Thing ;
-    rdfs:comment "Une source mentionne un objet."@fr;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( owl:Thing
+                          peg:AttributeVersion
+                          tbl:Taxpayer
+                        )
+            ] ;
+    rdfs:comment "Une source mentionne une ou plusieurs entités (entité géographique, contribuable)."@fr;
     rdfs:label "mentionne"@fr,
                "mentions"@en ;
     owl:inverseOf tbl:isMentionnedIn.
 
 tbl:isMentionnedIn a owl:ObjectProperty;
-    rdfs:domain owl:Thing ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( owl:Thing
+                          peg:AttributeVersion
+                          tbl:Taxpayer
+                        )
+            ] ;
     rdfs:range [ a owl:Class ;
             owl:unionOf ( rico:RecordResource
                           rico:Instantiation
+                          
                         )
             ] ;
-    rdfs:comment "Un objet est mentionné dans une source."@fr;
+    rdfs:comment "Une entité (entité géographique, contribuable) est mentionnée dans une source."@fr;
     rdfs:label "est mentionné dans"@fr,"is mentionned in"@en ;
     owl:inverseOf tbl:mentions.
 
