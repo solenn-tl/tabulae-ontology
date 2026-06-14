@@ -5,9 +5,9 @@
 @prefix tblctype: <https://w3id.org/tabulae/id/codes/changeType/> .
 @prefix tbletype: <https://w3id.org/tabulae/id/codes/eventType/> .
 @prefix tblltype: <https://w3id.org/tabulae/id/codes/landmarkType/> .
-@prefix spval: <https://w3id.org/tabulae/id/codes/specialCellValue/> .
-@prefix anclass: <https://w3id.org/tabulae/id/codes/anclass/> .
+@prefix anclass: <https://w3id.org/tabulae/id/codes/annotationClass/> .
 @prefix pnature: <https://w3id.org/tabulae/id/codes/plotNature/> .
+@prefix spval: <https://w3id.org/tabulae/id/codes/specialCellValue/> .
 @prefix srctype: <https://w3id.org/tabulae/id/codes/sourceType/> .
 @prefix bibo:<http://purl.org/ontology/bibo/> .
 @prefix cc: <http://creativecommons.org/ns#> .
@@ -193,7 +193,7 @@ tbl:AnnotationClassType a owl:Class ;
     skos:prefLabel "Type de classe attribuée par un processus d'annotation"@fr, "Class type provided by an annotation process"@en ;
     rdfs:comment "Type de classe attribuée manuellement ou automatiquement à une image (document) ou à un texte ou extrait de texte."@fr,
                 "Class type provided by an annotation process to an image (document) or to a text or excerpt of text, manually or automatically."@en ;
-    owl:disjointWith tbl:EventType, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:PropertyAccountChange.
+    owl:disjointWith tbl:EventType, tbl:Nature, tbl:SourceType, tbl:SpecialCellValue, tbl:Taxpayer, tbl:PropertyAccountChange, tbl:AnnotationClass.
 
 tbl:EventType a owl:Class ;
     rdfs:subClassOf skos:Concept ;
@@ -875,203 +875,434 @@ tbl:URL a owl:DatatypeProperty ;
 #rico:identifier a owl:DatatypeProperty .
 #rico:name a owl:DatatypeProperty .
 
-# ---- Named Individuals ----
-#Formerly tbl:CadastreAttributeList
-tbl:LandRegistryAttributeList a owl:NamedIndividual,
-    skos:ConceptScheme ;
-    rdfs:comment "Liste des différents rôles spécifique au cadastre pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."@fr ;
-    rdfs:label "Type d'attributs spécifiques aux objets du cadastre"@fr ,
-               "Type of attributes specific to land registry objects"@en ;
-    skos:prefLabel "Type d'attributs spécifiques aux objets du cadastre"@fr ,
-               "Type of attributes specific to land registry objects"@en .
+##########################
+#####  Individuals
+##########################
 
-#Formerly CadastreEventList
+# ------ Lists
+
+tbl:AnnotationClassList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of classes and entity types used in document processing workflows"@en,
+        "Liste des classes et types d'entités utilisés lors des processus de traitement des documents"@fr ;
+    rdfs:comment "List of the various classes that can be assigned to a document, a field within a document, or a text or text excerpt, represented as a list of SKOS concepts. These classes are assigned during the process of extracting and structuring digitised land registry documents. They enable the creation of the graph ultimately used to study changes in land plots."@en,
+        "Liste des différentes classes pouvant être attribuées à un document, à une zone dans un document, à un texte ou extrait de texte, représentés comme une liste de concepts SKOS. Ces classes sont attribuées lors de processus d'extraction et de structuration des documents cadastraux numérisés. Ils permettent de produire le graphe finalement utilisé pour étudier l'évolution des parcelles."@fr ;
+    skos:prefLabel "List of classes and entity types used in document processing workflows"@en,
+        "Liste des classes et types d'entités utilisés lors des processus de traitement des documents"@fr .
+
+tbl:LandRegistryChangeList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of types of changes related to the land registry."@en,
+        "Liste des types de changements liés au cadastre."@fr ;
+    rdfs:comment "List of the various changes specific to the land registry, affecting its different types of entities (geographical entities, taxpayers, documents), represented as a list of SKOS concepts."@en,
+        "Liste des différents changements spécifique au cadastre, impactant ses différents types d'entités (entités géographiques, contribuables, documents), représentés comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of types of changes related to the land registry."@en,
+        "Liste des types de changements liés au cadastre."@fr .
+
 tbl:LandRegistryEventList a owl:NamedIndividual,
-    skos:ConceptScheme ;
-    rdfs:comment "Liste des types d'évènements pouvant intervenir, spécifiques au cadastre, représentés comme une liste de concepts SKOS."@fr ,
-                "List of event types that can occur, specific to the land registry, represented as a list of SKOS concepts."@en ;
-    rdfs:label "Type d'événement"@fr ,
-               "Type of event"@en ;
-    skos:prefLabel "Type d'événement"@fr ,
-               "Type of event"@en .
+        skos:ConceptScheme ;
+    rdfs:label "List of types of events related to the land registry."@en,
+        "Liste des types d'évènements liés au cadastre."@fr ;
+    rdfs:comment "List of types of events related to the land regsitry that may occur, relating to the geographical features described or to the documents, represented as a list of SKOS concepts."@en,
+        "Liste des types d'évènements associés aux cadastre pouvant intervenir, liés aux entités géographiques décrites ou aux documents, représentés comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of types of events related to the land registry."@en,
+        "Liste des types d'évènements liés au cadastre."@fr .
 
-tbl:LandRegistryLandmarkList a owl:NamedIndividual ,
-    skos:ConceptScheme ;
-    rdfs:comment "Liste des différents rôles pouvant être joués par un repère spécifique au cadastre, représentés comme une liste de concepts SKOS."@fr ;
-    rdfs:label "Type de repère spécifiques au cadastre français"@fr ,
-                "Type of landmark related to the land registry"@en ;
-    skos:prefLabel "Type de repère spécifiques au cadastre"@fr ,
-               "Type of landmark related to the land registry"@en .
+tbl:LandRegistryLandmarkList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of types of geographical features associated with the land registry"@en,
+        "Liste des types d'entités géographiques liées au cadastre"@fr ;
+    rdfs:comment "List of reference types mentioned in the land registry, represented as a list of SKOS concepts."@en,
+        "Liste des types de repères mentionnés dans le cadastre, représentés comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of types of geographical features associated with the land registry"@en,
+        "Liste des types d'entités géographiques liées au cadastre"@fr .
 
-tbl:LandRegistryChangeList a owl:NamedIndividual ,
-    skos:ConceptScheme ;
-    rdfs:comment "Liste des différents changements spécifique au cadastre, représentés comme une liste de concepts SKOS."@fr ;
-    rdfs:label "Type de changements spécifiques au cadastre"@fr ,
-              "Type of changes related to the land registry"@en ;
-    skos:prefLabel "Type de changements spécifiques au cadastre"@fr ,
-               "Type of changes related to the land registry"@en .
+tbl:LandRegistrySourceList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of types of sources related to the land registry"@en,
+        "Liste des types de sources liées au cadastre"@fr ;
+    rdfs:comment "List of the different types of sources (documents) and their derivative versions, represented as a list of SKOS concepts."@en,
+        "Liste des différentes types de sources (documents) et de leurs versions dérivées, représentées comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of types of sources related to the land registry"@en,
+        "List of types of sources related to the land registry"@fr .
 
-tbl:NatureList a owl:NamedIndividual ,
-    skos:ConceptScheme ;
-    rdfs:comment "Liste des différentes natures de parcelles, représentés comme une liste de concepts SKOS."@fr ;
-    rdfs:label "Type de natures de parcelles"@fr ,
-               "Type of plot natures"@en ;
-    skos:prefLabel "Type de natures de parcelles"@fr ,
-               "Type of plot natures"@en .
+tbl:NatureList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of plot natures"@en,
+        "Liste des natures de parcelles"@fr ;
+    rdfs:comment "List of the different natures of plots, represented as a list of SKOS concepts. The types in the list are derived from observations made in old land registry as well as in documents describing the content of the current land registry."@en,
+        "Liste des différentes natures de parcelles, représentés comme une liste de concepts SKOS. Les natures de la liste sont issues d'observations réalisées dans les documents cadastraux anciens ainsi que dans des documents descriptifs du cadastre moderne."@fr ;
+    skos:prefLabel "List of plot natures"@en,
+        "Liste des natures de parcelles"@fr .
 
-tbl:AnnotationClassList a owl:NamedIndividual ,
-                  skos:ConceptScheme ;
-                  rdfs:comment "Liste des différentes classes pouvant être attribuées à un document ou à une zone dans un document, représentés comme une liste de concepts SKOS."@fr ;
-                  rdfs:label "Liste de classes"@fr ,
-                             "List of classes"@en ;
-                skos:prefLabel "Liste de classes"@fr ,
-                             "List of classes"@en .
+tbl:PlotAttributeList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of attribute types specific to land plots described in the land registry."@en,
+        "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr ;
+    rdfs:comment "List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts."@en,
+        "Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of attribute types specific to land plots described in the land registry."@en,
+        "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr .
 
-tbl:LandRegistrySourceList a owl:NamedIndividual ,
-    skos:ConceptScheme ;
-    rdfs:comment "Liste des différentes sources de données, représentées comme une liste de concepts SKOS."@fr ;
-    rdfs:label "Type de sources"@fr ,
-               "Type of sources"@en ;
-    skos:prefLabel "Type de sources"@fr ,
-               "Type of sources"@en .
+tbl:SpecialCellValueList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of special values found in the cadastral tables"@en,
+        "Liste des valeurs spéciales rencontrées dans les tables cadastrales"@fr ;
+    rdfs:comment "List of so-called special values found in cadastral documents. Once explained, these values enable the generation of structured insights into changes in land parcels. They are used in particular during the graph generation phase."@en,
+        "Liste des valeurs dites spéciales rencontrées dans les documents cadastraux. Une fois explicitées, ces valeurs permettent de produire des connaissances structurées sur l'évolution des parcelles. Elles sont notamment utilisées lors de la phase de production du graphe."@fr ;
+    skos:prefLabel "List of special values found in the cadastral tables"@en,
+        "Liste des valeurs spéciales rencontrées dans les tables cadastrales"@fr .
 
-tbl:SpecialCellValuesList a owl:NamedIndividual ,
-    skos:ConceptScheme ;
-    rdfs:comment "Liste des différentes valeurs spéciales liées au fonctionnement des documents cadastraux, représentés comme une liste de concepts SKOS."@fr ;
-    rdfs:label "Type de valeurs spéciales"@fr ,
-               "Type of special values"@en ;
-    skos:prefLabel "Type de valeurs spéciales"@fr ,
-               "Type of special values"@en .
 
-# ---- SKOS Concepts ----
+# ----- List of land registry landmarks (peg:Landmark) -----
 
-## ---- CadastreAttributesList ----
-tblatype:PlotAddress a peg:AttributeType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:altLabel "Location"@en,
+tblltype:Plot a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:altLabel "Land plot"@en ;
+    skos:broader tblltype:Section ;
+    skos:definition "The most precise geographical unit in the land registry, corresponding to a coherent parcel of land (often of the same type) and linked to a taxpayer."@en,
+        "Entité géographique la plus précise du cadastre, correspondant à une unité de terre cohérente (souvent de même nature) et associée à un contribuable."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "Plot"@en,
+        "Parcelle"@fr .
+
+tblltype:Arrondissement a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    rdf:seeAlso "https://fr.wikipedia.org/wiki/Arrondissement_fran%C3%A7ais" ;
+    skos:broader tblltype:Departement ;
+    skos:definition "A geographical unit corresponding to the first level of subdivision within a department. Their administrative role has evolved since their creation, which means there are differences compared with the current definition of an arrondissement, although this does not alter the hierarchy of administrative geographical units."@en,
+        "Entité géographique correspondant au premier niveau de sous-division des départements. Leur rôle administratif a évolué depuis leur création, ce qui implique des différences avec la définition actuelle de l'arrondissement sans que celà change la hiérarchie des entités géographiques administratives."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Arrondissement"@en,
+        "Arrondissement départemental"@fr .
+
+tblltype:Canton a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    rdf:seeAlso "https://fr.wikipedia.org/wiki/Canton_fran%C3%A7ais" ;
+    skos:altLabel "Canton officiel"@fr,
+        "Justice de paix"@fr ;
+    skos:broader tblltype:Arrondissement ;
+    skos:definition "A geographical unit corresponding to the second level of subdivision within departments as recorded in the land registry, situated between the district and the municipality. These are the official cantons, established in the late 18th century, primarily for the organisation of magistrates’ courts (until 1958) and elections. In the land registry records, the term ‘Justice of the Peace’ may also be used instead of ‘Canton’."@en,
+        "Entité géographique correspondant au deuxième niveau de sous-division des départements mentionné dans le cadastre, situé entre l'arrondissement et la commune. Il s'agit ici des cantons officiels, créés à la fin du 18ème siècle, notamment pour l'organisation des justices de paix (jusqu'à 1958) et des élections. Dans les registres cadastraux, le terme \"Justice de paix\" peut d'ailleurs être utilisé à la place de \"Canton\"."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Canton"@en,
+        "Canton"@fr .
+
+tblltype:Commune a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:altLabel "Municipality"@en ;
+    skos:broader tblltype:Canton ;
+    skos:definition "A geographical unit corresponding to the finest administrative division across the whole territory. Each municipality had its own land registry comprising a complete set of documents (maps and registers)."@en,
+        "Entité géographique correspondant au maillage administratif le plus fin sur l'ensemble du territoire. Chaque commune possédait son cadastre comprenant un corpus complet de documents (plans et registres)."@fr ;
+    skos:exactMatch <http://data.ign.fr/def/geofla#Commune> ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Commune"@en,
+        "Commune"@fr .
+
+tblltype:Departement a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:broader tblltype:FrenchAdministrativeUnit ;
+    skos:definition "A geographical unit corresponding to the French departments since their creation in 1790. The departments were responsible for collecting direct taxes from the municipalities within their territory."@en,
+        "Entité géographique correspondant aux départements français depuis leur création en 1790. Les départements étaient responsable du prélèvement des contributions directes des communes se trouvant sur le territoire."@fr ;
+    skos:exactMatch <http://data.ign.fr/def/geofla#Departement> ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Departement"@en,
+        "Département"@fr .
+
+tblltype:FrenchAdministrativeUnit a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:definition "A geographical entity corresponding to a French administrative unit."@en,
+        "Entité géographique correspondant à une unité administrative française."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Administrative Unit"@en,
+        "Unité administrative française"@fr .
+
+tblltype:Section a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:altLabel "Cadastral section"@en ;
+    skos:broader tblltype:Commune ;
+    skos:definition "A geographical unit specific to the land registry, it is identified by a single letter in the old land registry and by one or more letters in the updated land registry. It corresponds to a division of the municipality into large groups of plots. Generally speaking, each sheet of the plot map represented a section."@en,
+        "Entité géographique spécifique au cadastre, elle est identifiée par une lettre dans l'ancien cadastre et par une ou plusieurs lettres dans le cadastre rénové. Elle correspond à un découpage de la commune en grands ensembles de parcelles. Dans le cas général, chaque feuille de plan parcellaire représentait une section."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "Section"@en,
+        "Section"@fr .
+
+# ----- List of land registry landmarks attributes types (peg:AttributeType) -----
+tblatype:PlotAddress a owl:NamedIndividual,
+        skos:Concept,
+        peg:AttributeType ;
+    skos:altLabel "Plot location"@en,
         "Localisation de la parcelle"@fr ;
-    skos:inScheme tbl:LandRegistryAttributeList ;
-    skos:prefLabel "Plot address"@en,
+    skos:definition "Address of the plot, usually corresponding to a local place name, a road or street, or possibly a house number."@en,
+        "Adresse de la parcelle concernée, correspondant généralement à un lieu-dit, à une voie ou rue ou éventuellement à un numéro d'adresse."@fr ;
+    skos:inScheme tbl:PlotAttributeList ;
+    skos:prefLabel "Plot Address"@en,
         "Adresse de la parcelle"@fr .
 
-tblatype:PlotMention a peg:AttributeType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Détail des mentions précédente.s, courante et suivante.s associées à une parcelle (d'après les colonnes Tiré de, Porté et du numéro de folio courant)."@fr ;
-    skos:inScheme tbl:LandRegistryAttributeList ;
-    skos:prefLabel "Plot mention"@en,
+tblatype:PlotMention a owl:NamedIndividual,
+        skos:Concept,
+        peg:AttributeType ;
+    skos:definition "Reference to the plot in the registers. This usually involves stating the current folio of the plot, enabling it to be located in the documents."@en,
+        "Mention de la parcelle dans un document. Correspond généralement à l'indication du folio permettant de la retrouver dans les documents."@fr ;
+    skos:inScheme tbl:PlotAttributeList ;
+    skos:prefLabel "Mention of the plot"@en,
         "Mention de la parcelle"@fr .
 
-tblatype:PlotNature a peg:AttributeType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Nature d'une parcelle"@fr ;
-    skos:inScheme tbl:LandRegistryAttributeList ;
-    skos:prefLabel "Nature"@en,
-        "Nature"@fr .
+tblatype:PlotNature a owl:NamedIndividual,
+        skos:Concept,
+        peg:AttributeType ;
+    skos:definition "Nature of the plot, in relation to the soil type or its use."@en,
+        "Nature de la parcelle concernée, associée au type de sol ou à l'usage de celui-ci."@fr ;
+    skos:inScheme tbl:PlotAttributeList ;
+    skos:prefLabel "Plot Nature"@en,
+        "Nature de la parcelle"@fr .
 
-tblatype:PlotTaxpayer a peg:AttributeType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:altLabel "Propriétaire ou usufruitier"@fr ;
-    skos:definition "Propriétaire(s) ou usufruitier(s) d'une parcelle (contribuable)"@fr ;
-    skos:inScheme tbl:LandRegistryAttributeList ;
+tblatype:PlotTaxpayer a owl:NamedIndividual,
+        skos:Concept,
+        peg:AttributeType ;
+    skos:altLabel "Owner or usufructuary"@en,
+        "Propriétaire ou usufruitier"@fr ;
+    skos:definition "A natural or legal person liable for council tax on the plot in question."@en,
+        "Personne physique ou morale redevable de l'impôt foncier pour la parcelle concernée."@fr ;
+    skos:inScheme tbl:PlotAttributeList ;
     skos:prefLabel "Taxpayer"@en,
         "Contribuable"@fr .
 
-########## CadastreChange List
-tblctype:TaxpayerAppearance a  owl:NamedIndividual ,
-                                    peg:ChangeType ,
-                                    skos:Concept ;
-                                 skos:definition "Changement décrivant l'apparition d'un contribuable"@fr ;
-                                 skos:inScheme tbl:LandRegistryChange ;
-                                 skos:prefLabel "Apparition d'un contribuable"@fr ,
-                                                "Appearance of a taxpayer"@en .
-tblctype:TaxpayerDisappearance a  owl:NamedIndividual ,
-                                          peg:ChangeType ,
-                                          skos:Concept ;
-                                 skos:definition "Changement décrivant la disparition d'un contribuable"@fr ;
-                                 skos:inScheme tbl:LandRegistryChange ;
-                                 skos:prefLabel "Disparition d'un contribuable"@fr ,
-                                                "Disappearance of a taxpayer"@en .
-########## LandRegistryLandmarkList
+# ----- List of land registry events (peg:Event) -----
+tbletype:Addition a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This event is linked to a change to the building that results in an increase in its valuation (e.g. the addition of a floor or an extension)."@en,
+        "Cet évènement est associé à une modification du bâtiment qui provoque sa réévaluation à la hausse (ex : ajout d'un étage ou d'une extension)."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Extension to a building"@en,
+        "Augmentation d'un bâtiment"@fr .
 
-tblltype:Arrondissement a owl:NamedIndividual ,
-                    peg:LandmarkType ,
-                    skos:Concept ;
-           skos:altLabel "Arrondissement"@en ,
-                         "Arrondissement"@fr ;
-           skos:broader ltype:AdministrativeUnity ;
-           skos:definition "Entité administrative décrivant un arrondissement"@fr ;
-           skos:inScheme tbl:LandRegistryLandmarkList ;
-           skos:prefLabel "Arrondissement"@en ,
-                          "Arrondissement"@fr .
+tbletype:ClosePropertyAccount a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:altLabel "Supression d'un compte foncier"@fr ;
+    skos:definition "This event relates to the closure of a taxpayer’s property tax account in a given municipality. More specifically, the date on which the property tax account is closed corresponds to the date on which a legal or natural person ceases to pay property tax for [1..n] plots of land in the municipality in question."@en,
+        "Cet évènement est associé à la clôture du compte foncier d'un contribuable dans une commune donnée. Plus précisément, la date de clôture du compte foncier correspond à la date à laquelle une personne légale ou morale ne paye plus l'impôt foncier pour [1..n] parcelles de la commune concernée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Closing of a property tax account"@en,
+        "Fermeture d'un compte foncier"@fr .
 
-tblltype:Canton a owl:NamedIndividual ,
-                    peg:LandmarkType ,
-                    skos:Concept ;
-           skos:altLabel "Canton"@en ,
-                         "Canton"@fr ;
-           skos:broader ltype:AdministrativeUnity ;
-           skos:definition "Entité administrative décrivant un canton (jusqu'à la loi du loi du 17 mai 2013)"@fr ;
-           skos:inScheme tbl:LandRegistryLandmarkList ;
-           skos:prefLabel "Canton"@en ,
-                          "Canton"@fr .
+tbletype:ConsideredAsRuined a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This event is linked to a building being reclassified as a ruin. This generally means that it is no longer subject to property tax."@en,
+        "Cet évènement est associé au reclassement d'un bâtiment en tant que ruine. Ceci implique généralement qu'il n'est plus imposé au titre des propriétés bâties."@fr ;
+    skos:hiddenLabel "En ruines",
+        "Ruines" ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Declaration of a building in ruins"@en,
+        "Déclaration d'un bâtiment en ruines"@fr .
 
-tblltype:Departement a owl:NamedIndividual ,
-                       peg:LandmarkType ,
-                       skos:Concept ;
-              skos:broader ltype:AdministrativeUnity ;
-              skos:definition "Entité administrative décrivant un département "@fr ;
-              skos:inScheme tbl:LandRegistryLandmarkList ;
-              skos:prefLabel "Departement"@en ,
-                             "Département"@fr ;
-              skos:altLabel "French departement"@en .
+tbletype:Construction a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This project involves the construction of a building on a plot of land."@en,
+        "Cet évènement implique la construction d'un bâtiment sur une parcelle."@fr ;
+    skos:hiddenLabel "Construction nouvelle" ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Construction of a building"@en,
+        "Construction d'un bâtiment"@fr .
 
-tblltype:Plot a owl:NamedIndividual ,
-                            peg:LandmarkType ,
-                            skos:Concept ;
-                   skos:definition "Parcelle située dans une section d'une commune"@fr ;
-                   skos:inScheme tbl:LandRegistryLandmarkList ;
-                   skos:prefLabel "Parcelle"@fr ,
-                                  "Plot"@en .
+tbletype:Demotion a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This project involves the complete demolition of a building on a plot of land."@en,
+        "Cet évènement implique la destruction complète d'un bâtiment sur une parcelle."@fr ;
+    skos:hiddenLabel "Destruction" ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Demolition of a building"@en,
+        "Démolition d'un bâtiment"@fr .
 
-tblltype:Section a owl:NamedIndividual ,
-                            peg:LandmarkType ,
-                            skos:Concept ;
-                   skos:definition "Section cadastrale contentant tout ou partie des parcelles d'une commune, identifiée par une "@fr ;
-                   skos:inScheme tbl:LandRegistryLandmarkList ;
-                   skos:prefLabel "Section"@fr ,
-                                  "Section"@en .
+tbletype:DocumentCreation a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to the addition of a new physical document to the cadastral register of a given municipality. For example, it may involve the creation of a new register to replace one that has already been completed."@en,
+        "Cet évènement désigne l'ajout d'un nouveau document physique dans le corpus cadastral d'une commune donnée. Par exemple, il peut s'agir de l'ouverture d'une matrice (en tant que registre) pour succéder à une matrice déjà complète."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Creating a document"@en,
+        "Création d'un document"@fr .
 
-# --- NatureList ---
+tbletype:DocumentOutdated a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to the closure of a physical document within the cadastral records of a given municipality. For example, it may be a register whose contents have been transcribed into another register and which is no longer in use."@en,
+        "Cet évènement désigne la clôture d'un document physique dans le corpus cadastral d'une commune donnée. Par exemple, il peut s'agir d'un registre dont le contenu a été recopié dans un autre registre et qui n'est plus utilisé."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Archiving a document"@en,
+        "Archivage d'un document"@fr .
 
-pnature:Abreuvoir a tbl:Nature,
+tbletype:LandRegistryCreation a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to the creation of a land registry in a municipality, in the functional sense of the term. A land registry is established through the production of a parcel map, which corresponds to a specific division of land among various taxpayers, on which each parcel is assigned a unique identifier (1 land registry = 1 numbering system). The registers (section statements and matrices) are then created."@en,
+        "Cet évènement désigne la création d'un cadastre dans une commune, au sens fonctionnel de celui-ci. Un cadastre est initialisé par la production d'un plan parcellaire, correspond à un découpage donné du sol entre divers contribuables, sur lequel chaque parcelle porte un identifiant donné (1 cadastre = 1 numérotation). Les registres (états de sections et matrices) sont initialisés dans la foulée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Creating a land registry"@en,
+        "Initialisation d'un cadastre"@fr .
+
+tbletype:LandRegistryOutdated a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to the closure of a cadastral register in a municipality, in the functional sense of the term. The closure generally precedes the production of a new cadastral register, which involves a new survey, the production of new maps showing a different parcel layout with its own numbering system."@en,
+        "Cet évènement désigne la clôture d'un cadastre dans une commune, au sens fonctionnel de celui-ci. La clôture précède généralement la production d'un nouveau cadastre qui est doté d'une nouvelle opération de levés, de la production de nouveaux plans représentant un parcellaire différent avec sa numérotation propre."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Archiving a land registry"@en,
+        "Archivage d'un cadastre"@fr .
+
+tbletype:Merge a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:LandmarkEvent ;
+    skos:definition "This event describes the merging of [2..n] land plots. In the land registry documents, this event can be identified in two ways.\\n- A new plot is associated with two identifiers (for example, ‘D-100 D-102’).\\n Two plots bearing the same number, previously resulting from the division of a larger plot, are reassociated in the land register of the same taxpayer."@en,
+        "Cet évènement décrit la fusion de [2..n] parcelles. Dans les documents, cet évènement peut être dététecter de deux façons.\\n- Une parcelle est nouvelle associée à deux identifiant (par exemple \"D-100 D-102\").\\n Deux parcelles portant le même numéro, précédement issues de la division d'une parcelle de plus grande superficie, sont réassociées dans le compte foncier d'un même contribuable."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Merger of plots"@en,
+        "Fusion de parcelles"@fr .
+
+tbletype:Omission a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:altLabel "Oubli de déclaration"@fr ;
+    skos:definition "This event relates to a taxpayer’s failure to declare a property on which they have not paid tax for [n] years. Specifically, it refers to the point at which the property is retrospectively re-included in the property tax assessment."@en,
+        "Cet évènement est associé à omission de déclaration d'un bien foncier par un contribuable qui n'a pas payé l'impôt pendant [n] années pour celui-ci. L'évènement désigne précisément le moment de la réintégration a posteriori du bien le compte foncier."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Failure to declare"@en,
+        "Omission de déclaration"@fr .
+
+tbletype:OpenPropertyAccount a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:altLabel "Création d'un compte foncier"@fr ;
+    skos:definition "This event is linked to the opening of a taxpayer’s property tax account in a given municipality. More specifically, the date on which the property tax account is opened corresponds to the date on which a legal or natural person begins to pay property tax for [1..n] plots of land in the municipality in question."@en,
+        "Cet évènement est associé à l'ouverture du compte foncier d'un contribuable dans une commune donnée. Plus précisément, la date d'ouverture du compte foncier correspond à la date à laquelle une personne légale ou morale commence à payer l'impôt foncier pour [1..n] parcelles de la commune concernée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Opening of a property tax account"@en,
+        "Ouverture d'un compte foncier"@fr .
+
+tbletype:Reduction a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This event is linked to a change to the building that results in a downward revaluation (e.g. demolition of part of the building)."@en,
+        "Cet évènement est associé à une modification du bâtiment qui provoque sa réévaluation à la baisse (ex: destruction d'une partie du bâtiment)."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Demolition of a building"@en,
+        "Diminution d'un bâtiment"@fr .
+
+tbletype:Sale a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:TaxpayerMutation ;
+    skos:definition "This event involves the sale of a land plot from one taxpayer to another."@en,
+        "Cet évènement consiste en une vente d'une parcelle d'un contribuable à un autre."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Sale"@en,
+        "Vente"@fr .
+
+tbletype:SplitWithStay a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:Split ;
+    skos:definition "This event is a specific instance of the ‘Division’ event. In this case, at least one of the new parcels resulting from the division remains in the taxpayer’s land register, linked to the divided parcel."@en,
+        "Cet évènement est une précision de l'évènement \"Division\". Ici, au moins l'une des nouvelles parcelles résultant de la division reste dans le compte foncier du contribuable associée à la parcelle divisée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Division of a plot with a residual part in the original property account"@en,
+        "Division d'une parcelle avec résidu dans le compte foncier d'origine"@fr .
+
+tbletype:Succession a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:TaxpayerMutation ;
+    skos:definition "This event involves the transfer of one or more plots of land from one taxpayer to [1..n] other taxpayers upon the settlement of an estate on a given date."@en,
+        "Cet évènement consiste en une transmission d'une ou plusieurs parcelles d'un contribuable à [1..n] autre contribuable lors du réglement d'une sucession à une date donnée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Inheritance"@en,
+        "Succession"@fr .
+
+tbletype:Split a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:LandmarkEvent ;
+    skos:definition "This event describes the division of a plot into [2..n] new plots. In the mutation registres (Matrices des contribuables), this event can be detected by observing the carry-overs of folio numbers. If a plot described in a land register entry is ‘split’ across [2..n] new land register account, it has been divided amongst several taxpayers, each of whom will pay tax on a sub-portion of the original plot."@en,
+        "Cet évènement décrit la division d'une parcelle en [2..n] nouvelles parcelles. Dans les matrices des contribuables, cet évènement peut être détecté en observant les reports de folios. Si une parcelle décrite dans un compte foncier \"passe\" dans[2..n] nouveaux comptes fonciers, elle a été divisée entre plusieurs contribuables qui paieront l'impôt chacun pour une sous-partie de la parcelle intiale."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Split of a plot"@en,
+        "Division d'une parcelle"@fr .
+
+tbletype:LandmarkEvent a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event is associated with various situations involving a change to the boundaries of a land plot."@en,
+        "Cet évènement est associé à différentes situations qui impliquent une modification du périmètre d'une parcelle."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Modification of the boundaries of a plot"@en,
+        "Modification du périmètre d'une parcelle"@fr .
+
+tbletype:TaxpayerMutation a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event relates to a change in the taxpayer associated with a plot of land or a land account."@en,
+        "Cet évènement est associé à un changement de contribuable associé à une parcelle ou à un compte foncier."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Modification of taxpayer"@en,
+        "Mutation de contribuable"@fr .
+
+tbletype:BuildingRelatedEvent a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to a change in the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."@en,
+        "Cet évènement correspond à une évolution de la nature ou de la valeur d'une parcelle spécifiquement liée à l'apparition, la mutation ou la disparition d'un bâtiment sur celle-ci."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Event involving a building"@en,
+        "Evènement impliquant un bâtiment"@fr .
+
+# ----- List of plot natures (tbl:Nature) -----
+#
+pnature:Abreuvoir a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Water trough"@en,
-        "Abreuvoir"@fr .
+        "Abreuvoir"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Abricotier a tbl:Nature,
+pnature:Abricotier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Apricot"@en,
         "Abricotiers"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Apricot trees"@en,
-        "Plantation d'abricotiers"@fr .
+        "Plantation d'abricotiers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Acacia a tbl:Nature,
+pnature:Acacia a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Acacias"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Acacia"@en,
-        "Plantation d'acacias"@fr .
+        "Plantation d'acacias"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Ajonc a tbl:Nature,
+pnature:Ajonc a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Furze"@en,
         "Whin"@en,
@@ -1079,26 +1310,29 @@ pnature:Ajonc a tbl:Nature,
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Gorse"@en,
-        "Ajonc"@fr .
+        "Ajonc"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Allee a tbl:Nature,
+pnature:Allee a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Path"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Walk"@en,
-        "Allée"@fr .
+        "Allée"@fr ;
+    tbl:TFNBGroup "11" .
 
-pnature:Amandier a tbl:Nature,
+pnature:Amandier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Almond"@en,
         "Amandiers"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Almond tree"@en,
-        "Plantation d'amandiers"@fr .
+        "Plantation d'amandiers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Appenti a tbl:Nature,
+pnature:Appenti a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Batiment ;
@@ -1106,7 +1340,7 @@ pnature:Appenti a tbl:Nature,
     skos:prefLabel "Lean-to"@en,
         "Appenti"@fr .
 
-pnature:Ardoisiere a tbl:Nature,
+pnature:Ardoisiere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Ardoise"@fr,
         "Carrière d'ardoise"@fr ;
@@ -1114,9 +1348,10 @@ pnature:Ardoisiere a tbl:Nature,
     skos:closeMatch pnature:Carriere ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Slate quarry"@en,
-        "Ardoisière"@fr .
+        "Ardoisière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Argilliere a tbl:Nature,
+pnature:Argilliere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Argile"@fr,
         "Carrière d'argile"@fr ;
@@ -1124,31 +1359,34 @@ pnature:Argilliere a tbl:Nature,
     skos:closeMatch pnature:Carriere ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Clay quarry"@en,
-        "Argillière"@fr .
+        "Argillière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Asperges a tbl:Nature,
+pnature:Asperges a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Asperge"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Asparagus"@en,
-        "Plantation d'asperges"@fr .
+        "Plantation d'asperges"@fr ;
+    tbl:TFNBGroup "1" .
 
-pnature:Atelier a tbl:Nature,
+pnature:Atelier a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Workshop"@en,
         "Atelier"@fr .
 
-pnature:Aulnaie a tbl:Nature,
+pnature:Aulnaie a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Alder grove"@en,
-        "Aulnaie"@fr .
+        "Aulnaie"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Barraque a tbl:Nature,
+pnature:Barraque a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Shed"@en ;
     skos:broader pnature:NatureBatie ;
@@ -1157,22 +1395,24 @@ pnature:Barraque a tbl:Nature,
     skos:prefLabel "Hut"@en,
         "Baraque"@fr .
 
-pnature:Bassin a tbl:Nature,
+pnature:Bassin a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Basin"@en,
-        "Bassin"@fr .
+        "Bassin"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:BatimentRural a tbl:Nature,
+pnature:BatimentRural a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Bâtiments ruraux"@fr ;
     skos:broader pnature:Batiment ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Rural building"@en,
-        "Bâtiment rural"@fr .
+        "Bâtiment rural"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Batterie a tbl:Nature,
+pnature:Batterie a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Batterie de côte"@fr ;
     skos:broader pnature:Batiment ;
@@ -1180,46 +1420,51 @@ pnature:Batterie a tbl:Nature,
     skos:prefLabel "Battery"@en,
         "Batterie"@fr .
 
-pnature:Bief a tbl:Nature,
+pnature:Bief a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Millstream"@en,
-        "Bief"@fr .
+        "Bief"@fr ;
+    tbl:TFNBGroup "11" .
 
-pnature:BoisAgrement a tbl:Nature,
+pnature:BoisAgrement a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Bois,
         pnature:ObjetDAgrement ;
     skos:closeMatch pnature:Bois ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ornamental wood"@en,
-        "Bois d'agrément"@fr .
+        "Bois d'agrément"@fr ;
+    tbl:TFNBGroup "13" .
 
-pnature:Broussaille a tbl:Nature,
+pnature:Broussaille a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Bushes"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Undergrowth"@en,
-        "Brousaille"@fr .
+        "Brousaille"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Bruyere a tbl:Nature,
+pnature:Bruyere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Bruyères"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Heather"@en,
-        "Bruyère"@fr .
+        "Bruyère"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Buissiere a tbl:Nature,
+pnature:Buissiere a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Boxwood"@en,
-        "Buissières"@fr .
+        "Buissières"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:CanalAgrement a tbl:Nature,
+pnature:CanalAgrement a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Canal,
         pnature:ObjetDAgrement ;
@@ -1228,58 +1473,62 @@ pnature:CanalAgrement a tbl:Nature,
     skos:prefLabel "Ornamental canal"@en,
         "Canal d'agrément"@fr .
 
-pnature:Cassis a tbl:Nature,
+pnature:Cassis a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Blackcurrant"@en,
-        "Plantation de cassis"@fr .
+        "Plantation de cassis"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Cedratiers a tbl:Nature,
+pnature:Cedratiers a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Citron tree"@en,
         "Cédratier"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Cedrate tree"@en,
-        "Plantation de cédratier"@fr .
+        "Plantation de cédratier"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Cerisaies a tbl:Nature,
+pnature:Cerisaies a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Cerise"@fr,
         "Plantation de cerises"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Cherry orchard"@en,
-        "Cerisaies"@fr .
+        "Cerisaies"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Chantier a tbl:Nature,
+pnature:Chantier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Dépôt de marchandises"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Construction site"@en,
-        "Chantier"@fr .
+        "Chantier"@fr ;
+    tbl:TFNBGroup "13" .
 
-pnature:Charmille a tbl:Nature,
+pnature:Charmille a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Allée couverte"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Tree tunnel"@en,
-        "Charmille"@fr .
+        "Charmille"@fr ;
+    tbl:TFNBGroup "11" .
 
-pnature:Chataigneraie a tbl:Nature,
+pnature:Chataigneraie a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "3",
-        "5" ;
-    rdfs:comment "Cadastre actuel : Dans les régions où les châtaigneraies sont exploitées principalement en vue de la récolte des châtaignes, ces pro­priétés doivent être rangées dans le 3e groupe; là où elles sont surtout destinées à la pro­duction du bois, il y a lieu de les classer dans le 5e groupe."@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Chestnut grove"@en,
-        "Châtaigneraies"@fr .
+        "Châtaigneraies"@fr ;
+    tbl:TFNBGroup "3",
+        "5" .
 
-pnature:Chemin a tbl:Nature,
+pnature:Chemin a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Walk"@en ;
     skos:broader pnature:NatureNonBatie ;
@@ -1287,62 +1536,65 @@ pnature:Chemin a tbl:Nature,
     skos:prefLabel "Path"@en,
         "Chemin"@fr .
 
-pnature:ChemindeFer a tbl:Nature,
+pnature:ChemindeFer a owl:NamedIndividual,
         skos:Concept ;
-    rdfs:comment "Cadastre actuel : Abstraction faite, bien entendu, des dépendances sus­ceptibles d'être considérées comme sols de propriétés bâties, lesquelles doivent être rangées dans le 13e groupe"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Railway"@en,
-        "Chemin de fer"@fr .
+        "Chemin de fer"@fr ;
+    tbl:TFNBGroup "12" .
 
-pnature:Cheneviere a tbl:Nature,
+pnature:Cheneviere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Champ de chanvre"@fr,
         "Chanvre"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Hemp field"@en,
-        "Chenevière"@fr .
+        "Chenevière"@fr ;
+    tbl:TFNBGroup "1" .
 
-pnature:Cimetiere a tbl:Nature,
+pnature:Cimetiere a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Cemetery"@en,
         "Cimetiere"@fr .
 
-pnature:Citronnier a tbl:Nature,
+pnature:Citronnier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Citron"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Lemon tree"@en,
-        "Plantation de citronnier"@fr .
+        "Plantation de citronnier"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Clos a tbl:Nature,
+pnature:Clos a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Fenced lot"@en,
         "Clos"@fr .
 
-pnature:CourCommune a tbl:Nature,
+pnature:CourCommune a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Cour ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Shared courtyard"@en,
         "Cour commune"@fr .
 
-pnature:CoursDEau a tbl:Nature,
+pnature:CoursDEau a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "River"@en,
         "stream"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Waterway"@en,
-        "Cours d'eau"@fr .
+        "Cours d'eau"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Courtil a tbl:Nature,
+pnature:Courtil a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Jardin ;
@@ -1350,31 +1602,33 @@ pnature:Courtil a tbl:Nature,
     skos:prefLabel "Fenced garden"@en,
         "Courtil"@fr .
 
-pnature:Crayere a tbl:Nature,
+pnature:Crayere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Carrière de craie"@fr,
         "Craie"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Chalk quarry"@en,
-        "Crayère"@fr .
+        "Crayère"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Cressonniere a tbl:Nature,
+pnature:Cressonniere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Cresson"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Watercress"@en,
-        "Cressonnière"@fr .
+        "Cressonnière"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Cuisine a tbl:Nature,
+pnature:Cuisine a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Kitchen"@en,
         "Cuisine"@fr .
 
-pnature:Dependance a tbl:Nature,
+pnature:Dependance a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Batiment ;
@@ -1382,171 +1636,189 @@ pnature:Dependance a tbl:Nature,
     skos:prefLabel "Outbuilding"@en,
         "Dépendance"@fr .
 
-pnature:Digue a tbl:Nature,
+pnature:Digue a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Seawall"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Dyke"@en,
-        "Digue"@fr .
+        "Digue"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Douve a tbl:Nature,
+pnature:Douve a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Moat"@en,
-        "Douve"@fr .
+        "Douve"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Dune a tbl:Nature,
+pnature:Dune a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Dune"@en,
-        "Dune"@fr .
+        "Dune"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Eau a tbl:Nature,
+pnature:Eau a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Water"@en,
-        "Eau"@fr .
+        "Eau"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Ecluse a tbl:Nature,
+pnature:Ecluse a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Lock"@en,
-        "Ecluse"@fr .
+        "Ecluse"@fr ;
+    tbl:TFNBGroup "12" .
 
-pnature:Ecurie a tbl:Nature,
+pnature:Ecurie a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Stable"@en,
         "Ecurie"@fr .
 
-pnature:Eglise a tbl:Nature,
+pnature:Eglise a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Church"@en,
         "Eglise"@fr .
 
-pnature:EtablissementDeBains a tbl:Nature,
+pnature:EtablissementDeBains a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Public baths"@en,
         "Etablissement de bains"@fr .
 
-pnature:EtangEmpoissonne a tbl:Nature,
+pnature:EtangEmpoissonne a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Etang ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pond with fishes"@en,
         "Etang empoissonné"@fr .
 
-pnature:Falaise a tbl:Nature,
+pnature:Falaise a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Cliff"@en,
-        "Falaise"@fr .
+        "Falaise"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Figuier a tbl:Nature,
+pnature:Figuier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Figues"@fr,
         "Figuier"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Fig tree"@en,
-        "Plantation de figuiers"@fr .
+        "Plantation de figuiers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Fleur a tbl:Nature,
+pnature:Fleur a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Culture de fleurs"@fr,
         "Plantation de fleurs"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Flowers"@en,
-        "Fleurs"@fr .
+        "Fleurs"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Fontaine a tbl:Nature,
+pnature:Fontaine a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Fountain"@en,
-        "Fontaine"@fr .
+        "Fontaine"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Fosse a tbl:Nature,
+pnature:Fosse a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ditch"@en,
-        "Fossé"@fr .
+        "Fossé"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Fougeraie a tbl:Nature,
+pnature:Fougeraie a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ferny area"@en,
-        "Fougeraie"@fr .
+        "Fougeraie"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Fraisier a tbl:Nature,
+pnature:Fraisier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Plantation de fraisiers"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Strawberry plant"@en,
-        "Fraisiers"@fr .
+        "Fraisiers"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Framboisier a tbl:Nature,
+pnature:Framboisier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Plantation de framboisiers"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Raspberry bush"@en,
-        "Framboisiers"@fr .
+        "Framboisiers"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Friche a tbl:Nature,
+pnature:Friche a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Wasteland"@en,
-        "Friche"@fr .
+        "Friche"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Genet a tbl:Nature,
+pnature:Genet a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Broom"@en,
-        "Genêt"@fr .
+        "Genêt"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Graviere a tbl:Nature,
+pnature:Graviere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Carrière de gravier"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Gravel quarry"@en,
-        "Gravière"@fr .
+        "Gravière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Groseillier a tbl:Nature,
+pnature:Groseillier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Groseille"@fr,
         "Plantation de groseillier"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Currant bush"@en,
-        "Groseillier"@fr .
+        "Groseillier"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Gue a tbl:Nature,
+pnature:Gue a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ford"@en,
-        "Gué"@fr .
+        "Gué"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Hangar a tbl:Nature,
+pnature:Hangar a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Hangar"@en ;
     skos:broader pnature:NatureBatie ;
@@ -1556,100 +1828,108 @@ pnature:Hangar a tbl:Nature,
     skos:prefLabel "Shed"@en,
         "Hangar"@fr .
 
-pnature:Herbage a tbl:Nature,
+pnature:Herbage a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pasture"@en,
-        "Herbage"@fr .
+        "Herbage"@fr ;
+    tbl:TFNBGroup "2" .
 
-pnature:Houblonniere a tbl:Nature,
+pnature:Houblonniere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Houblon"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Hop field"@en,
-        "Houblonnière"@fr .
+        "Houblonnière"@fr ;
+    tbl:TFNBGroup "1" .
 
-pnature:JardinDAgrement a tbl:Nature,
+pnature:JardinDAgrement a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Jardin,
         pnature:ObjetDAgrement ;
     skos:hiddenLabel "J d'ag"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ornamental garden"@en,
-        "Jardin d'agrément"@fr .
+        "Jardin d'agrément"@fr ;
+    tbl:TFNBGroup "11" .
 
-pnature:JardinMaraicher a tbl:Nature,
+pnature:JardinMaraicher a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Jardin ;
-    skos:closeMatch pnature:Plantation ;
-    skos:exactMatch pnature:Potager ;
+    skos:closeMatch pnature:Plantation,
+        pnature:Potager ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Vegetable garden"@en,
-        "Jardin Maraîcher"@fr .
+        "Jardin Maraîcher"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:JardinMarais a tbl:Nature,
+pnature:JardinMarais a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Jardin ;
     skos:inScheme tbl:NatureList ;
-    skos:prefLabel "Jardin Marais"@fr .
+    skos:prefLabel "Jardin Marais"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Jonc a tbl:Nature,
+pnature:Jonc a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Rush"@en,
-        "Jonc"@fr .
+        "Jonc"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Lac a tbl:Nature,
+pnature:Lac a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Lake"@en,
-        "Lac"@fr .
+        "Lac"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Lagune a tbl:Nature,
+pnature:Lagune a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Lagoon"@en,
-        "Lagune"@fr .
+        "Lagune"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Lande a tbl:Nature,
+pnature:Lande a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Heath"@en,
-        "Lande"@fr .
+        "Lande"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Lavande a tbl:Nature,
+pnature:Lavande a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "1",
-        "6" ;
-    rdfs:comment "Cadastre actuel : Les cultures de lavande sont rangées dans le 1er ou dans le 6e groupe suivant leur mode d'exploitation."@fr ;
     skos:altLabel "Culture de lavande"@fr,
         "Plantation de lavande"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Lavander"@en,
-        "Lavande"@fr .
+        "Lavande"@fr ;
+    tbl:TFNBGroup "1",
+        "6" .
 
-pnature:Lavoir a tbl:Nature,
+pnature:Lavoir a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Washhouse"@en,
         "Lavoir"@fr .
 
-pnature:MachineAVapeur a tbl:Nature,
+pnature:MachineAVapeur a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Steam engine"@en,
         "Machine à vapeur"@fr .
 
-pnature:Magasin a tbl:Nature,
+pnature:Magasin a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Batiment ;
@@ -1657,7 +1937,7 @@ pnature:Magasin a tbl:Nature,
     skos:prefLabel "Shop"@en,
         "Magasin"@fr .
 
-pnature:Maison a tbl:Nature,
+pnature:Maison a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:hiddenLabel "Mais"@fr,
@@ -1666,7 +1946,7 @@ pnature:Maison a tbl:Nature,
     skos:prefLabel "House"@en,
         "Maison"@fr .
 
-pnature:Manufacture a tbl:Nature,
+pnature:Manufacture a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Fabrique ;
@@ -1674,180 +1954,193 @@ pnature:Manufacture a tbl:Nature,
     skos:prefLabel "Factory"@en,
         "Manufacture"@fr .
 
-pnature:MaraisSalant a tbl:Nature,
+pnature:MaraisSalant a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Salt marsh"@en,
-        "Marais salant"@fr .
+        "Marais salant"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Mare a tbl:Nature,
+pnature:Mare a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pond"@en,
-        "Mare"@fr .
+        "Mare"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Marecage a tbl:Nature,
+pnature:Marecage a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Marsh"@en,
-        "Marécage"@fr .
+        "Marécage"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Marniere a tbl:Nature,
+pnature:Marniere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Carrière de marne"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Marl quarry"@en,
-        "Manière"@fr .
+        "Manière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Meloniere a tbl:Nature,
+pnature:Meloniere a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Melon plantation"@en,
         "Melonière"@fr .
 
-pnature:Mine a tbl:Nature,
+pnature:Mine a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Mine"@en,
-        "Mine"@fr .
+        "Mine"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Miniere a tbl:Nature,
+pnature:Miniere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Open mine"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Small mine"@en,
-        "Minière"@fr .
+        "Minière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:MoulinAEau a tbl:Nature,
+pnature:MoulinAEau a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Moulin ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Water mill"@en,
         "Moulin à eau"@fr .
 
-pnature:MoulinAVent a tbl:Nature,
+pnature:MoulinAVent a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Moulin ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Wind mill"@en,
         "Moulin à vent"@fr .
 
-pnature:Murier a tbl:Nature,
+pnature:Murier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Mûrier"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Blackberry bush"@en,
-        "Plantation de mûriers"@fr .
+        "Plantation de mûriers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Neant a tbl:Nature,
+pnature:Neant a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Nul"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Nothing"@en,
         "Néant"@fr .
 
-pnature:Noisetier a tbl:Nature,
+pnature:Noisetier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Noisetier"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Hazel tree"@en,
-        "Plantation de noisetiers"@fr .
+        "Plantation de noisetiers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Noyer a tbl:Nature,
+pnature:Noyer a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "3",
-        "5" ;
-    rdfs:comment "Cadastre actuel : Selon qu'il s'agit de noyers à fruits ou à bois. Sont consi­dérées comme noyeraies à bois, à ranger dans le 5e groupe, les plantations qui répondent simul­tanément aux conditions sui­vantes : présenter une densité de peuplement au moins égale à 80 pieds à l'hectare; occuper entièrement une superficie au moins égale à 15 ares; être constituées exclusivement par des sujets “francs de pied” ou hybrides -c'est-à-dire non greffés- et appartenant à des variétés particulièrement aptes à la production du bois : “regia” ou “nigra” ou “nigra et regia”."@fr ;
     skos:altLabel "Noyer"@fr ;
     skos:broader pnature:Plantation ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Walnet tree"@en,
-        "Plantation de noyers"@fr .
+        "Plantation de noyers"@fr ;
+    tbl:TFNBGroup "3",
+        "5" .
 
-pnature:Olivier a tbl:Nature,
+pnature:Olivier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Olivier"@fr ;
-    skos:broader pnature:Plantation ;
+    skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Olive tree"@en,
-        "Plantation d'oliviers"@fr .
+        "Plantation d'oliviers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Oranger a tbl:Nature,
+pnature:Oranger a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Orange"@fr,
         "Oranger"@fr ;
-    skos:broader pnature:Plantation ;
+    skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Orange tree"@en,
-        "Plantation d'orangers"@fr .
+        "Plantation d'orangers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Ormaie a tbl:Nature,
+pnature:Ormaie a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Orme"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Elm"@en,
-        "Ormaie"@fr .
+        "Ormaie"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Oseraie a tbl:Nature,
+pnature:Oseraie a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Wicker grove"@en,
-        "Oseraie"@fr .
+        "Oseraie"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Parterre a tbl:Nature,
+pnature:Parterre a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Flowerbed"@en,
-        "Parterre"@fr .
+        "Parterre"@fr ;
+    tbl:TFNBGroup "11" .
 
-pnature:Passage a tbl:Nature,
+pnature:Passage a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "10",
-        "13" ;
-    rdfs:comment "Cadastre actuel : Passages pratiqués entre les murs de clôtures ou les mai­sons."@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Way"@en,
-        "Passage"@fr .
+        "Passage"@fr ;
+    tbl:TFNBGroup "10",
+        "13" .
 
-pnature:Pecher a tbl:Nature,
+pnature:Pecher a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Pêcher"@fr ;
-    skos:broader pnature:Plantation ;
+    skos:broader pnature:NatureNonBatie ;
+    skos:closeMatch pnature:Verger ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Peach tree"@en,
-        "Plantation de pêchers"@fr .
+        "Plantation de pêchers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Pepiniere a tbl:Nature,
+pnature:Pepiniere a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "1",
-        "9" ;
-    rdfs:comment "Cadastre actuel : Les pépinières sur terrains non aménagés sont rangées dans le 1er groupe."@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Plant nursery"@en,
-        "Pépinière"@fr .
+        "Pépinière"@fr ;
+    tbl:TFNBGroup "1",
+        "9" .
 
-pnature:Peuplier a tbl:Nature,
+pnature:Peuplier a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Poplar"@en,
-        "Peuplier"@fr .
+        "Peuplier"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:PieceDEauAgrement a tbl:Nature,
+pnature:PieceDEauAgrement a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:ObjetDAgrement,
         pnature:PieceDEau ;
@@ -1855,118 +2148,129 @@ pnature:PieceDEauAgrement a tbl:Nature,
     skos:prefLabel "Onermental piece of water"@en,
         "Pièce d'eau d'agrément"@fr .
 
-pnature:Pin a tbl:Nature,
+pnature:Pin a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pine"@en,
-        "Pin"@fr .
+        "Pin"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Plage a tbl:Nature,
+pnature:Plage a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Beach"@en,
-        "Plage"@fr .
+        "Plage"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Platriere a tbl:Nature,
+pnature:Platriere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Carrière de gypse"@fr,
         "Gypse"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Gypsum quarry"@en,
-        "Plâtrière"@fr .
+        "Plâtrière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Poirier a tbl:Nature,
+pnature:Poirier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Poire"@fr,
         "Poirier"@fr ;
-    skos:broader pnature:Plantation ;
+    skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Verger ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pear tree"@en,
-        "Plantation de poiriers"@fr .
+        "Plantation de poiriers"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Pommeraie a tbl:Nature,
+pnature:Pommeraie a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Pommier"@fr ;
-    skos:broader pnature:Plantation ;
+    skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Verger ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Apple tree"@en,
-        "Pommeraie"@fr .
+        "Pommeraie"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Poudriere a tbl:Nature,
+pnature:Poudriere a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Batiment ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Gunpowder depot"@en,
         "Poudrière"@fr .
 
-pnature:Pre a tbl:Nature,
+pnature:Pre a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Meadow"@en,
-        "Pre"@fr .
+        "Pre"@fr ;
+    tbl:TFNBGroup "2" .
 
-pnature:PrePlante a tbl:Nature,
+pnature:PrePlante a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "2",
-        "3" ;
-    rdfs:comment "Cadastre actuel : Ces prés doivent faire l'objet d'une classification parti­culière; mais le terrain est rangé dans le 3e groupe lorsque les arbres fournissent le produit principal"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Plated meadow"@en,
-        "Pré planté"@fr .
+        "Pré planté"@fr ;
+    tbl:TFNBGroup "2",
+        "3" .
 
-pnature:Reservoir a tbl:Nature,
+pnature:Reservoir a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Water tank"@en,
-        "Réservoir"@fr .
+        "Réservoir"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Rigole a tbl:Nature,
+pnature:Rigole a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Furrow"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Channel"@en,
-        "Rigole"@fr .
+        "Rigole"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Riziere a tbl:Nature,
+pnature:Riziere a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Rice paddy"@en,
-        "Rizière"@fr .
+        "Rizière"@fr ;
+    tbl:TFNBGroup "1" .
 
-pnature:Rocher a tbl:Nature,
+pnature:Rocher a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Boulder"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Rock"@en,
-        "Rocher"@fr .
+        "Rocher"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Rosier a tbl:Nature,
+pnature:Rosier a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Plantation de rosiers"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Rose"@en,
-        "Rosier"@fr .
+        "Rosier"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Routoir a tbl:Nature,
+pnature:Routoir a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Rouissoir"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
-    skos:prefLabel "Routoir"@fr .
+    skos:prefLabel "Routoir"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Ruine a tbl:Nature,
+pnature:Ruine a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:Batiment ;
     skos:hiddenLabel "Ruines"@fr ;
@@ -1974,52 +2278,53 @@ pnature:Ruine a tbl:Nature,
     skos:prefLabel "Ruin"@en,
         "Ruine"@fr .
 
-pnature:Sabliere a tbl:Nature,
+pnature:Sabliere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Carrière de sable"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Sand quary"@en,
-        "Sablière"@fr .
+        "Sablière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Salin a tbl:Nature,
+pnature:Salin a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Saline"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Salina"@en,
-        "Salin"@fr .
+        "Salin"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Sapin a tbl:Nature,
+pnature:Sapin a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Pine tree"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Fir tree"@en,
-        "Sapin"@fr .
+        "Sapin"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Saulaie a tbl:Nature,
+pnature:Saulaie a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Saussaie"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Willow grove"@en,
-        "Saulaie"@fr .
+        "Saulaie"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Serre a tbl:Nature,
+pnature:Serre a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "13",
-        "9" ;
-    rdfs:comment """Cadastre actuel : Selon les cas, les serres peuvent être classées ainsi qu'il suit :\r
-- serres non affectées aux besoins d'une exploitation agricole : groupe 13 ;\r
-- serres affectées aux besoins d'une exploitation agricole : groupe 9."""@fr ;
     skos:altLabel "Forcerie"@fr ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Greenhouse"@en,
-        "Serre"@fr .
+        "Serre"@fr ;
+    tbl:TFNBGroup "13",
+        "9" .
 
-pnature:Sol a tbl:Nature,
+pnature:Sol a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "House ground"@en,
         "Superficie des bâtiments"@fr ;
@@ -2031,132 +2336,138 @@ pnature:Sol a tbl:Nature,
         "Terre de maison"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ground"@en,
-        "Sol"@fr .
+        "Sol"@fr ;
+    tbl:TFNBGroup "13" .
 
-pnature:Terrain a tbl:Nature,
+pnature:Terrain a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Piece of land"@en,
         "Terrain"@fr .
 
-pnature:TerrainABatir a tbl:Nature,
+pnature:TerrainABatir a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Piece of land for building"@en,
-        "Terrain à bâtir"@fr .
+        "Terrain à bâtir"@fr ;
+    tbl:TFNBGroup "10" .
 
-pnature:TerrainDAgregemnt a tbl:Nature,
+pnature:TerrainDAgregemnt a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie,
         pnature:ObjetDAgrement ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ornemental piece of land"@en,
-        "Terrain d'agrément"@fr .
+        "Terrain d'agrément"@fr ;
+    tbl:TFNBGroup "11" .
 
-pnature:Terre a tbl:Nature,
+pnature:Terre a owl:NamedIndividual,
         skos:Concept ;
-    rdfs:comment "Cadastre actuel : On comprend dans le groupe des terres les terres plantées, quand le produit de la terre l'emporte sensiblement sur celui des plantations. On y fait figurer non seulement les terrains affectés à la culture des céréales, mais aussi ceux qui sont consacrés à la production des légumes (grande culture potagère rentrant dans l'agriculture proprement dite) et des plantes industrielles (tabac, colza, chanvre, lin, etc.). On y range également les prairies artificielles."@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:hiddenLabel "T"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Bare ground"@en,
-        "Terre"@fr .
+        "Terre"@fr ;
+    tbl:TFNBGroup "1" .
 
-pnature:TerreAVigne a tbl:Nature,
+pnature:TerreAVigne a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Vineyard land"@en,
         "Terre à vigne"@fr .
 
-pnature:TerreLabourable a tbl:Nature,
+pnature:TerreLabourable a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Plowed land"@en,
         "Terre labourable"@fr .
 
-pnature:TerrePlantee a tbl:Nature,
+pnature:TerrePlantee a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "1",
-        "3" ;
-    rdfs:comment "Cadastre actuel : Lorsque la plantation fournit le produit principal, le terrain est rangé dans le 3e groupe."@fr ;
     skos:altLabel "Terrain planté"@fr ;
     skos:broader pnature:NatureNonBatie ;
-    skos:closeMatch pnature:Plantation ;
     skos:hiddenLabel "T pt"@fr,
         "T. p."@fr,
-        "Tp"@fr ,
-        "Terrain planté"@fr ;
+        "Tp"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Planted land"@en,
-        "Terre plantée"@fr .
+        "Terre plantée"@fr ;
+    tbl:TFNBGroup "1",
+        "3" .
 
-pnature:TerreVaine a tbl:Nature,
+pnature:TerreVaine a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Terre vague"@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
-    skos:prefLabel "Terre vaine"@fr .
+    skos:prefLabel "Terre vaine"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Tourbiere a tbl:Nature,
+pnature:Tourbiere a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Peatland"@en,
-        "Tourbière"@fr .
+        "Tourbière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Truffiere a tbl:Nature,
+pnature:Truffiere a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "3",
-        "5" ;
-    rdfs:comment "Cadastre actuel : Les terrains spécialement plantés et entretenus en vue de la production des truffes sont rangés dans le 3e groupe."@fr ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Truffle patch"@en,
-        "Truffière"@fr .
+        "Truffière"@fr ;
+    tbl:TFNBGroup "3",
+        "5" .
 
-pnature:Vigne a tbl:Nature,
+pnature:Vigne a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:hiddenLabel "V"@fr,
         "Vig"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Vineyard"@en,
-        "Vigne"@fr .
+        "Vigne"@fr ;
+    tbl:TFNBGroup "4" .
 
-pnature:Vivier a tbl:Nature,
+pnature:Vivier a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Fishpond"@en,
-        "Vivier"@fr .
+        "Vivier"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Cour a tbl:Nature,
+pnature:Cour a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Courtyard"@en,
-        "Cour"@fr .
+        "Cour"@fr ;
+    tbl:TFNBGroup "13" .
 
-pnature:Etang a tbl:Nature,
+pnature:Etang a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pond"@en,
-        "Etang"@fr .
+        "Etang"@fr ;
+    tbl:TFNBGroup "8" .
 
-pnature:Etendoir a tbl:Nature,
+pnature:Etendoir a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Sechoir ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Drying rack"@en,
-        "Etendoir"@fr .
+        "Etendoir"@fr ;
+    tbl:TFNBGroup "13" .
 
-pnature:Fabrique a tbl:Nature,
+pnature:Fabrique a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Manufacture"@fr ;
     skos:broader pnature:NatureBatie ;
@@ -2164,15 +2475,15 @@ pnature:Fabrique a tbl:Nature,
     skos:prefLabel "Factory"@en,
         "Fabrique"@fr .
 
-pnature:Four a tbl:Nature,
+pnature:Four a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Fournil ;
     skos:inScheme tbl:NatureList ;
-    skos:prefLabel "\"Oven\""@en,
+    skos:prefLabel "Oven"@en,
         "Four"@fr .
 
-pnature:Fournil a tbl:Nature,
+pnature:Fournil a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Four ;
@@ -2180,111 +2491,121 @@ pnature:Fournil a tbl:Nature,
     skos:prefLabel "Bakery"@en,
         "Fournil"@fr .
 
-pnature:Marais a tbl:Nature,
+pnature:Marais a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Palus ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Swamp"@en,
-        "Marais"@fr .
+        "Marais"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Palus a tbl:Nature,
+pnature:Palus a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Marais ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Swamp"@en,
-        "Palus"@fr .
+        "Palus"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:PieceDEau a tbl:Nature,
+pnature:PieceDEau a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Piece of water"@en,
-        "Pièce d'eau"@fr .
+        "Pièce d'eau"@fr ;
+    tbl:TFNBGroup "11" .
 
-pnature:Potager a tbl:Nature,
+pnature:Potager a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Jardin potager"@fr ;
     skos:broader pnature:Jardin ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Vegetable garden"@en,
-        "Potager"@fr .
+        "Potager"@fr ;
+    tbl:TFNBGroup "9" .
 
-pnature:Sechoir a tbl:Nature,
+pnature:Sechoir a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:closeMatch pnature:Etendoir ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Airer"@en,
-        "Séchoir"@fr .
+        "Séchoir"@fr ;
+    tbl:TFNBGroup "13" .
 
-pnature:Bois a tbl:Nature,
+pnature:Bois a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Wood"@en,
-        "Bois"@fr .
+        "Bois"@fr ;
+    tbl:TFNBGroup "5" .
 
-pnature:Canal a tbl:Nature,
+pnature:Canal a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Canal"@en,
         "Canal"@fr .
 
-pnature:Carriere a tbl:Nature,
+pnature:Carriere a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Pit"@en ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Quarry"@en,
-        "Carrière"@fr .
+        "Carrière"@fr ;
+    tbl:TFNBGroup "7" .
 
-pnature:Moulin a tbl:Nature,
+pnature:Moulin a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Mill"@en,
         "Moulin"@fr .
 
-pnature:Patis a tbl:Nature,
+pnature:Patis a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Paturage,
         pnature:Pature ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Grass"@en,
-        "Pâtis"@fr .
+        "Pâtis"@fr ;
+    tbl:TFNBGroup "6" .
 
-pnature:Paturage a tbl:Nature,
+pnature:Paturage a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Patis,
         pnature:Pature ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pastureland"@en,
-        "Pâturage"@fr .
+        "Pâturage"@fr ;
+    tbl:TFNBGroup "2" .
 
-pnature:Pature a tbl:Nature,
+pnature:Pature a owl:NamedIndividual,
         skos:Concept ;
-    tbl:TFNBGroup "2",
-        "6" ;
     skos:broader pnature:NatureNonBatie ;
     skos:closeMatch pnature:Patis,
         pnature:Paturage ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Pasture"@en,
-        "Pâture"@fr .
+        "Pâture"@fr ;
+    tbl:TFNBGroup "2",
+        "6" .
 
-pnature:Verger a tbl:Nature,
+pnature:Verger a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Orchard"@en,
-        "Verger"@fr .
+        "Verger"@fr ;
+    tbl:TFNBGroup "3" .
 
-pnature:Jardin a tbl:Nature,
+pnature:Jardin a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
     skos:hiddenLabel "J"@fr ;
@@ -2292,13 +2613,13 @@ pnature:Jardin a tbl:Nature,
     skos:prefLabel "Garden"@en,
         "Jardin"@fr .
 
-pnature:ObjetDAgrement a tbl:Nature,
+pnature:ObjetDAgrement a owl:NamedIndividual,
         skos:Concept ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Ornemental thing"@en,
         "Objet d'agrément"@fr .
 
-pnature:Batiment a tbl:Nature,
+pnature:Batiment a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureBatie ;
     skos:hiddenLabel "Bat"@fr,
@@ -2307,831 +2628,383 @@ pnature:Batiment a tbl:Nature,
     skos:prefLabel "Building"@en,
         "Bâtiment"@fr .
 
-pnature:Plantation a tbl:Nature,
+pnature:Plantation a owl:NamedIndividual,
         skos:Concept ;
     skos:broader pnature:NatureNonBatie ;
-    skos:closeMatch pnature:TerrePlantee ;
+    skos:closeMatch pnature:TerrainPlante ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Plantation"@en,
         "Plantation"@fr .
 
-pnature:NatureBatie a tbl:Nature,
+pnature:NatureBatie a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Propriété bâtie"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Build plot nature"@en,
-        "Type de nature bâtie"@fr .
+        "Parcelle imposée au titre des propriétés bâties"@fr .
 
-pnature:NatureNonBatie a tbl:Nature,
+pnature:NatureNonBatie a owl:NamedIndividual,
         skos:Concept ;
     skos:altLabel "Propriété non bâtie"@fr ;
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Unbuild plot nature"@en,
-        "Type de nature non bâtie"@fr .
+        "Parcelle imposée au titre des propriétés no bâties"@fr .
 
-########## EventList
+# ----- List of source types -----
 
-tbletype:Addition a tbl:EventType,
-        owl:NamedIndividual,
+srctype:ArticleDeMutation a owl:NamedIndividual,
         skos:Concept ;
-    skos:broader tbletype:BuiltPlotEvent ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Augmentation"@fr .
-
-tbletype:CadastreCreation a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:CadastreAdminEvent ;
-    skos:definition "Création d'un cadastre (= une numérotation)"@fr ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Initialisation d'un cadastre"@fr .
-
-tbletype:CadastreOutdated a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:CadastreAdminEvent ;
-    skos:definition "Archivage d'un cadastre"@fr ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Cadastre archivé"@fr .
-
-tbletype:ChangeWithoutConstruction a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:PlotNatureEvent ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Evolution de nature n'impliquant pas de bâtiment"@fr .
-
-tbletype:ConsideredAsRuined a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:BuiltPlotEvent ;
-    skos:hiddenLabel "En ruines",
-        "Ruines" ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Considéré comme en ruines"@fr .
-
-tbletype:Construction a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:PlotNatureChange ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Construction d'un bâtiment"@fr .
-
-tbletype:Demotion a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:PlotNatureChange ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Démolition d'un bâtiment"@fr .
-
-tbletype:Split a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:LandmarkEvent ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Division d'un objet"@fr .
-
-tbletype:SplitWithStay a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:CadastralEvent ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Subdivision d'une parcelle qui reste dans le compte foncier initial"@fr .
-
-tbletype:DocumentCreation a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:CadastreAdminEvent ;
-    skos:definition "Ouverture d'une matrice"@fr ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Création d'un document"@fr .
-
-tbletype:DocumentOutdated a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:CadastreAdminEvent ;
-    skos:definition "Clôture d'une matrice"@fr ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Archivage d'un document"@fr .
-
-tbletype:EventMentionnedinFoliosColumns a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Evènement mentionné explicitement dans les colonnes 'Tiré de' et 'Porté à' des matrices cadastrales"@fr ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Evènement mentionné dans les colonnes dédiées aux folios"@fr .
-
-tbletype:Merge a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:LandmarkEvent ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Fusion d'objets entiers"@fr .
-
-tbletype:Omission a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:CadastreAdminEvent ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Omission de déclaration qui entraine une réintégration a posteriori de l'article de classement dans un folio"@fr .
-
-tbletype:PartialMerge a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:LandmarkEvent ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Fusion impliquant la fusion d'objets entiers ou subdivisés"@fr .
-
-tbletype:Reduction a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:BuiltPlotEvent ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Diminution"@fr .
-
-tbletype:Sale a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:TaxpayerMutation ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Vente"@fr .
-
-tbletype:Sucession a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:TaxpayerMutation ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Sucession"@fr .
-
-tbletype:PlotNatureEvent a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Evènement impliquant la nature de la parcelle ou les objets qu'elle contient"@fr ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Evènement impliquant la nature d'une parcelle"@fr .
-
-tbletype:TaxpayerMutation a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Mutation de propriétaire"@fr .
-
-tbletype:BuiltPlotEvent a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader tbletype:PlotNatureChange ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Evènement impliquant un bâtiment existant"@fr .
-
-tbletype:LandmarkEvent a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Evènement impliquant un landmark (identité)"@fr .
-
-tbletype:CadastreAdminEvent a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Evènement concernant le cadastre et ses documents"@fr .
-
-tbletype:PlotNatureChange a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Evènement impliquant un changement de nature d'une parcelle"@fr .
-
-tbletype:CadastralEvent a tbl:EventType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:inScheme tbl:LandRegistryEventList ;
-    skos:prefLabel "Evènement cadastral"@fr .
-
-########## SourceList
-
-srctype:ArticleDeClassement a tbl:SourceType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:altLabel "Numéro d'article"@fr ;
+    rdfs:label "Article de mutation" ;
     skos:broader srctype:ZoneDePage ;
-    skos:definition "Ligne de tableau de matrice qui décrit un état de parcelle"@fr ;
+    skos:definition "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."@en,
+        "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Article de classement"@fr .
+    skos:prefLabel "Page area describing a list of taxpayers"@en,
+        "Article de mutation"@fr .
 
-srctype:ArticleDeMutation a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:CompteFoncier a owl:NamedIndividual,
         skos:Concept ;
-    skos:broader srctype:ZoneDePage ;
-    skos:definition "Zone ou cellule d'un folio ou sous-folio qui liste les propriétaires d'un ensemble de parcelles et indique leurs dates de mutations*"@fr ;
+    rdfs:label "Compte foncier" ;
+    skos:broader srctype:MatriceCadastrale ;
+    skos:definition "A set of parcel records (lines) describing the plots of one or more successive related taxpayers. A land account may correspond ‘physically’ to a folio where the latter describes the details of one, and only one, taxpayer (or a list of successive taxpayers)."@en,
+        "Ensemble d'états de parcelles (lignes) qui décrivent les parcelles d'un ou plusieurs contribuables liés se succédant. Un compte foncier peut correspondre \"physiquement\" à un folio dans le cas où celui-ci décrit les informations d'un, et un seul, contribuable (ou liste de contribuables successifs)."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Article de mutation"@fr .
+    skos:prefLabel "Property account"@en,
+        "Compte foncier"@fr .
 
-srctype:CompteFoncier a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:EtatsDeSections_Ap_1822 a owl:NamedIndividual,
         skos:Concept ;
-    skos:broader srctype:ZoneDePage; 
-    skos:broader srctype:Folio ;
-    skos:definition "Ensemble de lignes et de cellules qui décrivent les parcelles d'un ou plusieurs propriétaires conjoints ou sucessifs. Peut correspondre à un ou plusieurs comptes fonciers"@fr ;
-    skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Compte foncier"@fr .
-
-srctype:EtatsDeSections_Ap_1822 a tbl:SourceType,
-        owl:NamedIndividual,
-        skos:Concept ;
+    rdfs:label "Etats de sections postérieurs à 1822" ;
     skos:broader srctype:EtatsDeSections ;
-    skos:definition "Registre d'états de sections créé après 1822."@fr ;
+    skos:definition "Initial registers created after 1822."@en,
+        "Registre d'états de sections créé après 1822."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Etats de sections ultérieurs à 1822"@fr .
+    skos:prefLabel "Initial register created after 1822"@en,
+        "Etats de sections postérieurs à 1822"@fr .
 
-srctype:EtatsDeSections_Av_1822_Bati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:EtatsDeSections_Av_1822_Bati a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés bâties" ;
     skos:broader srctype:EtatsDeSections_Av_1822 ;
-    skos:definition "Partie d'un registre d'états de sections créé avant 1822 dédié à la description des propriétés bâties."@fr ;
+    skos:definition "Extract from an initial register created before 1822, dedicated to the description of built properties."@en,
+        "Partie d'un registre d'états de sections créé avant 1822 dédié à la description des propriétés bâties."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Etats de sections antérieurs à 1822 (propriétés bâties)"@fr .
+    skos:prefLabel "Initial register created before 1822 (unbuilt properties)"@en,
+        "Etats de sections antérieurs à 1822 (propriétés bâties)"@fr .
 
-srctype:EtatsDeSections_Av_1822_NonBati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:EtatsDeSections_Av_1822_NonBati a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés non bâties" ;
     skos:broader srctype:EtatsDeSections_Av_1822 ;
-    skos:definition "Partie d'un registre d'états de sections créé avant 1822 dédié à la description des propriétés non bâties."@fr ;
+    skos:definition "Extract from an initial register created before 1822, dedicated to the description of unbuilt properties."@en,
+        "Partie d'un registre d'états de sections créé avant 1822 dédié à la description des propriétés non bâties."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Etats de sections antérieurs à 1822 (propriétés non bâties)"@fr .
+    skos:prefLabel "Initial register created before 1822 (built properties)"@en,
+        "Etats de sections antérieurs à 1822 (propriétés non bâties)"@fr .
 
-srctype:EtatsDeSections_Scp_Seine_1835 a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:EtatsDeSections_Scp_Seine_1835 a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)" ;
     skos:broader srctype:EtatsDeSections ;
-    skos:definition "Registre d'états de sections spécifique à la tentative de rénovation du cadastre ayant eu lieu entre 1835 et 1845 dans le département de la Seine. "@fr ;
+    skos:definition "Initial registers relating specifically to the attempt to update the land registry carried out between 1835 and 1845 in the department of Seine."@en,
+        "Registre d'états de sections spécifique à la tentative de rénovation du cadastre ayant eu lieu entre 1835 et 1845 dans le département de la Seine."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)"@fr .
+    skos:prefLabel "Special intial registers of the (1835-1845) Seine departement cadaster"@en,
+        "Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)"@fr .
 
-srctype:FicheInventaire a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:FicheInventaire a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Inventaire des archives" ;
     skos:altLabel "Inventaire"@fr ;
-    skos:definition "Fiches d'inventaire décrivant le contenu des archives localisées dans un service d'archives."@fr ;
+    skos:definition "Inventory records describing the contents of the archives held by an archive service."@en,
+        "Fiches d'inventaire décrivant le contenu des archives localisées dans un service d'archives."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Archival Records Inventory"@en,
         "Inventaire des archives"@fr .
 
-srctype:FolioBati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:FolioBati a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Folio (Bâti)" ;
     skos:broader srctype:Folio ;
-    skos:definition "Folio dédié à des parcelles imposées au titre des propriétés bâties"@fr ;
+    skos:definition "Section dedicated to pland plots subject to tax as built property."@en,
+        "Folio dédié à des parcelles imposées au titre des propriétés bâties."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Folio (Bâti)"@fr .
+    skos:prefLabel "Folio (built property)"@en,
+        "Folio (Bâti)"@fr .
 
-srctype:FolioNonBati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:FolioNonBati a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Folio (Non Bâti)" ;
     skos:broader srctype:Folio ;
-    skos:definition "Folio dédié à des parcelles imposées au titre des propriétés non bâties/foncières"@fr ;
+    skos:definition "Account dedicated to land plots taxed as land without any buildings on it (unbuilt properties)."@en,
+        "Folio dédié à des parcelles imposées au titre des propriétés non bâties/foncières."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Folio (Non Bâti)"@fr .
+    skos:prefLabel "Folio (unbuilt property)"@en,
+        "Folio (Non Bâti)"@fr .
 
-srctype:LigneEtatDeSection a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:LigneEtatDeSection a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Ligne de tableau d'états de sections" ;
     skos:broader srctype:ZoneDePage ;
-    skos:definition "Ligne du tableau principal d'un registre d'état de sections décrivant une parcelle à l'initialisation du cadastre"@fr ;
+    skos:definition "A row in the main table of a section status register describing a parcel at the time of the cadastral survey’s initialisation."@en,
+        "Ligne du tableau principal d'un registre d'état de sections décrivant une parcelle à l'initialisation du cadastre."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Ligne de tableau d'états de sections"@fr .
+    skos:prefLabel "Table row in an initial register page"@en,
+        "Ligne de tableau d'états de sections"@fr .
 
-srctype:MatriceCadastrale1807_1822_Bati_NonBati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:LigneMatrice a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Ligne de tableau d'une matrice" ;
+    skos:broader srctype:ZoneDePage ;
+    skos:definition "A table row in a folio of a register describing the status of a plot of land."@en,
+        "Ligne d'un folio d'une matrice décrivant l'état d'une parcelle."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Table row in a mutation register page"@en,
+        "Ligne de tableau d'une matrice"@fr .
+
+srctype:MatriceCadastrale1807_1822_Bati_NonBati a owl:NamedIndividual,
+        skos:Concept ;
+    rdfs:label "Matrice de rôles des propriétés bâties et non bâties (1807-1822)" ;
     skos:altLabel "Matrice des propriétés bâties et non bâties (1807-1822)"@fr ;
     skos:broader srctype:MatriceCadastrale ;
-    skos:definition "Matrice cadastrale créée entre 1807 et 1822, décrit les propriétés bâties et non bâties d'une commune."@fr ;
+    skos:definition "Mutation register created between 1807 and 1822, detailing the built and unbuilt properties within a municipality."@en,
+        "Matrice cadastrale créée entre 1807 et 1822, décrit les propriétés bâties et non bâties d'une commune."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Matrice de rôles des propriétés bâties et non bâties (1807-1822)"@fr .
+    skos:prefLabel "Mutation register of built and non built properties (1807-1822)"@en,
+        "Matrice de rôles des propriétés bâties et non bâties (1807-1822)"@fr .
 
-srctype:MatriceCadastrale1822_1914_NonBati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:MatriceCadastrale1822_1914_NonBati a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Matrice des propriétés non bâties (1822-1914)" ;
     skos:altLabel "Matrice des propriétés foncières (1822-1914)"@fr ;
     skos:broader srctype:MatriceCadastrale ;
-    skos:definition "Matrice cadastrale créée entre 1822 et 1914, décrit les propriétés bâties et non bâties jusqu'à 1882 puis uniquement les propriétés non bâties jusqu'à 1914."@fr ;
+    skos:definition "Mutation register compiled between 1822 and 1914, which lists both built and unbuilt properties up to 1882, and only unbuilt properties up to 1914."@en,
+        "Matrice cadastrale créée entre 1822 et 1914, décrit les propriétés bâties et non bâties jusqu'à 1882 puis uniquement les propriétés non bâties jusqu'à 1914."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Matrice des propriétés non bâties (1822-1914)"@fr .
+    skos:prefLabel "Mutation register of non built properties (1822-1914)"@en,
+        "Matrice des propriétés non bâties (1822-1914)"@fr .
 
-srctype:MatriceCadastrale1882_1911_Bati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:MatriceCadastrale1882_1911_Bati a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Matrice des propriétés bâties (1882-1911)" ;
     skos:broader srctype:MatriceCadastrale ;
-    skos:definition "Matrice cadastrale utilisée à partir de 1882 pour décrire les propriétés bâties."@fr ;
+    skos:definition "Mutation register used from 1882 onwards to describe built properties."@en,
+        "Matrice cadastrale utilisée à partir de 1882 pour décrire les propriétés bâties."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Matrice des propriétés bâties (1882-1911)"@fr .
+    skos:prefLabel "Mutation register of build properties (1882-1911)"@en,
+        "Matrice des propriétés bâties (1882-1911)"@fr .
 
-srctype:MatriceCadastrale1911_Renovation_Bati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:MatriceCadastrale1911_Renovation_Bati a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Matrice des propriétés bâties (1911-rénovation)" ;
     skos:broader srctype:MatriceCadastrale ;
-    skos:definition "Matrice cadastrale utilisée à partir de 1911 pour décrire les propriétés bâties."@fr ;
+    skos:definition "Mutation register used from 1911 onwards to describe built properties."@en,
+        "Matrice cadastrale utilisée à partir de 1911 pour décrire les propriétés bâties."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Matrice des propriétés bâties (1911-rénovation)"@fr .
+    skos:prefLabel "Mutation register of built properties (1911-renewal)"@en,
+        "Matrice des propriétés bâties (1911-rénovation)"@fr .
 
-srctype:MatriceCadastrale1914_Renovation_NonBati a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:MatriceCadastrale1914_Renovation_NonBati a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Matrice des propriétés non bâties (1914-rénovation)" ;
     skos:broader srctype:MatriceCadastrale ;
-    skos:definition "Matrice cadastrale utilisée à partir de 1914 pour décrire les propriétés non bâties"@fr ;
+    skos:definition "Mutation register used from 1914 onwards to describe unbuilt properties."@en,
+        "Matrice cadastrale utilisée à partir de 1914 pour décrire les propriétés non bâties"@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Mutation register of unbuilt properties (1914-cadaster renovation)"@en,
         "Matrice des propriétés non bâties (1914-rénovation)"@fr .
 
-srctype:Ouvrage a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:Ouvrage a owl:NamedIndividual,
         skos:Concept ;
-    skos:definition "Ouvrage (livre, article)"@fr ;
+    rdfs:label "Ouvrage" ;
+    skos:definition "Publication (book, article)."@en,
+        "Ouvrage (livre, article)."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Ouvrage"@fr .
+    skos:prefLabel "Book"@en,
+        "Ouvrage"@fr .
 
-srctype:PlanGeoreference a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:PlanGeoreference a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Plan vectorisé" ;
     skos:broader srctype:Plan ;
-    skos:definition "Plan georéférencé (manuellement ou automatiquement)"@fr ;
+    skos:definition "Georeferenced map (manually or automatically)."@en,
+        "Plan georéférencé (manuellement ou automatiquement)."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Plan vectorisé"@fr .
+    skos:prefLabel "Vectorized map"@en,
+        "Plan vectorisé"@fr .
 
-srctype:PlanParcellaireIssuDAtlas a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:PlanParcellaireIssuDAtlas a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Plan parcellaire issu d'atlas" ;
     skos:broader srctype:PlanParcellaireFinal ;
-    skos:definition "Version finale d'un plan parcellaire extraire d'un atlas communal ou cantonal"@fr ;
+    skos:definition "Final version of a cadastral index map taken from a municipal or cantonal atlas."@en,
+        "Version finale d'un plan parcellaire extraire d'un atlas communal ou cantonal"@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Cadastral index map : final version extract from atlas"@en,
         "Plan parcellaire issu d'atlas"@fr .
 
-srctype:PlanParcellaireMinute a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:PlanParcellaireMinute a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Plan parcellaire : minute" ;
     skos:broader srctype:PlanParcellaire ;
-    skos:definition "Version de travail du plan parcellaire, peut comprendre des traits de constructions, notes de travail ou une numérotation non définitive des parcelles."@fr ;
+    skos:definition "Draft version of a cadastral index map; may include building outlines, working notes or provisional plot numbering."@en,
+        "Version de travail du plan parcellaire, peut comprendre des traits de constructions, notes de travail ou une numérotation non définitive des parcelles."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Cadastral index map : working version"@en,
+    skos:prefLabel "Cadastral index map : draft version"@en,
         "Plan parcellaire : minute"@fr .
 
-srctype:PlanVectorise a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:PlanVectorise a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Plan géoréférencé" ;
     skos:broader srctype:Plan ;
-    skos:definition "Plan vectorisé (manuellement ou automatiquement)"@fr ;
+    skos:definition "Vectorised plan (manually or automatically)."@en,
+        "Plan vectorisé (manuellement ou automatiquement)."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Plan géoréférencé"@fr .
+    skos:prefLabel "Georeferenced map"@en,
+        "Plan géoréférencé"@fr .
 
-srctype:TableauAssemblage a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:TableauAssemblage a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Tableau d'assemblage" ;
     skos:broader srctype:Plan ;
-    skos:definition "Plan réalisé à l'échelle d'une commune représentant l'assemblage des plans parcellaires qui détaillent les parcelles de la commune."@fr ;
+    skos:definition "A map drawn to the scale of a municipality, showing the compilation of cadastral index maps detailing the plots within the municipality."@en,
+        "Plan réalisé à l'échelle d'une commune représentant l'assemblage des plans parcellaires qui détaillent les parcelles de la commune."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Assembly map of the cadastral index maps"@en,
         "Tableau d'assemblage"@fr .
 
-srctype:PageDeRegistre a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:PageDeRegistre a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Page de registre cadastral" ;
     skos:broader srctype:RegistreCadastral ;
-    skos:definition "Page issue d'un registre"@fr ;
+    skos:definition "Page taken from a register."@en,
+        "Page issue d'un registre."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Page de registre cadastral"@fr .
+    skos:prefLabel "Page of register"@en,
+        "Page de registre cadastral"@fr .
 
-srctype:PlanParcellaireFinal a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:PlanParcellaireFinal a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Plan parcellaire final" ;
     skos:broader srctype:PlanParcellaire ;
-    skos:definition "Version finale d'un plan parcellaire"@fr ;
+    skos:definition "Final version of a cadastral index map."@en,
+        "Version finale d'un plan parcellaire"@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Cadastral index map : final version"@en,
         "Plan parcellaire final"@fr .
 
-srctype:Cadastre a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:Cadastre a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Cadastre" ;
     skos:altLabel "Cadastre napoléonien"@fr ;
-    skos:definition "Cadastre complet caractérisé par une numérotation donnée"@fr ;
+    skos:definition "A land registry comprising maps and registers, used for a certain period to calculate and collect property tax on plots of land within a municipality."@en,
+        "Corpus cadastral composé de plans et de registres, utilisé pendant une certaine période pour le calcul et le prélèvement de l'impôt foncier des parcelles d'une commune."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Cadastre"@fr .
+    skos:prefLabel "Land registry"@en,
+        "Cadastre"@fr .
 
-srctype:EtatsDeSections_Av_1822 a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:EtatsDeSections_Av_1822 a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Etats de sections antérieurs à 1822" ;
     skos:broader srctype:EtatsDeSections ;
-    skos:definition "Registre d'états de sections créé avant 1822. Contient une partie dédiée à la description du sol (propriété non bâties) et une partie dédiée à la description des bâtiments (propriétés bâties)."@fr ;
+    skos:definition "Initial register created before 1822. Sometimes, it contains a section describing the unbuilt plots and a section describing the buildings."@en,
+        "Registre d'états de sections créé avant 1822. Contient une partie dédiée à la description du sol (propriété non bâties) et une partie dédiée à la description des bâtiments (propriétés bâties)."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Etats de sections antérieurs à 1822"@fr .
+    skos:prefLabel "Initial register created before 1822"@en,
+        "Etats de sections antérieurs à 1822"@fr .
 
-srctype:Folio a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:Folio a owl:NamedIndividual,
         skos:Concept ;
-    skos:altLabel "Article,Case"@fr ;
+    rdfs:label "Folio" ;
+    skos:altLabel "Article"@fr,
+        "Case"@fr ;
     skos:broader srctype:ZoneDePage ;
-    skos:definition "Zone située dans une page de registre qui est caractérisée à un numéro (identifiant). Peut contenir des éléments d'un ou plusieurs comptes fonciers sous la forme de subdivisions du folios."@fr ;
+    skos:definition "An area within a mutation register page that is identified by a number (ID). It may contain property accounts from one or more taxpayers, depending on the period and the type of pre-printed register."@en,
+        "Zone située dans une page de matrice qui est caractérisée à un numéro (identifiant). Elle peut contenir des éléments d'un ou plusieurs comptes fonciers selon les époques et les types de registres pré-imprimés."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Folio"@fr .
+    skos:prefLabel "Folio"@en,
+        "Folio"@fr .
 
-srctype:PlanParcellaire a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:PlanParcellaire a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Plan parcellaire" ;
     skos:broader srctype:Plan ;
-    skos:definition "Plan représentant les parcellaires d'une portion d'une commune (section entière ou partie d'une section), réalisé à des échelles situées entre 1:1250 et 1:5000."@fr ;
+    skos:definition "A map showing the lant plots within a section of a municipality (an entire section or part of a section), drawn to scales ranging from 1:1,250 to 1:5,000."@en,
+        "Plan représentant les parcellaires d'une portion d'une commune (section entière ou partie d'une section), réalisé à des échelles situées entre 1:1250 et 1:5000."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Cadastral index map"@en,
         "Plan parcellaire"@fr .
 
-srctype:EtatsDeSections a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:EtatsDeSections a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Etats de sections" ;
     skos:broader srctype:RegistreCadastral ;
-    skos:definition "Registre d'état de sections décrivant le parcellaire d'une commune à une date donnée, proche de la réalisation d'un plan cadastral."@fr ;
+    skos:definition "Initial register detailing the initial status of plots within a municipality on a given date for a specific cadastral survey, prior to the completion of a cadastral map."@en,
+        "Registre d'état de sections décrivant l'état initial des parcelles d'une commune à une date donnée pour un cadastre donné, proche de la réalisation d'un plan cadastral."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Initial register"@en,
         "Etats de sections"@fr .
 
-srctype:RegistreCadastral a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:RegistreCadastral a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Registre cadastral" ;
     skos:broader srctype:Cadastre ;
-    skos:definition "Registre faisant partie de la documentation cadastrale"@fr ;
+    skos:definition "A register forming part of the land registry records."@en,
+        "Registre faisant partie de la documentation cadastrale."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Register"@en,
         "Registre cadastral"@fr .
 
-srctype:Plan a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:Plan a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Plan" ;
     skos:broader srctype:Cadastre ;
-    skos:definition "Plan faisant partie de la documentation cadastrale"@fr ;
+    skos:definition "Map forming part of the land registry records."@en,
+        "Plan faisant partie de la documentation cadastrale."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Map"@en,
         "Plan"@fr .
 
-srctype:MatriceCadastrale a tbl:SourceType,
-        owl:NamedIndividual,
+srctype:ZoneDePage a owl:NamedIndividual,
         skos:Concept ;
+    rdfs:label "Zone située dans une page de registre cadastral" ;
+    skos:broader srctype:PageDeRegistre ;
+    skos:definition "An area within a registry page."@en,
+        "Zone située dans une page de registre."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Area in a register page"@en,
+        "Zone située dans une page de registre cadastral"@fr .
+
+srctype:MatriceCadastrale a owl:NamedIndividual,
+        skos:Concept ;
+    rdfs:label "Matrice cadastrale" ;
     skos:broader srctype:RegistreCadastral ;
-    skos:definition "Registre contenant l'ensemble des mutations affectant les parcelles pendant la période de validité de la matrice"@fr ;
+    skos:definition "A register containing all changes affecting the plots during its period of validity."@en,
+        "Registre contenant l'ensemble des mutations affectant les parcelles pendant la période de validité de la matrice"@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Mutation register"@en,
         "Matrice cadastrale"@fr .
 
-srctype:ZoneDePage a tbl:SourceType,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader srctype:PageDeRegistre ;
-    skos:definition "Zone située dans une page de registre"@fr ;
-    skos:inScheme tbl:LandRegistrySourceList ;
-    skos:prefLabel "Zone située dans une page de registre cadastral"@fr .
+# ----- List of special values -----
 
-# --- anclasssList ---
-
-anclass:CrossedOut a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:TextStyles ;
-    skos:hiddenLabel "~~~~" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Texte barré/rayé"@fr .
-
-anclass:DoublePage a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:definition "Correspondant à la numérisation d'une double page "@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Double page"@fr .
-
-anclass:ETSBlankTab a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:PageClasses ;
-    skos:definition "Classe additionnelle. Désigne une page blanche (avec structure pré-imprimée ou non)"@fr ;
-    skos:hiddenLabel "ets_blank" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Page vide"@fr ;
-    skos:related anclass:Page .
-
-anclass:ETSCover a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:PageClasses ;
-    skos:definition "Page de couverture qui précéde le tableau décrivant les parcelles d'une section donnée appartenant à une commune"@fr ;
-    skos:hiddenLabel "ets_couv" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Couverture décrivant une section dans un registre d'états de sections"@fr ;
-    skos:related anclass:Page .
-
-anclass:ETSEntityTypes a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Entités spécifiques aux états de sections"@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Types d'entités présentes dans les états de sections"@fr .
-
-anclass:ETSIntermediateSummary a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:PageClasses ;
-    skos:definition "Page de récapitulatif intermédiaire appartenant à un registre d'états de sections"@fr ;
-    skos:hiddenLabel "ets_recap_inter" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Récapitulatif intermédiaire (par page, par nature etc)"@fr ;
-    skos:related anclass:Page .
-
-anclass:ETSSummary a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:PageClasses ;
-    skos:definition "Page de résumé situé à la fin d'une partie (section) d'un registre d'états de sections"@fr ;
-    skos:hiddenLabel "ets_resume" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Résumé final d'une section"@fr ;
-    skos:related anclass:Page .
-
-anclass:ETSTabP1 a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:PageClasses ;
-    skos:definition "Première page (avant 1822)/ Page unique du tableau principal d'un registre d'états de sections contenant la description des parcelles listées dans l'ordre croissant de numéro identifiant."@fr ;
-    skos:hiddenLabel "ets_tab_p1" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Tableau principal d'état de section (première page si double page)"@fr ;
-    skos:related anclass:Page .
-
-anclass:ETSTabP2 a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:PageClasses ;
-    skos:definition "Deuxième page (avant 1822) du tableau principal d'un registre d'états de sections"@fr ;
-    skos:hiddenLabel "ets_tab_p2" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Tableau principal d'état de section (deuxième page si double page)"@fr ;
-    skos:related anclass:Page .
-
-anclass:EndTime a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:hiddenLabel "date_sortie" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Date de sortie"@fr .
-
-anclass:MATArticleDeClassement a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:altLabel "Ligne de tableau décrivant un état de parcelle"@fr ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:definition "Compte foncier au sens document du terme : groupe de ligne associée à un propriétaire dans un folio de la matrice."@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "NaN"^^xsd:string .
-
-anclass:MATArticleDeMutation a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "NaN"^^xsd:string .
-
-anclass:MATEntityTypes a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Types d'entités présentes dans les matrices"@fr .
-
-anclass:MATFolioArea a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "NaN"^^xsd:string .
-
-anclass:MATMainTable a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:PageClasses ;
-    skos:definition "Page contenant un tableau principal dans une matrice"@fr ;
-    skos:hiddenLabel "mat_main_tab" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Page de tableau principal"@fr ;
-    skos:related anclass:Page .
-
-anclass:NamedPlace a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Localisation de la parcelle à l'échelle d'un lieu-dit ou d'une adresse"@fr ;
-    skos:hiddenLabel "lieu_dit" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Lieu-dit ou adresse"@fr .
-
-anclass:Nature a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Nature de la parcelle"@fr ;
-    skos:hiddenLabel "nature" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Nature"@fr .
-
-
-anclass:Taxpayer a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Propriétaire ou usufruitier de la parcelle"@fr ;
-    skos:hiddenLabel "identite" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Propriétaire"@fr .
-anclass:Owner a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Propriétaire ou usufruitier de la parcelle"@fr ;
-    skos:hiddenLabel "identite" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Propriétaire"@fr ;
-    owl:deprecated true ;
-    owl:equivalentClass anclass:Taxpayer .
-
-anclass:OwnerNumber a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Numéro de folio du propriétaire dans la matrice suivant immédiatement l'état de sections"@fr ;
-    skos:hiddenLabel "numero_proprietaire" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Numéro de folio du propriétaire"@fr ;
-    owl:deprecated true ;
-    owl:equivalentClass anclass:TaxpayerIndexNumber .
-
-anclass:TaxpayerIndexNumber a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Numéro de folio du propriétaire dans la matrice suivant immédiatement l'état de sections"@fr ;
-    skos:hiddenLabel "numero_proprietaire" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Numéro de folio du propriétaire"@fr .
-
-anclass:PassedTo a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:hiddenLabel "porte_a" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Porté à"@fr .
-
-anclass:PlotNumber a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Numéro de la parcelle"@fr ;
-    skos:hiddenLabel "numero_parcelle" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Numéro de parcelle"@fr .
-
-anclass:PreviousNature a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Entité spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), décrit la nature de la parcelle dans l'état de sections précédent"@fr ;
-    skos:hiddenLabel "ancienne_nature" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Ancienne nature de la parcelle"@fr .
-
-anclass:PreviousPlotNumber a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Entité spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), indique le numéro de la parcelle dans l'état de sections précédent"@fr ;
-    skos:hiddenLabel "ancien_numero_parcelle" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Ancien numéro de parcelle"@fr .
-
-anclass:SectionIdentifier a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Indentifiant de la section dans laquelle se trouve la parcelle"@fr ;
-    skos:hiddenLabel "section" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Identifiant de section"@fr .
-
-anclass:StartTime a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:hiddenLabel "date_entree" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Date d'entrée"@fr .
-
-anclass:TableHeader a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:definition "Correspond à l'entête d'un tableau"@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "En-tête de tableau"@fr .
-
-anclass:TableLine a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:definition "Correspond à une ligne de tableau"@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Ligne de tableau"@fr .
-
-anclass:TakenFrom a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:hiddenLabel "tire_de" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Tiré de"@fr .
-
-anclass:TextStyles a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Style du texte"^^xsd:string .
-
-anclass:DocumentsTypes a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Liste des types de zones contenues dans les documents d'archives du cadastre (au sens du machine learning)"@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Types de document"@fr .
-
-anclass:Page a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:definition "Correspondant à la numérisation d'une page simple"@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Page simple"@fr .
-
-anclass:PageClasses a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Liste des classes pouvant être attribuées à une page de registre numérisée."@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Types de pages"@fr .
-
-anclass:NamedEntityTypes a tbl:AnnotationClass,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Correspond aux classes des éléments textuels transcrits dans les documents (champs du formulaire d'annotation)"@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Types d'entités"@fr .
-
-# --- SpecialValueList ---
-
-spval:AdditionConstructionSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Addition à une contruction existente"@fr ;
-    skos:hiddenLabel " add C",
-        "add",
-        "addition" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
-    skos:prefLabel "Expension"@en,
-        "Addition à une construction"@fr .
-
-spval:AugmentationSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Modification d'un bâtiment qui entraine une augmentation du montant de l'impôt"@fr ;
-    skos:hiddenLabel "Augmentation",
-        "Augon",
-        "Augtion",
-        "Augton" ;
-    skos:inScheme tbl:SpecialCellValuesList ;
-    skos:prefLabel "Enhancement"@en,
-        "Augmentation"@fr .
-
-spval:CelluleVide a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
+spval:CelluleVide a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
     skos:altLabel "EMPTY"@fr ;
-    skos:definition "Cellule vide (sens différent de idem)"@fr ;
+    skos:definition "An empty cell with no meaning. This is different from cells left blank to indicate that their value is the same as another cell (Idem)."@en,
+        "Cellule vide sans signification. Diffère des cellules laissées vides pour indiquer que leur valeur est identique à une autre cellule (Idem)."@fr ;
     skos:inScheme tbl:SpecialCellValuesList ;
     skos:prefLabel "Empty cell"@en,
         "Cellule vide"@fr .
 
-spval:ConstructionNouvelleSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Construction d'un bâtiment qui est donc imposable au titre de propriété bâtie"@fr ;
-    skos:hiddenLabel " Cn nvelle",
+spval:ConstructionNouvelleSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indique une construction d'un bâtiment qui est donc imposable au titre des propriétés bâties."@en,
+        "Indique une construction d'un bâtiment qui est donc imposable au titre des propriétés bâties."@fr ;
+    skos:hiddenLabel "CN",
+        "Cn nvelle",
         "Con nvelle",
-        "CN",
         "Conston nouvelle",
         "Construction nouvelle",
         "Nouvelle construction" ;
@@ -3139,10 +3012,11 @@ spval:ConstructionNouvelleSV a tbl:SpecialCellValue,
     skos:prefLabel "New building"@en,
         "Construction nouvelle"@fr .
 
-spval:DemolitionSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Destruction d'un bâtiment qui n'est donc plus imposable au titre de propriété bâtie"@fr ;
+spval:DemolitionSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that a building has been demolished and is therefore no longer subject to property tax."@en,
+        "Indique une destruction d'un bâtiment qui n'est donc plus imposable au titre des propriétés bâties."@fr ;
     skos:hiddenLabel "Destruction",
         "Démolie",
         "Démolition",
@@ -3151,10 +3025,11 @@ spval:DemolitionSV a tbl:SpecialCellValue,
     skos:prefLabel "Demolition"@en,
         "Démolition"@fr .
 
-spval:DiminutionSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Modification d'un bâtiment qui entraine une diminution du montant de l'impôt"@fr ;
+spval:DiminutionSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates a change to a building that results in a reduction in its property valuation."@en,
+        "Indique une modification d'un bâtiment qui entraine une diminution de l'évaluation foncière de celui-ci."@fr ;
     skos:hiddenLabel "Dim",
         "Diminution",
         "Dton" ;
@@ -3162,30 +3037,33 @@ spval:DiminutionSV a tbl:SpecialCellValue,
     skos:prefLabel "Reduction"@en,
         "Diminution"@fr .
 
-spval:DoubleEmploiSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "A définir"@fr ;
+spval:DoubleEmploiSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "! To be defined in accordance with the tax authorities’ guidelines."@en,
+        "! A définir au sens de l'administration fiscale."@fr ;
     skos:hiddenLabel "Double emploi" ;
     skos:inScheme tbl:SpecialCellValuesList ;
     skos:prefLabel "Double employement"@en,
         "Double emploi"@fr .
 
-spval:EvaluationSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Evaluation ou réévaluation fiscale d'une parcelle"@fr ;
+spval:EvaluationSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates a tax valuation or revaluation of a land plot."@en,
+        "Indique une évaluation ou réévaluation fiscale d'une parcelle."@fr ;
     skos:hiddenLabel "Eval",
         "Evaluation" ;
     skos:inScheme tbl:SpecialCellValuesList ;
     skos:prefLabel "Evaluation"@en,
         "Evaluation"@fr .
 
-spval:IdemPrecedentSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
+spval:IdemPrecedentSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
     skos:broader spval:IdemSV ;
-    skos:definition "Valeur de cellule reprenant le contenu de la cellule précédente"@fr ;
+    skos:definition "Indicates that the cell is the same as that of the previous cell."@en,
+        "Valeur de cellule identique à celle de la cellule précédente."@fr ;
     skos:hiddenLabel "\"",
         "/",
         "Id",
@@ -3195,15 +3073,15 @@ spval:IdemPrecedentSV a tbl:SpecialCellValue,
         "§",
         "Ø" ;
     skos:inScheme tbl:SpecialCellValuesList ;
-    skos:prefLabel "Idem as previous cell value"@en,
-        "Idem à la valeur de la cellule précédente"@fr ;
-    skos:altLabel "Idem au précédent"@fr .
+    skos:prefLabel "Idem as previous cell"@en,
+        "Idem au précédent"@fr .
 
-spval:IdemSuivantSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
+spval:IdemSuivantSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
     skos:broader spval:IdemSV ;
-    skos:definition "Valeur de cellule reprenant le contenu de la cellule suivante"@fr ;
+    skos:definition "Indicates that the cell is the same as that of the next cell."@en,
+        "Valeur de cellule identique à celle de la cellule suivante."@fr ;
     skos:hiddenLabel "\"",
         "/",
         "Id",
@@ -3213,23 +3091,24 @@ spval:IdemSuivantSV a tbl:SpecialCellValue,
         "§",
         "☼" ;
     skos:inScheme tbl:SpecialCellValuesList ;
-    skos:prefLabel "Idem as next cell value"@en,
-        "Idem à la valeur de la cellule suivante"@fr ;
-    skos:altLabel "Idem au suivant"@fr .
+    skos:prefLabel "Idem as next cell"@en,
+        "Idem au précédent"@fr .
 
-spval:InconnuSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Valeur de cellule dont le sens n'a pas été explicité"@fr ;
+spval:InconnuSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that the cell meaning has not been specified or understanded."@en,
+        "Valeur de cellule dont le sens n'a pas été explicité."@fr ;
     skos:inScheme tbl:SpecialCellValuesList ;
     skos:prefLabel "Unknown"@en,
         "Valeur inconnue"@fr .
 
-spval:OmissionSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
+spval:OmissionSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
     skos:altLabel "OmissionSV{{date}}"@fr ;
-    skos:definition "Déclaration omise depuis une date donnée réintégrée au compte foncier d'un propriétaire"@fr ;
+    skos:definition "Indicates that the plot of land has been retroactively included in the taxpayer’s land register, as the taxpayer had failed to declare it for a certain period."@en,
+        "Indique que la parcelle a fait l'objet d'une intégration réatroactive dans le compte foncier du contribuable qui ne l'avait pas déclarée pendant une certaine période."@fr ;
     skos:hiddenLabel "Omission",
         "Omission depuis",
         "OmissionSV{{date}}" ;
@@ -3237,10 +3116,11 @@ spval:OmissionSV a tbl:SpecialCellValue,
     skos:prefLabel "Omission"@en,
         "Omission"@fr .
 
-spval:PartieSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Partie d'une parcelle initiale (cartographiée sur le plan)"@fr ;
+spval:PartieSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that the plot is a part of an original parcel that had the same number and has (usually) been subdivided. A \"p\" letter is often concatenated after the plot number."@en,
+        "Indique que la parcelle décrite est une partie d'une parcelle initiale qui possèdait le même numéro et a (généralement) été divisée. La lettre \"p\" est souvent accolée au numéro de la parcelle."@fr ;
     skos:hiddenLabel "Partie",
         "Ptie",
         "p" ;
@@ -3248,19 +3128,21 @@ spval:PartieSV a tbl:SpecialCellValue,
     skos:prefLabel "Part of"@en,
         "Partie"@fr .
 
-spval:ResteSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Reste d'une parcelle modifiée (divisée ou partiellement bâtie) à un état antérieur"@fr ;
+spval:ResteSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that the plot is the remnant of a plot from the same land account that was subdivided and bore the same identifier as the plot in question."@en,
+        "Indique que la parcelle est le résidu d'une parcelle du même compte foncier qui a été divisée et qui portait le même identiant que la parcelle considérée."@fr ;
     skos:hiddenLabel "Reste" ;
     skos:inScheme tbl:SpecialCellValuesList ;
     skos:prefLabel "Left-over"@en,
         "Reste"@fr .
 
-spval:RuinesSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Construction enruine, n'est généralement plus imposable au titre de propriété bâtie"@fr ;
+spval:RuinesSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that a building is or was in ruins."@en,
+        "Indique qu'une construction est ou était en ruines."@fr ;
     skos:hiddenLabel "En ruine",
         "En ruines",
         "Ruines" ;
@@ -3268,30 +3150,60 @@ spval:RuinesSV a tbl:SpecialCellValue,
     skos:prefLabel "Ruined"@en,
         "En ruines"@fr .
 
-spval:ValeurBarreeSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
+spval:ValeurBarreeSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
     skos:altLabel "~~TEXT~~"@fr ;
-    skos:definition "Indique que le texte entre double tilde est rayé dans le document"@fr ;
+    skos:definition "Indicates that the text is crossed out in the document."@en,
+        "Indique que le texte est barré dans le document."@fr ;
     skos:hiddenLabel "~~~~" ;
     skos:inScheme tbl:SpecialCellValuesList ;
     skos:prefLabel "Crossed out"@en,
         "Valeur barrée"@fr .
 
-spval:VoiePubliqueSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Indique d'une partie de la parcelle est passée à la voie publique"@fr ;
+spval:VoiePubliqueSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that part of the plot has been incorporated into the public highway."@en,
+        "Indique d'une partie de la parcelle est passée à la voie publique."@fr ;
     skos:hiddenLabel "Voie publique",
         "Vp" ;
     skos:inScheme tbl:SpecialCellValuesList ;
     skos:prefLabel "Passed to the public roads"@en,
         "Passé à la voie publique"@fr .
 
-spval:IdemSV a tbl:SpecialCellValue,
-        owl:NamedIndividual,
-        skos:Concept ;
-    skos:definition "Idem"@fr ;
+spval:AdditionConstructionSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:closeMatch spval:AugmentationSV ;
+    skos:definition "Indicates an extension to an existing building, which may result in a reassessment of its tax value."@en,
+        "Indique une addition à une contruction existente, pouvant entraîner une réévaluation de la valeur fiscale de celle-ci."@fr ;
+    skos:hiddenLabel "add",
+        "add C",
+        "addition" ;
+    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:prefLabel "Expension"@en,
+        "Addition à une construction"@fr .
+
+spval:AugmentationSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:closeMatch spval:AdditionConstructionSV ;
+    skos:definition "Indicates an extension to an existing building, which may result in a reassessment of its tax value."@en,
+        "Indique une addition à une contruction existente, pouvant entraîner une réévaluation de la valeur fiscale de celle-ci."@fr ;
+    skos:hiddenLabel "Augmentation",
+        "Augon",
+        "Augtion",
+        "Augton" ;
+    skos:inScheme tbl:SpecialCellValuesList ;
+    skos:prefLabel "Enhancement"@en,
+        "Augmentation"@fr .
+
+spval:IdemSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that the cell value that is the same as that of another cell."@en,
+        "Valeur de cellule identique à celle d'une autre cellule."@fr ;
     skos:hiddenLabel "\"",
         "/",
         "Id",
@@ -3302,3 +3214,435 @@ spval:IdemSV a tbl:SpecialCellValue,
     skos:inScheme tbl:SpecialCellValuesList ;
     skos:prefLabel "Idem"@en,
         "Idem"@fr .
+
+# ----- List of annotation classes -----
+
+anclass:BlankPage a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:definition "Page not completed, regardless of its nature. This class can be used in addition of other classes to describe the page in more detail."@en,
+        "Page non complétée, indépendament de sa nature. Cette classe peut-être utilisée avec d'autres classes pour décrire la page plus précisément."@fr ;
+    skos:hiddenLabel "ets_blank" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Blank page"@en,
+        "Page vide"@fr ;
+    skos:related spval:Page .
+
+anclass:CrossedOut a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:TextStyles ;
+    skos:definition "Indicates that the text in a page area is crossed out."@en,
+        "Indique que le texte d'une zone de page est barré."@fr ;
+    skos:hiddenLabel "~~~~" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Crossed-out text"@en,
+        "Texte barré/rayé"@fr .
+
+anclass:DocumentType a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:definition "Types of documents or fields contained in cadastral archive documents, relating to a task of detecting/locating content within images."@en,
+        "Types de documents ou de zones contenues dans les documents d'archives du cadastre, relatif à une tâche de détection/localisation de contenu dans des images."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Type of document"@en,
+        "Type de document"@fr .
+
+anclass:DoublePage a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Image showing a scanned double-page from a register."@en,
+        "Image correspondant à la numérisation d'une double page de registre."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Double-page"@en,
+        "Double page"@fr .
+
+anclass:ETSCover a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:definition "Cover page preceding the main table describing the plots in a given section within a section register."@en,
+        "Page de couverture qui précéde le tableau principal décrivant les parcelles d'une section donnée dans un registre d'état de section."@fr ;
+    skos:hiddenLabel "ets_couv" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Section page cover"@en,
+        "Couverture décrivant une section dans un registre d'états de sections"@fr ;
+    skos:related spval:Page .
+
+anclass:ETSIntermediateSummary a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:definition "Intermediate summary page visible in an initial register."@en,
+        "Page de récapitulatif intermédiaire dans un registre d'états de sections."@fr ;
+    skos:hiddenLabel "ets_recap_inter" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Intermediate summary"@en,
+        "Récapitulatif intermédiaire"@fr ;
+    skos:related spval:Page .
+
+anclass:ETSSummary a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:definition "Final summary page located at the end of a section of an initial register, more precisly at the end of the decsription of the plots of a given section."@en,
+        "Page de résumé situé à la fin d'une partie d'un registre d'états de sections décrivant les parcelles d'une section donnée."@fr ;
+    skos:hiddenLabel "ets_resume" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Summary"@en,
+        "Résumé final d'une section"@fr ;
+    skos:related spval:Page .
+
+anclass:ETSTab a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:closeMatch spval:ETSTabP1 ;
+    skos:definition "Main table page of an initial register containing a description of the plots listed in ascending order by number."@en,
+        "Page du tableau principal d'un registre d'états de sections contenant la description des parcelles listées dans l'ordre croissant des numéros."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Main table in an initial register"@en,
+        "Tableau principal d'état de section"@fr ;
+    skos:related spval:Page .
+
+anclass:ETSTabP1 a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:closeMatch spval:ETSTab ;
+    skos:definition "First page of the main table of an initial register containing a description of the plots listed in ascending order by number. Used only when the main table is display in a double-page. Mostly used for registers created before 1822."@en,
+        "Première page (sur deux) du tableau principal d'un registre d'état de sections contenant la description des parcelles listées dans l'ordre croissant de numéro identifiant. Classe utilisée uniquement quand le tableau principal couvre une double page. Ce type de page est principalement visible dans des registres créés avant 1822."@fr ;
+    skos:hiddenLabel "ets_tab_p1" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "First page of a main table in an initial register"@en,
+        "Tableau principal d'état de section (première page si double page)"@fr ;
+    skos:related spval:Page .
+
+anclass:ETSTabP2 a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:definition "Last page of the main table of an initial register containing a description of the plots listed in ascending order by number. Used only when the main table is display in a double-page. Mostly used for registers created before 1822."@en,
+        "Seconde page du tableau principal d'un registre d'état de sections contenant la description des parcelles listées dans l'ordre croissant de numéro identifiant. Classe utilisée uniquement quand le tableau principal couvre une double page. Ce type de page est principalement visible dans des registres créés avant 1822."@fr ;
+    skos:hiddenLabel "ets_tab_p2" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Second page of a main table in an initial register"@en,
+        "Tableau principal d'état de section (seconde page si double page)"@fr ;
+    skos:related spval:Page .
+
+anclass:EndTime a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value indicating the expiry date of a parcel statement."@en,
+        "Valeur de colonne indiquant la date de fin de validité d'un état de parcelle."@fr ;
+    skos:hiddenLabel "date_sortie" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "End date"@en,
+        "Date de sortie"@fr .
+
+anclass:MATAlphabeticTable a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:definition "Page from a mutation register containing an alphabetical list of taxpayers."@en,
+        "Page d'une matrice cadastrale correspondant à une liste alphabétique des contribuables."@fr ;
+    skos:hiddenLabel "mat_alpha_tab" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Alphabetical table"@en,
+        "Table alphabétique"@fr ;
+    skos:related spval:Page .
+
+anclass:MATArticleDeMutation a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en,
+        "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "List of sucessive taxpayers"@en,
+        "Liste de contribuables sucessifs"@fr .
+
+anclass:MATCompteFoncier a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:altLabel "Ligne de tableau décrivant un état de parcelle"@fr ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Image area corresponding to a group of lines delineating parcels associated with a list of 1 to n taxpayers located in a folio of a register."@en,
+        "Zone d'une image correspondant à un groupe de lignes décrivant des parcelles associé à une liste de 1..n contribuable situé dans un folio d'une matrice."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Area corresponding to a property tax account"@en,
+        "Zone correspondant à un compte foncier"@fr .
+
+anclass:MATMainTable a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:definition "Main table page of a mutation register containing one or more property tax account."@en,
+        "Page du tableau principal d'une matrice cadastrale contenant un ou plusieurs comptes fonciers."@fr ;
+    skos:hiddenLabel "mat_main_tab" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Page containing property accounts"@en,
+        "Page correspondant à un ou plusieurs folios"@fr ;
+    skos:related spval:Page .
+
+anclass:Nature a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value containing the plot nature."@en,
+        "Valeur de colonne relative à la nature de la parcelle."@fr ;
+    skos:hiddenLabel "nature" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Plot Nature"@en,
+        "Nature"@fr .
+
+anclass:Page a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Image showing a scanned single page from a register."@en,
+        "Image correspondant à la numérisation d'une page simple de registre."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Simple-page"@en,
+        "Page simple"@fr .
+
+anclass:PassedTo a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "A column value indicating either one (or more) folio numbers where the following status of the parcel is recorded, or a special value providing information about that status."@en,
+        "Valeur de colonne indiquant soit un (ou plusieurs) numéro.s de folio.s où est inscrit l'état suivant de la parcelle soit une valeur spéciale renseignant sur cet état."@fr ;
+    skos:hiddenLabel "porte_a" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Next folio or status"@en,
+        "Porté à"@fr .
+
+anclass:PlotAddress a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value corresponding to the plot address."@en,
+        "Valeur de colonne correspondant à l'adresse de la parcelle."@fr ;
+    skos:hiddenLabel "lieu_dit" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Plot Address"@en,
+        "Lieu-dit ou adresse"@fr .
+
+anclass:PlotNumber a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value corresponding to the plot number."@en,
+        "Valeur de colonne correspondant au numéro de la parcelle."@fr ;
+    skos:hiddenLabel "numero_parcelle" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Plot Number"@en,
+        "Numéro de parcelle"@fr .
+
+anclass:PreviousNature a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot nature in the previous section list."@en,
+        "Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), décrit la nature de la parcelle dans l'état de sections précédent."@fr ;
+    skos:hiddenLabel "ancienne_nature" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Former Plot Nature"@en,
+        "Ancienne nature de la parcelle"@fr .
+
+anclass:PreviousPlotNumber a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot number in the previous section list."@en,
+        "Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), indique le numéro de la parcelle dans l'état de sections précédent."@fr ;
+    skos:hiddenLabel "ancien_numero_parcelle" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Former Plot Number"@en,
+        "Ancien numéro de parcelle"@fr .
+
+anclass:SectionIdentifier a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value containing the ID of the section in which the plot is located."@en,
+        "Valeur d'une colonne contenant l'identifiant de la section dans laquelle se trouve la parcelle."@fr ;
+    skos:hiddenLabel "section" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Section Identifier"@en,
+        "Identifiant de section"@fr .
+
+anclass:StartTime a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value indicating the start date of validity for a parcel record."@en,
+        "Valeur de colonne indiquant la date de début de validité d'un état de parcelle."@fr ;
+    skos:hiddenLabel "date_entree" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Start date"@en,
+        "Date d'entrée"@fr .
+
+anclass:TableHeader a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Image area corresponding to the header of a table."@en,
+        "Zone d'une image correspondant à l'entête d'un tableau."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Table header"@en,
+        "En-tête de tableau"@fr .
+
+anclass:TableRow a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Image area corresponding to a row of a table."@en,
+        "Zone d'une image correspondant à une ligne de tableau"@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Table row"@en,
+        "Ligne de tableau"@fr .
+
+anclass:TakenFrom a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "A column value indicating either the folio number where the previous status of the parcel was recorded, or a special value providing information about that status."@en,
+        "Valeur de colonne indiquant soit le numéro de folio où était décrit l'état précédent de la parcelle soit une valeur spéciale renseignant sur cet état."@fr ;
+    skos:hiddenLabel "tire_de" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Previous folio or status"@en,
+        "Tiré de"@fr .
+
+anclass:Taxpayer a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value corresponding to the taxpayer."@en,
+        "Valeur de colonne correspondant au contribuable."@fr ;
+    skos:hiddenLabel "identite" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Taxpayer"@en,
+        "Contribuable"@fr .
+
+anclass:TaxpayerActivity a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Activity"@en,
+        "Activité"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TaxpayerAddress a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Address"@en,
+        "Adresse"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TaxpayerBirthName a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Birth name"@en,
+        "Nom de naissance"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TaxpayerFamilyStatus a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Family status"@en,
+        "Statut familial"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TaxpayerFirstNames a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "First name.s"@en,
+        "Prénom.s"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TaxpayerLastName a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Last name"@en,
+        "Nom de famille"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TaxpayerNumber a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value containing the folio number or the alphabetical number of a taxpayer in the following mutation register."@en,
+        "Valeur de colonne correspondant au numéro désignant le numéro de folio ou d'index dans la table alphabétique d'un contribuable dans la matrice suivant immédiatement l'état de sections."@fr ;
+    skos:hiddenLabel "numero_proprietaire" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Folio Number"@en,
+        "Numéro de folio du propriétaire"@fr .
+
+anclass:TaxpayerOrganisationName a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Organisation name"@en,
+        "Raison sociale"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TaxpayerSpouseOrChildrenFirstNames a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "First name.s of the spouse or children"@en,
+        "Prénom.s de l'époux/épouse ou des enfants"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TaxpayerTitle a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Title"@en,
+        "Titre"@fr ;
+    skos:related spval:Taxpayer .
+
+anclass:TextStyles a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Text style"@en,
+        "Style du texte"@fr .
+
+anclass:PageClasses a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:definition "List of classes that can be assigned to a single registry page in relation to a classification task."@en,
+        "Liste des classes pouvant être attribuées à une page simple de registre, relatif à une tâche de classification."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Types of simple pages"@en,
+        "Types de pages"@fr ;
+    skos:related spval:Page .
+
+anclass:NamedEntityTypes a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:definition "Types of named entities that can be identified in land registry documents."@en,
+        "Types d'entités nommées pouvant être reconnues dans les documents cadastraux."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Types of named entities"@en,
+        "Types d'entités nommées"@fr .
+

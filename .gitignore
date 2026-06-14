@@ -14,9 +14,10 @@ scripts/addresses/tmp_files/
 /scripts/
 /scripts/dev/
 /data/land-registry/
-/data/skos/csv-test/
+/data/skos/
 /data/
 /ontology/
+ontology/ontology-land-registry_without_skos.ttl
 /other/
 # Byte-compiled / optimized / DLL files
 __pycache__/
