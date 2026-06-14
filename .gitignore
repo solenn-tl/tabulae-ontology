@@ -17,8 +17,9 @@ scripts/addresses/tmp_files/
 /data/skos/
 /data/
 /ontology/
-ontology/ontology-land-registry_without_skos.ttl
+/ontology/ontology-land-registry_without_skos.ttl
 /other/
+/docs/sections-backup/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -14,14 +14,15 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:voaf="http://purl.org/vocommons/voaf#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:schema="https://schema.org/"
      xmlns:tabulae="https://w3id.org/tabulae#">
     <owl:Ontology rdf:about="https://w3id.org/tabulae#">
         <ns:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
         <ns:license rdf:resource="http://opendatacommons.org/licenses/by/"/>
         <ns:license rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
-        <terms:abstract xml:lang="fr">L&apos;ontologie TABULAE est une extension de l&apos;ontologie PeGazUs dédiée à la représentation des informations relatives aux parcelles contenues dans les documents du cadastre ancien français (XIXe siècle). Elle permet de décrire les parcelles (Plot), leurs contribuables (Taxpayer), leur nature d&apos;occupation du sol (Nature, avec plus de 150 valeurs contrôlées), ainsi que les événements et changements qui affectent ces parcelles au fil du temps. Leur évolution est décrite à l&apos;échelle des attributs. L&apos;ontologie modélise également les sources documentaires mobilisées (matrices cadastrales, états de sections, plans parcellaires) et intègre un support pour la classification automatique et la reconnaissance d&apos;entités nommées dans les documents numérisés (anclass, NamedEntity). Elle s&apos;appuie sur les ontologies PeGazUs, RiC-O, SKOS et PROV-O.</terms:abstract>
-        <terms:abstract xml:lang="en">L&apos;ontology TABULAE is an extension of the PeGazUs vocabulary dedicated to the representation of information contained in the French 19th-century land registry documents. It enables the description of land plots, their taxpayers, their nature (with over 150 controlled values), and the changes and events affecting these plots over time. Their evolution is described at the attribute level. The ontology also models the sources involved (mutation registers, section registers, cadastral index maps) and provides support for automatic classification and named entity recognition in digitised documents (anclass, NamedEntity). It builds on the PeGazUs, RiC-O, SKOS and PROV-O ontologies.</terms:abstract>
+        <terms:abstract xml:lang="fr">L&apos;ontologie TABULAE vise à décrire l&apos;évolution des parcelles cadastrales à l&apos;échelle de leurs attributs.</terms:abstract>
+        <terms:abstract xml:lang="en">The TABULAE ontology aims to describe the evolution of land plots at the attribute level.</terms:abstract>
         <terms:contributor rdf:nodeID="genid1"/>
         <terms:contributor rdf:nodeID="genid3"/>
         <terms:contributor rdf:nodeID="genid5"/>
@@ -48,10 +49,13 @@
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/PeGazUs#"/>
         <rdfs:seeAlso rdf:resource="https://www.ica.org/standards/RiC/ontology#"/>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/owl-time/"/>
         <owl:versionInfo>2.0.0</owl:versionInfo>
         <schema:codeRepository rdf:resource="https://github.com/solenn-tl/tabulae-ontology"/>
         <schema:funding>Agence d&apos;Innovation de Défense (AID) - Ministère des Armées</schema:funding>
         <schema:funding>Institut National de l&apos;Information Géographique et Forestière (IGN)</schema:funding>
+        <vocab:introduction xml:lang="fr">L&apos;ontologie TABULAE est une extension de l&apos;ontologie PeGazUs dédiée à la représentation des informations relatives aux parcelles contenues dans les documents du cadastre ancien français (XIXe siècle). Elle permet de décrire les parcelles (Plot), leurs contribuables (Taxpayer), leur nature d&apos;occupation du sol (Nature, avec plus de 150 valeurs contrôlées) et leur adresse, ainsi que les événements et changements qui affectent ces parcelles au fil du temps. Leur évolution est décrite à l&apos;échelle des attributs. L&apos;ontologie modélise également les sources documentaires mobilisées (matrices cadastrales, états de sections, plans parcellaires) et intègre des concepts et propriétés utiles à la traçabilité des processus de traitement (manuel ou automatique) réalisés pour extraire des informations des documents (classification des images, extraction d&apos;information, reconnaissance des entités nommées). L&apos;ontologie TABULAE s&apos;appuie sur les ontologies PeGazUs, RiC-O, Time et PROV-O.</vocab:introduction>
+        <vocab:introduction xml:lang="en">The TABULAE ontology is an extension of the PeGazUs vocabulary dedicated to the representation of information about land plots contained in the French 19th-century land registry documents. It enables the description of land plots, their nature (with over 150 controlled values) and addresses, of the associated taxpayers, and the changes and events affecting these plots over time. Their evolution is described at the attribute level. The ontology also models the sources involved (mutation registers, section registers, cadastral index maps) and provides support to described the processing of the documents, by hand or automatically, including images classification, information extraction and named entity recognition in digitised documents. The TABULAE ontology re-uses concepts and properties of the PeGazUs, Time, RiC-O, and PROV-O ontologies.</vocab:introduction>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
@@ -482,6 +486,13 @@
 
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/tabulae#isPreferredOver"/>
+    
+
+
+    <!-- https://w3id.org/widoco/vocab#introduction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#introduction"/>
     
 
 
@@ -2015,7 +2026,7 @@
         <skos:hiddenLabel>~~~~</skos:hiddenLabel>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Crossed-out text</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Texte barré/rayé</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Texte barré/rayé</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -2160,23 +2171,6 @@
     
 
 
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/EndTime -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/EndTime">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value indicating the expiry date of a parcel statement.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne indiquant la date de fin de validité d&apos;un état de parcelle.</skos:definition>
-        <skos:hiddenLabel>date_sortie</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Date de sortie</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">End date</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable -->
 
 
@@ -2246,6 +2240,363 @@
     
 
 
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NEEndTime -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NEEndTime">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value indicating the expiry date of a parcel statement.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne indiquant la date de fin de validité d&apos;un état de parcelle.</skos:definition>
+        <skos:hiddenLabel>date_sortie</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Date de sortie</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : End date</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NENature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NENature">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value containing the plot nature.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne relative à la nature de la parcelle.</skos:definition>
+        <skos:hiddenLabel>nature</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Nature</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Plot Nature</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NEPassedTo -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NEPassedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">A column value indicating either one (or more) folio numbers where the following status of the parcel is recorded, or a special value providing information about that status.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne indiquant soit un (ou plusieurs) numéro.s de folio.s où est inscrit l&apos;état suivant de la parcelle soit une valeur spéciale renseignant sur cet état.</skos:definition>
+        <skos:hiddenLabel>porte_a</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Porté à</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Next folio or status</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NEPlotAddress -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NEPlotAddress">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value corresponding to the plot address.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne correspondant à l&apos;adresse de la parcelle.</skos:definition>
+        <skos:hiddenLabel>lieu_dit</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Lieu-dit ou adresse</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Plot Address</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NEPlotNumber -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NEPlotNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value corresponding to the plot number.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne correspondant au numéro de la parcelle.</skos:definition>
+        <skos:hiddenLabel>numero_parcelle</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Numéro de parcelle</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Plot Number</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NEPreviousNature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NEPreviousNature">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot nature in the previous section list.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), décrit la nature de la parcelle dans l&apos;état de sections précédent.</skos:definition>
+        <skos:hiddenLabel>ancienne_nature</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Ancienne nature de la parcelle</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Former Plot Nature</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NEPreviousPlotNumber -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NEPreviousPlotNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot number in the previous section list.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), indique le numéro de la parcelle dans l&apos;état de sections précédent.</skos:definition>
+        <skos:hiddenLabel>ancien_numero_parcelle</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Ancien numéro de parcelle</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Former Plot Number</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NESectionIdentifier -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NESectionIdentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value containing the ID of the section in which the plot is located.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur d&apos;une colonne contenant l&apos;identifiant de la section dans laquelle se trouve la parcelle.</skos:definition>
+        <skos:hiddenLabel>section</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Identifiant de section</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Section Identifier</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NEStartTime -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NEStartTime">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value indicating the start date of validity for a parcel record.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne indiquant la date de début de validité d&apos;un état de parcelle.</skos:definition>
+        <skos:hiddenLabel>date_entree</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Date d&apos;entrée</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Start date</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETakenFrom -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETakenFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">A column value indicating either the folio number where the previous status of the parcel was recorded, or a special value providing information about that status.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne indiquant soit le numéro de folio où était décrit l&apos;état précédent de la parcelle soit une valeur spéciale renseignant sur cet état.</skos:definition>
+        <skos:hiddenLabel>tire_de</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Tiré de</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Previous folio or status</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value corresponding to the taxpayer.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne correspondant au contribuable.</skos:definition>
+        <skos:hiddenLabel>identite</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Contribuable</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Taxpayer</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerActivity -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerActivity">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Activité</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Activity</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerAddress -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerAddress">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Adresse</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Address</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerBirthName -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerBirthName">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Nom de naissance</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Birth name</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerFamilyStatus -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerFamilyStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Statut familial</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Family status</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerFirstNames -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerFirstNames">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Prénom.s</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : First name.s</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerLastName -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerLastName">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Nom de famille</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Last name</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerNumber -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="en">Column value containing the folio number or the alphabetical number of a taxpayer in the following mutation register.</skos:definition>
+        <skos:definition xml:lang="fr">Valeur de colonne correspondant au numéro désignant le numéro de folio ou d&apos;index dans la table alphabétique d&apos;un contribuable dans la matrice suivant immédiatement l&apos;état de sections.</skos:definition>
+        <skos:hiddenLabel>numero_proprietaire</skos:hiddenLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Numéro de folio du propriétaire</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Folio Number</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerOrganisationName -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerOrganisationName">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Raison sociale</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Organisation name</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerSpouseOrChildrenFirstNames -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerSpouseOrChildrenFirstNames">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Prénom.s de l&apos;époux/épouse ou des enfants</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : First name.s of the spouse or children</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerTitle -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
+        <skos:definition xml:lang="fr">Entité nommée identifiable dans une valeur de la colonne relative au contribuable.</skos:definition>
+        <skos:definition xml:lang="en">Named entity that can be extracted fril within a value in the taxpayer column.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Titre</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Named entity : Title</skos:prefLabel>
+        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes -->
 
 
@@ -2257,23 +2608,6 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="fr">Types d&apos;entités nommées</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Types of named entities</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/Nature -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/Nature">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value containing the plot nature.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne relative à la nature de la parcelle.</skos:definition>
-        <skos:hiddenLabel>nature</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Nature</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Plot Nature</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -2310,125 +2644,6 @@
     
 
 
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/PassedTo -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/PassedTo">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">A column value indicating either one (or more) folio numbers where the following status of the parcel is recorded, or a special value providing information about that status.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne indiquant soit un (ou plusieurs) numéro.s de folio.s où est inscrit l&apos;état suivant de la parcelle soit une valeur spéciale renseignant sur cet état.</skos:definition>
-        <skos:hiddenLabel>porte_a</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Next folio or status</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Porté à</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/PlotAddress -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/PlotAddress">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value corresponding to the plot address.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne correspondant à l&apos;adresse de la parcelle.</skos:definition>
-        <skos:hiddenLabel>lieu_dit</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Lieu-dit ou adresse</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Plot Address</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/PlotNumber -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/PlotNumber">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value corresponding to the plot number.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne correspondant au numéro de la parcelle.</skos:definition>
-        <skos:hiddenLabel>numero_parcelle</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Numéro de parcelle</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Plot Number</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/PreviousNature -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/PreviousNature">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot nature in the previous section list.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), décrit la nature de la parcelle dans l&apos;état de sections précédent.</skos:definition>
-        <skos:hiddenLabel>ancienne_nature</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Ancienne nature de la parcelle</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Former Plot Nature</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/PreviousPlotNumber -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/PreviousPlotNumber">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot number in the previous section list.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), indique le numéro de la parcelle dans l&apos;état de sections précédent.</skos:definition>
-        <skos:hiddenLabel>ancien_numero_parcelle</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Ancien numéro de parcelle</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Former Plot Number</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/SectionIdentifier -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/SectionIdentifier">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value containing the ID of the section in which the plot is located.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur d&apos;une colonne contenant l&apos;identifiant de la section dans laquelle se trouve la parcelle.</skos:definition>
-        <skos:hiddenLabel>section</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Identifiant de section</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Section Identifier</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/StartTime -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/StartTime">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value indicating the start date of validity for a parcel record.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne indiquant la date de début de validité d&apos;un état de parcelle.</skos:definition>
-        <skos:hiddenLabel>date_entree</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Date d&apos;entrée</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Start date</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/tabulae/id/codes/annotationClass/TableHeader -->
 
 
@@ -2461,192 +2676,6 @@
     
 
 
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TakenFrom -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TakenFrom">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">A column value indicating either the folio number where the previous status of the parcel was recorded, or a special value providing information about that status.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne indiquant soit le numéro de folio où était décrit l&apos;état précédent de la parcelle soit une valeur spéciale renseignant sur cet état.</skos:definition>
-        <skos:hiddenLabel>tire_de</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Previous folio or status</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Tiré de</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value corresponding to the taxpayer.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne correspondant au contribuable.</skos:definition>
-        <skos:hiddenLabel>identite</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Contribuable</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Taxpayer</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerActivity -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerActivity">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Activity</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Activité</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Adresse</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Birth name</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Nom de naissance</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Family status</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Statut familial</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">First name.s</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Prénom.s</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Last name</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Nom de famille</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerNumber -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerNumber">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:definition xml:lang="en">Column value containing the folio number or the alphabetical number of a taxpayer in the following mutation register.</skos:definition>
-        <skos:definition xml:lang="fr">Valeur de colonne correspondant au numéro désignant le numéro de folio ou d&apos;index dans la table alphabétique d&apos;un contribuable dans la matrice suivant immédiatement l&apos;état de sections.</skos:definition>
-        <skos:hiddenLabel>numero_proprietaire</skos:hiddenLabel>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Folio Number</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Numéro de folio du propriétaire</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerOrganisationName -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerOrganisationName">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Organisation name</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Raison sociale</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">First name.s of the spouse or children</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Prénom.s de l&apos;époux/épouse ou des enfants</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"/>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">Title</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Titre</skos:prefLabel>
-        <skos:related rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/tabulae/id/codes/annotationClass/TextStyles -->
 
 
@@ -2654,7 +2683,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="fr">Style du texte</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Entité nommée : Style du texte</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Text style</skos:prefLabel>
     </owl:NamedIndividual>
     

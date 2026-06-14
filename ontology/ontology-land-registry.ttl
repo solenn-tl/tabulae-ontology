@@ -156,16 +156,19 @@
     #bibo:doi "10.1007/978-3-031-77792-9_22" ;
     #dcterms:source <https://doi.org/10.1007/978-3-031-77792-9_22> ;
     schema:codeRepository <https://github.com/solenn-tl/tabulae-ontology> ;
-    dcterms:abstract
-        "L'ontologie TABULAE est une extension de l'ontologie PeGazUs dédiée à la représentation des informations relatives aux parcelles contenues dans les documents du cadastre ancien français (XIXe siècle). Elle permet de décrire les parcelles (Plot), leurs contribuables (Taxpayer), leur nature d'occupation du sol (Nature, avec plus de 150 valeurs contrôlées), ainsi que les événements et changements qui affectent ces parcelles au fil du temps. Leur évolution est décrite à l'échelle des attributs. L'ontologie modélise également les sources documentaires mobilisées (matrices cadastrales, états de sections, plans parcellaires) et intègre un support pour la classification automatique et la reconnaissance d'entités nommées dans les documents numérisés (anclass, NamedEntity). Elle s'appuie sur les ontologies PeGazUs, RiC-O, SKOS et PROV-O."@fr ,
-        "L'ontology TABULAE is an extension of the PeGazUs vocabulary dedicated to the representation of information contained in the French 19th-century land registry documents. It enables the description of land plots, their taxpayers, their nature (with over 150 controlled values), and the changes and events affecting these plots over time. Their evolution is described at the attribute level. The ontology also models the sources involved (mutation registers, section registers, cadastral index maps) and provides support for automatic classification and named entity recognition in digitised documents (anclass, NamedEntity). It builds on the PeGazUs, RiC-O, SKOS and PROV-O ontologies."@en ;
+    dcterms:abstract "L'ontologie TABULAE vise à décrire l'évolution des parcelles cadastrales à l'échelle de leurs attributs."@fr, 
+                        "The TABULAE ontology aims to describe the evolution of land plots at the attribute level."@en ;
+    widoco:introduction
+        "L'ontologie TABULAE est une extension de l'ontologie PeGazUs dédiée à la représentation des informations relatives aux parcelles contenues dans les documents du cadastre ancien français (XIXe siècle). Elle permet de décrire les parcelles (Plot), leurs contribuables (Taxpayer), leur nature d'occupation du sol (Nature, avec plus de 150 valeurs contrôlées) et leur adresse, ainsi que les événements et changements qui affectent ces parcelles au fil du temps. Leur évolution est décrite à l'échelle des attributs. L'ontologie modélise également les sources documentaires mobilisées (matrices cadastrales, états de sections, plans parcellaires) et intègre des concepts et propriétés utiles à la traçabilité des processus de traitement (manuel ou automatique) réalisés pour extraire des informations des documents (classification des images, extraction d'information, reconnaissance des entités nommées). L'ontologie TABULAE s'appuie sur les ontologies PeGazUs, RiC-O, Time et PROV-O."@fr ,
+        "The TABULAE ontology is an extension of the PeGazUs vocabulary dedicated to the representation of information about land plots contained in the French 19th-century land registry documents. It enables the description of land plots, their nature (with over 150 controlled values) and addresses, of the associated taxpayers, and the changes and events affecting these plots over time. Their evolution is described at the attribute level. The ontology also models the sources involved (mutation registers, section registers, cadastral index maps) and provides support to described the processing of the documents, by hand or automatically, including images classification, information extraction and named entity recognition in digitised documents. The TABULAE ontology re-uses concepts and properties of the PeGazUs, Time, RiC-O, and PROV-O ontologies."@en ;
     #widoco:introduction
     #"Un texte bref à ajouter dans l'introduction."@fr ,
     #"A brief text for the introduction section may be written here."@en ;
     rdfs:seeAlso 
     <https://w3id.org/PeGazUs#> ,
     <https://www.ica.org/standards/RiC/ontology#> ,
-    <http://www.w3.org/ns/prov#> .
+    <http://www.w3.org/ns/prov#> ,
+    <https://www.w3.org/TR/owl-time/>.
 
 # ---- Annotation properties ----
 #owl:maxQualifiedCardinality a owl:AnnotationProperty .
@@ -3215,6 +3218,7 @@ spval:IdemSV a owl:NamedIndividual,
         "Idem"@fr .
 
 # ----- List of annotation classes -----
+
 anclass:BlankPage a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
@@ -3236,7 +3240,7 @@ anclass:CrossedOut a owl:NamedIndividual,
     skos:hiddenLabel "~~~~" ;
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Crossed-out text"@en,
-        "Texte barré/rayé"@fr .
+        "Entité nommée : Texte barré/rayé"@fr .
 
 anclass:DocumentType a owl:NamedIndividual,
         skos:Concept,
@@ -3293,31 +3297,6 @@ anclass:ETSSummary a owl:NamedIndividual,
         "Résumé final d'une section"@fr ;
     skos:related anclass:Page .
 
-anclass:ETSTab a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:PageClasses ;
-    skos:closeMatch anclass:ETSTabP1 ;
-    skos:definition "Main table page of an initial register containing a description of the plots listed in ascending order by number."@en,
-        "Page du tableau principal d'un registre d'états de sections contenant la description des parcelles listées dans l'ordre croissant des numéros."@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Main table in an initial register"@en,
-        "Tableau principal d'état de section"@fr ;
-    skos:related anclass:Page .
-
-anclass:ETSTabP1 a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:PageClasses ;
-    skos:closeMatch anclass:ETSTab ;
-    skos:definition "First page of the main table of an initial register containing a description of the plots listed in ascending order by number. Used only when the main table is display in a double-page. Mostly used for registers created before 1822."@en,
-        "Première page (sur deux) du tableau principal d'un registre d'état de sections contenant la description des parcelles listées dans l'ordre croissant de numéro identifiant. Classe utilisée uniquement quand le tableau principal couvre une double page. Ce type de page est principalement visible dans des registres créés avant 1822."@fr ;
-    skos:hiddenLabel "ets_tab_p1" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "First page of a main table in an initial register"@en,
-        "Tableau principal d'état de section (première page si double page)"@fr ;
-    skos:related anclass:Page .
-
 anclass:ETSTabP2 a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
@@ -3329,17 +3308,6 @@ anclass:ETSTabP2 a owl:NamedIndividual,
     skos:prefLabel "Second page of a main table in an initial register"@en,
         "Tableau principal d'état de section (seconde page si double page)"@fr ;
     skos:related anclass:Page .
-
-anclass:EndTime a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Column value indicating the expiry date of a parcel statement."@en,
-        "Valeur de colonne indiquant la date de fin de validité d'un état de parcelle."@fr ;
-    skos:hiddenLabel "date_sortie" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "End date"@en,
-        "Date de sortie"@fr .
 
 anclass:MATAlphabeticTable a owl:NamedIndividual,
         skos:Concept,
@@ -3386,7 +3354,18 @@ anclass:MATMainTable a owl:NamedIndividual,
         "Page correspondant à un ou plusieurs folios"@fr ;
     skos:related anclass:Page .
 
-anclass:Nature a owl:NamedIndividual,
+anclass:NEEndTime a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value indicating the expiry date of a parcel statement."@en,
+        "Valeur de colonne indiquant la date de fin de validité d'un état de parcelle."@fr ;
+    skos:hiddenLabel "date_sortie" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : End date"@en,
+        "Entité nommée : Date de sortie"@fr .
+
+anclass:NENature a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3394,20 +3373,10 @@ anclass:Nature a owl:NamedIndividual,
         "Valeur de colonne relative à la nature de la parcelle."@fr ;
     skos:hiddenLabel "nature" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Plot Nature"@en,
-        "Nature"@fr .
+    skos:prefLabel "Named entity : Plot Nature"@en,
+        "Entité nommée : Nature"@fr .
 
-anclass:Page a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:definition "Image showing a scanned single page from a register."@en,
-        "Image correspondant à la numérisation d'une page simple de registre."@fr ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Simple-page"@en,
-        "Page simple"@fr .
-
-anclass:PassedTo a owl:NamedIndividual,
+anclass:NEPassedTo a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3415,10 +3384,10 @@ anclass:PassedTo a owl:NamedIndividual,
         "Valeur de colonne indiquant soit un (ou plusieurs) numéro.s de folio.s où est inscrit l'état suivant de la parcelle soit une valeur spéciale renseignant sur cet état."@fr ;
     skos:hiddenLabel "porte_a" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Next folio or status"@en,
-        "Porté à"@fr .
+    skos:prefLabel "Named entity : Next folio or status"@en,
+        "Entité nommée : Porté à"@fr .
 
-anclass:PlotAddress a owl:NamedIndividual,
+anclass:NEPlotAddress a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3426,10 +3395,10 @@ anclass:PlotAddress a owl:NamedIndividual,
         "Valeur de colonne correspondant à l'adresse de la parcelle."@fr ;
     skos:hiddenLabel "lieu_dit" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Plot Address"@en,
-        "Lieu-dit ou adresse"@fr .
+    skos:prefLabel "Named entity : Plot Address"@en,
+        "Entité nommée : Lieu-dit ou adresse"@fr .
 
-anclass:PlotNumber a owl:NamedIndividual,
+anclass:NEPlotNumber a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3437,10 +3406,10 @@ anclass:PlotNumber a owl:NamedIndividual,
         "Valeur de colonne correspondant au numéro de la parcelle."@fr ;
     skos:hiddenLabel "numero_parcelle" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Plot Number"@en,
-        "Numéro de parcelle"@fr .
+    skos:prefLabel "Named entity : Plot Number"@en,
+        "Entité nommée : Numéro de parcelle"@fr .
 
-anclass:PreviousNature a owl:NamedIndividual,
+anclass:NEPreviousNature a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3448,10 +3417,10 @@ anclass:PreviousNature a owl:NamedIndividual,
         "Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), décrit la nature de la parcelle dans l'état de sections précédent."@fr ;
     skos:hiddenLabel "ancienne_nature" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Former Plot Nature"@en,
-        "Ancienne nature de la parcelle"@fr .
+    skos:prefLabel "Named entity : Former Plot Nature"@en,
+        "Entité nommée : Ancienne nature de la parcelle"@fr .
 
-anclass:PreviousPlotNumber a owl:NamedIndividual,
+anclass:NEPreviousPlotNumber a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3459,10 +3428,10 @@ anclass:PreviousPlotNumber a owl:NamedIndividual,
         "Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), indique le numéro de la parcelle dans l'état de sections précédent."@fr ;
     skos:hiddenLabel "ancien_numero_parcelle" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Former Plot Number"@en,
-        "Ancien numéro de parcelle"@fr .
+    skos:prefLabel "Named entity : Former Plot Number"@en,
+        "Entité nommée : Ancien numéro de parcelle"@fr .
 
-anclass:SectionIdentifier a owl:NamedIndividual,
+anclass:NESectionIdentifier a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3470,10 +3439,10 @@ anclass:SectionIdentifier a owl:NamedIndividual,
         "Valeur d'une colonne contenant l'identifiant de la section dans laquelle se trouve la parcelle."@fr ;
     skos:hiddenLabel "section" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Section Identifier"@en,
-        "Identifiant de section"@fr .
+    skos:prefLabel "Named entity : Section Identifier"@en,
+        "Entité nommée : Identifiant de section"@fr .
 
-anclass:StartTime a owl:NamedIndividual,
+anclass:NEStartTime a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3481,8 +3450,129 @@ anclass:StartTime a owl:NamedIndividual,
         "Valeur de colonne indiquant la date de début de validité d'un état de parcelle."@fr ;
     skos:hiddenLabel "date_entree" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Start date"@en,
-        "Date d'entrée"@fr .
+    skos:prefLabel "Named entity : Start date"@en,
+        "Entité nommée : Date d'entrée"@fr .
+
+anclass:NETakenFrom a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "A column value indicating either the folio number where the previous status of the parcel was recorded, or a special value providing information about that status."@en,
+        "Valeur de colonne indiquant soit le numéro de folio où était décrit l'état précédent de la parcelle soit une valeur spéciale renseignant sur cet état."@fr ;
+    skos:hiddenLabel "tire_de" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Previous folio or status"@en,
+        "Entité nommée : Tiré de"@fr .
+
+anclass:NETaxpayerActivity a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Activity"@en,
+        "Entité nommée : Activité"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerAddress a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Address"@en,
+        "Entité nommée : Adresse"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerBirthName a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Birth name"@en,
+        "Entité nommée : Nom de naissance"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerFamilyStatus a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Family status"@en,
+        "Entité nommée : Statut familial"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerFirstNames a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : First name.s"@en,
+        "Entité nommée : Prénom.s"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerLastName a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Last name"@en,
+        "Entité nommée : Nom de famille"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerNumber a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value containing the folio number or the alphabetical number of a taxpayer in the following mutation register."@en,
+        "Valeur de colonne correspondant au numéro désignant le numéro de folio ou d'index dans la table alphabétique d'un contribuable dans la matrice suivant immédiatement l'état de sections."@fr ;
+    skos:hiddenLabel "numero_proprietaire" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Folio Number"@en,
+        "Entité nommée : Numéro de folio du propriétaire"@fr .
+
+anclass:NETaxpayerOrganisationName a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Organisation name"@en,
+        "Entité nommée : Raison sociale"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerSpouseOrChildrenFirstNames a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : First name.s of the spouse or children"@en,
+        "Entité nommée : Prénom.s de l'époux/épouse ou des enfants"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerTitle a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
+        "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Title"@en,
+        "Entité nommée : Titre"@fr ;
+    skos:related anclass:NETaxpayer .
 
 anclass:TableHeader a owl:NamedIndividual,
         skos:Concept,
@@ -3504,18 +3594,39 @@ anclass:TableRow a owl:NamedIndividual,
     skos:prefLabel "Table row"@en,
         "Ligne de tableau"@fr .
 
-anclass:TakenFrom a owl:NamedIndividual,
+anclass:ETSTab a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "A column value indicating either the folio number where the previous status of the parcel was recorded, or a special value providing information about that status."@en,
-        "Valeur de colonne indiquant soit le numéro de folio où était décrit l'état précédent de la parcelle soit une valeur spéciale renseignant sur cet état."@fr ;
-    skos:hiddenLabel "tire_de" ;
+    skos:broader anclass:PageClasses ;
+    skos:closeMatch anclass:ETSTabP1 ;
+    skos:definition "Main table page of an initial register containing a description of the plots listed in ascending order by number."@en,
+        "Page du tableau principal d'un registre d'états de sections contenant la description des parcelles listées dans l'ordre croissant des numéros."@fr ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Previous folio or status"@en,
-        "Tiré de"@fr .
+    skos:prefLabel "Main table in an initial register"@en,
+        "Tableau principal d'état de section"@fr ;
+    skos:related anclass:Page .
 
-anclass:Taxpayer a owl:NamedIndividual,
+anclass:ETSTabP1 a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:closeMatch anclass:ETSTab ;
+    skos:definition "First page of the main table of an initial register containing a description of the plots listed in ascending order by number. Used only when the main table is display in a double-page. Mostly used for registers created before 1822."@en,
+        "Première page (sur deux) du tableau principal d'un registre d'état de sections contenant la description des parcelles listées dans l'ordre croissant de numéro identifiant. Classe utilisée uniquement quand le tableau principal couvre une double page. Ce type de page est principalement visible dans des registres créés avant 1822."@fr ;
+    skos:hiddenLabel "ets_tab_p1" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "First page of a main table in an initial register"@en,
+        "Tableau principal d'état de section (première page si double page)"@fr ;
+    skos:related anclass:Page .
+
+anclass:TextStyles a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Text style"@en,
+        "Entité nommée : Style du texte"@fr .
+
+anclass:NETaxpayer a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -3523,107 +3634,8 @@ anclass:Taxpayer a owl:NamedIndividual,
         "Valeur de colonne correspondant au contribuable."@fr ;
     skos:hiddenLabel "identite" ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Taxpayer"@en,
-        "Contribuable"@fr .
-
-anclass:TaxpayerActivity a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Activity"@en,
-        "Activité"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TaxpayerAddress a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Address"@en,
-        "Adresse"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TaxpayerBirthName a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Birth name"@en,
-        "Nom de naissance"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TaxpayerFamilyStatus a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Family status"@en,
-        "Statut familial"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TaxpayerFirstNames a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "First name.s"@en,
-        "Prénom.s"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TaxpayerLastName a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Last name"@en,
-        "Nom de famille"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TaxpayerNumber a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Column value containing the folio number or the alphabetical number of a taxpayer in the following mutation register."@en,
-        "Valeur de colonne correspondant au numéro désignant le numéro de folio ou d'index dans la table alphabétique d'un contribuable dans la matrice suivant immédiatement l'état de sections."@fr ;
-    skos:hiddenLabel "numero_proprietaire" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Folio Number"@en,
-        "Numéro de folio du propriétaire"@fr .
-
-anclass:TaxpayerOrganisationName a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Organisation name"@en,
-        "Raison sociale"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TaxpayerSpouseOrChildrenFirstNames a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "First name.s of the spouse or children"@en,
-        "Prénom.s de l'époux/épouse ou des enfants"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TaxpayerTitle a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Title"@en,
-        "Titre"@fr ;
-    skos:related anclass:Taxpayer .
-
-anclass:TextStyles a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Text style"@en,
-        "Style du texte"@fr .
+    skos:prefLabel "Named entity : Taxpayer"@en,
+        "Entité nommée : Contribuable"@fr .
 
 anclass:PageClasses a owl:NamedIndividual,
         skos:Concept,
@@ -3634,6 +3646,16 @@ anclass:PageClasses a owl:NamedIndividual,
     skos:prefLabel "Types of simple pages"@en,
         "Types de pages"@fr ;
     skos:related anclass:Page .
+
+anclass:Page a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Image showing a scanned single page from a register."@en,
+        "Image correspondant à la numérisation d'une page simple de registre."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Simple-page"@en,
+        "Page simple"@fr .
 
 anclass:NamedEntityTypes a owl:NamedIndividual,
         skos:Concept,

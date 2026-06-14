@@ -795,10 +795,10 @@
   } ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "fr",
-    "@value" : "L'ontologie TABULAE est une extension de l'ontologie PeGazUs dédiée à la représentation des informations relatives aux parcelles contenues dans les documents du cadastre ancien français (XIXe siècle). Elle permet de décrire les parcelles (Plot), leurs contribuables (Taxpayer), leur nature d'occupation du sol (Nature, avec plus de 150 valeurs contrôlées), ainsi que les événements et changements qui affectent ces parcelles au fil du temps. Leur évolution est décrite à l'échelle des attributs. L'ontologie modélise également les sources documentaires mobilisées (matrices cadastrales, états de sections, plans parcellaires) et intègre un support pour la classification automatique et la reconnaissance d'entités nommées dans les documents numérisés (anclass, NamedEntity). Elle s'appuie sur les ontologies PeGazUs, RiC-O, SKOS et PROV-O."
+    "@value" : "L'ontologie TABULAE vise à décrire l'évolution des parcelles cadastrales à l'échelle de leurs attributs."
   }, {
     "@language" : "en",
-    "@value" : "L'ontology TABULAE is an extension of the PeGazUs vocabulary dedicated to the representation of information contained in the French 19th-century land registry documents. It enables the description of land plots, their taxpayers, their nature (with over 150 controlled values), and the changes and events affecting these plots over time. Their evolution is described at the attribute level. The ontology also models the sources involved (mutation registers, section registers, cadastral index maps) and provides support for automatic classification and named entity recognition in digitised documents (anclass, NamedEntity). It builds on the PeGazUs, RiC-O, SKOS and PROV-O ontologies."
+    "@value" : "The TABULAE ontology aims to describe the evolution of land plots at the attribute level."
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@id" : "_:genid1"
@@ -878,6 +878,8 @@
     "@id" : "https://w3id.org/PeGazUs#"
   }, {
     "@id" : "https://www.ica.org/standards/RiC/ontology#"
+  }, {
+    "@id" : "https://www.w3.org/TR/owl-time/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "2.0.0"
@@ -889,6 +891,13 @@
     "@value" : "Agence d'Innovation de Défense (AID) - Ministère des Armées"
   }, {
     "@value" : "Institut National de l'Information Géographique et Forestière (IGN)"
+  } ],
+  "https://w3id.org/widoco/vocab#introduction" : [ {
+    "@language" : "fr",
+    "@value" : "L'ontologie TABULAE est une extension de l'ontologie PeGazUs dédiée à la représentation des informations relatives aux parcelles contenues dans les documents du cadastre ancien français (XIXe siècle). Elle permet de décrire les parcelles (Plot), leurs contribuables (Taxpayer), leur nature d'occupation du sol (Nature, avec plus de 150 valeurs contrôlées) et leur adresse, ainsi que les événements et changements qui affectent ces parcelles au fil du temps. Leur évolution est décrite à l'échelle des attributs. L'ontologie modélise également les sources documentaires mobilisées (matrices cadastrales, états de sections, plans parcellaires) et intègre des concepts et propriétés utiles à la traçabilité des processus de traitement (manuel ou automatique) réalisés pour extraire des informations des documents (classification des images, extraction d'information, reconnaissance des entités nommées). L'ontologie TABULAE s'appuie sur les ontologies PeGazUs, RiC-O, Time et PROV-O."
+  }, {
+    "@language" : "en",
+    "@value" : "The TABULAE ontology is an extension of the PeGazUs vocabulary dedicated to the representation of information about land plots contained in the French 19th-century land registry documents. It enables the description of land plots, their nature (with over 150 controlled values) and addresses, of the associated taxpayers, and the changes and events affecting these plots over time. Their evolution is described at the attribute level. The ontology also models the sources involved (mutation registers, section registers, cadastral index maps) and provides support to described the processing of the documents, by hand or automatically, including images classification, information extraction and named entity recognition in digitised documents. The TABULAE ontology re-uses concepts and properties of the PeGazUs, Time, RiC-O, and PROV-O ontologies."
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#AnnotationClass",
@@ -2777,7 +2786,7 @@
     "@value" : "Crossed-out text"
   }, {
     "@language" : "fr",
-    "@value" : "Texte barré/rayé"
+    "@value" : "Entité nommée : Texte barré/rayé"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/DocumentType",
@@ -3040,37 +3049,6 @@
     "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/EndTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value indicating the expiry date of a parcel statement."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne indiquant la date de fin de validité d'un état de parcelle."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "date_sortie"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Date de sortie"
-  }, {
-    "@language" : "en",
-    "@value" : "End date"
-  } ]
-}, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -3199,32 +3177,38 @@
     "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes",
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NEEndTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
     "@id" : "https://w3id.org/tabulae#AnnotationClassType"
   } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "fr",
-    "@value" : "Types d'entités nommées pouvant être reconnues dans les documents cadastraux."
-  }, {
     "@language" : "en",
-    "@value" : "Types of named entities that can be identified in land registry documents."
+    "@value" : "Column value indicating the expiry date of a parcel statement."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne indiquant la date de fin de validité d'un état de parcelle."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "date_sortie"
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://w3id.org/tabulae#AnnotationClassList"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
-    "@value" : "Types d'entités nommées"
+    "@value" : "Entité nommée : Date de sortie"
   }, {
     "@language" : "en",
-    "@value" : "Types of named entities"
+    "@value" : "Named entity : End date"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Nature",
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NENature",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
@@ -3249,10 +3233,624 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
-    "@value" : "Nature"
+    "@value" : "Entité nommée : Nature"
   }, {
     "@language" : "en",
-    "@value" : "Plot Nature"
+    "@value" : "Named entity : Plot Nature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NEPassedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A column value indicating either one (or more) folio numbers where the following status of the parcel is recorded, or a special value providing information about that status."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne indiquant soit un (ou plusieurs) numéro.s de folio.s où est inscrit l'état suivant de la parcelle soit une valeur spéciale renseignant sur cet état."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "porte_a"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Porté à"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Next folio or status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NEPlotAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Column value corresponding to the plot address."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne correspondant à l'adresse de la parcelle."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "lieu_dit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Lieu-dit ou adresse"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Plot Address"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NEPlotNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Column value corresponding to the plot number."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne correspondant au numéro de la parcelle."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "numero_parcelle"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Numéro de parcelle"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Plot Number"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NEPreviousNature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot nature in the previous section list."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), décrit la nature de la parcelle dans l'état de sections précédent."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "ancienne_nature"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Ancienne nature de la parcelle"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Former Plot Nature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NEPreviousPlotNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot number in the previous section list."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), indique le numéro de la parcelle dans l'état de sections précédent."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "ancien_numero_parcelle"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Ancien numéro de parcelle"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Former Plot Number"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NESectionIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Column value containing the ID of the section in which the plot is located."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur d'une colonne contenant l'identifiant de la section dans laquelle se trouve la parcelle."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "section"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Identifiant de section"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Section Identifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NEStartTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Column value indicating the start date of validity for a parcel record."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne indiquant la date de début de validité d'un état de parcelle."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "date_entree"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Date d'entrée"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Start date"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETakenFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A column value indicating either the folio number where the previous status of the parcel was recorded, or a special value providing information about that status."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne indiquant soit le numéro de folio où était décrit l'état précédent de la parcelle soit une valeur spéciale renseignant sur cet état."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "tire_de"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Tiré de"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Previous folio or status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Column value corresponding to the taxpayer."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne correspondant au contribuable."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "identite"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Contribuable"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Taxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Activité"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Activity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Adresse"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Address"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerBirthName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Nom de naissance"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Birth name"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerFamilyStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Statut familial"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Family status"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerFirstNames",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Prénom.s"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : First name.s"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerLastName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Nom de famille"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Last name"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Column value containing the folio number or the alphabetical number of a taxpayer in the following mutation register."
+  }, {
+    "@language" : "fr",
+    "@value" : "Valeur de colonne correspondant au numéro désignant le numéro de folio ou d'index dans la table alphabétique d'un contribuable dans la matrice suivant immédiatement l'état de sections."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
+    "@value" : "numero_proprietaire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Numéro de folio du propriétaire"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Folio Number"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerOrganisationName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Raison sociale"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Organisation name"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerSpouseOrChildrenFirstNames",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Prénom.s de l'époux/épouse ou des enfants"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : First name.s of the spouse or children"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayerTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity that can be extracted fril within a value in the taxpayer column."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité nommée : Titre"
+  }, {
+    "@language" : "en",
+    "@value" : "Named entity : Title"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NETaxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Types d'entités nommées pouvant être reconnues dans les documents cadastraux."
+  }, {
+    "@language" : "en",
+    "@value" : "Types of named entities that can be identified in land registry documents."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Types d'entités nommées"
+  }, {
+    "@language" : "en",
+    "@value" : "Types of named entities"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page",
@@ -3311,223 +3909,6 @@
     "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/PassedTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A column value indicating either one (or more) folio numbers where the following status of the parcel is recorded, or a special value providing information about that status."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne indiquant soit un (ou plusieurs) numéro.s de folio.s où est inscrit l'état suivant de la parcelle soit une valeur spéciale renseignant sur cet état."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "porte_a"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Next folio or status"
-  }, {
-    "@language" : "fr",
-    "@value" : "Porté à"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/PlotAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value corresponding to the plot address."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne correspondant à l'adresse de la parcelle."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "lieu_dit"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Lieu-dit ou adresse"
-  }, {
-    "@language" : "en",
-    "@value" : "Plot Address"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/PlotNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value corresponding to the plot number."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne correspondant au numéro de la parcelle."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "numero_parcelle"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Numéro de parcelle"
-  }, {
-    "@language" : "en",
-    "@value" : "Plot Number"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/PreviousNature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot nature in the previous section list."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), décrit la nature de la parcelle dans l'état de sections précédent."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "ancienne_nature"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Ancienne nature de la parcelle"
-  }, {
-    "@language" : "en",
-    "@value" : "Former Plot Nature"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/PreviousPlotNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value specific to the initial register of the revised Seine land registry (1835–1845), indicating the plot number in the previous section list."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne spécifique aux états de sections du cadastre rénové de la Seine (1835-1845), indique le numéro de la parcelle dans l'état de sections précédent."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "ancien_numero_parcelle"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Ancien numéro de parcelle"
-  }, {
-    "@language" : "en",
-    "@value" : "Former Plot Number"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/SectionIdentifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value containing the ID of the section in which the plot is located."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur d'une colonne contenant l'identifiant de la section dans laquelle se trouve la parcelle."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "section"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Identifiant de section"
-  }, {
-    "@language" : "en",
-    "@value" : "Section Identifier"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/StartTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value indicating the start date of validity for a parcel record."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne indiquant la date de début de validité d'un état de parcelle."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "date_entree"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Date d'entrée"
-  }, {
-    "@language" : "en",
-    "@value" : "Start date"
-  } ]
-}, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TableHeader",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -3584,315 +3965,6 @@
     "@value" : "Table row"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TakenFrom",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A column value indicating either the folio number where the previous status of the parcel was recorded, or a special value providing information about that status."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne indiquant soit le numéro de folio où était décrit l'état précédent de la parcelle soit une valeur spéciale renseignant sur cet état."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "tire_de"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Previous folio or status"
-  }, {
-    "@language" : "fr",
-    "@value" : "Tiré de"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value corresponding to the taxpayer."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne correspondant au contribuable."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "identite"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Contribuable"
-  }, {
-    "@language" : "en",
-    "@value" : "Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerActivity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Activity"
-  }, {
-    "@language" : "fr",
-    "@value" : "Activité"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Address"
-  }, {
-    "@language" : "fr",
-    "@value" : "Adresse"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerBirthName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Birth name"
-  }, {
-    "@language" : "fr",
-    "@value" : "Nom de naissance"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFamilyStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Family status"
-  }, {
-    "@language" : "fr",
-    "@value" : "Statut familial"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerFirstNames",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "First name.s"
-  }, {
-    "@language" : "fr",
-    "@value" : "Prénom.s"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerLastName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Last name"
-  }, {
-    "@language" : "fr",
-    "@value" : "Nom de famille"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Column value containing the folio number or the alphabetical number of a taxpayer in the following mutation register."
-  }, {
-    "@language" : "fr",
-    "@value" : "Valeur de colonne correspondant au numéro désignant le numéro de folio ou d'index dans la table alphabétique d'un contribuable dans la matrice suivant immédiatement l'état de sections."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#hiddenLabel" : [ {
-    "@value" : "numero_proprietaire"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Folio Number"
-  }, {
-    "@language" : "fr",
-    "@value" : "Numéro de folio du propriétaire"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerOrganisationName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Organisation name"
-  }, {
-    "@language" : "fr",
-    "@value" : "Raison sociale"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerSpouseOrChildrenFirstNames",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "First name.s of the spouse or children"
-  }, {
-    "@language" : "fr",
-    "@value" : "Prénom.s de l'époux/épouse ou des enfants"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TaxpayerTitle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NamedEntityTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Title"
-  }, {
-    "@language" : "fr",
-    "@value" : "Titre"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Taxpayer"
-  } ]
-}, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/TextStyles",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -3905,7 +3977,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
-    "@value" : "Style du texte"
+    "@value" : "Entité nommée : Style du texte"
   }, {
     "@language" : "en",
     "@value" : "Text style"
@@ -10239,6 +10311,9 @@
     "@language" : "fr",
     "@value" : "Passé à la voie publique"
   } ]
+}, {
+  "@id" : "https://w3id.org/widoco/vocab#introduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]

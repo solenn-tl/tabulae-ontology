@@ -1,19 +1,20 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as follows:"
-title: "TABULAE Ontology: Temporal Attribute-Based Understanding of LAnd plot Evolution"
+title: "TABULAE Ontology: Temporal Attribute-Based Understanding of LAnd plots Evolution"
 authors:
   - family-names: Tual
     given-names: Solenn
+contributors:
   - family-names: Abadie
     given-names: Nathalie
-  - family-names: Duménieu
-    given-names: Bertrand
   - family-names: Chazalon
     given-names: Joseph
+  - family-names: Duménieu
+    given-names: Bertrand
   - family-names: Perret
     given-names: Julien
 date-released: 2026-06
-version: "1.5"
+version: "2.0.0"
 doi: "10.70675/bbb45d62z6cedz4e17z98c8zb2a18b4f7aa9"
 url: "https://theses.hal.science/tel-05603252"
 keywords:
