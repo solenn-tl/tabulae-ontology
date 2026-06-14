@@ -3285,8 +3285,8 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://w3id.org/PeGazUs#LandmarkType"/>
-        <skos:definition xml:lang="en">A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest.</skos:definition>
-        <skos:definition xml:lang="fr">Entité géographique correspondant à un espace non cadastré, tel qu&apos;une route, une rivière ou une forêt.</skos:definition>
+        <skos:definition xml:lang="en">A geographical unit corresponding to a non-cadastral space, such as a road or a river.</skos:definition>
+        <skos:definition xml:lang="fr">Entité géographique correspondant à un espace non cadastré, tel qu&apos;une route ou une rivière.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryLandmarkList"/>
         <skos:prefLabel xml:lang="fr">Espace non cadastré</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Unregistered land</skos:prefLabel>

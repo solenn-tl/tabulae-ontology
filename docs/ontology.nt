@@ -2153,8 +2153,8 @@ _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/PeGazUs#LandmarkType> .
-<https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/2004/02/skos/core#definition> "A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest."@en .
-<https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/2004/02/skos/core#definition> "Entité géographique correspondant à un espace non cadastré, tel qu'une route, une rivière ou une forêt."@fr .
+<https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/2004/02/skos/core#definition> "A geographical unit corresponding to a non-cadastral space, such as a road or a river."@en .
+<https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/2004/02/skos/core#definition> "Entité géographique correspondant à un espace non cadastré, tel qu'une route ou une rivière."@fr .
 <https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistryLandmarkList> .
 <https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/2004/02/skos/core#prefLabel> "Espace non cadastré"@fr .
 <https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unregistered land"@en .

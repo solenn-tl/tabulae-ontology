@@ -4975,10 +4975,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest."
+    "@value" : "A geographical unit corresponding to a non-cadastral space, such as a road or a river."
   }, {
     "@language" : "fr",
-    "@value" : "Entité géographique correspondant à un espace non cadastré, tel qu'une route, une rivière ou une forêt."
+    "@value" : "Entité géographique correspondant à un espace non cadastré, tel qu'une route ou une rivière."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://w3id.org/tabulae#LandRegistryLandmarkList"

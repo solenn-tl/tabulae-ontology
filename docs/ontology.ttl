@@ -2314,8 +2314,8 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/tabulae/id/codes/landmarkType/UnregisteredLand> rdf:type owl:NamedIndividual ,
                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                            <https://w3id.org/PeGazUs#LandmarkType> ;
-                                                                  <http://www.w3.org/2004/02/skos/core#definition> "A geographical unit corresponding to a non-cadastral space, such as a road, a river, or a forest."@en ,
-                                                                                                                   "Entité géographique correspondant à un espace non cadastré, tel qu'une route, une rivière ou une forêt."@fr ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "A geographical unit corresponding to a non-cadastral space, such as a road or a river."@en ,
+                                                                                                                   "Entité géographique correspondant à un espace non cadastré, tel qu'une route ou une rivière."@fr ;
                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryLandmarkList ;
                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Espace non cadastré"@fr ,
                                                                                                                   "Unregistered land"@en .
