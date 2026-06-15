@@ -1907,18 +1907,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                                                        "Table alphabétique"@fr .
 
 
-###  https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> rdf:type owl:NamedIndividual ,
-                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
-                                                                                  :AnnotationClassType ;
-                                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/annotationClass/DocumentsTypes> ;
-                                                                         <http://www.w3.org/2004/02/skos/core#definition> "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en ,
-                                                                                                                          "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr ;
-                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
-                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "List of successive taxpayers"@en ,
-                                                                                                                         "Liste de contribuables successifs"@fr .
-
-
 ###  https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier
 <https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier> rdf:type owl:NamedIndividual ,
                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ,
@@ -1944,6 +1932,18 @@ xsd:date rdf:type rdfs:Datatype .
                                                                  <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Page containing property accounts"@en ,
                                                                                                                  "Page correspondant à un ou plusieurs folios"@fr .
+
+
+###  https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                   :AnnotationClassType ;
+                                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/annotationClass/DocumentsTypes> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#definition> "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en ,
+                                                                                                                           "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr ;
+                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
+                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "List of successive taxpayers"@en ,
+                                                                                                                          "Liste de contribuables successifs"@fr .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/NEEndTime
@@ -4536,19 +4536,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                                       "Vivier"@fr .
 
 
-###  https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> rdf:type owl:NamedIndividual ,
-                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ,
-                                                                          :SourceType ;
-                                                                 <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage> ;
-                                                                 rdfs:label "Article de mutation" ;
-                                                                 <http://www.w3.org/2004/02/skos/core#definition> "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."@en ,
-                                                                                                                  "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."@fr ;
-                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistrySourceList ;
-                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Article de mutation"@fr ,
-                                                                                                                 "Page area describing a list of taxpayers"@en .
-
-
 ###  https://w3id.org/tabulae/id/codes/sourceType/Cadastre
 <https://w3id.org/tabulae/id/codes/sourceType/Cadastre> rdf:type owl:NamedIndividual ,
                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
@@ -4731,6 +4718,19 @@ xsd:date rdf:type rdfs:Datatype .
                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistrySourceList ;
                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Ligne de tableau d'une matrice"@fr ,
                                                                                                             "Table row in a mutation register page"@en .
+
+
+###  https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                      :SourceType ;
+                                                                             <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage> ;
+                                                                             rdfs:label "Liste des contribuables fonciers" ;
+                                                                             <http://www.w3.org/2004/02/skos/core#definition> "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."@en ,
+                                                                                                                              "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."@fr ;
+                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistrySourceList ;
+                                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste des contribuables fonciers"@fr ,
+                                                                                                                             "Page area describing a list of taxpayers"@en .
 
 
 ###  https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale

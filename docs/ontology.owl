@@ -2767,22 +2767,6 @@
     
 
 
-    <!-- https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/DocumentsTypes"/>
-        <skos:definition xml:lang="en">Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account.</skos:definition>
-        <skos:definition xml:lang="fr">Zone d&apos;image correspond à une liste de 1..n contribuables associés au même compte foncier.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
-        <skos:prefLabel xml:lang="en">List of successive taxpayers</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Liste de contribuables successifs</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier -->
 
 
@@ -2814,6 +2798,22 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Page containing property accounts</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Page correspondant à un ou plusieurs folios</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#AnnotationClassType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/annotationClass/DocumentsTypes"/>
+        <skos:definition xml:lang="en">Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account.</skos:definition>
+        <skos:definition xml:lang="fr">Zone d&apos;image correspond à une liste de 1..n contribuables associés au même compte foncier.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
+        <skos:prefLabel xml:lang="en">List of successive taxpayers</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Liste de contribuables successifs</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -6287,23 +6287,6 @@
     
 
 
-    <!-- https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
-        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage"/>
-        <rdfs:label>Article de mutation</rdfs:label>
-        <skos:definition xml:lang="en">A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register.</skos:definition>
-        <skos:definition xml:lang="fr">Zone ou cellule d&apos;un folio ou sous-folio qui liste les contribuables d&apos;un compte foncier et indique leurs dates d&apos;entrée (voir de sortie) de ce même compte.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistrySourceList"/>
-        <skos:prefLabel xml:lang="fr">Article de mutation</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Page area describing a list of taxpayers</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/tabulae/id/codes/sourceType/Cadastre -->
 
 
@@ -6540,6 +6523,23 @@
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistrySourceList"/>
         <skos:prefLabel xml:lang="fr">Ligne de tableau d&apos;une matrice</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Table row in a mutation register page</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#SourceType"/>
+        <skos:broader rdf:resource="https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage"/>
+        <rdfs:label>Liste des contribuables fonciers</rdfs:label>
+        <skos:definition xml:lang="en">A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register.</skos:definition>
+        <skos:definition xml:lang="fr">Zone ou cellule d&apos;un folio ou sous-folio qui liste les contribuables d&apos;un compte foncier et indique leurs dates d&apos;entrée (voir de sortie) de ce même compte.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistrySourceList"/>
+        <skos:prefLabel xml:lang="fr">Liste des contribuables fonciers</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Page area describing a list of taxpayers</skos:prefLabel>
     </owl:NamedIndividual>
     
 

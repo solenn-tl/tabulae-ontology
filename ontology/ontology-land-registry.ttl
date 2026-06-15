@@ -3092,16 +3092,16 @@ pnature:NatureNonBatie a owl:NamedIndividual,
 
 # ----- List of source types -----
 
-srctype:ArticleDeMutation a owl:NamedIndividual,
+srctype:ListeDesContribuablesFonciers a owl:NamedIndividual,
         skos:Concept,
         tbl:SourceType ;
-    rdfs:label "Article de mutation" ;
+    rdfs:label "Liste des contribuables fonciers" ;
     skos:broader srctype:ZoneDePage ;
     skos:definition "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."@en,
         "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."@fr ;
     skos:inScheme tbl:LandRegistrySourceList ;
     skos:prefLabel "Page area describing a list of taxpayers"@en,
-        "Article de mutation"@fr .
+        "Liste des contribuables fonciers"@fr .
 
 srctype:CompteFoncier a owl:NamedIndividual,
         skos:Concept,
@@ -3792,7 +3792,7 @@ anclass:MATAlphabeticTable a owl:NamedIndividual,
         "Table alphabétique"@fr ;
     skos:related anclass:Page .
 
-anclass:MATArticleDeMutation a owl:NamedIndividual,
+anclass:MATPropertyTaxAccount a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:DocumentsTypes ;

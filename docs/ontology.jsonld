@@ -3460,34 +3460,6 @@
     "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/DocumentsTypes"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."
-  }, {
-    "@language" : "fr",
-    "@value" : "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "List of successive taxpayers"
-  }, {
-    "@language" : "fr",
-    "@value" : "Liste de contribuables successifs"
-  } ]
-}, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -3552,6 +3524,34 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
     "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/Page"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/DocumentsTypes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."
+  }, {
+    "@language" : "fr",
+    "@value" : "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#AnnotationClassList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "List of successive taxpayers"
+  }, {
+    "@language" : "fr",
+    "@value" : "Liste de contribuables successifs"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/annotationClass/NEEndTime",
@@ -9462,37 +9462,6 @@
     "@value" : "8"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://w3id.org/tabulae#SourceType"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Article de mutation"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."
-  }, {
-    "@language" : "fr",
-    "@value" : "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#LandRegistrySourceList"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Article de mutation"
-  }, {
-    "@language" : "en",
-    "@value" : "Page area describing a list of taxpayers"
-  } ]
-}, {
   "@id" : "https://w3id.org/tabulae/id/codes/sourceType/Cadastre",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -9934,6 +9903,37 @@
   }, {
     "@language" : "en",
     "@value" : "Table row in a mutation register page"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Liste des contribuables fonciers"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."
+  }, {
+    "@language" : "fr",
+    "@value" : "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#LandRegistrySourceList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Liste des contribuables fonciers"
+  }, {
+    "@language" : "en",
+    "@value" : "Page area describing a list of taxpayers"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale",

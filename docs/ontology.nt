@@ -1794,17 +1794,6 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Alphabetical table"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Table alphabétique"@fr .
 # 
-# https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tabulae#AnnotationClassType> .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/annotationClass/DocumentsTypes> .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#definition> "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#definition> "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "List of successive taxpayers"@en .
-<https://w3id.org/tabulae/id/codes/annotationClass/MATArticleDeMutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste de contribuables successifs"@fr .
-# 
 # https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier
 <https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATCompteFoncier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -1829,6 +1818,17 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/annotationClass/MATMainTable> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATMainTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Page containing property accounts"@en .
 <https://w3id.org/tabulae/id/codes/annotationClass/MATMainTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Page correspondant à un ou plusieurs folios"@fr .
+# 
+# https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tabulae#AnnotationClassType> .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/annotationClass/DocumentsTypes> .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/2004/02/skos/core#definition> "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/2004/02/skos/core#definition> "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#AnnotationClassList> .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/2004/02/skos/core#prefLabel> "List of successive taxpayers"@en .
+<https://w3id.org/tabulae/id/codes/annotationClass/MATPropertyTaxAccount> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste de contribuables successifs"@fr .
 # 
 # https://w3id.org/tabulae/id/codes/annotationClass/NEEndTime
 <https://w3id.org/tabulae/id/codes/annotationClass/NEEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4200,18 +4200,6 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/plotNature/Vivier> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fishpond"@en .
 <https://w3id.org/tabulae/id/codes/plotNature/Vivier> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vivier"@fr .
 # 
-# https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tabulae#SourceType> .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage> .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/2000/01/rdf-schema#label> "Article de mutation" .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/2004/02/skos/core#definition> "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."@en .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/2004/02/skos/core#definition> "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."@fr .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistrySourceList> .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Article de mutation"@fr .
-<https://w3id.org/tabulae/id/codes/sourceType/ArticleDeMutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Page area describing a list of taxpayers"@en .
-# 
 # https://w3id.org/tabulae/id/codes/sourceType/Cadastre
 <https://w3id.org/tabulae/id/codes/sourceType/Cadastre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/tabulae/id/codes/sourceType/Cadastre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -4381,6 +4369,18 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/sourceType/LigneMatrice> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistrySourceList> .
 <https://w3id.org/tabulae/id/codes/sourceType/LigneMatrice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ligne de tableau d'une matrice"@fr .
 <https://w3id.org/tabulae/id/codes/sourceType/LigneMatrice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Table row in a mutation register page"@en .
+# 
+# https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tabulae#SourceType> .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/tabulae/id/codes/sourceType/ZoneDePage> .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/2000/01/rdf-schema#label> "Liste des contribuables fonciers" .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/2004/02/skos/core#definition> "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."@en .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/2004/02/skos/core#definition> "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."@fr .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistrySourceList> .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste des contribuables fonciers"@fr .
+<https://w3id.org/tabulae/id/codes/sourceType/ListeDesContribuablesFonciers> <http://www.w3.org/2004/02/skos/core#prefLabel> "Page area describing a list of taxpayers"@en .
 # 
 # https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale
 <https://w3id.org/tabulae/id/codes/sourceType/MatriceCadastrale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

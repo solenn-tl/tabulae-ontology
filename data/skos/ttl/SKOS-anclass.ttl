@@ -105,7 +105,7 @@ anclass:MATAlphabeticTable a owl:NamedIndividual,
         "Table alphabétique"@fr ;
     skos:related anclass:Page .
 
-anclass:MATArticleDeMutation a owl:NamedIndividual,
+anclass:MATPropertyTaxAccount a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:DocumentsTypes ;
