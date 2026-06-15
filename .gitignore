@@ -1,21 +1,15 @@
-/ontology/documentation/plots/
-/ontology/documentation/landmarks_and_addresses/
-/ontology/RiC-O_1-0-2.rdf
 /scripts/land-registry/TO_CORRECT.md
 /scripts/land-registry/4_BUILD_KG_old.md
 /scripts/land-registry/notes.md
-/ontology/widoco-docs/
 /ontology/documentation/taxpayers/NOTES.md
-# Created folders
-scripts/addresses/tmp_files/
 /ontology/others.ttl
-/ontology/documentation/temporal_evolution_land_registry_extension/
-/ontology/documentation/sources_land_registry_extension/
+/ontology/eng-documentation/
+/ontology/fr-documentation/
 /scripts/
 /scripts/dev/
 /data/land-registry/
-/data/skos/
-/data/
+/data/skos/csv/
+/data/skos/csv-test/
 /ontology/
 /ontology/ontology-land-registry_without_skos.ttl
 /other/

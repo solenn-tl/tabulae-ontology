@@ -1,5 +1,0 @@
-skos:Concept,rdf:type,skos:inScheme,skos:prefLabel@fr,skos:altLabel@fr,skos:prefLabel@en,skos:altLabel@en,skos:definition@fr,,skos:broader
-PlotTaxpayer,add:AttributeType,PlotAttributeList,Contribuable,Propriétaire ou usufruitier,Taxpayer,,Personne physique ou morale redevable de l'impôt foncier. Propriétaire(s) ou usufruitier(s) d'une parcelle. ,,
-PlotNature,add:AttributeType,PlotAttributeList,Nature,,Nature,,Nature d'une parcelle,,
-PlotAddress,add:AttributeType,PlotAttributeList,Adresse de la parcelle,Localisation de la parcelle,Address,Plot Location,Addresse d'une parcelle,,
-PlotMention,add:AttributeType,PlotAttributeList,Mention,,Mention,,Mention d'une contribuable ou d'une parcelle dans un document,,

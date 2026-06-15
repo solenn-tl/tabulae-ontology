@@ -1,0 +1,202 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbl: <https://w3id.org/tabulae#> .
+@prefix tbletype: <https://w3id.org/tabulae/id/codes/eventType/> .
+
+tbletype:Addition a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This event is linked to a change to the building that results in an increase in its valuation (e.g. the addition of a floor or an extension)."@en,
+        "Cet évènement est associé à une modification du bâtiment qui provoque sa réévaluation à la hausse (ex : ajout d'un étage ou d'une extension)."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Extension to a building"@en,
+        "Augmentation d'un bâtiment"@fr .
+
+tbletype:ClosePropertyAccount a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:altLabel "Supression d'un compte foncier"@fr ;
+    skos:definition "This event relates to the closure of a taxpayer’s property tax account in a given municipality. More specifically, the date on which the property tax account is closed corresponds to the date on which a legal or natural person ceases to pay property tax for [1..n] plots of land in the municipality in question."@en,
+        "Cet évènement est associé à la clôture du compte foncier d'un contribuable dans une commune donnée. Plus précisément, la date de clôture du compte foncier correspond à la date à laquelle une personne légale ou morale ne paye plus l'impôt foncier pour [1..n] parcelles de la commune concernée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Closing of a property tax account"@en,
+        "Fermeture d'un compte foncier"@fr .
+
+tbletype:ConsideredAsRuined a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This event is linked to a building being reclassified as a ruin. This generally means that it is no longer subject to property tax."@en,
+        "Cet évènement est associé au reclassement d'un bâtiment en tant que ruine. Ceci implique généralement qu'il n'est plus imposé au titre des propriétés bâties."@fr ;
+    skos:hiddenLabel "En ruines",
+        "Ruines" ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Declaration of a building in ruins"@en,
+        "Déclaration d'un bâtiment en ruines"@fr .
+
+tbletype:Construction a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This project involves the construction of a building on a plot of land."@en,
+        "Cet évènement implique la construction d'un bâtiment sur une parcelle."@fr ;
+    skos:hiddenLabel "Construction nouvelle" ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Construction of a building"@en,
+        "Construction d'un bâtiment"@fr .
+
+tbletype:Demotion a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This project involves the complete demolition of a building on a plot of land."@en,
+        "Cet évènement implique la destruction complète d'un bâtiment sur une parcelle."@fr ;
+    skos:hiddenLabel "Destruction" ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Demolition of a building"@en,
+        "Démolition d'un bâtiment"@fr .
+
+tbletype:DocumentCreation a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to the addition of a new physical document to the cadastral register of a given municipality. For example, it may involve the creation of a new register to replace one that has already been completed."@en,
+        "Cet évènement désigne l'ajout d'un nouveau document physique dans le corpus cadastral d'une commune donnée. Par exemple, il peut s'agir de l'ouverture d'une matrice (en tant que registre) pour succéder à une matrice déjà complète."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Creating a document"@en,
+        "Création d'un document"@fr .
+
+tbletype:DocumentOutdated a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to the closure of a physical document within the cadastral records of a given municipality. For example, it may be a register whose contents have been transcribed into another register and which is no longer in use."@en,
+        "Cet évènement désigne la clôture d'un document physique dans le corpus cadastral d'une commune donnée. Par exemple, il peut s'agir d'un registre dont le contenu a été recopié dans un autre registre et qui n'est plus utilisé."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Archiving a document"@en,
+        "Archivage d'un document"@fr .
+
+tbletype:LandRegistryCreation a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to the creation of a land registry in a municipality, in the functional sense of the term. A land registry is established through the production of a parcel map, which corresponds to a specific division of land among various taxpayers, on which each parcel is assigned a unique identifier (1 land registry = 1 numbering system). The registers (section statements and matrices) are then created."@en,
+        "Cet évènement désigne la création d'un cadastre dans une commune, au sens fonctionnel de celui-ci. Un cadastre est initialisé par la production d'un plan parcellaire, correspond à un découpage donné du sol entre divers contribuables, sur lequel chaque parcelle porte un identifiant donné (1 cadastre = 1 numérotation). Les registres (états de sections et matrices) sont initialisés dans la foulée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Creating a land registry"@en,
+        "Initialisation d'un cadastre"@fr .
+
+tbletype:LandRegistryOutdated a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to the closure of a cadastral register in a municipality, in the functional sense of the term. The closure generally precedes the production of a new cadastral register, which involves a new survey, the production of new maps showing a different parcel layout with its own numbering system."@en,
+        "Cet évènement désigne la clôture d'un cadastre dans une commune, au sens fonctionnel de celui-ci. La clôture précède généralement la production d'un nouveau cadastre qui est doté d'une nouvelle opération de levés, de la production de nouveaux plans représentant un parcellaire différent avec sa numérotation propre."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Archiving a land registry"@en,
+        "Archivage d'un cadastre"@fr .
+
+tbletype:Merge a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:LandmarkEvent ;
+    skos:definition "This event describes the merging of [2..n] land plots. In the land registry documents, this event can be identified in two ways.\\n- A new plot is associated with two identifiers (for example, ‘D-100 D-102’).\\n Two plots bearing the same number, previously resulting from the division of a larger plot, are reassociated in the land register of the same taxpayer."@en,
+        "Cet évènement décrit la fusion de [2..n] parcelles. Dans les documents, cet évènement peut être dététecter de deux façons.\\n- Une parcelle est nouvelle associée à deux identifiant (par exemple \"D-100 D-102\").\\n Deux parcelles portant le même numéro, précédement issues de la division d'une parcelle de plus grande superficie, sont réassociées dans le compte foncier d'un même contribuable."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Merger of plots"@en,
+        "Fusion de parcelles"@fr .
+
+tbletype:Omission a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:altLabel "Oubli de déclaration"@fr ;
+    skos:definition "This event relates to a taxpayer’s failure to declare a property on which they have not paid tax for [n] years. Specifically, it refers to the point at which the property is retrospectively re-included in the property tax assessment."@en,
+        "Cet évènement est associé à omission de déclaration d'un bien foncier par un contribuable qui n'a pas payé l'impôt pendant [n] années pour celui-ci. L'évènement désigne précisément le moment de la réintégration a posteriori du bien le compte foncier."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Failure to declare"@en,
+        "Omission de déclaration"@fr .
+
+tbletype:OpenPropertyAccount a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:altLabel "Création d'un compte foncier"@fr ;
+    skos:definition "This event is linked to the opening of a taxpayer’s property tax account in a given municipality. More specifically, the date on which the property tax account is opened corresponds to the date on which a legal or natural person begins to pay property tax for [1..n] plots of land in the municipality in question."@en,
+        "Cet évènement est associé à l'ouverture du compte foncier d'un contribuable dans une commune donnée. Plus précisément, la date d'ouverture du compte foncier correspond à la date à laquelle une personne légale ou morale commence à payer l'impôt foncier pour [1..n] parcelles de la commune concernée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Opening of a property tax account"@en,
+        "Ouverture d'un compte foncier"@fr .
+
+tbletype:Reduction a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:BuildingRelatedEvent ;
+    skos:definition "This event is linked to a change to the building that results in a downward revaluation (e.g. demolition of part of the building)."@en,
+        "Cet évènement est associé à une modification du bâtiment qui provoque sa réévaluation à la baisse (ex: destruction d'une partie du bâtiment)."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Demolition of a building"@en,
+        "Diminution d'un bâtiment"@fr .
+
+tbletype:Sale a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:TaxpayerMutation ;
+    skos:definition "This event involves the sale of a land plot from one taxpayer to another."@en,
+        "Cet évènement consiste en une vente d'une parcelle d'un contribuable à un autre."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Sale"@en,
+        "Vente"@fr .
+
+tbletype:SplitWithStay a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:Split ;
+    skos:definition "This event is a specific instance of the ‘Division’ event. In this case, at least one of the new parcels resulting from the division remains in the taxpayer’s land register, linked to the divided parcel."@en,
+        "Cet évènement est une précision de l'évènement \"Division\". Ici, au moins l'une des nouvelles parcelles résultant de la division reste dans le compte foncier du contribuable associée à la parcelle divisée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Division of a plot with a residual part in the original property account"@en,
+        "Division d'une parcelle avec résidu dans le compte foncier d'origine"@fr .
+
+tbletype:Succession a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:TaxpayerMutation ;
+    skos:definition "This event involves the transfer of one or more plots of land from one taxpayer to [1..n] other taxpayers upon the settlement of an estate on a given date."@en,
+        "Cet évènement consiste en une transmission d'une ou plusieurs parcelles d'un contribuable à [1..n] autre contribuable lors du réglement d'une sucession à une date donnée."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Inheritance"@en,
+        "Succession"@fr .
+
+tbletype:Split a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:broader tbletype:LandmarkEvent ;
+    skos:definition "This event describes the division of a plot into [2..n] new plots. In the mutation registres (Matrices des contribuables), this event can be detected by observing the carry-overs of folio numbers. If a plot described in a land register entry is ‘split’ across [2..n] new land register account, it has been divided amongst several taxpayers, each of whom will pay tax on a sub-portion of the original plot."@en,
+        "Cet évènement décrit la division d'une parcelle en [2..n] nouvelles parcelles. Dans les matrices des contribuables, cet évènement peut être détecté en observant les reports de folios. Si une parcelle décrite dans un compte foncier \"passe\" dans[2..n] nouveaux comptes fonciers, elle a été divisée entre plusieurs contribuables qui paieront l'impôt chacun pour une sous-partie de la parcelle intiale."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Split of a plot"@en,
+        "Division d'une parcelle"@fr .
+
+tbletype:LandmarkEvent a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event is associated with various situations involving a change to the boundaries of a land plot."@en,
+        "Cet évènement est associé à différentes situations qui impliquent une modification du périmètre d'une parcelle."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Modification of the boundaries of a plot"@en,
+        "Modification du périmètre d'une parcelle"@fr .
+
+tbletype:TaxpayerMutation a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event relates to a change in the taxpayer associated with a plot of land or a land account."@en,
+        "Cet évènement est associé à un changement de contribuable associé à une parcelle ou à un compte foncier."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Modification of taxpayer"@en,
+        "Mutation de contribuable"@fr .
+
+tbletype:BuildingRelatedEvent a owl:NamedIndividual,
+        skos:Concept,
+        tbl:EventType ;
+    skos:definition "This event refers to a change in the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."@en,
+        "Cet évènement correspond à une évolution de la nature ou de la valeur d'une parcelle spécifiquement liée à l'apparition, la mutation ou la disparition d'un bâtiment sur celle-ci."@fr ;
+    skos:inScheme tbl:LandRegistryEventList ;
+    skos:prefLabel "Event involving a building"@en,
+        "Evènement impliquant un bâtiment"@fr .
+

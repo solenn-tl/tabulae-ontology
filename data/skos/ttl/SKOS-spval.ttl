@@ -1,0 +1,233 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spval: <https://w3id.org/tabulae/id/codes/specialCellValue/> .
+@prefix tbl: <https://w3id.org/tabulae#> .
+
+spval:CelluleVide a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:altLabel "EMPTY"@fr ;
+    skos:definition "An empty cell with no meaning. This is different from cells left blank to indicate that their value is the same as another cell (Idem)."@en,
+        "Cellule vide sans signification. Diffère des cellules laissées vides pour indiquer que leur valeur est identique à une autre cellule (Idem)."@fr ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Empty cell"@en,
+        "Cellule vide"@fr .
+
+spval:ConstructionNouvelleSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indique une construction d'un bâtiment qui est donc imposable au titre des propriétés bâties."@en,
+        "Indique une construction d'un bâtiment qui est donc imposable au titre des propriétés bâties."@fr ;
+    skos:hiddenLabel "CN",
+        "Cn nvelle",
+        "Con nvelle",
+        "Conston nouvelle",
+        "Construction nouvelle",
+        "Nouvelle construction" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "New building"@en,
+        "Construction nouvelle"@fr .
+
+spval:DemolitionSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that a building has been demolished and is therefore no longer subject to property tax."@en,
+        "Indique une destruction d'un bâtiment qui n'est donc plus imposable au titre des propriétés bâties."@fr ;
+    skos:hiddenLabel "Destruction",
+        "Démolie",
+        "Démolition",
+        "Détruite" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Demolition"@en,
+        "Démolition"@fr .
+
+spval:DiminutionSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates a change to a building that results in a reduction in its property valuation."@en,
+        "Indique une modification d'un bâtiment qui entraine une diminution de l'évaluation foncière de celui-ci."@fr ;
+    skos:hiddenLabel "Dim",
+        "Diminution",
+        "Dton" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Reduction"@en,
+        "Diminution"@fr .
+
+spval:DoubleEmploiSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "! To be defined in accordance with the tax authorities’ guidelines."@en,
+        "! A définir au sens de l'administration fiscale."@fr ;
+    skos:hiddenLabel "Double emploi" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Double employement"@en,
+        "Double emploi"@fr .
+
+spval:EvaluationSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates a tax valuation or revaluation of a land plot."@en,
+        "Indique une évaluation ou réévaluation fiscale d'une parcelle."@fr ;
+    skos:hiddenLabel "Eval",
+        "Evaluation" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Evaluation"@en,
+        "Evaluation"@fr .
+
+spval:IdemPrecedentSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:broader spval:IdemSV ;
+    skos:definition "Indicates that the cell is the same as that of the previous cell."@en,
+        "Valeur de cellule identique à celle de la cellule précédente."@fr ;
+    skos:hiddenLabel "\"",
+        "/",
+        "Id",
+        "Le même",
+        "Les mêmes",
+        "idem",
+        "§",
+        "Ø" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Idem as previous cell"@en,
+        "Idem au précédent"@fr .
+
+spval:IdemSuivantSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:broader spval:IdemSV ;
+    skos:definition "Indicates that the cell is the same as that of the next cell."@en,
+        "Valeur de cellule identique à celle de la cellule suivante."@fr ;
+    skos:hiddenLabel "\"",
+        "/",
+        "Id",
+        "Le même",
+        "Les mêmes",
+        "idem",
+        "§",
+        "☼" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Idem as next cell"@en,
+        "Idem au précédent"@fr .
+
+spval:InconnuSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that the cell meaning has not been specified or understanded."@en,
+        "Valeur de cellule dont le sens n'a pas été explicité."@fr ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Unknown"@en,
+        "Valeur inconnue"@fr .
+
+spval:OmissionSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:altLabel "OmissionSV{{date}}"@fr ;
+    skos:definition "Indicates that the plot of land has been retroactively included in the taxpayer’s land register, as the taxpayer had failed to declare it for a certain period."@en,
+        "Indique que la parcelle a fait l'objet d'une intégration réatroactive dans le compte foncier du contribuable qui ne l'avait pas déclarée pendant une certaine période."@fr ;
+    skos:hiddenLabel "Omission",
+        "Omission depuis",
+        "OmissionSV{{date}}" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Omission"@en,
+        "Omission"@fr .
+
+spval:PartieSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that the plot is a part of an original parcel that had the same number and has (usually) been subdivided. A \"p\" letter is often concatenated after the plot number."@en,
+        "Indique que la parcelle décrite est une partie d'une parcelle initiale qui possèdait le même numéro et a (généralement) été divisée. La lettre \"p\" est souvent accolée au numéro de la parcelle."@fr ;
+    skos:hiddenLabel "Partie",
+        "Ptie",
+        "p" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Part of"@en,
+        "Partie"@fr .
+
+spval:ResteSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that the plot is the remnant of a plot from the same land account that was subdivided and bore the same identifier as the plot in question."@en,
+        "Indique que la parcelle est le résidu d'une parcelle du même compte foncier qui a été divisée et qui portait le même identiant que la parcelle considérée."@fr ;
+    skos:hiddenLabel "Reste" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Left-over"@en,
+        "Reste"@fr .
+
+spval:RuinesSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that a building is or was in ruins."@en,
+        "Indique qu'une construction est ou était en ruines."@fr ;
+    skos:hiddenLabel "En ruine",
+        "En ruines",
+        "Ruines" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Ruined"@en,
+        "En ruines"@fr .
+
+spval:ValeurBarreeSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:altLabel "~~TEXT~~"@fr ;
+    skos:definition "Indicates that the text is crossed out in the document."@en,
+        "Indique que le texte est barré dans le document."@fr ;
+    skos:hiddenLabel "~~~~" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Crossed out"@en,
+        "Valeur barrée"@fr .
+
+spval:VoiePubliqueSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that part of the plot has been incorporated into the public highway."@en,
+        "Indique d'une partie de la parcelle est passée à la voie publique."@fr ;
+    skos:hiddenLabel "Voie publique",
+        "Vp" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Passed to the public roads"@en,
+        "Passé à la voie publique"@fr .
+
+spval:AdditionConstructionSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:closeMatch spval:AugmentationSV ;
+    skos:definition "Indicates an extension to an existing building, which may result in a reassessment of its tax value."@en,
+        "Indique une addition à une contruction existente, pouvant entraîner une réévaluation de la valeur fiscale de celle-ci."@fr ;
+    skos:hiddenLabel "add",
+        "add C",
+        "addition" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Expension"@en,
+        "Addition à une construction"@fr .
+
+spval:AugmentationSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:closeMatch spval:AdditionConstructionSV ;
+    skos:definition "Indicates an extension to an existing building, which may result in a reassessment of its tax value."@en,
+        "Indique une addition à une contruction existente, pouvant entraîner une réévaluation de la valeur fiscale de celle-ci."@fr ;
+    skos:hiddenLabel "Augmentation",
+        "Augon",
+        "Augtion",
+        "Augton" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Enhancement"@en,
+        "Augmentation"@fr .
+
+spval:IdemSV a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SpecialCellValue ;
+    skos:definition "Indicates that the cell value that is the same as that of another cell."@en,
+        "Valeur de cellule identique à celle d'une autre cellule."@fr ;
+    skos:hiddenLabel "\"",
+        "/",
+        "Id",
+        "Le même",
+        "Les mêmes",
+        "idem",
+        "§" ;
+    skos:inScheme tbl:SpecialCellValueList ;
+    skos:prefLabel "Idem"@en,
+        "Idem"@fr .
+

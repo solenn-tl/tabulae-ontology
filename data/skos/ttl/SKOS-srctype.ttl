@@ -1,0 +1,372 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix srctype: <https://w3id.org/tabulae/id/codes/sourceType/> .
+@prefix tbl: <https://w3id.org/tabulae#> .
+
+srctype:ArticleDeMutation a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Article de mutation" ;
+    skos:broader srctype:ZoneDePage ;
+    skos:definition "A section or cell in a folio or sub-folio that lists the taxpayers on a land register and shows their dates of entry (and exit) from that register."@en,
+        "Zone ou cellule d'un folio ou sous-folio qui liste les contribuables d'un compte foncier et indique leurs dates d'entrée (voir de sortie) de ce même compte."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Page area describing a list of taxpayers"@en,
+        "Article de mutation"@fr .
+
+srctype:CompteFoncier a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Compte foncier" ;
+    skos:broader srctype:MatriceCadastrale ;
+    skos:definition "A set of parcel records (lines) describing the plots of one or more successive related taxpayers. A land account may correspond ‘physically’ to a folio where the latter describes the details of one, and only one, taxpayer (or a list of successive taxpayers)."@en,
+        "Ensemble d'états de parcelles (lignes) qui décrivent les parcelles d'un ou plusieurs contribuables liés se succédant. Un compte foncier peut correspondre \"physiquement\" à un folio dans le cas où celui-ci décrit les informations d'un, et un seul, contribuable (ou liste de contribuables successifs)."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Property account"@en,
+        "Compte foncier"@fr .
+
+srctype:EtatsDeSections_Ap_1822 a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Etats de sections postérieurs à 1822" ;
+    skos:broader srctype:EtatsDeSections ;
+    skos:definition "Initial registers created after 1822."@en,
+        "Registre d'états de sections créé après 1822."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Initial register created after 1822"@en,
+        "Etats de sections postérieurs à 1822"@fr .
+
+srctype:EtatsDeSections_Av_1822_Bati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés bâties" ;
+    skos:broader srctype:EtatsDeSections_Av_1822 ;
+    skos:definition "Extract from an initial register created before 1822, dedicated to the description of built properties."@en,
+        "Partie d'un registre d'états de sections créé avant 1822 dédié à la description des propriétés bâties."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Initial register created before 1822 (unbuilt properties)"@en,
+        "Etats de sections antérieurs à 1822 (propriétés bâties)"@fr .
+
+srctype:EtatsDeSections_Av_1822_NonBati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Etats de sections antérieurs à 1822 : chapitres dédiés aux propriétés non bâties" ;
+    skos:broader srctype:EtatsDeSections_Av_1822 ;
+    skos:definition "Extract from an initial register created before 1822, dedicated to the description of unbuilt properties."@en,
+        "Partie d'un registre d'états de sections créé avant 1822 dédié à la description des propriétés non bâties."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Initial register created before 1822 (built properties)"@en,
+        "Etats de sections antérieurs à 1822 (propriétés non bâties)"@fr .
+
+srctype:EtatsDeSections_Scp_Seine_1835 a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)" ;
+    skos:broader srctype:EtatsDeSections ;
+    skos:definition "Initial registers relating specifically to the attempt to update the land registry carried out between 1835 and 1845 in the department of Seine."@en,
+        "Registre d'états de sections spécifique à la tentative de rénovation du cadastre ayant eu lieu entre 1835 et 1845 dans le département de la Seine."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Special intial registers of the (1835-1845) Seine departement cadaster"@en,
+        "Etats de sections spécifiques à la rénovation du cadastre de la Seine (1835-1845)"@fr .
+
+srctype:FicheInventaire a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Inventaire des archives" ;
+    skos:altLabel "Inventaire"@fr ;
+    skos:definition "Inventory records describing the contents of the archives held by an archive service."@en,
+        "Fiches d'inventaire décrivant le contenu des archives localisées dans un service d'archives."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Archival Records Inventory"@en,
+        "Inventaire des archives"@fr .
+
+srctype:FolioBati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Folio (Bâti)" ;
+    skos:broader srctype:Folio ;
+    skos:definition "Section dedicated to pland plots subject to tax as built property."@en,
+        "Folio dédié à des parcelles imposées au titre des propriétés bâties."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Folio (built property)"@en,
+        "Folio (Bâti)"@fr .
+
+srctype:FolioNonBati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Folio (Non Bâti)" ;
+    skos:broader srctype:Folio ;
+    skos:definition "Account dedicated to land plots taxed as land without any buildings on it (unbuilt properties)."@en,
+        "Folio dédié à des parcelles imposées au titre des propriétés non bâties/foncières."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Folio (unbuilt property)"@en,
+        "Folio (Non Bâti)"@fr .
+
+srctype:LigneEtatDeSection a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Ligne de tableau d'états de sections" ;
+    skos:broader srctype:ZoneDePage ;
+    skos:definition "A row in the main table of a section status register describing a parcel at the time of the cadastral survey’s initialisation."@en,
+        "Ligne du tableau principal d'un registre d'état de sections décrivant une parcelle à l'initialisation du cadastre."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Table row in an initial register page"@en,
+        "Ligne de tableau d'états de sections"@fr .
+
+srctype:LigneMatrice a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Ligne de tableau d'une matrice" ;
+    skos:broader srctype:ZoneDePage ;
+    skos:definition "A table row in a folio of a register describing the status of a plot of land."@en,
+        "Ligne d'un folio d'une matrice décrivant l'état d'une parcelle."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Table row in a mutation register page"@en,
+        "Ligne de tableau d'une matrice"@fr .
+
+srctype:MatriceCadastrale1807_1822_Bati_NonBati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Matrice de rôles des propriétés bâties et non bâties (1807-1822)" ;
+    skos:altLabel "Matrice des propriétés bâties et non bâties (1807-1822)"@fr ;
+    skos:broader srctype:MatriceCadastrale ;
+    skos:definition "Mutation register created between 1807 and 1822, detailing the built and unbuilt properties within a municipality."@en,
+        "Matrice cadastrale créée entre 1807 et 1822, décrit les propriétés bâties et non bâties d'une commune."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Mutation register of built and non built properties (1807-1822)"@en,
+        "Matrice de rôles des propriétés bâties et non bâties (1807-1822)"@fr .
+
+srctype:MatriceCadastrale1822_1914_NonBati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Matrice des propriétés non bâties (1822-1914)" ;
+    skos:altLabel "Matrice des propriétés foncières (1822-1914)"@fr ;
+    skos:broader srctype:MatriceCadastrale ;
+    skos:definition "Mutation register compiled between 1822 and 1914, which lists both built and unbuilt properties up to 1882, and only unbuilt properties up to 1914."@en,
+        "Matrice cadastrale créée entre 1822 et 1914, décrit les propriétés bâties et non bâties jusqu'à 1882 puis uniquement les propriétés non bâties jusqu'à 1914."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Mutation register of non built properties (1822-1914)"@en,
+        "Matrice des propriétés non bâties (1822-1914)"@fr .
+
+srctype:MatriceCadastrale1882_1911_Bati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Matrice des propriétés bâties (1882-1911)" ;
+    skos:broader srctype:MatriceCadastrale ;
+    skos:definition "Mutation register used from 1882 onwards to describe built properties."@en,
+        "Matrice cadastrale utilisée à partir de 1882 pour décrire les propriétés bâties."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Mutation register of build properties (1882-1911)"@en,
+        "Matrice des propriétés bâties (1882-1911)"@fr .
+
+srctype:MatriceCadastrale1911_Renovation_Bati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Matrice des propriétés bâties (1911-rénovation)" ;
+    skos:broader srctype:MatriceCadastrale ;
+    skos:definition "Mutation register used from 1911 onwards to describe built properties."@en,
+        "Matrice cadastrale utilisée à partir de 1911 pour décrire les propriétés bâties."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Mutation register of built properties (1911-renewal)"@en,
+        "Matrice des propriétés bâties (1911-rénovation)"@fr .
+
+srctype:MatriceCadastrale1914_Renovation_NonBati a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Matrice des propriétés non bâties (1914-rénovation)" ;
+    skos:broader srctype:MatriceCadastrale ;
+    skos:definition "Mutation register used from 1914 onwards to describe unbuilt properties."@en,
+        "Matrice cadastrale utilisée à partir de 1914 pour décrire les propriétés non bâties"@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Mutation register of unbuilt properties (1914-cadaster renovation)"@en,
+        "Matrice des propriétés non bâties (1914-rénovation)"@fr .
+
+srctype:Ouvrage a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Ouvrage" ;
+    skos:definition "Publication (book, article)."@en,
+        "Ouvrage (livre, article)."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Book"@en,
+        "Ouvrage"@fr .
+
+srctype:PlanGeoreference a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Plan vectorisé" ;
+    skos:broader srctype:Plan ;
+    skos:definition "Georeferenced map (manually or automatically)."@en,
+        "Plan georéférencé (manuellement ou automatiquement)."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Vectorized map"@en,
+        "Plan vectorisé"@fr .
+
+srctype:PlanParcellaireIssuDAtlas a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Plan parcellaire issu d'atlas" ;
+    skos:broader srctype:PlanParcellaireFinal ;
+    skos:definition "Final version of a cadastral index map taken from a municipal or cantonal atlas."@en,
+        "Version finale d'un plan parcellaire extraire d'un atlas communal ou cantonal"@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Cadastral index map : final version extract from atlas"@en,
+        "Plan parcellaire issu d'atlas"@fr .
+
+srctype:PlanParcellaireMinute a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Plan parcellaire : minute" ;
+    skos:broader srctype:PlanParcellaire ;
+    skos:definition "Draft version of a cadastral index map; may include building outlines, working notes or provisional plot numbering."@en,
+        "Version de travail du plan parcellaire, peut comprendre des traits de constructions, notes de travail ou une numérotation non définitive des parcelles."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Cadastral index map : draft version"@en,
+        "Plan parcellaire : minute"@fr .
+
+srctype:PlanVectorise a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Plan géoréférencé" ;
+    skos:broader srctype:Plan ;
+    skos:definition "Vectorised plan (manually or automatically)."@en,
+        "Plan vectorisé (manuellement ou automatiquement)."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Georeferenced map"@en,
+        "Plan géoréférencé"@fr .
+
+srctype:TableauAssemblage a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Tableau d'assemblage" ;
+    skos:broader srctype:Plan ;
+    skos:definition "A map drawn to the scale of a municipality, showing the compilation of cadastral index maps detailing the plots within the municipality."@en,
+        "Plan réalisé à l'échelle d'une commune représentant l'assemblage des plans parcellaires qui détaillent les parcelles de la commune."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Assembly map of the cadastral index maps"@en,
+        "Tableau d'assemblage"@fr .
+
+srctype:PageDeRegistre a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Page de registre cadastral" ;
+    skos:broader srctype:RegistreCadastral ;
+    skos:definition "Page taken from a register."@en,
+        "Page issue d'un registre."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Page of register"@en,
+        "Page de registre cadastral"@fr .
+
+srctype:PlanParcellaireFinal a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Plan parcellaire final" ;
+    skos:broader srctype:PlanParcellaire ;
+    skos:definition "Final version of a cadastral index map."@en,
+        "Version finale d'un plan parcellaire"@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Cadastral index map : final version"@en,
+        "Plan parcellaire final"@fr .
+
+srctype:Cadastre a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Cadastre" ;
+    skos:altLabel "Corpus cadastral"@fr ;
+    skos:definition "A land registry comprising maps and registers, used for a certain period to calculate and collect property tax on plots of land within a municipality."@en,
+        "Corpus cadastral composé de plans et de registres, utilisé pendant une certaine période pour le calcul et le prélèvement de l'impôt foncier des parcelles d'une commune."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Land registry corpus"@en,
+        "Cadastre"@fr .
+
+srctype:EtatsDeSections_Av_1822 a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Etats de sections antérieurs à 1822" ;
+    skos:broader srctype:EtatsDeSections ;
+    skos:definition "Initial register created before 1822. Sometimes, it contains a section describing the unbuilt plots and a section describing the buildings."@en,
+        "Registre d'états de sections créé avant 1822. Contient une partie dédiée à la description du sol (propriété non bâties) et une partie dédiée à la description des bâtiments (propriétés bâties)."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Initial register created before 1822"@en,
+        "Etats de sections antérieurs à 1822"@fr .
+
+srctype:Folio a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Folio" ;
+    skos:altLabel "Article"@fr,
+        "Case"@fr ;
+    skos:broader srctype:ZoneDePage ;
+    skos:definition "An area within a mutation register page that is identified by a number (ID). It may contain property accounts from one or more taxpayers, depending on the period and the type of pre-printed register."@en,
+        "Zone située dans une page de matrice qui est caractérisée à un numéro (identifiant). Elle peut contenir des éléments d'un ou plusieurs comptes fonciers selon les époques et les types de registres pré-imprimés."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Folio"@en,
+        "Folio"@fr .
+
+srctype:PlanParcellaire a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Plan parcellaire" ;
+    skos:broader srctype:Plan ;
+    skos:definition "A map showing the lant plots within a section of a municipality (an entire section or part of a section), drawn to scales ranging from 1:1,250 to 1:5,000."@en,
+        "Plan représentant les parcellaires d'une portion d'une commune (section entière ou partie d'une section), réalisé à des échelles situées entre 1:1250 et 1:5000."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Cadastral index map"@en,
+        "Plan parcellaire"@fr .
+
+srctype:EtatsDeSections a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Etats de sections" ;
+    skos:broader srctype:RegistreCadastral ;
+    skos:definition "Initial register detailing the initial status of plots within a municipality on a given date for a specific cadastral survey, prior to the completion of a cadastral map."@en,
+        "Registre d'état de sections décrivant l'état initial des parcelles d'une commune à une date donnée pour un cadastre donné, proche de la réalisation d'un plan cadastral."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Initial register"@en,
+        "Etats de sections"@fr .
+
+srctype:RegistreCadastral a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Registre cadastral" ;
+    skos:broader srctype:Cadastre ;
+    skos:definition "A register forming part of the land registry records."@en,
+        "Registre faisant partie de la documentation cadastrale."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Register"@en,
+        "Registre cadastral"@fr .
+
+srctype:Plan a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Plan" ;
+    skos:broader srctype:Cadastre ;
+    skos:definition "Map forming part of the land registry records."@en,
+        "Plan faisant partie de la documentation cadastrale."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Map"@en,
+        "Plan"@fr .
+
+srctype:ZoneDePage a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Zone située dans une page de registre cadastral" ;
+    skos:broader srctype:PageDeRegistre ;
+    skos:definition "An area within a registry page."@en,
+        "Zone située dans une page de registre."@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Area in a register page"@en,
+        "Zone située dans une page de registre cadastral"@fr .
+
+srctype:MatriceCadastrale a owl:NamedIndividual,
+        skos:Concept,
+        tbl:SourceType ;
+    rdfs:label "Matrice cadastrale" ;
+    skos:broader srctype:RegistreCadastral ;
+    skos:definition "A register containing all changes affecting the plots during its period of validity."@en,
+        "Registre contenant l'ensemble des mutations affectant les parcelles pendant la période de validité de la matrice"@fr ;
+    skos:inScheme tbl:LandRegistrySourceList ;
+    skos:prefLabel "Mutation register"@en,
+        "Matrice cadastrale"@fr .
+

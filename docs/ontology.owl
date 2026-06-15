@@ -784,10 +784,18 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#hasTaxpayer">
-        <rdfs:domain rdf:resource="https://w3id.org/PeGazUs#AttributeVersion"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/PeGazUs#AttributeVersion"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
-        <rdfs:comment xml:lang="en">Links an attribute version of a plot to a taxpayer liable for the property tax for that plot.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Relie une version d&apos;attribut d&apos;une parcelle à un contribuable redevable de l&apos;impôt foncier pour celle-ci.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links an attribute version of a plot or a document (Folio) to a taxpayer.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relie une version d&apos;attribut d&apos;une parcelle ou un document (Folio) à un contribuable.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
         <rdfs:label xml:lang="fr">a pour contribuable</rdfs:label>
         <rdfs:label xml:lang="en">has taxpayer</rdfs:label>
@@ -985,9 +993,17 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#isTaxpayerOf">
         <owl:inverseOf rdf:resource="https://w3id.org/tabulae#hasTaxpayer"/>
         <rdfs:domain rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
-        <rdfs:range rdf:resource="https://w3id.org/PeGazUs#AttributeVersion"/>
-        <rdfs:comment xml:lang="en">Links a taxpayer to an attribute version of a plot.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Relie un contribuable à une version d&apos;attribut d&apos;une parcelle.</rdfs:comment>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/PeGazUs#AttributeVersion"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Links a taxpayer to an attribute version of a plot or a document (Folio).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relie un contribuable à une version d&apos;attribut d&apos;une parcelle ou un document (Folio).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
         <rdfs:label xml:lang="fr">est le contribuable associé à</rdfs:label>
         <rdfs:label xml:lang="en">is associated taxpayer of</rdfs:label>
@@ -1418,10 +1434,37 @@
     
 
 
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/identifier -->
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/spatial -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/spatial">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:DatatypeProperty>
     
@@ -2554,7 +2597,7 @@
         <skos:hiddenLabel>~~~~</skos:hiddenLabel>
         <skos:inScheme rdf:resource="https://w3id.org/tabulae#AnnotationClassList"/>
         <skos:prefLabel xml:lang="en">Crossed-out text</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Entité nommée : Texte barré/rayé</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Texte barré/rayé</skos:prefLabel>
     </owl:NamedIndividual>
     
 

@@ -1,0 +1,77 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbl: <https://w3id.org/tabulae#> .
+
+tbl:AnnotationClassList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of classes and entity types used in document processing workflows"@en,
+        "Liste des classes et types d'entités utilisés lors des processus de traitement des documents"@fr ;
+    rdfs:comment "List of the various classes that can be assigned to a document, a field within a document, or a text or text excerpt, represented as a list of SKOS concepts. These classes are assigned during the process of extracting and structuring digitised land registry documents. They enable the creation of the graph ultimately used to study changes in land plots."@en,
+        "Liste des différentes classes pouvant être attribuées à un document, à une zone dans un document, à un texte ou extrait de texte, représentés comme une liste de concepts SKOS. Ces classes sont attribuées lors de processus d'extraction et de structuration des documents cadastraux numérisés. Ils permettent de produire le graphe finalement utilisé pour étudier l'évolution des parcelles."@fr ;
+    skos:prefLabel "List of classes and entity types used in document processing workflows"@en,
+        "Liste des classes et types d'entités utilisés lors des processus de traitement des documents"@fr .
+
+tbl:LandRegistryChangeList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of types of changes related to the land registry."@en,
+        "Liste des types de changements liés au cadastre."@fr ;
+    rdfs:comment "List of the various changes specific to the land registry, affecting its different types of entities (geographical entities, taxpayers, documents), represented as a list of SKOS concepts."@en,
+        "Liste des différents changements spécifique au cadastre, impactant ses différents types d'entités (entités géographiques, contribuables, documents), représentés comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of types of changes related to the land registry."@en,
+        "Liste des types de changements liés au cadastre."@fr .
+
+tbl:LandRegistryEventList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of types of events related to the land registry."@en,
+        "Liste des types d'évènements liés au cadastre."@fr ;
+    rdfs:comment "List of types of events related to the land regsitry that may occur, relating to the geographical features described or to the documents, represented as a list of SKOS concepts."@en,
+        "Liste des types d'évènements associés aux cadastre pouvant intervenir, liés aux entités géographiques décrites ou aux documents, représentés comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of types of events related to the land registry."@en,
+        "Liste des types d'évènements liés au cadastre."@fr .
+
+tbl:LandRegistryLandmarkList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of types of geographical features associated with the land registry"@en,
+        "Liste des types d'entités géographiques liées au cadastre"@fr ;
+    rdfs:comment "List of reference types mentioned in the land registry, represented as a list of SKOS concepts."@en,
+        "Liste des types de repères mentionnés dans le cadastre, représentés comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of types of geographical features associated with the land registry"@en,
+        "Liste des types d'entités géographiques liées au cadastre"@fr .
+
+tbl:LandRegistrySourceList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of types of sources related to the land registry"@en,
+        "Liste des types de sources liées au cadastre"@fr ;
+    rdfs:comment "List of the different types of sources (documents) and their derivative versions, represented as a list of SKOS concepts."@en,
+        "Liste des différentes types de sources (documents) et de leurs versions dérivées, représentées comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of types of sources related to the land registry"@en,
+        "List of types of sources related to the land registry"@fr .
+
+tbl:NatureList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of plot natures"@en,
+        "Liste des natures de parcelles"@fr ;
+    rdfs:comment "List of the different natures of plots, represented as a list of SKOS concepts. The types in the list are derived from observations made in old land registry as well as in documents describing the content of the current land registry."@en,
+        "Liste des différentes natures de parcelles, représentés comme une liste de concepts SKOS. Les natures de la liste sont issues d'observations réalisées dans les documents cadastraux anciens ainsi que dans des documents descriptifs du cadastre moderne."@fr ;
+    skos:prefLabel "List of plot natures"@en,
+        "Liste des natures de parcelles"@fr .
+
+tbl:PlotAttributeList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of attribute types specific to land plots described in the land registry."@en,
+        "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr ;
+    rdfs:comment "List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts."@en,
+        "Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."@fr ;
+    skos:prefLabel "List of attribute types specific to land plots described in the land registry."@en,
+        "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr .
+
+tbl:SpecialCellValueList a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:label "List of special values found in the cadastral tables"@en,
+        "Liste des valeurs spéciales rencontrées dans les tables cadastrales"@fr ;
+    rdfs:comment "List of so-called special values found in cadastral documents. Once explained, these values enable the generation of structured insights into changes in land parcels. They are used in particular during the graph generation phase."@en,
+        "Liste des valeurs dites spéciales rencontrées dans les documents cadastraux. Une fois explicitées, ces valeurs permettent de produire des connaissances structurées sur l'évolution des parcelles. Elles sont notamment utilisées lors de la phase de production du graphe."@fr ;
+    skos:prefLabel "List of special values found in the cadastral tables"@en,
+        "Liste des valeurs spéciales rencontrées dans les tables cadastrales"@fr .
+

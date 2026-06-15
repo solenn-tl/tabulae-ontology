@@ -53,7 +53,6 @@
         foaf:familyName "Tual" ;
         foaf:firstName "Solenn" ;
         foaf:mbox <mailto:solenn.tual@inria.fr> ;
-        #foaf:mbox <mailto:solenntual.pro@gmail.com> ;
         foaf:workInfoHomepage <https://www.umr-lastig.fr/solenn-tual/> ;
         schema:identifier <https://www.wikidata.org/wiki/Q122457645> ;
         schema:affiliation [
@@ -61,11 +60,6 @@
             schema:name "MOEX, Inria" ;
             schema:url <https://www.wikidata.org/wiki/Q52607062>
         ] ;
-        #schema:affiliation [
-        #    a schema:Organization ;
-        #    schema:name "UMR LASTIG, IGN-Géodata Paris, Université Gustave Eiffel" ;
-        #    schema:url <https://www.wikidata.org/wiki/Q124526085>
-        #] ;
         organization:hasMembership [
             a organization:Membership ;
             organization:memberDuring [
@@ -441,25 +435,35 @@ tbl:isPlotNatureOf a owl:ObjectProperty ;
     rdfs:isDefinedBy tbl: .
 
 tbl:hasTaxpayer a owl:ObjectProperty ;
-    rdfs:domain peg:AttributeVersion ;
+    rdfs:domain [ a owl:Class ;
+                    owl:unionOf ( peg:AttributeVersion
+                                  rico:RecordResource
+                                  rico:Instantiation
+                                )
+                  ] ;
     rdfs:range tbl:Taxpayer ;
     rdfs:label "a pour contribuable"@fr ,
                 "has taxpayer"@en ;
     owl:inverseOf tbl:isTaxpayerOf;
-    rdfs:comment "Relie une version d'attribut d'une parcelle à un contribuable redevable de l'impôt foncier pour celle-ci."@fr ,
-                "Links an attribute version of a plot to a taxpayer liable for the property tax for that plot."@en ;
+    rdfs:comment "Relie une version d'attribut d'une parcelle ou un document (Folio) à un contribuable."@fr ,
+                "Links an attribute version of a plot or a document (Folio) to a taxpayer."@en ;
     rdfs:isDefinedBy tbl: .
 
 tbl:isTaxpayerOf a owl:ObjectProperty ;
     rdfs:domain tbl:Taxpayer ;
-    rdfs:range peg:AttributeVersion ;
+    rdfs:range [ a owl:Class ;
+                    owl:unionOf ( peg:AttributeVersion
+                                  rico:RecordResource
+                                  rico:Instantiation
+                                )
+                  ] ;
     rdfs:label "est le contribuable associé à"@fr ,
                 "is associated taxpayer of"@en ;
     skos:altLabel "est le contribuable associé à la version d'attribut"@fr, 
                     "is taxpayer of attribute version"@en ;
     owl:inverseOf tbl:hasTaxpayer;
-    rdfs:comment "Relie un contribuable à une version d'attribut d'une parcelle."@fr ,
-                "Links a taxpayer to an attribute version of a plot."@en ;
+    rdfs:comment "Relie un contribuable à une version d'attribut d'une parcelle ou un document (Folio)."@fr ,
+                "Links a taxpayer to an attribute version of a plot or a document (Folio)."@en ;
     rdfs:isDefinedBy tbl: .
 
 tbl:hasPlotAddress a owl:ObjectProperty ;
@@ -1132,6 +1136,15 @@ rico:identifier a owl:DatatypeProperty ;
 
 rico:name a owl:DatatypeProperty ;
     rdfs:isDefinedBy rico: .
+
+dcterms:spatial a owl:DatatypeProperty ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:date a owl:DatatypeProperty ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:created a owl:DatatypeProperty ;
+    rdfs:isDefinedBy dcterms: .
 
 ##########################
 #####  Individuals
@@ -3698,7 +3711,7 @@ anclass:CrossedOut a owl:NamedIndividual,
     skos:hiddenLabel "~~~~" ;
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Crossed-out text"@en,
-        "Entité nommée : Texte barré/rayé"@fr .
+        "Texte barré/rayé"@fr .
 
 anclass:DocumentType a owl:NamedIndividual,
         skos:Concept,

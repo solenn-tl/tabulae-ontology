@@ -505,10 +505,15 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#hasTaxpayer
 :hasTaxpayer rdf:type owl:ObjectProperty ;
-             rdfs:domain <https://w3id.org/PeGazUs#AttributeVersion> ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( <https://w3id.org/PeGazUs#AttributeVersion>
+                                         <https://www.ica.org/standards/RiC/ontology#Instantiation>
+                                         <https://www.ica.org/standards/RiC/ontology#RecordResource>
+                                       )
+                         ] ;
              rdfs:range :Taxpayer ;
-             rdfs:comment "Links an attribute version of a plot to a taxpayer liable for the property tax for that plot."@en ,
-                          "Relie une version d'attribut d'une parcelle à un contribuable redevable de l'impôt foncier pour celle-ci."@fr ;
+             rdfs:comment "Links an attribute version of a plot or a document (Folio) to a taxpayer."@en ,
+                          "Relie une version d'attribut d'une parcelle ou un document (Folio) à un contribuable."@fr ;
              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
              rdfs:label "a pour contribuable"@fr ,
                         "has taxpayer"@en .
@@ -649,9 +654,14 @@ xsd:date rdf:type rdfs:Datatype .
 :isTaxpayerOf rdf:type owl:ObjectProperty ;
               owl:inverseOf :hasTaxpayer ;
               rdfs:domain :Taxpayer ;
-              rdfs:range <https://w3id.org/PeGazUs#AttributeVersion> ;
-              rdfs:comment "Links a taxpayer to an attribute version of a plot."@en ,
-                           "Relie un contribuable à une version d'attribut d'une parcelle."@fr ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( <https://w3id.org/PeGazUs#AttributeVersion>
+                                         <https://www.ica.org/standards/RiC/ontology#Instantiation>
+                                         <https://www.ica.org/standards/RiC/ontology#RecordResource>
+                                       )
+                         ] ;
+              rdfs:comment "Links a taxpayer to an attribute version of a plot or a document (Folio)."@en ,
+                           "Relie un contribuable à une version d'attribut d'une parcelle ou un document (Folio)."@fr ;
               rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
               rdfs:label "est le contribuable associé à"@fr ,
                          "is associated taxpayer of"@en ;
@@ -953,9 +963,24 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty ;
+                                rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+
 ###  http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+
+###  http://purl.org/dc/terms/spatial
+<http://purl.org/dc/terms/spatial> rdf:type owl:DatatypeProperty ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
 
 ###  http://www.wikidata.org/prop/P8422
@@ -1753,7 +1778,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                <http://www.w3.org/2004/02/skos/core#hiddenLabel> "~~~~" ;
                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :AnnotationClassList ;
                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Crossed-out text"@en ,
-                                                                                                               "Entité nommée : Texte barré/rayé"@fr .
+                                                                                                               "Texte barré/rayé"@fr .
 
 
 ###  https://w3id.org/tabulae/id/codes/annotationClass/DocumentType

@@ -1,0 +1,94 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix peg: <https://w3id.org/PeGazUs#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbl: <https://w3id.org/tabulae#> .
+@prefix tblltype: <https://w3id.org/tabulae/id/codes/landmarkType/> .
+
+tblltype:Plot a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:altLabel "Land plot"@en ;
+    skos:broader tblltype:Section ;
+    skos:definition "The most precise geographical unit in the land registry, corresponding to a coherent parcel of land (often of the same type) and linked to a taxpayer."@en,
+        "Entité géographique la plus précise du cadastre, correspondant à une unité de terre cohérente (souvent de même nature) et associée à un contribuable."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "Plot"@en,
+        "Parcelle"@fr .
+
+tblltype:Arrondissement a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q194203> ;
+    skos:broader tblltype:Departement ;
+    skos:definition "A geographical unit corresponding to the first level of subdivision within a department. Their administrative role has evolved since their creation, which means there are differences compared with the current definition of an arrondissement, although this does not alter the hierarchy of administrative geographical units."@en,
+        "Entité géographique correspondant au premier niveau de sous-division des départements. Leur rôle administratif a évolué depuis leur création, ce qui implique des différences avec la définition actuelle de l'arrondissement sans que celà change la hiérarchie des entités géographiques administratives."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Arrondissement"@en,
+        "Arrondissement départemental"@fr .
+
+tblltype:Canton a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q184188> ;
+    skos:altLabel "Canton officiel"@fr,
+        "Justice de paix"@fr ;
+    skos:broader tblltype:Arrondissement ;
+    skos:definition "A geographical unit corresponding to the second level of subdivision within departments as recorded in the land registry, situated between the district and the municipality. These are the official cantons, established in the late 18th century, primarily for the organisation of magistrates’ courts (until 1958) and elections. In the land registry records, the term ‘Justice of the Peace’ may also be used instead of ‘Canton’."@en,
+        "Entité géographique correspondant au deuxième niveau de sous-division des départements mentionné dans le cadastre, situé entre l'arrondissement et la commune. Il s'agit ici des cantons officiels, créés à la fin du 18ème siècle, notamment pour l'organisation des justices de paix (jusqu'à 1958) et des élections. Dans les registres cadastraux, le terme \"Justice de paix\" peut d'ailleurs être utilisé à la place de \"Canton\"."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Canton"@en,
+        "Canton"@fr .
+
+tblltype:Commune a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:altLabel "Municipality"@en ;
+    skos:broader tblltype:Canton ;
+    skos:definition "A geographical unit corresponding to the finest administrative division across the whole territory. Each municipality had its own land registry comprising a complete set of documents (maps and registers)."@en,
+        "Entité géographique correspondant au maillage administratif le plus fin sur l'ensemble du territoire. Chaque commune possédait son cadastre comprenant un corpus complet de documents (plans et registres)."@fr ;
+    skos:exactMatch <http://data.ign.fr/def/geofla#Commune> ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Commune"@en,
+        "Commune"@fr .
+
+tblltype:Departement a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:broader tblltype:FrenchAdministrativeUnit ;
+    skos:definition "A geographical unit corresponding to the French departments since their creation in 1790. The departments were responsible for collecting direct taxes from the municipalities within their territory."@en,
+        "Entité géographique correspondant aux départements français depuis leur création en 1790. Les départements étaient responsable du prélèvement des contributions directes des communes se trouvant sur le territoire."@fr ;
+    skos:exactMatch <http://data.ign.fr/def/geofla#Departement> ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Departement"@en,
+        "Département"@fr .
+
+tblltype:FrenchAdministrativeUnit a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:definition "A geographical entity corresponding to a French administrative unit."@en,
+        "Entité géographique correspondant à une unité administrative française."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "French Administrative Unit"@en,
+        "Unité administrative française"@fr .
+
+tblltype:Section a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:altLabel "Cadastral section"@en ;
+    skos:broader tblltype:Commune ;
+    skos:definition "A geographical unit specific to the land registry, it is identified by a single letter in the old land registry and by one or more letters in the updated land registry. It corresponds to a division of the municipality into large groups of plots. Generally speaking, each sheet of the plot map represented a section."@en,
+        "Entité géographique spécifique au cadastre, elle est identifiée par une lettre dans l'ancien cadastre et par une ou plusieurs lettres dans le cadastre rénové. Elle correspond à un découpage de la commune en grands ensembles de parcelles. Dans le cas général, chaque feuille de plan parcellaire représentait une section."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "Section"@en,
+        "Section"@fr .
+
+tblltype:UnregisteredLand a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:definition "A geographical unit corresponding to a non-cadastral space, such as a road or a river."@en,
+        "Entité géographique correspondant à un espace non cadastré, tel qu'une route ou une rivière."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "Unregistered land"@en,
+        "Espace non cadastré"@fr .
