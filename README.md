@@ -7,31 +7,35 @@ The TABULAE ontology has been developped as an extension of the PeGaZus ontology
 ## Structure of the repository
 ```
 ├── data                   
-│   ├── skos               <- SKOS Concept Scheme as csv              
+│   ├── skos                        
+│       ├── ttl            <- SKOS Concept Scheme as ttl
 │
 ├── docs                   <- Widoco documentation
 │
-├── ontology               <- Ontology documentation
+├── ontology 
 │   ├── ontology-land-registry.ttl   <- Turtle implementation
-│   ├── eng-documentation
+│   ├── eng-documentation            <- Ontology documentation (english)
 │       ├── geographical_entities
 │       ├── taxpayers
 │       ├── temporal_evolution
 │       ├── land_registry_documents_use
 │       ├── sources
-│   ├── fr-documentation
+│   ├── fr-documentation             <- Ontology documentation (french)
 │       ├── entites_geographiques
 │       ├── contribuables
 │       ├── evolution_temporelle
-│       ├── fonctionnement_du_corpus_cadastral
+│       ├── fonctionnement_cadastre
 │       ├── sources
 │
 ├── CITATION.cff
 ├── LICENCE.md
 └── README.md
 ```
+
 ### `ontology` folder
-The TABULAE ontology implementation in RDF is available in `ontology-land-registry.ttl`. The detailed documentaation is provided in english and in french in the [ontology folder](ontology/documentation). It is is divided into as many parts as there are modelets:
+*The documentation of the repo is currently upgraded with new schemas, examples. The french translation is also in preparation. It should be uploaded between june and july 2026.*
+
+The TABULAE ontology implementation in RDF is available in `ontology-land-registry.ttl`. The detailed documentaation is provided in english and in french in the [ontology folder](ontology/eng-documentation). It is is divided into as many parts as there are modelets:
 * [`landmarks`](ontology/documentation/eng-documentation/landmarks);
 * [`land_registry_documents_use`](ontology/documentation/eng-documentation/land_registry_documents_use) ;
 * [`sources`](ontology/documentation/eng-documentation/sources) ;
