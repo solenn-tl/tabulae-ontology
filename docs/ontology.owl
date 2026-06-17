@@ -614,6 +614,60 @@
     
 
 
+    <!-- https://w3id.org/tabulae#adds -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#adds">
+        <owl:inverseOf rdf:resource="https://w3id.org/tabulae#isAddedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tabulae#SourceChange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="fr">Cette propriété relie un changement à la version d&apos;un élément qu&apos;il rend active/ajoutée dans une source.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a change to the version of an element that it makes active/added in a source.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="en">adds</rdfs:label>
+        <rdfs:label xml:lang="fr">ajoute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#appliedToSource -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#appliedToSource">
+        <rdfs:domain rdf:resource="https://w3id.org/tabulae#SourceChange"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Cette propriété relie un changement à une source qu&apos;il modifie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a change to a source it modifies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="en">change applied to source</rdfs:label>
+        <rdfs:label xml:lang="fr">changement appliqué à la source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#deletes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#deletes">
+        <owl:inverseOf rdf:resource="https://w3id.org/tabulae#isDeletedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tabulae#SourceChange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="fr">Cette propriété relie un changement à la version d&apos;un élément (comme une mention ou un contribuable) qu&apos;il rature, supprime ou rend obsolète dans la source.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a change to the version of an element that it crosses out, deletes, or makes obsolete in the source.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="en">deletes</rdfs:label>
+        <rdfs:label xml:lang="fr">supprime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/tabulae#hasClass -->
 
 
@@ -780,6 +834,22 @@
     
 
 
+    <!-- https://w3id.org/tabulae#hasSourceChange -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#hasSourceChange">
+        <owl:inverseOf rdf:resource="https://w3id.org/tabulae#sourceChangeDependsOn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tabulae#SourceEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/tabulae#SourceChange"/>
+        <rdfs:comment xml:lang="fr">Cette propriété relie un évènement à un changement qu&apos;il déclenche dans une source.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links an event to a change it triggers in a source.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="en">creates source change</rdfs:label>
+        <rdfs:label xml:lang="fr">créé un changement dans une source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/tabulae#hasTaxpayer -->
 
 
@@ -799,6 +869,21 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
         <rdfs:label xml:lang="fr">a pour contribuable</rdfs:label>
         <rdfs:label xml:lang="en">has taxpayer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#isAddedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#isAddedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/tabulae#SourceChange"/>
+        <rdfs:comment xml:lang="fr">Cette propriété relie la version d&apos;un élément au changement qui l&apos;a introduite dans la source.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links an element version to the change that introduced it into the source.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="fr">est ajouté par</rdfs:label>
+        <rdfs:label xml:lang="en">is added by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -843,6 +928,21 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
         <rdfs:label xml:lang="fr">est la valeur de classe attribuée à</rdfs:label>
         <rdfs:label xml:lang="en">is class value of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#isDeletedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#isDeletedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/tabulae#SourceChange"/>
+        <rdfs:comment xml:lang="fr">Cette propriété relie la version d&apos;un élément au changement qui l&apos;a raturée ou retirée de la source.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links an element version to the change that crossed it out or removed it from the source.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="fr">est supprimé par</rdfs:label>
+        <rdfs:label xml:lang="en">is deleted by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -972,6 +1072,21 @@
     
 
 
+    <!-- https://w3id.org/tabulae#isSourceChangeType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#isSourceChangeType">
+        <rdfs:domain rdf:resource="https://w3id.org/tabulae#SourceChangeType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="fr">Cette propriété permet d&apos;associer un type à un changement impliquant une source.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property allows to associate a type with a change involving a source.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="fr">est le type de changement dans une source</rdfs:label>
+        <rdfs:label xml:lang="en">is source change type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/tabulae#isSourceType -->
 
 
@@ -1067,6 +1182,52 @@
         <skos:prefLabel xml:lang="en">next state or folio</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">état ou folio suivant</skos:prefLabel>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#sourceChangeDependsOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#sourceChangeDependsOn">
+        <owl:inverseOf rdf:resource="https://w3id.org/tabulae#sourceEventAppliedTo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tabulae#SourceChange"/>
+        <rdfs:range rdf:resource="https://w3id.org/tabulae#SourceEvent"/>
+        <rdfs:comment xml:lang="fr">Cette propriété relie un changement modifiant une source à l&apos;évènement dont il dépend.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a change modifying a source to the event on which it depends.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="fr">changement d&apos;une source dépendant de</rdfs:label>
+        <rdfs:label xml:lang="en">source change depends on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#sourceChangedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#sourceChangedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/tabulae#appliedToSource"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+                    <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/tabulae#SourceChange"/>
+        <rdfs:comment xml:lang="fr">Cette propriété relie une source à un changement qui la modifie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a source to a change.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="en">source changed by</rdfs:label>
+        <rdfs:label xml:lang="fr">source changée par</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tabulae#sourceEventAppliedTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tabulae#sourceEventAppliedTo"/>
     
 
 
@@ -1930,6 +2091,13 @@
     
 
 
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
     <!-- http://purl.org/vocommons/voaf#Vocabulary -->
 
 
@@ -2170,6 +2338,7 @@
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#NamedEntity"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Nature"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#PropertyAccountChange"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceChangeType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SpecialCellValue"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
@@ -2195,6 +2364,7 @@
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#NamedEntity"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Nature"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#PropertyAccountChange"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceChangeType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SpecialCellValue"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
@@ -2217,6 +2387,7 @@
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#NamedEntity"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Nature"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#PropertyAccountChange"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceChangeType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SpecialCellValue"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
@@ -2231,12 +2402,28 @@
     
 
 
+    <!-- https://w3id.org/tabulae#LandRegistryChangeType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/tabulae#LandRegistryChangeType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tabulae#SourceChangeType"/>
+        <rdfs:comment xml:lang="en">A specific type of change affecting a resource in the land registry corpus.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Cette classe représente un type spécifique de changement affectant un document du corpus cadastral.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Type de changement sur un document cadastral</rdfs:label>
+        <rdfs:label xml:lang="en">Type of change on a land registry document</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Type de changement sur un document cadastral</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Type of change on a land registry document</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/tabulae#NamedEntity -->
 
 
     <owl:Class rdf:about="https://w3id.org/tabulae#NamedEntity">
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Nature"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#PropertyAccountChange"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceChangeType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SpecialCellValue"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
@@ -2257,6 +2444,7 @@
     <owl:Class rdf:about="https://w3id.org/tabulae#Nature">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#PropertyAccountChange"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceChangeType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SpecialCellValue"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
@@ -2275,17 +2463,52 @@
 
 
     <owl:Class rdf:about="https://w3id.org/tabulae#PropertyAccountChange">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/PeGazUs#Change"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceChangeType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceType"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SpecialCellValue"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
-        <rdfs:comment xml:lang="en">A change affecting the property account of a taxpayer.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Un changement sur le compte foncier caractérise un changement affectant le compte foncier d&apos;un contribuable.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/tabulae#SourceChange -->
+
+
+    <owl:Class rdf:about="https://w3id.org/tabulae#SourceChange">
+        <rdfs:comment xml:lang="fr">Cette classe représente tout changement au sein d&apos;un document d&apos;archive (source).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents any change within an archival document (source).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
-        <rdfs:label xml:lang="fr">Changement sur le compte foncier</rdfs:label>
-        <rdfs:label xml:lang="en">Property account change</rdfs:label>
-        <skos:prefLabel xml:lang="fr">Changement sur le compte foncier</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Property account change</skos:prefLabel>
+        <rdfs:label xml:lang="fr">Changement dans une source</rdfs:label>
+        <rdfs:label xml:lang="en">Source change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/tabulae#SourceChangeType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/tabulae#SourceChangeType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SourceType"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#SpecialCellValue"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tabulae#Taxpayer"/>
+        <rdfs:comment xml:lang="fr">Cette classe représente un type spécifique de changement affectant une source.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a specific type of change affecting a source.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tabulae#"/>
+        <rdfs:label xml:lang="fr">Type de changement dans une source</rdfs:label>
+        <rdfs:label xml:lang="en">Type of change in a source</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Type de changement dans une source</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Type of change in a source</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/tabulae#SourceEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/tabulae#SourceEvent">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/PeGazUs#Event"/>
     </owl:Class>
     
 
@@ -2462,6 +2685,21 @@
     
 
 
+    <!-- https://w3id.org/tabulae#LandRegistryAttributeList -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae#LandRegistryAttributeList">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS.</rdfs:comment>
+        <rdfs:label xml:lang="en">List of attribute types specific to land plots described in the land registry.</rdfs:label>
+        <rdfs:label xml:lang="fr">Liste des types d&apos;attributs spécifiques aux parcelles cadastrales.</rdfs:label>
+        <skos:prefLabel xml:lang="en">List of attribute types specific to land plots described in the land registry.</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Liste des types d&apos;attributs spécifiques aux parcelles cadastrales.</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/tabulae#LandRegistryChangeList -->
 
 
@@ -2533,21 +2771,6 @@
         <rdfs:label xml:lang="fr">Liste des natures de parcelles</rdfs:label>
         <skos:prefLabel xml:lang="en">List of plot natures</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Liste des natures de parcelles</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/tabulae#PlotAttributeList -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae#PlotAttributeList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <rdfs:comment xml:lang="en">List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS.</rdfs:comment>
-        <rdfs:label xml:lang="en">List of attribute types specific to land plots described in the land registry.</rdfs:label>
-        <rdfs:label xml:lang="fr">Liste des types d&apos;attributs spécifiques aux parcelles cadastrales.</rdfs:label>
-        <skos:prefLabel xml:lang="en">List of attribute types specific to land plots described in the land registry.</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Liste des types d&apos;attributs spécifiques aux parcelles cadastrales.</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -3277,7 +3500,7 @@
         <skos:altLabel xml:lang="en">Plot location</skos:altLabel>
         <skos:definition xml:lang="en">Address of the plot, usually corresponding to a local place name, a road or street, or possibly a house number.</skos:definition>
         <skos:definition xml:lang="fr">Adresse de la parcelle concernée, correspondant généralement à un lieu-dit, à une voie ou rue ou éventuellement à un numéro d&apos;adresse.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#PlotAttributeList"/>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryAttributeList"/>
         <skos:prefLabel xml:lang="fr">Adresse de la parcelle</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Plot Address</skos:prefLabel>
     </owl:NamedIndividual>
@@ -3292,7 +3515,7 @@
         <rdf:type rdf:resource="https://w3id.org/PeGazUs#AttributeType"/>
         <skos:definition xml:lang="fr">Mention de la parcelle dans un document. Correspond généralement à l&apos;indication du folio permettant de la retrouver dans les documents.</skos:definition>
         <skos:definition xml:lang="en">Reference to the plot in the registers. This usually involves stating the current folio of the plot, enabling it to be located in the documents.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#PlotAttributeList"/>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryAttributeList"/>
         <skos:prefLabel xml:lang="fr">Mention de la parcelle</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Mention of the plot</skos:prefLabel>
     </owl:NamedIndividual>
@@ -3307,7 +3530,7 @@
         <rdf:type rdf:resource="https://w3id.org/PeGazUs#AttributeType"/>
         <skos:definition xml:lang="fr">Nature de la parcelle concernée, associée au type de sol ou à l&apos;usage de celui-ci.</skos:definition>
         <skos:definition xml:lang="en">Nature of the plot, in relation to the soil type or its use.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#PlotAttributeList"/>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryAttributeList"/>
         <skos:prefLabel xml:lang="fr">Nature de la parcelle</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Plot Nature</skos:prefLabel>
     </owl:NamedIndividual>
@@ -3320,15 +3543,39 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://w3id.org/PeGazUs#AttributeType"/>
-        <skos:altLabel xml:lang="en">Owner or usufructuary</skos:altLabel>
-        <skos:altLabel xml:lang="fr">Propriétaire ou usufruitier</skos:altLabel>
-        <skos:altLabel>Contribuable</skos:altLabel>
-        <skos:altLabel>Taxpayer</skos:altLabel>
         <skos:definition xml:lang="en">A natural or legal person liable for council tax on the plot in question.</skos:definition>
         <skos:definition xml:lang="fr">Personne physique ou morale redevable de l&apos;impôt foncier pour la parcelle concernée.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/tabulae#PlotAttributeList"/>
-        <skos:prefLabel xml:lang="fr">Contribuable associé à la parcelle</skos:prefLabel>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryAttributeList"/>
+        <skos:prefLabel xml:lang="fr">Contribuable associé à une parcelle</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Plot Taxpayer</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#LandRegistryChangeType"/>
+        <skos:definition xml:lang="fr">Changement décrivant l&apos;apparition d&apos;un contribuable.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryChangeList"/>
+        <skos:prefLabel xml:lang="fr">Apparition d&apos;un contribuable</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Appearance of a taxpayer</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/tabulae#LandRegistryChangeType"/>
+        <skos:definition xml:lang="fr">Changement décrivant la disparition d&apos;un contribuable.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/tabulae#LandRegistryChangeList"/>
+        <skos:prefLabel xml:lang="en">Disappearance of a taxpayer</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Disparition d&apos;un contribuable</skos:prefLabel>
     </owl:NamedIndividual>
     
 

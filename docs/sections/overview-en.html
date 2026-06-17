@@ -53,7 +53,9 @@ This ontology has the following classes and properties.</span>
       <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a>
    </li>
    <li>
-      <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property account change</a>
+      <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">
+         <span>Property Account Change</span>
+      </a>
    </li>
    <li>
       <a href="#https://www.ica.org/standards/RiC/ontology#Record"
@@ -75,6 +77,14 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">SoftwareAgent</a>
    </li>
    <li>
+      <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a>
+   </li>
+   <li>
+      <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">
+         <span>Source Event</span>
+      </a>
+   </li>
+   <li>
       <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a>
    </li>
    <li>
@@ -82,6 +92,12 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a>
+   </li>
+   <li>
+      <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a>
+   </li>
+   <li>
+      <a href="#LandRegistryChangeType" title="https://w3id.org/tabulae#LandRegistryChangeType">Type of change on a land registry document</a>
    </li>
    <li>
       <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a>
@@ -96,14 +112,26 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#adds" title="https://w3id.org/tabulae#adds">adds</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">
          <span>broader</span>
       </a>
    </li>
    <li>
+      <a href="#appliedToSource" title="https://w3id.org/tabulae#appliedToSource">change applied to source</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/2004/02/skos/core#closeMatch" title="http://www.w3.org/2004/02/skos/core#closeMatch">
          <span>close Match</span>
       </a>
+   </li>
+   <li>
+      <a href="#hasSourceChange" title="https://w3id.org/tabulae#hasSourceChange">creates source change</a>
+   </li>
+   <li>
+      <a href="#deletes" title="https://w3id.org/tabulae#deletes">deletes</a>
    </li>
    <li>
       <a href="#http://www.w3.org/2004/02/skos/core#exactMatch" title="http://www.w3.org/2004/02/skos/core#exactMatch">
@@ -171,6 +199,9 @@ This ontology has the following classes and properties.</span>
          title="https://www.ica.org/standards/RiC/ontology#includesOrIncluded">includes or included</a>
    </li>
    <li>
+      <a href="#isAddedBy" title="https://w3id.org/tabulae#isAddedBy">is added by</a>
+   </li>
+   <li>
       <a href="#isAddressEntityOfTaxpayer"
          title="https://w3id.org/tabulae#isAddressEntityOfTaxpayer">is address (entity) of a taxpayer</a>
    </li>
@@ -182,6 +213,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#isClassValueOf" title="https://w3id.org/tabulae#isClassValueOf">is class value of</a>
+   </li>
+   <li>
+      <a href="#isDeletedBy" title="https://w3id.org/tabulae#isDeletedBy">is deleted by</a>
    </li>
    <li>
       <a href="#isEventType" title="https://w3id.org/tabulae#isEventType">is event type</a>
@@ -230,6 +264,9 @@ This ontology has the following classes and properties.</span>
       <a href="#isPlotAddressOf" title="https://w3id.org/tabulae#isPlotAddressOf">is plot address of</a>
    </li>
    <li>
+      <a href="#isSourceChangeType" title="https://w3id.org/tabulae#isSourceChangeType">is source change type</a>
+   </li>
+   <li>
       <a href="#isSourceType" title="https://w3id.org/tabulae#isSourceType">is source type</a>
    </li>
    <li>
@@ -253,6 +290,12 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">
          <span>related</span>
       </a>
+   </li>
+   <li>
+      <a href="#sourceChangeDependsOn" title="https://w3id.org/tabulae#sourceChangeDependsOn">source change depends on</a>
+   </li>
+   <li>
+      <a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changed by</a>
    </li>
    <li>
       <a href="#sourcedFrom" title="https://w3id.org/tabulae#sourcedFrom">sourced from</a>
@@ -429,6 +472,10 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/tabulae/id/codes/annotationClass/MATAlphabeticTable">Alphabetical table</a>
    </li>
    <li>
+      <a href="#https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance"
+         title="https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance">Appearance of a taxpayer</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/tabulae/id/codes/plotNature/Pommeraie"
          title="https://w3id.org/tabulae/id/codes/plotNature/Pommeraie">Apple tree</a>
    </li>
@@ -599,6 +646,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://w3id.org/tabulae/id/codes/eventType/Reduction"
          title="https://w3id.org/tabulae/id/codes/eventType/Reduction">Demolition of a building</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance"
+         title="https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance">Disappearance of a taxpayer</a>
    </li>
    <li>
       <a href="#https://w3id.org/tabulae/id/codes/plotNature/Fosse"
@@ -893,7 +944,8 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/tabulae/id/codes/sourceType/LigneEtatDeSection">Ligne de tableau d'états de sections</a>
    </li>
    <li>
-      <a href="#PlotAttributeList" title="https://w3id.org/tabulae#PlotAttributeList">List of attribute types specific to land plots described in the land registry.</a>
+      <a href="#LandRegistryAttributeList"
+         title="https://w3id.org/tabulae#LandRegistryAttributeList">List of attribute types specific to land plots described in the land registry.</a>
    </li>
    <li>
       <a href="#AnnotationClassList" title="https://w3id.org/tabulae#AnnotationClassList">List of classes and entity types used in document processing workflows</a>

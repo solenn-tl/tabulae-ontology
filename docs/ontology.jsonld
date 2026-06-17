@@ -147,23 +147,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
       "@id" : "https://w3id.org/PeGazUs#Address"
     }, {
       "@id" : "https://w3id.org/PeGazUs#Landmark"
     }, {
       "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
@@ -187,7 +185,19 @@
     "@id" : "_:genid4"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -199,25 +209,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid39",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/PeGazUs#Address"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#Landmark"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
     } ]
   } ]
 }, {
@@ -229,22 +227,24 @@
     "@value" : "CRH, EHESS-CNRS"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/PeGazUs#Address"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#Landmark"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
@@ -275,6 +275,16 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
     }, {
       "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
@@ -283,19 +293,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/tabulae#SpecialCellValue"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -315,23 +313,25 @@
     "@value" : "LRE, EPITA"
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
+      "@id" : "https://w3id.org/tabulae#SpecialCellValue"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
@@ -341,7 +341,7 @@
     "@list" : [ {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
     } ]
   } ]
 }, {
@@ -384,7 +384,7 @@
     "@list" : [ {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet"
     } ]
   } ]
 }, {
@@ -394,7 +394,7 @@
     "@list" : [ {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
     } ]
   } ]
 }, {
@@ -410,9 +410,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
     } ]
   } ]
 }, {
@@ -420,9 +420,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet"
     } ]
   } ]
 }, {
@@ -430,9 +430,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
-      "@id" : "https://w3id.org/tabulae#NamedEntity"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid89",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
@@ -465,6 +475,16 @@
     "@id" : "https://www.wikidata.org/wiki/Q122457645"
   } ]
 }, {
+  "@id" : "_:genid92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "@id" : "https://w3id.org/tabulae#NamedEntity"
+    } ]
+  } ]
+}, {
   "@id" : "http://creativecommons.org/ns#license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -473,6 +493,9 @@
 }, {
   "@id" : "http://data.ign.fr/def/geofla#Departement",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -1131,6 +1154,8 @@
   }, {
     "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
   }, {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
     "@id" : "https://w3id.org/tabulae#SpecialCellValue"
@@ -1210,6 +1235,8 @@
   }, {
     "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
   }, {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
     "@id" : "https://w3id.org/tabulae#SpecialCellValue"
@@ -1253,6 +1280,8 @@
   }, {
     "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
   }, {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
     "@id" : "https://w3id.org/tabulae#SpecialCellValue"
@@ -1293,6 +1322,33 @@
     "@id" : "https://w3id.org/tabulae#imageURL"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#LandRegistryAttributeList",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts."
+  }, {
+    "@language" : "fr",
+    "@value" : "Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of attribute types specific to land plots described in the land registry."
+  }, {
+    "@language" : "fr",
+    "@value" : "Liste des types d'attributs spécifiques aux parcelles cadastrales."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "List of attribute types specific to land plots described in the land registry."
+  }, {
+    "@language" : "fr",
+    "@value" : "Liste des types d'attributs spécifiques aux parcelles cadastrales."
+  } ]
+}, {
   "@id" : "https://w3id.org/tabulae#LandRegistryChangeList",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1318,6 +1374,33 @@
   }, {
     "@language" : "fr",
     "@value" : "Liste des types de changements liés au cadastre."
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae#LandRegistryChangeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A specific type of change affecting a resource in the land registry corpus."
+  }, {
+    "@language" : "fr",
+    "@value" : "Cette classe représente un type spécifique de changement affectant un document du corpus cadastral."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Type de changement sur un document cadastral"
+  }, {
+    "@language" : "en",
+    "@value" : "Type of change on a land registry document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Type de changement sur un document cadastral"
+  }, {
+    "@language" : "en",
+    "@value" : "Type of change on a land registry document"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#LandRegistryEventList",
@@ -1425,6 +1508,8 @@
   }, {
     "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
   }, {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
     "@id" : "https://w3id.org/tabulae#SpecialCellValue"
@@ -1463,6 +1548,8 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
@@ -1505,54 +1592,59 @@
     "@value" : "Liste des natures de parcelles"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae#PlotAttributeList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts."
-  }, {
-    "@language" : "fr",
-    "@value" : "Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "List of attribute types specific to land plots described in the land registry."
-  }, {
-    "@language" : "fr",
-    "@value" : "Liste des types d'attributs spécifiques aux parcelles cadastrales."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "List of attribute types specific to land plots described in the land registry."
-  }, {
-    "@language" : "fr",
-    "@value" : "Liste des types d'attributs spécifiques aux parcelles cadastrales."
-  } ]
-}, {
   "@id" : "https://w3id.org/tabulae#PropertyAccountChange",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A change affecting the property account of a taxpayer."
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
   }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SpecialCellValue"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Taxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae#SourceChange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Un changement sur le compte foncier caractérise un changement affectant le compte foncier d'un contribuable."
+    "@value" : "Cette classe représente tout changement au sein d'un document d'archive (source)."
+  }, {
+    "@language" : "en",
+    "@value" : "This class represents any change within an archival document (source)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
-    "@value" : "Changement sur le compte foncier"
+    "@value" : "Changement dans une source"
   }, {
     "@language" : "en",
-    "@value" : "Property account change"
+    "@value" : "Source change"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae#SourceChangeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette classe représente un type spécifique de changement affectant une source."
+  }, {
+    "@language" : "en",
+    "@value" : "This class represents a specific type of change affecting a source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Type de changement dans une source"
+  }, {
+    "@language" : "en",
+    "@value" : "Type of change in a source"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/PeGazUs#Change"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/tabulae#SourceType"
@@ -1563,10 +1655,18 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
-    "@value" : "Changement sur le compte foncier"
+    "@value" : "Type de changement dans une source"
   }, {
     "@language" : "en",
-    "@value" : "Property account change"
+    "@value" : "Type of change in a source"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae#SourceEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://org.semanticweb.owlapi/error#Error1"
+  }, {
+    "@id" : "https://w3id.org/PeGazUs#Event"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#SourceType",
@@ -1757,6 +1857,61 @@
     "@value" : "url de la source"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#adds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie un changement à la version d'un élément qu'il rend active/ajoutée dans une source."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a change to the version of an element that it makes active/added in a source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "adds"
+  }, {
+    "@language" : "fr",
+    "@value" : "ajoute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tabulae#isAddedBy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae#appliedToSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie un changement à une source qu'il modifie."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a change to a source it modifies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "change applied to source"
+  }, {
+    "@language" : "fr",
+    "@value" : "changement appliqué à la source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid18"
+  } ]
+}, {
   "@id" : "https://w3id.org/tabulae#coordinatesInImageSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1783,6 +1938,35 @@
     "@value" : "coordonnées dans l'image"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#deletes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie un changement à la version d'un élément (comme une mention ou un contribuable) qu'il rature, supprime ou rend obsolète dans la source."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a change to the version of an element that it crosses out, deletes, or makes obsolete in the source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "deletes"
+  }, {
+    "@language" : "fr",
+    "@value" : "supprime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tabulae#isDeletedBy"
+  } ]
+}, {
   "@id" : "https://w3id.org/tabulae#hasAlternativeFolioNumber",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1793,7 +1977,7 @@
     "@value" : "Numéro de folio alternatif (ex: ancien numéro)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid80"
+    "@id" : "_:genid86"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -1878,7 +2062,7 @@
     "@value" : "This property allows to associate two land registry folios of the same taxpayer in the same municipality, one being the continuation of the other."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid21"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1891,7 +2075,7 @@
     "@value" : "has equivalent folio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid21"
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasFolioNumber",
@@ -1904,7 +2088,7 @@
     "@value" : "folio number (associated to a mutation register page or part of page)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid83"
+    "@id" : "_:genid89"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -2034,7 +2218,7 @@
     "@value" : "parcelle a pour adresse"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid24"
+    "@id" : "_:genid27"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#isPlotAddressOf"
@@ -2109,6 +2293,35 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#hasSourceChange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie un évènement à un changement qu'il déclenche dans une source."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links an event to a change it triggers in a source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "creates source change"
+  }, {
+    "@language" : "fr",
+    "@value" : "créé un changement dans une source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChange"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tabulae#sourceChangeDependsOn"
+  } ]
+}, {
   "@id" : "https://w3id.org/tabulae#hasTaxpayer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2119,7 +2332,7 @@
     "@value" : "Relie une version d'attribut d'une parcelle ou un document (Folio) à un contribuable."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid28"
+    "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2204,6 +2417,32 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#isAddedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie la version d'un élément au changement qui l'a introduite dans la source."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links an element version to the change that introduced it into the source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "est ajouté par"
+  }, {
+    "@language" : "en",
+    "@value" : "is added by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChange"
+  } ]
+}, {
   "@id" : "https://w3id.org/tabulae#isAddressEntityOfTaxpayer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2277,6 +2516,32 @@
     "@id" : "https://w3id.org/tabulae#hasClassValue"
   } ]
 }, {
+  "@id" : "https://w3id.org/tabulae#isDeletedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie la version d'un élément au changement qui l'a raturée ou retirée de la source."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links an element version to the change that crossed it out or removed it from the source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "est supprimé par"
+  }, {
+    "@language" : "en",
+    "@value" : "is deleted by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChange"
+  } ]
+}, {
   "@id" : "https://w3id.org/tabulae#isEventType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2303,7 +2568,7 @@
     "@value" : "Une entité (entité géographique, contribuable) est mentionnée dans une source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid32"
+    "@id" : "_:genid35"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2316,7 +2581,7 @@
     "@value" : "is mentionned in"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#isNamedEntityOf",
@@ -2406,7 +2671,7 @@
     "@value" : "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à une version d'attribut."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2450,6 +2715,32 @@
 }, {
   "@id" : "https://w3id.org/tabulae#isPreferredOver",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/tabulae#isSourceChangeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété permet d'associer un type à un changement impliquant une source."
+  }, {
+    "@language" : "en",
+    "@value" : "This property allows to associate a type with a change involving a source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "est le type de changement dans une source"
+  }, {
+    "@language" : "en",
+    "@value" : "is source change type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
 }, {
   "@id" : "https://w3id.org/tabulae#isSourceType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -2500,7 +2791,7 @@
     "@value" : "is associated taxpayer of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid43"
+    "@id" : "_:genid46"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#hasTaxpayer"
@@ -2546,7 +2837,7 @@
     "@value" : "Une source mentionne une ou plusieurs entités (entité géographique, contribuable)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid47"
+    "@id" : "_:genid50"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2559,7 +2850,7 @@
     "@value" : "mentions"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid50"
+    "@id" : "_:genid53"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#isMentionnedIn"
@@ -2588,7 +2879,7 @@
     "@value" : "état ou folio suivant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid57"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -2604,6 +2895,67 @@
     "@language" : "fr",
     "@value" : "état ou folio suivant"
   } ]
+}, {
+  "@id" : "https://w3id.org/tabulae#sourceChangeDependsOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie un changement modifiant une source à l'évènement dont il dépend."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a change modifying a source to the event on which it depends."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "changement d'une source dépendant de"
+  }, {
+    "@language" : "en",
+    "@value" : "source change depends on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tabulae#sourceEventAppliedTo"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae#sourceChangedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie une source à un changement qui la modifie."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a source to a change."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid61"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "source changed by"
+  }, {
+    "@language" : "fr",
+    "@value" : "source changée par"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChange"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tabulae#appliedToSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae#sourceEventAppliedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://w3id.org/tabulae#sourcedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -2648,7 +3000,7 @@
     "@value" : "This property allows to indicate the value of a substring."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid86"
+    "@id" : "_:genid92"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2684,7 +3036,7 @@
     "@value" : "état ou folio précédent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid58"
+    "@id" : "_:genid64"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -4382,7 +4734,7 @@
     "@value" : "Adresse de la parcelle concernée, correspondant généralement à un lieu-dit, à une voie ou rue ou éventuellement à un numéro d'adresse."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#PlotAttributeList"
+    "@id" : "https://w3id.org/tabulae#LandRegistryAttributeList"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -4407,7 +4759,7 @@
     "@value" : "Reference to the plot in the registers. This usually involves stating the current folio of the plot, enabling it to be located in the documents."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#PlotAttributeList"
+    "@id" : "https://w3id.org/tabulae#LandRegistryAttributeList"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -4432,7 +4784,7 @@
     "@value" : "Nature of the plot, in relation to the soil type or its use."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#PlotAttributeList"
+    "@id" : "https://w3id.org/tabulae#LandRegistryAttributeList"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -4449,17 +4801,6 @@
   }, {
     "@id" : "https://w3id.org/PeGazUs#AttributeType"
   } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "Owner or usufructuary"
-  }, {
-    "@language" : "fr",
-    "@value" : "Propriétaire ou usufruitier"
-  }, {
-    "@value" : "Contribuable"
-  }, {
-    "@value" : "Taxpayer"
-  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "A natural or legal person liable for council tax on the plot in question."
@@ -4468,14 +4809,58 @@
     "@value" : "Personne physique ou morale redevable de l'impôt foncier pour la parcelle concernée."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "https://w3id.org/tabulae#PlotAttributeList"
+    "@id" : "https://w3id.org/tabulae#LandRegistryAttributeList"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
-    "@value" : "Contribuable associé à la parcelle"
+    "@value" : "Contribuable associé à une parcelle"
   }, {
     "@language" : "en",
     "@value" : "Plot Taxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#LandRegistryChangeType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Changement décrivant l'apparition d'un contribuable."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#LandRegistryChangeList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Apparition d'un contribuable"
+  }, {
+    "@language" : "en",
+    "@value" : "Appearance of a taxpayer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/tabulae#LandRegistryChangeType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Changement décrivant la disparition d'un contribuable."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/tabulae#LandRegistryChangeList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Disappearance of a taxpayer"
+  }, {
+    "@language" : "fr",
+    "@value" : "Disparition d'un contribuable"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae/id/codes/eventType/Addition",
@@ -11245,7 +11630,7 @@
     "@value" : "Connects a Record or Record Part to a Record or Record part that\r\n         is or was a constituent of that Record or Record Part."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid62"
+    "@id" : "_:genid68"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#"
@@ -11258,7 +11643,7 @@
     "@value" : "has or had constituent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid65"
+    "@id" : "_:genid71"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#hasOrHadPart"
@@ -11387,7 +11772,7 @@
     "@value" : "inclut ou a inclus"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid68"
+    "@id" : "_:genid74"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#hasOrHadPart"
@@ -11436,7 +11821,7 @@
     "@value" : "Inverse of 'has or had constituent' object\r\n         property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid71"
+    "@id" : "_:genid77"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#"
@@ -11449,7 +11834,7 @@
     "@value" : "is or was constituent of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid74"
+    "@id" : "_:genid80"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#isOrWasPartOf"
@@ -11521,7 +11906,7 @@
     "@value" : "Inverse of 'includes or included' object property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid77"
+    "@id" : "_:genid83"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#"

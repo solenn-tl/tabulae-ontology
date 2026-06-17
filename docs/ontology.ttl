@@ -382,6 +382,45 @@ xsd:date rdf:type rdfs:Datatype .
                                                 "is trace of"@en .
 
 
+###  https://w3id.org/tabulae#adds
+:adds rdf:type owl:ObjectProperty ;
+      owl:inverseOf :isAddedBy ;
+      rdfs:domain :SourceChange ;
+      rdfs:range owl:Thing ;
+      rdfs:comment "Cette propriété relie un changement à la version d'un élément qu'il rend active/ajoutée dans une source."@fr ,
+                   "This property links a change to the version of an element that it makes active/added in a source."@en ;
+      rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+      rdfs:label "adds"@en ,
+                 "ajoute"@fr .
+
+
+###  https://w3id.org/tabulae#appliedToSource
+:appliedToSource rdf:type owl:ObjectProperty ;
+                 rdfs:domain :SourceChange ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
+                                            <https://www.ica.org/standards/RiC/ontology#RecordResource>
+                                          )
+                            ] ;
+                 rdfs:comment "Cette propriété relie un changement à une source qu'il modifie."@fr ,
+                              "This property links a change to a source it modifies."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+                 rdfs:label "change applied to source"@en ,
+                            "changement appliqué à la source"@fr .
+
+
+###  https://w3id.org/tabulae#deletes
+:deletes rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isDeletedBy ;
+         rdfs:domain :SourceChange ;
+         rdfs:range owl:Thing ;
+         rdfs:comment "Cette propriété relie un changement à la version d'un élément (comme une mention ou un contribuable) qu'il rature, supprime ou rend obsolète dans la source."@fr ,
+                      "This property links a change to the version of an element that it crosses out, deletes, or makes obsolete in the source."@en ;
+         rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+         rdfs:label "deletes"@en ,
+                    "supprime"@fr .
+
+
 ###  https://w3id.org/tabulae#hasClass
 :hasClass rdf:type owl:ObjectProperty ;
           rdfs:domain owl:Thing ;
@@ -503,6 +542,18 @@ xsd:date rdf:type rdfs:Datatype .
                                          "has previous version in the source order"@en .
 
 
+###  https://w3id.org/tabulae#hasSourceChange
+:hasSourceChange rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :sourceChangeDependsOn ;
+                 rdfs:domain :SourceEvent ;
+                 rdfs:range :SourceChange ;
+                 rdfs:comment "Cette propriété relie un évènement à un changement qu'il déclenche dans une source."@fr ,
+                              "This property links an event to a change it triggers in a source."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+                 rdfs:label "creates source change"@en ,
+                            "créé un changement dans une source"@fr .
+
+
 ###  https://w3id.org/tabulae#hasTaxpayer
 :hasTaxpayer rdf:type owl:ObjectProperty ;
              rdfs:domain [ rdf:type owl:Class ;
@@ -517,6 +568,17 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
              rdfs:label "a pour contribuable"@fr ,
                         "has taxpayer"@en .
+
+
+###  https://w3id.org/tabulae#isAddedBy
+:isAddedBy rdf:type owl:ObjectProperty ;
+           rdfs:domain owl:Thing ;
+           rdfs:range :SourceChange ;
+           rdfs:comment "Cette propriété relie la version d'un élément au changement qui l'a introduite dans la source."@fr ,
+                        "This property links an element version to the change that introduced it into the source."@en ;
+           rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+           rdfs:label "est ajouté par"@fr ,
+                      "is added by"@en .
 
 
 ###  https://w3id.org/tabulae#isAddressEntityOfTaxpayer
@@ -549,6 +611,17 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                 rdfs:label "est la valeur de classe attribuée à"@fr ,
                            "is class value of"@en .
+
+
+###  https://w3id.org/tabulae#isDeletedBy
+:isDeletedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range :SourceChange ;
+             rdfs:comment "Cette propriété relie la version d'un élément au changement qui l'a raturée ou retirée de la source."@fr ,
+                          "This property links an element version to the change that crossed it out or removed it from the source."@en ;
+             rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+             rdfs:label "est supprimé par"@fr ,
+                        "is deleted by"@en .
 
 
 ###  https://w3id.org/tabulae#isEventType
@@ -639,6 +712,17 @@ xsd:date rdf:type rdfs:Datatype .
                            "is nature of plot"@en .
 
 
+###  https://w3id.org/tabulae#isSourceChangeType
+:isSourceChangeType rdf:type owl:ObjectProperty ;
+                    rdfs:domain :SourceChangeType ;
+                    rdfs:range owl:Thing ;
+                    rdfs:comment "Cette propriété permet d'associer un type à un changement impliquant une source."@fr ,
+                                 "This property allows to associate a type with a change involving a source."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+                    rdfs:label "est le type de changement dans une source"@fr ,
+                               "is source change type"@en .
+
+
 ###  https://w3id.org/tabulae#isSourceType
 :isSourceType rdf:type owl:ObjectProperty ;
               rdfs:domain owl:Thing ;
@@ -707,6 +791,38 @@ xsd:date rdf:type rdfs:Datatype .
                                                          "passé à"@fr ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "next state or folio"@en ,
                                                           "état ou folio suivant"@fr .
+
+
+###  https://w3id.org/tabulae#sourceChangeDependsOn
+:sourceChangeDependsOn rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :sourceEventAppliedTo ;
+                       rdfs:domain :SourceChange ;
+                       rdfs:range :SourceEvent ;
+                       rdfs:comment "Cette propriété relie un changement modifiant une source à l'évènement dont il dépend."@fr ,
+                                    "This property links a change modifying a source to the event on which it depends."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+                       rdfs:label "changement d'une source dépendant de"@fr ,
+                                  "source change depends on"@en .
+
+
+###  https://w3id.org/tabulae#sourceChangedBy
+:sourceChangedBy rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :appliedToSource ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
+                                             <https://www.ica.org/standards/RiC/ontology#RecordResource>
+                                           )
+                             ] ;
+                 rdfs:range :SourceChange ;
+                 rdfs:comment "Cette propriété relie une source à un changement qui la modifie."@fr ,
+                              "This property links a source to a change."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+                 rdfs:label "source changed by"@en ,
+                            "source changée par"@fr .
+
+
+###  https://w3id.org/tabulae#sourceEventAppliedTo
+:sourceEventAppliedTo rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/tabulae#sourcedFrom
@@ -1302,6 +1418,10 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
 ###  http://purl.org/vocommons/voaf#Vocabulary
 <http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
 
@@ -1461,6 +1581,7 @@ xsd:date rdf:type rdfs:Datatype .
                                   :NamedEntity ,
                                   :Nature ,
                                   :PropertyAccountChange ,
+                                  :SourceChangeType ,
                                   :SourceType ,
                                   :SpecialCellValue ,
                                   :Taxpayer ;
@@ -1482,6 +1603,7 @@ xsd:date rdf:type rdfs:Datatype .
                                       :NamedEntity ,
                                       :Nature ,
                                       :PropertyAccountChange ,
+                                      :SourceChangeType ,
                                       :SourceType ,
                                       :SpecialCellValue ,
                                       :Taxpayer ;
@@ -1500,6 +1622,7 @@ xsd:date rdf:type rdfs:Datatype .
            owl:disjointWith :NamedEntity ,
                             :Nature ,
                             :PropertyAccountChange ,
+                            :SourceChangeType ,
                             :SourceType ,
                             :SpecialCellValue ,
                             :Taxpayer ;
@@ -1512,10 +1635,22 @@ xsd:date rdf:type rdfs:Datatype .
                                                            "Type of event"@en .
 
 
+###  https://w3id.org/tabulae#LandRegistryChangeType
+:LandRegistryChangeType rdf:type owl:Class ;
+                        rdfs:subClassOf :SourceChangeType ;
+                        rdfs:comment "A specific type of change affecting a resource in the land registry corpus."@en ,
+                                     "Cette classe représente un type spécifique de changement affectant un document du corpus cadastral."@fr ;
+                        rdfs:label "Type de changement sur un document cadastral"@fr ,
+                                   "Type of change on a land registry document"@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Type de changement sur un document cadastral"@fr ,
+                                                                        "Type of change on a land registry document"@en .
+
+
 ###  https://w3id.org/tabulae#NamedEntity
 :NamedEntity rdf:type owl:Class ;
              owl:disjointWith :Nature ,
                               :PropertyAccountChange ,
+                              :SourceChangeType ,
                               :SourceType ,
                               :SpecialCellValue ,
                               :Taxpayer ;
@@ -1532,6 +1667,7 @@ xsd:date rdf:type rdfs:Datatype .
 :Nature rdf:type owl:Class ;
         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
         owl:disjointWith :PropertyAccountChange ,
+                         :SourceChangeType ,
                          :SourceType ,
                          :SpecialCellValue ,
                          :Taxpayer ;
@@ -1546,17 +1682,40 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#PropertyAccountChange
 :PropertyAccountChange rdf:type owl:Class ;
-                       rdfs:subClassOf <https://w3id.org/PeGazUs#Change> ;
-                       owl:disjointWith :SourceType ,
+                       owl:disjointWith :SourceChangeType ,
+                                        :SourceType ,
                                         :SpecialCellValue ,
-                                        :Taxpayer ;
-                       rdfs:comment "A change affecting the property account of a taxpayer."@en ,
-                                    "Un changement sur le compte foncier caractérise un changement affectant le compte foncier d'un contribuable."@fr ;
-                       rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
-                       rdfs:label "Changement sur le compte foncier"@fr ,
-                                  "Property account change"@en ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Changement sur le compte foncier"@fr ,
-                                                                       "Property account change"@en .
+                                        :Taxpayer .
+
+
+###  https://w3id.org/tabulae#SourceChange
+:SourceChange rdf:type owl:Class ;
+              rdfs:comment "Cette classe représente tout changement au sein d'un document d'archive (source)."@fr ,
+                           "This class represents any change within an archival document (source)."@en ;
+              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+              rdfs:label "Changement dans une source"@fr ,
+                         "Source change"@en .
+
+
+###  https://w3id.org/tabulae#SourceChangeType
+:SourceChangeType rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  owl:disjointWith :SourceType ,
+                                   :SpecialCellValue ,
+                                   :Taxpayer ;
+                  rdfs:comment "Cette classe représente un type spécifique de changement affectant une source."@fr ,
+                               "This class represents a specific type of change affecting a source."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+                  rdfs:label "Type de changement dans une source"@fr ,
+                             "Type of change in a source"@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Type de changement dans une source"@fr ,
+                                                                  "Type of change in a source"@en .
+
+
+###  https://w3id.org/tabulae#SourceEvent
+:SourceEvent rdf:type owl:Class ;
+             rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error1> ,
+                             <https://w3id.org/PeGazUs#Event> .
 
 
 ###  https://w3id.org/tabulae#SourceType
@@ -1677,6 +1836,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                                      "Liste des classes et types d'entités utilisés lors des processus de traitement des documents"@fr .
 
 
+###  https://w3id.org/tabulae#LandRegistryAttributeList
+:LandRegistryAttributeList rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                           rdfs:comment "List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts."@en ,
+                                        "Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."@fr ;
+                           rdfs:label "List of attribute types specific to land plots described in the land registry."@en ,
+                                      "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "List of attribute types specific to land plots described in the land registry."@en ,
+                                                                           "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr .
+
+
 ###  https://w3id.org/tabulae#LandRegistryChangeList
 :LandRegistryChangeList rdf:type owl:NamedIndividual ,
                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
@@ -1730,17 +1900,6 @@ xsd:date rdf:type rdfs:Datatype .
                        "Liste des natures de parcelles"@fr ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "List of plot natures"@en ,
                                                             "Liste des natures de parcelles"@fr .
-
-
-###  https://w3id.org/tabulae#PlotAttributeList
-:PlotAttributeList rdf:type owl:NamedIndividual ,
-                            <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                   rdfs:comment "List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts."@en ,
-                                "Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."@fr ;
-                   rdfs:label "List of attribute types specific to land plots described in the land registry."@en ,
-                              "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "List of attribute types specific to land plots described in the land registry."@en ,
-                                                                   "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr .
 
 
 ###  https://w3id.org/tabulae#SpecialCellValueList
@@ -2295,7 +2454,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                                              "Plot location"@en ;
                                                               <http://www.w3.org/2004/02/skos/core#definition> "Address of the plot, usually corresponding to a local place name, a road or street, or possibly a house number."@en ,
                                                                                                                "Adresse de la parcelle concernée, correspondant généralement à un lieu-dit, à une voie ou rue ou éventuellement à un numéro d'adresse."@fr ;
-                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :PlotAttributeList ;
+                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryAttributeList ;
                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Adresse de la parcelle"@fr ,
                                                                                                               "Plot Address"@en .
 
@@ -2306,7 +2465,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                        <https://w3id.org/PeGazUs#AttributeType> ;
                                                               <http://www.w3.org/2004/02/skos/core#definition> "Mention de la parcelle dans un document. Correspond généralement à l'indication du folio permettant de la retrouver dans les documents."@fr ,
                                                                                                                "Reference to the plot in the registers. This usually involves stating the current folio of the plot, enabling it to be located in the documents."@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :PlotAttributeList ;
+                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryAttributeList ;
                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Mention de la parcelle"@fr ,
                                                                                                               "Mention of the plot"@en .
 
@@ -2317,7 +2476,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                       <https://w3id.org/PeGazUs#AttributeType> ;
                                                              <http://www.w3.org/2004/02/skos/core#definition> "Nature de la parcelle concernée, associée au type de sol ou à l'usage de celui-ci."@fr ,
                                                                                                               "Nature of the plot, in relation to the soil type or its use."@en ;
-                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :PlotAttributeList ;
+                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryAttributeList ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Nature de la parcelle"@fr ,
                                                                                                              "Plot Nature"@en .
 
@@ -2326,15 +2485,31 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> rdf:type owl:NamedIndividual ,
                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                         <https://w3id.org/PeGazUs#AttributeType> ;
-                                                               <http://www.w3.org/2004/02/skos/core#altLabel> "Owner or usufructuary"@en ,
-                                                                                                              "Propriétaire ou usufruitier"@fr ,
-                                                                                                              "Contribuable" ,
-                                                                                                              "Taxpayer" ;
                                                                <http://www.w3.org/2004/02/skos/core#definition> "A natural or legal person liable for council tax on the plot in question."@en ,
                                                                                                                 "Personne physique ou morale redevable de l'impôt foncier pour la parcelle concernée."@fr ;
-                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :PlotAttributeList ;
-                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Contribuable associé à la parcelle"@fr ,
+                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryAttributeList ;
+                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Contribuable associé à une parcelle"@fr ,
                                                                                                                "Plot Taxpayer"@en .
+
+
+###  https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                           :LandRegistryChangeType ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "Changement décrivant l'apparition d'un contribuable."@fr ;
+                                                                  <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryChangeList ;
+                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Apparition d'un contribuable"@fr ,
+                                                                                                                  "Appearance of a taxpayer"@en .
+
+
+###  https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                              :LandRegistryChangeType ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "Changement décrivant la disparition d'un contribuable."@fr ;
+                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryChangeList ;
+                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Disappearance of a taxpayer"@en ,
+                                                                                                                     "Disparition d'un contribuable"@fr .
 
 
 ###  https://w3id.org/tabulae/id/codes/eventType/Addition

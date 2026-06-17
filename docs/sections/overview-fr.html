@@ -21,7 +21,7 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
       <a href="#https://w3id.org/PeGazUs#Change" title="https://w3id.org/PeGazUs#Change">Changement</a>
    </li>
    <li>
-      <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Changement sur le compte foncier</a>
+      <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Changement dans une source</a>
    </li>
    <li>
       <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Classe issue d'un processus d'annotation</a>
@@ -55,6 +55,11 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
          title="https://www.ica.org/standards/RiC/ontology#RecordPart">Partie d’objet informationnel</a>
    </li>
    <li>
+      <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">
+         <span>Property Account Change</span>
+      </a>
+   </li>
+   <li>
       <a href="#https://w3id.org/PeGazUs#LandmarkRelation" title="https://w3id.org/PeGazUs#LandmarkRelation">Relation entre repères</a>
    </li>
    <li>
@@ -69,10 +74,21 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
       <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">SoftwareAgent</a>
    </li>
    <li>
+      <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">
+         <span>Source Event</span>
+      </a>
+   </li>
+   <li>
       <a href="#https://w3id.org/PeGazUs#AttributeType" title="https://w3id.org/PeGazUs#AttributeType">Type d'attribut</a>
    </li>
    <li>
       <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type d'évènement</a>
+   </li>
+   <li>
+      <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type de changement dans une source</a>
+   </li>
+   <li>
+      <a href="#LandRegistryChangeType" title="https://w3id.org/tabulae#LandRegistryChangeType">Type de changement sur un document cadastral</a>
    </li>
    <li>
       <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type de classe d'annotation</a>
@@ -153,9 +169,18 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
          title="https://w3id.org/tabulae#isAddressEntityOfTaxpayer">adresse (entité) du contribuable</a>
    </li>
    <li>
+      <a href="#adds" title="https://w3id.org/tabulae#adds">ajoute</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">
          <span>broader</span>
       </a>
+   </li>
+   <li>
+      <a href="#appliedToSource" title="https://w3id.org/tabulae#appliedToSource">changement appliqué à la source</a>
+   </li>
+   <li>
+      <a href="#sourceChangeDependsOn" title="https://w3id.org/tabulae#sourceChangeDependsOn">changement d'une source dépendant de</a>
    </li>
    <li>
       <a href="#isClassOf" title="https://w3id.org/tabulae#isClassOf">classe attribuée à</a>
@@ -170,6 +195,12 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
          title="https://w3id.org/tabulae#taxpayerHasAddressEntity">contribuable a pour adresse (entité)</a>
    </li>
    <li>
+      <a href="#hasSourceChange" title="https://w3id.org/tabulae#hasSourceChange">créé un changement dans une source</a>
+   </li>
+   <li>
+      <a href="#isAddedBy" title="https://w3id.org/tabulae#isAddedBy">est ajouté par</a>
+   </li>
+   <li>
       <a href="#isOverlappedByVersionInSRCOrder"
          title="https://w3id.org/tabulae#isOverlappedByVersionInSRCOrder">est chevauchée par la version dans les documents</a>
    </li>
@@ -181,6 +212,9 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
    </li>
    <li>
       <a href="#isTaxpayerOf" title="https://w3id.org/tabulae#isTaxpayerOf">est le contribuable associé à</a>
+   </li>
+   <li>
+      <a href="#isSourceChangeType" title="https://w3id.org/tabulae#isSourceChangeType">est le type de changement dans une source</a>
    </li>
    <li>
       <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">est mentionné dans</a>
@@ -208,6 +242,9 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
    <li>
       <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf"
          title="https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf">est ou a été une instanciation numérique de</a>
+   </li>
+   <li>
+      <a href="#isDeletedBy" title="https://w3id.org/tabulae#isDeletedBy">est supprimé par</a>
    </li>
    <li>
       <a href="#isEventType" title="https://w3id.org/tabulae#isEventType">est un événement de type</a>
@@ -254,6 +291,12 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
       <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">
          <span>related</span>
       </a>
+   </li>
+   <li>
+      <a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changée par</a>
+   </li>
+   <li>
+      <a href="#deletes" title="https://w3id.org/tabulae#deletes">supprime</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">
@@ -429,6 +472,10 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
          title="https://w3id.org/tabulae/id/codes/plotNature/Allee">Allée</a>
    </li>
    <li>
+      <a href="#https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance"
+         title="https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance">Apparition d'un contribuable</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/tabulae/id/codes/plotNature/Appenti"
          title="https://w3id.org/tabulae/id/codes/plotNature/Appenti">Appenti</a>
    </li>
@@ -590,7 +637,7 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
    </li>
    <li>
       <a href="#https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer"
-         title="https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer">Contribuable associé à la parcelle</a>
+         title="https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer">Contribuable associé à une parcelle</a>
    </li>
    <li>
       <a href="#https://w3id.org/tabulae/id/codes/plotNature/Cour"
@@ -639,6 +686,10 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
    <li>
       <a href="#https://w3id.org/tabulae/id/codes/eventType/Reduction"
          title="https://w3id.org/tabulae/id/codes/eventType/Reduction">Diminution d'un bâtiment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance"
+         title="https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance">Disparition d'un contribuable</a>
    </li>
    <li>
       <a href="#https://w3id.org/tabulae/id/codes/eventType/Split"
@@ -1027,7 +1078,8 @@ Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
       <a href="#NatureList" title="https://w3id.org/tabulae#NatureList">Liste des natures de parcelles</a>
    </li>
    <li>
-      <a href="#PlotAttributeList" title="https://w3id.org/tabulae#PlotAttributeList">Liste des types d'attributs spécifiques aux parcelles cadastrales.</a>
+      <a href="#LandRegistryAttributeList"
+         title="https://w3id.org/tabulae#LandRegistryAttributeList">Liste des types d'attributs spécifiques aux parcelles cadastrales.</a>
    </li>
    <li>
       <a href="#LandRegistryLandmarkList"

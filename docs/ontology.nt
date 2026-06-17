@@ -323,6 +323,46 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 <https://w3id.org/PeGazUs#isTraceOf> <http://www.w3.org/2000/01/rdf-schema#label> "est une trace de"@fr .
 <https://w3id.org/PeGazUs#isTraceOf> <http://www.w3.org/2000/01/rdf-schema#label> "is trace of"@en .
 # 
+# https://w3id.org/tabulae#adds
+<https://w3id.org/tabulae#adds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#adds> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tabulae#isAddedBy> .
+<https://w3id.org/tabulae#adds> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tabulae#SourceChange> .
+<https://w3id.org/tabulae#adds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/tabulae#adds> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété relie un changement à la version d'un élément qu'il rend active/ajoutée dans une source."@fr .
+<https://w3id.org/tabulae#adds> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links a change to the version of an element that it makes active/added in a source."@en .
+<https://w3id.org/tabulae#adds> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#adds> <http://www.w3.org/2000/01/rdf-schema#label> "adds"@en .
+<https://w3id.org/tabulae#adds> <http://www.w3.org/2000/01/rdf-schema#label> "ajoute"@fr .
+# 
+# https://w3id.org/tabulae#appliedToSource
+<https://w3id.org/tabulae#appliedToSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#appliedToSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tabulae#SourceChange> .
+<https://w3id.org/tabulae#appliedToSource> <http://www.w3.org/2000/01/rdf-schema#range> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#appliedToSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété relie un changement à une source qu'il modifie."@fr .
+<https://w3id.org/tabulae#appliedToSource> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links a change to a source it modifies."@en .
+<https://w3id.org/tabulae#appliedToSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#appliedToSource> <http://www.w3.org/2000/01/rdf-schema#label> "change applied to source"@en .
+<https://w3id.org/tabulae#appliedToSource> <http://www.w3.org/2000/01/rdf-schema#label> "changement appliqué à la source"@fr .
+# 
+# https://w3id.org/tabulae#deletes
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tabulae#isDeletedBy> .
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tabulae#SourceChange> .
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété relie un changement à la version d'un élément (comme une mention ou un contribuable) qu'il rature, supprime ou rend obsolète dans la source."@fr .
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links a change to the version of an element that it crosses out, deletes, or makes obsolete in the source."@en .
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/2000/01/rdf-schema#label> "deletes"@en .
+<https://w3id.org/tabulae#deletes> <http://www.w3.org/2000/01/rdf-schema#label> "supprime"@fr .
+# 
 # https://w3id.org/tabulae#hasClass
 <https://w3id.org/tabulae#hasClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#hasClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
@@ -346,16 +386,7 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 # https://w3id.org/tabulae#hasEquivalentFolio
 <https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
-<https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
-_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/2000/01/rdf-schema#range> _:genid21 .
+<https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid21 .
 _:genid21 <http://www.w3.org/2002/07/owl#unionOf> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -364,6 +395,15 @@ _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/2000/01/rdf-schema#range> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#unionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété permet d'attribuer d'associer deux comptes fonciers d'un même contribuable dans une même commune dont l'un est la continuation de l'autre."@fr .
 <https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows to associate two land registry folios of the same taxpayer in the same municipality, one being the continuation of the other."@en .
 <https://w3id.org/tabulae#hasEquivalentFolio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
@@ -406,19 +446,19 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#hasPlotAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#hasPlotAddress> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tabulae#isPlotAddressOf> .
 <https://w3id.org/tabulae#hasPlotAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/PeGazUs#AttributeVersion> .
-<https://w3id.org/tabulae#hasPlotAddress> <http://www.w3.org/2000/01/rdf-schema#range> _:genid24 .
-_:genid24 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#LandmarkRelation> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#Landmark> .
+<https://w3id.org/tabulae#hasPlotAddress> <http://www.w3.org/2000/01/rdf-schema#range> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#unionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#LandmarkRelation> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#Landmark> .
 <https://w3id.org/PeGazUs#Landmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#Address> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#Address> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#hasPlotAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an attribute version to an address or a spatial relation with other geographical landmarks."@en .
 <https://w3id.org/tabulae#hasPlotAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Relie une version d'attribut à une adresse ou une relation spatiale avec d'autres repères géographiques."@fr .
 <https://w3id.org/tabulae#hasPlotAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
@@ -450,26 +490,47 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#hasPreviousVersionInSRCOrder> <http://www.w3.org/2000/01/rdf-schema#label> "a pour version précédente dans les documents"@fr .
 <https://w3id.org/tabulae#hasPreviousVersionInSRCOrder> <http://www.w3.org/2000/01/rdf-schema#label> "has previous version in the source order"@en .
 # 
+# https://w3id.org/tabulae#hasSourceChange
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tabulae#sourceChangeDependsOn> .
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tabulae#SourceEvent> .
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tabulae#SourceChange> .
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété relie un évènement à un changement qu'il déclenche dans une source."@fr .
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links an event to a change it triggers in a source."@en .
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/2000/01/rdf-schema#label> "creates source change"@en .
+<https://w3id.org/tabulae#hasSourceChange> <http://www.w3.org/2000/01/rdf-schema#label> "créé un changement dans une source"@fr .
+# 
 # https://w3id.org/tabulae#hasTaxpayer
 <https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid28 .
-_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#AttributeVersion> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#unionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#AttributeVersion> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tabulae#Taxpayer> .
 <https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an attribute version of a plot or a document (Folio) to a taxpayer."@en .
 <https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relie une version d'attribut d'une parcelle ou un document (Folio) à un contribuable."@fr .
 <https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
 <https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/2000/01/rdf-schema#label> "a pour contribuable"@fr .
 <https://w3id.org/tabulae#hasTaxpayer> <http://www.w3.org/2000/01/rdf-schema#label> "has taxpayer"@en .
+# 
+# https://w3id.org/tabulae#isAddedBy
+<https://w3id.org/tabulae#isAddedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#isAddedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/tabulae#isAddedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tabulae#SourceChange> .
+<https://w3id.org/tabulae#isAddedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété relie la version d'un élément au changement qui l'a introduite dans la source."@fr .
+<https://w3id.org/tabulae#isAddedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links an element version to the change that introduced it into the source."@en .
+<https://w3id.org/tabulae#isAddedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#isAddedBy> <http://www.w3.org/2000/01/rdf-schema#label> "est ajouté par"@fr .
+<https://w3id.org/tabulae#isAddedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is added by"@en .
 # 
 # https://w3id.org/tabulae#isAddressEntityOfTaxpayer
 <https://w3id.org/tabulae#isAddressEntityOfTaxpayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -500,6 +561,16 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#isClassValueOf> <http://www.w3.org/2000/01/rdf-schema#label> "est la valeur de classe attribuée à"@fr .
 <https://w3id.org/tabulae#isClassValueOf> <http://www.w3.org/2000/01/rdf-schema#label> "is class value of"@en .
 # 
+# https://w3id.org/tabulae#isDeletedBy
+<https://w3id.org/tabulae#isDeletedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#isDeletedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/tabulae#isDeletedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tabulae#SourceChange> .
+<https://w3id.org/tabulae#isDeletedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété relie la version d'un élément au changement qui l'a raturée ou retirée de la source."@fr .
+<https://w3id.org/tabulae#isDeletedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links an element version to the change that crossed it out or removed it from the source."@en .
+<https://w3id.org/tabulae#isDeletedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#isDeletedBy> <http://www.w3.org/2000/01/rdf-schema#label> "est supprimé par"@fr .
+<https://w3id.org/tabulae#isDeletedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is deleted by"@en .
+# 
 # https://w3id.org/tabulae#isEventType
 <https://w3id.org/tabulae#isEventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#isEventType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/PeGazUs#Event> .
@@ -510,27 +581,27 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/tabulae#isMentionnedIn
 <https://w3id.org/tabulae#isMentionnedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/tabulae#isMentionnedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid32 .
-_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#Taxpayer> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#AttributeVersion> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/owl#Thing> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tabulae#isMentionnedIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid36 .
-_:genid36 <http://www.w3.org/2002/07/owl#unionOf> _:genid38 .
+<https://w3id.org/tabulae#isMentionnedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#unionOf> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#Taxpayer> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#AttributeVersion> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/owl#Thing> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#isMentionnedIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#unionOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#isMentionnedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Une entité (entité géographique, contribuable) est mentionnée dans une source."@fr .
 <https://w3id.org/tabulae#isMentionnedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
 <https://w3id.org/tabulae#isMentionnedIn> <http://www.w3.org/2000/01/rdf-schema#label> "est mentionné dans"@fr .
@@ -568,18 +639,18 @@ _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/tabulae#isPlotAddressOf
 <https://w3id.org/tabulae#isPlotAddressOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/tabulae#isPlotAddressOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid39 .
-_:genid39 <http://www.w3.org/2002/07/owl#unionOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#LandmarkRelation> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#Landmark> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#Address> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#isPlotAddressOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#unionOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#LandmarkRelation> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#Landmark> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#Address> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#isPlotAddressOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/PeGazUs#AttributeVersion> .
 <https://w3id.org/tabulae#isPlotAddressOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an address or a spatial relation with other geographical landmarks to an attribute version."@en .
 <https://w3id.org/tabulae#isPlotAddressOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à une version d'attribut."@fr .
@@ -597,6 +668,16 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#isPlotNatureOf> <http://www.w3.org/2000/01/rdf-schema#label> "est une nature de la parcelle"@fr .
 <https://w3id.org/tabulae#isPlotNatureOf> <http://www.w3.org/2000/01/rdf-schema#label> "is nature of plot"@en .
 # 
+# https://w3id.org/tabulae#isSourceChangeType
+<https://w3id.org/tabulae#isSourceChangeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#isSourceChangeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tabulae#SourceChangeType> .
+<https://w3id.org/tabulae#isSourceChangeType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/tabulae#isSourceChangeType> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété permet d'associer un type à un changement impliquant une source."@fr .
+<https://w3id.org/tabulae#isSourceChangeType> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows to associate a type with a change involving a source."@en .
+<https://w3id.org/tabulae#isSourceChangeType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#isSourceChangeType> <http://www.w3.org/2000/01/rdf-schema#label> "est le type de changement dans une source"@fr .
+<https://w3id.org/tabulae#isSourceChangeType> <http://www.w3.org/2000/01/rdf-schema#label> "is source change type"@en .
+# 
 # https://w3id.org/tabulae#isSourceType
 <https://w3id.org/tabulae#isSourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#isSourceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
@@ -611,18 +692,18 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#isTaxpayerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#isTaxpayerOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tabulae#hasTaxpayer> .
 <https://w3id.org/tabulae#isTaxpayerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tabulae#Taxpayer> .
-<https://w3id.org/tabulae#isTaxpayerOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid43 .
-_:genid43 <http://www.w3.org/2002/07/owl#unionOf> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#AttributeVersion> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#isTaxpayerOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#unionOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#AttributeVersion> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#isTaxpayerOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a taxpayer to an attribute version of a plot or a document (Folio)."@en .
 <https://w3id.org/tabulae#isTaxpayerOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relie un contribuable à une version d'attribut d'une parcelle ou un document (Folio)."@fr .
 <https://w3id.org/tabulae#isTaxpayerOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
@@ -634,27 +715,27 @@ _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/tabulae#mentions
 <https://w3id.org/tabulae#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#mentions> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tabulae#isMentionnedIn> .
-<https://w3id.org/tabulae#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid47 .
-_:genid47 <http://www.w3.org/2002/07/owl#unionOf> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tabulae#mentions> <http://www.w3.org/2000/01/rdf-schema#range> _:genid50 .
-_:genid50 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+<https://w3id.org/tabulae#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#unionOf> _:genid52 .
 _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#Taxpayer> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#AttributeVersion> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
 _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/owl#Thing> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#mentions> <http://www.w3.org/2000/01/rdf-schema#range> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#unionOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#Taxpayer> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/PeGazUs#AttributeVersion> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#mentions> <http://www.w3.org/2000/01/rdf-schema#comment> "Une source mentionne une ou plusieurs entités (entité géographique, contribuable)."@fr .
 <https://w3id.org/tabulae#mentions> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
 <https://w3id.org/tabulae#mentions> <http://www.w3.org/2000/01/rdf-schema#label> "mentionne"@fr .
@@ -663,18 +744,18 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/tabulae#passedTo
 <https://w3id.org/tabulae#passedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#passedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/PeGazUs#AttributeVersion> .
-<https://w3id.org/tabulae#passedTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid54 .
-_:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid57 .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#SpecialCellValue> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#passedTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid57 .
+_:genid57 <http://www.w3.org/2002/07/owl#unionOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#SpecialCellValue> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#passedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Folio où est décrit l'état de parcelle suivant OU autre information sur l'état suivant d'une parcelle."@fr .
 <https://w3id.org/tabulae#passedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Folio where the following plot state is described OR other information about the previous or following state of a plot."@en .
 <https://w3id.org/tabulae#passedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
@@ -684,6 +765,39 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#passedTo> <http://www.w3.org/2004/02/skos/core#altLabel> "passé à"@fr .
 <https://w3id.org/tabulae#passedTo> <http://www.w3.org/2004/02/skos/core#prefLabel> "next state or folio"@en .
 <https://w3id.org/tabulae#passedTo> <http://www.w3.org/2004/02/skos/core#prefLabel> "état ou folio suivant"@fr .
+# 
+# https://w3id.org/tabulae#sourceChangeDependsOn
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tabulae#sourceEventAppliedTo> .
+<https://w3id.org/tabulae#sourceEventAppliedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tabulae#SourceChange> .
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tabulae#SourceEvent> .
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété relie un changement modifiant une source à l'évènement dont il dépend."@fr .
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links a change modifying a source to the event on which it depends."@en .
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/2000/01/rdf-schema#label> "changement d'une source dépendant de"@fr .
+<https://w3id.org/tabulae#sourceChangeDependsOn> <http://www.w3.org/2000/01/rdf-schema#label> "source change depends on"@en .
+# 
+# https://w3id.org/tabulae#sourceChangedBy
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tabulae#appliedToSource> .
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid61 .
+_:genid61 <http://www.w3.org/2002/07/owl#unionOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tabulae#SourceChange> .
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété relie une source à un changement qui la modifie."@fr .
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links a source to a change."@en .
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/2000/01/rdf-schema#label> "source changed by"@en .
+<https://w3id.org/tabulae#sourceChangedBy> <http://www.w3.org/2000/01/rdf-schema#label> "source changée par"@fr .
+# 
+# https://w3id.org/tabulae#sourceEventAppliedTo
 # 
 # https://w3id.org/tabulae#sourcedFrom
 <https://w3id.org/tabulae#sourcedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -700,18 +814,18 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/tabulae#takenFrom
 <https://w3id.org/tabulae#takenFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tabulae#takenFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/PeGazUs#AttributeVersion> .
-<https://w3id.org/tabulae#takenFrom> <http://www.w3.org/2000/01/rdf-schema#range> _:genid58 .
-_:genid58 <http://www.w3.org/2002/07/owl#unionOf> _:genid61 .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#SpecialCellValue> .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#takenFrom> <http://www.w3.org/2000/01/rdf-schema#range> _:genid64 .
+_:genid64 <http://www.w3.org/2002/07/owl#unionOf> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#SpecialCellValue> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#takenFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Folio où est décrit l'état de parcelle précédent OU information sur l'état précédent d'une parcelle."@fr .
 <https://w3id.org/tabulae#takenFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Folio where the previous plot state is described OR other information about the previous state of a plot."@en .
 <https://w3id.org/tabulae#takenFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
@@ -755,24 +869,24 @@ _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.ica.org/standards/RiC/ontology#isRecordResourceAssociatedWithRecordResource> .
 <https://www.ica.org/standards/RiC/ontology#isRecordResourceAssociatedWithRecordResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> .
-<https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid62 .
-_:genid62 <http://www.w3.org/2002/07/owl#unionOf> _:genid64 .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordPart> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2000/01/rdf-schema#range> _:genid65 .
-_:genid65 <http://www.w3.org/2002/07/owl#unionOf> _:genid67 .
-_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordPart> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
-_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#unionOf> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordPart> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2000/01/rdf-schema#range> _:genid71 .
+_:genid71 <http://www.w3.org/2002/07/owl#unionOf> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordPart> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a Record or Record Part to a Record or Record part that\r\n         is or was a constituent of that Record or Record Part."@en .
 <https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.ica.org/standards/RiC/ontology#> .
 <https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent> <http://www.w3.org/2000/01/rdf-schema#label> "a ou a eu pour constituant"@fr .
@@ -822,15 +936,15 @@ _:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://www.ica.org/standards/RiC/ontology#includesOrIncluded> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.ica.org/standards/RiC/ontology#isRecordResourceAssociatedWithRecordResource> .
 <https://www.ica.org/standards/RiC/ontology#includesOrIncluded> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> .
 <https://www.ica.org/standards/RiC/ontology#includesOrIncluded> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.ica.org/standards/RiC/ontology#RecordSet> .
-<https://www.ica.org/standards/RiC/ontology#includesOrIncluded> <http://www.w3.org/2000/01/rdf-schema#range> _:genid68 .
-_:genid68 <http://www.w3.org/2002/07/owl#unionOf> _:genid70 .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordSet> .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.ica.org/standards/RiC/ontology#includesOrIncluded> <http://www.w3.org/2000/01/rdf-schema#range> _:genid74 .
+_:genid74 <http://www.w3.org/2002/07/owl#unionOf> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordSet> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.ica.org/standards/RiC/ontology#includesOrIncluded> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a Record Set to a Record or Record Set it aggregates, or\r\n         aggregated in the past."@en .
 <https://www.ica.org/standards/RiC/ontology#includesOrIncluded> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.ica.org/standards/RiC/ontology#> .
 <https://www.ica.org/standards/RiC/ontology#includesOrIncluded> <http://www.w3.org/2000/01/rdf-schema#label> "includes or included"@en .
@@ -854,24 +968,24 @@ _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.ica.org/standards/RiC/ontology#isOrWasPartOf> .
 <https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.ica.org/standards/RiC/ontology#isRecordResourceAssociatedWithRecordResource> .
-<https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid71 .
-_:genid71 <http://www.w3.org/2002/07/owl#unionOf> _:genid73 .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordPart> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid74 .
-_:genid74 <http://www.w3.org/2002/07/owl#unionOf> _:genid76 .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordPart> .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid77 .
+_:genid77 <http://www.w3.org/2002/07/owl#unionOf> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordPart> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid80 .
+_:genid80 <http://www.w3.org/2002/07/owl#unionOf> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordPart> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of 'has or had constituent' object\r\n         property."@en .
 <https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.ica.org/standards/RiC/ontology#> .
 <https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf> <http://www.w3.org/2000/01/rdf-schema#label> "est ou a été un constituant de"@fr .
@@ -903,15 +1017,15 @@ _:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.ica.org/standards/RiC/ontology#isOrWasPartOf> .
 <https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.ica.org/standards/RiC/ontology#isRecordResourceAssociatedWithRecordResource> .
-<https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid77 .
-_:genid77 <http://www.w3.org/2002/07/owl#unionOf> _:genid79 .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordSet> .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid83 .
+_:genid83 <http://www.w3.org/2002/07/owl#unionOf> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordSet> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Record> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.ica.org/standards/RiC/ontology#RecordSet> .
 <https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of 'includes or included' object property."@en .
 <https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.ica.org/standards/RiC/ontology#> .
@@ -1010,15 +1124,15 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/tabulae#hasAlternativeFolioNumber
 <https://w3id.org/tabulae#hasAlternativeFolioNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/tabulae#hasAlternativeFolioNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid80 .
-_:genid80 <http://www.w3.org/2002/07/owl#unionOf> _:genid82 .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#hasAlternativeFolioNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid86 .
+_:genid86 <http://www.w3.org/2002/07/owl#unionOf> _:genid88 .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#hasAlternativeFolioNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/tabulae#hasAlternativeFolioNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Alternative folio number (e.g. former number)"@en .
 <https://w3id.org/tabulae#hasAlternativeFolioNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Numéro de folio alternatif (ex: ancien numéro)"@fr .
@@ -1032,15 +1146,15 @@ _:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/tabulae#hasFolioNumber
 <https://w3id.org/tabulae#hasFolioNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/tabulae#hasFolioNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid83 .
-_:genid83 <http://www.w3.org/2002/07/owl#unionOf> _:genid85 .
-_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
-_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#hasFolioNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid89 .
+_:genid89 <http://www.w3.org/2002/07/owl#unionOf> _:genid91 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid90 .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#hasFolioNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/tabulae#hasFolioNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Numéro de folio (associé à une page entière ou à une partie de page) "@fr .
 <https://w3id.org/tabulae#hasFolioNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "folio number (associated to a mutation register page or part of page)"@en .
@@ -1091,15 +1205,15 @@ _:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/tabulae#spanValue
 <https://w3id.org/tabulae#spanValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/tabulae#spanValue> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid86 .
-_:genid86 <http://www.w3.org/2002/07/owl#unionOf> _:genid88 .
-_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid87 .
-_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#NamedEntity> .
-_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/owl#Thing> .
-_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#spanValue> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid92 .
+_:genid92 <http://www.w3.org/2002/07/owl#unionOf> _:genid94 .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tabulae#NamedEntity> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#spanValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/tabulae#spanValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété permet d'indiquer la valeur d'une sous-chaine de caractères."@fr .
 <https://w3id.org/tabulae#spanValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows to indicate the value of a substring."@en .
@@ -1266,6 +1380,9 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
+# http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://purl.org/vocommons/voaf#Vocabulary
 <http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
@@ -1387,6 +1504,8 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#AnnotationClass> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#NamedEntity> .
 <https://w3id.org/tabulae#AnnotationClass> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Nature> .
 <https://w3id.org/tabulae#AnnotationClass> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#PropertyAccountChange> .
+<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#AnnotationClass> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceChangeType> .
 <https://w3id.org/tabulae#AnnotationClass> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceType> .
 <https://w3id.org/tabulae#AnnotationClass> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SpecialCellValue> .
 <https://w3id.org/tabulae#AnnotationClass> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Taxpayer> .
@@ -1407,6 +1526,7 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#AnnotationClassType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#NamedEntity> .
 <https://w3id.org/tabulae#AnnotationClassType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Nature> .
 <https://w3id.org/tabulae#AnnotationClassType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#PropertyAccountChange> .
+<https://w3id.org/tabulae#AnnotationClassType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceChangeType> .
 <https://w3id.org/tabulae#AnnotationClassType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceType> .
 <https://w3id.org/tabulae#AnnotationClassType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SpecialCellValue> .
 <https://w3id.org/tabulae#AnnotationClassType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Taxpayer> .
@@ -1424,6 +1544,7 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#EventType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#NamedEntity> .
 <https://w3id.org/tabulae#EventType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Nature> .
 <https://w3id.org/tabulae#EventType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#PropertyAccountChange> .
+<https://w3id.org/tabulae#EventType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceChangeType> .
 <https://w3id.org/tabulae#EventType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceType> .
 <https://w3id.org/tabulae#EventType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SpecialCellValue> .
 <https://w3id.org/tabulae#EventType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Taxpayer> .
@@ -1435,10 +1556,21 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#EventType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Type d'évènement"@fr .
 <https://w3id.org/tabulae#EventType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Type of event"@en .
 # 
+# https://w3id.org/tabulae#LandRegistryChangeType
+<https://w3id.org/tabulae#LandRegistryChangeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#LandRegistryChangeType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tabulae#SourceChangeType> .
+<https://w3id.org/tabulae#LandRegistryChangeType> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of change affecting a resource in the land registry corpus."@en .
+<https://w3id.org/tabulae#LandRegistryChangeType> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette classe représente un type spécifique de changement affectant un document du corpus cadastral."@fr .
+<https://w3id.org/tabulae#LandRegistryChangeType> <http://www.w3.org/2000/01/rdf-schema#label> "Type de changement sur un document cadastral"@fr .
+<https://w3id.org/tabulae#LandRegistryChangeType> <http://www.w3.org/2000/01/rdf-schema#label> "Type of change on a land registry document"@en .
+<https://w3id.org/tabulae#LandRegistryChangeType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Type de changement sur un document cadastral"@fr .
+<https://w3id.org/tabulae#LandRegistryChangeType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Type of change on a land registry document"@en .
+# 
 # https://w3id.org/tabulae#NamedEntity
 <https://w3id.org/tabulae#NamedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#NamedEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Nature> .
 <https://w3id.org/tabulae#NamedEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#PropertyAccountChange> .
+<https://w3id.org/tabulae#NamedEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceChangeType> .
 <https://w3id.org/tabulae#NamedEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceType> .
 <https://w3id.org/tabulae#NamedEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SpecialCellValue> .
 <https://w3id.org/tabulae#NamedEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Taxpayer> .
@@ -1454,6 +1586,7 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#Nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tabulae#Nature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://w3id.org/tabulae#Nature> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#PropertyAccountChange> .
+<https://w3id.org/tabulae#Nature> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceChangeType> .
 <https://w3id.org/tabulae#Nature> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceType> .
 <https://w3id.org/tabulae#Nature> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SpecialCellValue> .
 <https://w3id.org/tabulae#Nature> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Taxpayer> .
@@ -1466,18 +1599,37 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#Nature> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plot nature"@en .
 # 
 # https://w3id.org/tabulae#PropertyAccountChange
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/PeGazUs#Change> .
+<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceChangeType> .
 <https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceType> .
 <https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SpecialCellValue> .
 <https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Taxpayer> .
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2000/01/rdf-schema#comment> "A change affecting the property account of a taxpayer."@en .
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2000/01/rdf-schema#comment> "Un changement sur le compte foncier caractérise un changement affectant le compte foncier d'un contribuable."@fr .
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2000/01/rdf-schema#label> "Changement sur le compte foncier"@fr .
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2000/01/rdf-schema#label> "Property account change"@en .
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2004/02/skos/core#prefLabel> "Changement sur le compte foncier"@fr .
-<https://w3id.org/tabulae#PropertyAccountChange> <http://www.w3.org/2004/02/skos/core#prefLabel> "Property account change"@en .
+# 
+# https://w3id.org/tabulae#SourceChange
+<https://w3id.org/tabulae#SourceChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#SourceChange> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette classe représente tout changement au sein d'un document d'archive (source)."@fr .
+<https://w3id.org/tabulae#SourceChange> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents any change within an archival document (source)."@en .
+<https://w3id.org/tabulae#SourceChange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#SourceChange> <http://www.w3.org/2000/01/rdf-schema#label> "Changement dans une source"@fr .
+<https://w3id.org/tabulae#SourceChange> <http://www.w3.org/2000/01/rdf-schema#label> "Source change"@en .
+# 
+# https://w3id.org/tabulae#SourceChangeType
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SourceType> .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#SpecialCellValue> .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tabulae#Taxpayer> .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette classe représente un type spécifique de changement affectant une source."@fr .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a specific type of change affecting a source."@en .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/tabulae#> .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2000/01/rdf-schema#label> "Type de changement dans une source"@fr .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2000/01/rdf-schema#label> "Type of change in a source"@en .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Type de changement dans une source"@fr .
+<https://w3id.org/tabulae#SourceChangeType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Type of change in a source"@en .
+# 
+# https://w3id.org/tabulae#SourceEvent
+<https://w3id.org/tabulae#SourceEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tabulae#SourceEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://org.semanticweb.owlapi/error#Error1> .
+<https://w3id.org/tabulae#SourceEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/PeGazUs#Event> .
 # 
 # https://w3id.org/tabulae#SourceType
 <https://w3id.org/tabulae#SourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1583,6 +1735,16 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#AnnotationClassList> <http://www.w3.org/2004/02/skos/core#prefLabel> "List of classes and entity types used in document processing workflows"@en .
 <https://w3id.org/tabulae#AnnotationClassList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste des classes et types d'entités utilisés lors des processus de traitement des documents"@fr .
 # 
+# https://w3id.org/tabulae#LandRegistryAttributeList
+<https://w3id.org/tabulae#LandRegistryAttributeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/tabulae#LandRegistryAttributeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/tabulae#LandRegistryAttributeList> <http://www.w3.org/2000/01/rdf-schema#comment> "List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts."@en .
+<https://w3id.org/tabulae#LandRegistryAttributeList> <http://www.w3.org/2000/01/rdf-schema#comment> "Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."@fr .
+<https://w3id.org/tabulae#LandRegistryAttributeList> <http://www.w3.org/2000/01/rdf-schema#label> "List of attribute types specific to land plots described in the land registry."@en .
+<https://w3id.org/tabulae#LandRegistryAttributeList> <http://www.w3.org/2000/01/rdf-schema#label> "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr .
+<https://w3id.org/tabulae#LandRegistryAttributeList> <http://www.w3.org/2004/02/skos/core#prefLabel> "List of attribute types specific to land plots described in the land registry."@en .
+<https://w3id.org/tabulae#LandRegistryAttributeList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr .
+# 
 # https://w3id.org/tabulae#LandRegistryChangeList
 <https://w3id.org/tabulae#LandRegistryChangeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/tabulae#LandRegistryChangeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
@@ -1632,16 +1794,6 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae#NatureList> <http://www.w3.org/2000/01/rdf-schema#label> "Liste des natures de parcelles"@fr .
 <https://w3id.org/tabulae#NatureList> <http://www.w3.org/2004/02/skos/core#prefLabel> "List of plot natures"@en .
 <https://w3id.org/tabulae#NatureList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste des natures de parcelles"@fr .
-# 
-# https://w3id.org/tabulae#PlotAttributeList
-<https://w3id.org/tabulae#PlotAttributeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/tabulae#PlotAttributeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-<https://w3id.org/tabulae#PlotAttributeList> <http://www.w3.org/2000/01/rdf-schema#comment> "List of the various roles specific to the plots described in the land registry, that can be assigned to an attribute, represented as a list of SKOS concepts."@en .
-<https://w3id.org/tabulae#PlotAttributeList> <http://www.w3.org/2000/01/rdf-schema#comment> "Liste des différents rôles spécifique aux parcelles cadastrales pouvant être joués par un attribut, représentés comme une liste de concepts SKOS."@fr .
-<https://w3id.org/tabulae#PlotAttributeList> <http://www.w3.org/2000/01/rdf-schema#label> "List of attribute types specific to land plots described in the land registry."@en .
-<https://w3id.org/tabulae#PlotAttributeList> <http://www.w3.org/2000/01/rdf-schema#label> "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr .
-<https://w3id.org/tabulae#PlotAttributeList> <http://www.w3.org/2004/02/skos/core#prefLabel> "List of attribute types specific to land plots described in the land registry."@en .
-<https://w3id.org/tabulae#PlotAttributeList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liste des types d'attributs spécifiques aux parcelles cadastrales."@fr .
 # 
 # https://w3id.org/tabulae#SpecialCellValueList
 <https://w3id.org/tabulae#SpecialCellValueList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2152,7 +2304,7 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/attributeType/PlotAddress> <http://www.w3.org/2004/02/skos/core#altLabel> "Plot location"@en .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotAddress> <http://www.w3.org/2004/02/skos/core#definition> "Address of the plot, usually corresponding to a local place name, a road or street, or possibly a house number."@en .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotAddress> <http://www.w3.org/2004/02/skos/core#definition> "Adresse de la parcelle concernée, correspondant généralement à un lieu-dit, à une voie ou rue ou éventuellement à un numéro d'adresse."@fr .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotAddress> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#PlotAttributeList> .
+<https://w3id.org/tabulae/id/codes/attributeType/PlotAddress> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistryAttributeList> .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adresse de la parcelle"@fr .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plot Address"@en .
 # 
@@ -2162,7 +2314,7 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/attributeType/PlotMention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/PeGazUs#AttributeType> .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotMention> <http://www.w3.org/2004/02/skos/core#definition> "Mention de la parcelle dans un document. Correspond généralement à l'indication du folio permettant de la retrouver dans les documents."@fr .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotMention> <http://www.w3.org/2004/02/skos/core#definition> "Reference to the plot in the registers. This usually involves stating the current folio of the plot, enabling it to be located in the documents."@en .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotMention> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#PlotAttributeList> .
+<https://w3id.org/tabulae/id/codes/attributeType/PlotMention> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistryAttributeList> .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotMention> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mention de la parcelle"@fr .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotMention> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mention of the plot"@en .
 # 
@@ -2172,7 +2324,7 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/attributeType/PlotNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/PeGazUs#AttributeType> .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotNature> <http://www.w3.org/2004/02/skos/core#definition> "Nature de la parcelle concernée, associée au type de sol ou à l'usage de celui-ci."@fr .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotNature> <http://www.w3.org/2004/02/skos/core#definition> "Nature of the plot, in relation to the soil type or its use."@en .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotNature> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#PlotAttributeList> .
+<https://w3id.org/tabulae/id/codes/attributeType/PlotNature> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistryAttributeList> .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotNature> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nature de la parcelle"@fr .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotNature> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plot Nature"@en .
 # 
@@ -2180,15 +2332,29 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/PeGazUs#AttributeType> .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#altLabel> "Owner or usufructuary"@en .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#altLabel> "Propriétaire ou usufruitier"@fr .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#altLabel> "Contribuable" .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#altLabel> "Taxpayer" .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#definition> "A natural or legal person liable for council tax on the plot in question."@en .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#definition> "Personne physique ou morale redevable de l'impôt foncier pour la parcelle concernée."@fr .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#PlotAttributeList> .
-<https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contribuable associé à la parcelle"@fr .
+<https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistryAttributeList> .
+<https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contribuable associé à une parcelle"@fr .
 <https://w3id.org/tabulae/id/codes/attributeType/PlotTaxpayer> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plot Taxpayer"@en .
+# 
+# https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tabulae#LandRegistryChangeType> .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance> <http://www.w3.org/2004/02/skos/core#definition> "Changement décrivant l'apparition d'un contribuable."@fr .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistryChangeList> .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Apparition d'un contribuable"@fr .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerAppearance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Appearance of a taxpayer"@en .
+# 
+# https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tabulae#LandRegistryChangeType> .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance> <http://www.w3.org/2004/02/skos/core#definition> "Changement décrivant la disparition d'un contribuable."@fr .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/tabulae#LandRegistryChangeList> .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Disappearance of a taxpayer"@en .
+<https://w3id.org/tabulae/id/codes/changeType/TaxpayerDisappearance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Disparition d'un contribuable"@fr .
 # 
 # https://w3id.org/tabulae/id/codes/eventType/Addition
 <https://w3id.org/tabulae/id/codes/eventType/Addition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
