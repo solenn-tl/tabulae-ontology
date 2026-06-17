@@ -4,15 +4,17 @@
 @prefix : <> .
 <..\index-en.html> a prov:Entity;
 	 dc:title "TABULAE ontology";
-	 prov:wasAttributedTo :agent0;
-	 prov:wasAttributedTo :agent1;
-	 prov:wasAttributedTo :agent2;
-	 prov:wasAttributedTo :agent3;
-	 prov:wasAttributedTo :agent4;
+	 prov:wasAttributedTo <https://www.umr-lastig.fr/solenn-tual/>;
+	 dc:creator <https://www.umr-lastig.fr/solenn-tual/>;
+	 prov:wasAttributedTo <https://www.umr-lastig.fr/nathalie-abadie/>;
+	 dc:contributor <https://www.umr-lastig.fr/nathalie-abadie/>;
+	 prov:wasAttributedTo <https://jchazalon.github.io/>;
+	 dc:contributor <https://jchazalon.github.io/>;
+	 prov:wasAttributedTo <https://ladehis.ehess.fr/index.php?625>;
+	 dc:contributor <https://ladehis.ehess.fr/index.php?625>;
+	 prov:wasAttributedTo <https://www.umr-lastig.fr/julien-perret/>;
+	 dc:contributor <https://www.umr-lastig.fr/julien-perret/>;
+	 prov:wasAttributedTo <https://www.umr-lastig.fr/charly-bernard/>;
+	 dc:contributor <https://www.umr-lastig.fr/charly-bernard/>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 .
-:agent0 a prov:Agent; foaf:name "Solenn Tual".
-:agent1 a prov:Agent; foaf:name "Nathalie Abadie".
-:agent2 a prov:Agent; foaf:name "Bertrand Duménieu".
-:agent3 a prov:Agent; foaf:name "Joseph Chazalon".
-:agent4 a prov:Agent; foaf:name "Julien Perret".

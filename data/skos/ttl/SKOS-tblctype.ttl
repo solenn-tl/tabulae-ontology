@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbl: <https://w3id.org/tabulae#> .
+@prefix tblctype: <https://w3id.org/tabulae/id/codes/changeType/> .
+
+tblctype:TaxpayerAppearance a owl:NamedIndividual ,
+                                          tbl:LandRegistryChangeType ,
+                                          skos:Concept ;
+                                 skos:definition "Changement décrivant l'apparition d'un contribuable."@fr ;
+                                 skos:inScheme tbl:LandRegistryChangeList ;
+                                 skos:prefLabel "Apparition d'un contribuable"@fr ,
+                                                "Appearance of a taxpayer"@en .
+tblctype:TaxpayerDisappearance a owl:NamedIndividual ,
+                                          tbl:LandRegistryChangeType ,
+                                          skos:Concept ;
+                                 skos:definition "Changement décrivant la disparition d'un contribuable."@fr ;
+                                 skos:inScheme tbl:LandRegistryChangeList ;
+                                 skos:prefLabel "Disparition d'un contribuable"@fr ,
+                                                "Disappearance of a taxpayer"@en .

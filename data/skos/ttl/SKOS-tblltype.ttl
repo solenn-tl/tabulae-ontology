@@ -6,6 +6,15 @@
 @prefix tbl: <https://w3id.org/tabulae#> .
 @prefix tblltype: <https://w3id.org/tabulae/id/codes/landmarkType/> .
 
+tblltype:UnregisteredLand a owl:NamedIndividual,
+        skos:Concept,
+        peg:LandmarkType ;
+    skos:definition "A geographical unit corresponding to a non-cadastral space, such as a road or a river."@en,
+        "Entité géographique correspondant à un espace non cadastré, tel qu'une route ou une rivière."@fr ;
+    skos:inScheme tbl:LandRegistryLandmarkList ;
+    skos:prefLabel "Unregistered land"@en,
+        "Espace non cadastré"@fr .
+
 tblltype:Plot a owl:NamedIndividual,
         skos:Concept,
         peg:LandmarkType ;
@@ -83,12 +92,3 @@ tblltype:Section a owl:NamedIndividual,
     skos:inScheme tbl:LandRegistryLandmarkList ;
     skos:prefLabel "Section"@en,
         "Section"@fr .
-
-tblltype:UnregisteredLand a owl:NamedIndividual,
-        skos:Concept,
-        peg:LandmarkType ;
-    skos:definition "A geographical unit corresponding to a non-cadastral space, such as a road or a river."@en,
-        "Entité géographique correspondant à un espace non cadastré, tel qu'une route ou une rivière."@fr ;
-    skos:inScheme tbl:LandRegistryLandmarkList ;
-    skos:prefLabel "Unregistered land"@en,
-        "Espace non cadastré"@fr .

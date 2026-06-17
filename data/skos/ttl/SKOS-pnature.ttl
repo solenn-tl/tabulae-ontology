@@ -1537,4 +1537,3 @@ pnature:NatureNonBatie a owl:NamedIndividual,
     skos:inScheme tbl:NatureList ;
     skos:prefLabel "Unbuild plot nature"@en,
         "Parcelle imposée au titre des propriétés no bâties"@fr .
-

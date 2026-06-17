@@ -230,4 +230,3 @@ spval:IdemSV a owl:NamedIndividual,
     skos:inScheme tbl:SpecialCellValueList ;
     skos:prefLabel "Idem"@en,
         "Idem"@fr .
-

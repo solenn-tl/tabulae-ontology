@@ -9,14 +9,14 @@
   "http://xmlns.com/foaf/0.1/firstName" : [ {
     "@value" : "Nathalie"
   } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.umr-lastig.fr/nathalie-abadie/"
+  } ],
   "http://xmlns.com/foaf/0.1/mbox" : [ {
     "@id" : "mailto:nathalie-f.abadie@ign.fr"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Nathalie Abadie"
-  } ],
-  "http://xmlns.com/foaf/0.1/workInfoHomepage" : [ {
-    "@id" : "https://www.umr-lastig.fr/nathalie-abadie/"
   } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid2"
@@ -24,21 +24,80 @@
 }, {
   "@id" : "_:genid10",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/org#Membership"
+    "@id" : "https://schema.org/Organization"
   } ],
-  "http://www.w3.org/ns/org#memberDuring" : [ {
-    "@id" : "_:genid11"
+  "https://schema.org/name" : [ {
+    "@value" : "IGN"
+  } ]
+}, {
+  "@id" : "_:genid101",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "@id" : "https://w3id.org/tabulae#NamedEntity"
+    } ]
   } ]
 }, {
   "@id" : "_:genid11",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/ns/org#hasMembership" : [ {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid12"
+  } ],
+  "http://xmlns.com/foaf/0.1/familyName" : [ {
+    "@value" : "Tual"
+  } ],
+  "http://xmlns.com/foaf/0.1/firstName" : [ {
+    "@value" : "Solenn"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.umr-lastig.fr/solenn-tual/"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@id" : "mailto:solenn.tual@inria.fr"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Solenn Tual"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "_:genid21"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@id" : "https://www.wikidata.org/wiki/Q122457645"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/org#Membership"
+  } ],
+  "http://www.w3.org/ns/org#memberDuring" : [ {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2006/time#Interval"
   } ],
   "http://www.w3.org/2006/time#hasBeginning" : [ {
-    "@id" : "_:genid12"
+    "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2006/time#hasEnd" : [ {
-    "@id" : "_:genid13"
+    "@id" : "_:genid15"
   } ],
   "http://www.w3.org/ns/org#organization" : [ {
     "@id" : "http://www.umr-lastig.fr/"
@@ -46,10 +105,10 @@
     "@id" : "http://www.ign.fr/"
   } ],
   "http://www.w3.org/ns/org#role" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid16"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid14",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2006/time#Instant"
   } ],
@@ -58,7 +117,7 @@
     "@value" : "2022-04-04"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid15",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2006/time#Instant"
   } ],
@@ -67,7 +126,7 @@
     "@value" : "2025-10-23"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid16",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/ns/org#Role"
   } ],
@@ -79,50 +138,35 @@
     "@value" : "Doctorante en Sciences et Technologies de l'Information Géographique"
   } ]
 }, {
-  "@id" : "_:genid15",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://schema.org/Organization"
-  } ],
-  "https://schema.org/name" : [ {
-    "@value" : "MOEX, Inria"
-  } ],
-  "https://schema.org/url" : [ {
-    "@id" : "https://www.wikidata.org/wiki/Q52607062"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://schema.org/Organization"
-  } ],
-  "https://schema.org/name" : [ {
-    "@value" : "UMR LASTIG"
-  } ],
-  "https://schema.org/parentOrganization" : [ {
-    "@id" : "_:genid17"
-  } ],
-  "https://schema.org/url" : [ {
-    "@id" : "https://www.wikidata.org/wiki/Q124526085"
-  } ]
-}, {
   "@id" : "_:genid17",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://schema.org/Organization"
+    "@id" : "http://www.w3.org/ns/org#Membership"
   } ],
-  "https://schema.org/name" : [ {
-    "@value" : "IGN"
+  "http://www.w3.org/ns/org#memberDuring" : [ {
+    "@id" : "_:genid18"
   } ],
-  "https://schema.org/url" : [ {
-    "@id" : "https://www.wikidata.org/wiki/Q1665102"
+  "http://www.w3.org/ns/org#organization" : [ {
+    "@id" : "https://moex.inria.fr/"
+  } ],
+  "http://www.w3.org/ns/org#role" : [ {
+    "@id" : "_:genid20"
   } ]
 }, {
   "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2006/time#Interval"
+  } ],
+  "http://www.w3.org/2006/time#hasBeginning" : [ {
+    "@id" : "_:genid19"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ],
+  "http://www.w3.org/2006/time#inXSDDateTimeStamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "@value" : "2026-05-01"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -133,125 +177,103 @@
     "@value" : "UMR LASTIG, IGN-Géodata Paris, Université Gustave Eiffel"
   } ]
 }, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/PeGazUs#Address"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#Landmark"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid3",
+  "@id" : "_:genid20",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
+    "@id" : "http://www.w3.org/ns/org#Role"
   } ],
-  "http://xmlns.com/foaf/0.1/familyName" : [ {
-    "@value" : "Duménieu"
-  } ],
-  "http://xmlns.com/foaf/0.1/firstName" : [ {
-    "@value" : "Bertrand"
-  } ],
-  "http://xmlns.com/foaf/0.1/mbox" : [ {
-    "@id" : "mailto:bertrand.dumenieu@ehess.fr"
-  } ],
-  "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Bertrand Duménieu"
-  } ],
-  "https://schema.org/affiliation" : [ {
-    "@id" : "_:genid4"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Postdoctorante"
+  }, {
+    "@language" : "en",
+    "@value" : "Postdoctoral fellow"
   } ]
 }, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
-    }, {
-      "@id" : "https://w3id.org/tabulae#Taxpayer"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid39",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
-    }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid21",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://schema.org/Organization"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "CRH, EHESS-CNRS"
+    "@value" : "MOEX, Inria"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://moex.inria.fr/"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid22",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "UMR LASTIG"
+  } ],
+  "https://schema.org/parentOrganization" : [ {
+    "@id" : "_:genid23"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://www.umr-lastig.fr/"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "IGN"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://www.umr-lastig.fr/"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Grant"
+  } ],
+  "https://schema.org/sponsor" : [ {
+    "@id" : "_:genid25"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "Institut National de l'Information Géographique et Forestière (IGN)"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://www.ign.fr/"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Grant"
+  } ],
+  "https://schema.org/sponsor" : [ {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "Agence d'Innovation de Défense (AID) - Ministère des Armées"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://www.defense.gouv.fr/aid"
+  } ]
+}, {
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/PeGazUs#Address"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#Landmark"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid46",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
-    }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid3",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ],
@@ -261,6 +283,9 @@
   "http://xmlns.com/foaf/0.1/firstName" : [ {
     "@value" : "Joseph"
   } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://jchazalon.github.io/"
+  } ],
   "http://xmlns.com/foaf/0.1/mbox" : [ {
     "@id" : "mailto:joseph.chazalon@epita.fr"
   } ],
@@ -268,10 +293,10 @@
     "@value" : "Joseph Chazalon"
   } ],
   "https://schema.org/affiliation" : [ {
-    "@id" : "_:genid6"
+    "@id" : "_:genid4"
   } ]
 }, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -279,29 +304,118 @@
     }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/PeGazUs#Address"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#Landmark"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "LRE, EPITA"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#Landmark"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#LandmarkVersion"
+    }, {
+      "@id" : "https://w3id.org/tabulae#Taxpayer"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/PeGazUs#Address"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#Landmark"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#LandmarkRelation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/familyName" : [ {
+    "@value" : "Duménieu"
+  } ],
+  "http://xmlns.com/foaf/0.1/firstName" : [ {
+    "@value" : "Bertrand"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://ladehis.ehess.fr/index.php?625"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@id" : "mailto:bertrand.dumenieu@ehess.fr"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Bertrand Duménieu"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
-    }, {
-      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
-    }, {
-      "@id" : "https://w3id.org/tabulae#Taxpayer"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid57",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/tabulae#SpecialCellValue"
-    }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
       "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#Landmark"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#LandmarkVersion"
+    }, {
+      "@id" : "https://w3id.org/tabulae#Taxpayer"
     } ]
   } ]
 }, {
@@ -310,20 +424,22 @@
     "@id" : "https://schema.org/Organization"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "LRE, EPITA"
+    "@value" : "CRH, EHESS-CNRS"
   } ]
 }, {
   "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+      "@id" : "https://w3id.org/PeGazUs#Landmark"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#LandmarkVersion"
     } ]
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -335,13 +451,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
@@ -355,46 +471,40 @@
   "http://xmlns.com/foaf/0.1/firstName" : [ {
     "@value" : "Julien"
   } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.umr-lastig.fr/julien-perret/"
+  } ],
   "http://xmlns.com/foaf/0.1/mbox" : [ {
     "@id" : "mailto:julien.perret@ign.fr"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Julien Perret"
   } ],
-  "http://xmlns.com/foaf/0.1/workInfoHomepage" : [ {
-    "@id" : "https://www.umr-lastig.fr/julien-perret/"
-  } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid8"
   } ]
 }, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
+      "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
+      "@id" : "https://w3id.org/PeGazUs#Landmark"
+    }, {
+      "@id" : "https://w3id.org/PeGazUs#LandmarkVersion"
     } ]
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
+      "@id" : "https://w3id.org/tabulae#SpecialCellValue"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid77",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
@@ -422,7 +532,7 @@
     "@list" : [ {
       "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
     } ]
   } ]
 }, {
@@ -430,9 +540,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet"
     } ]
   } ]
 }, {
@@ -440,9 +550,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
     } ]
   } ]
 }, {
@@ -450,38 +560,52 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ],
-  "http://www.w3.org/ns/org#hasMembership" : [ {
-    "@id" : "_:genid10"
-  } ],
   "http://xmlns.com/foaf/0.1/familyName" : [ {
-    "@value" : "Tual"
+    "@value" : "Bernard"
   } ],
   "http://xmlns.com/foaf/0.1/firstName" : [ {
-    "@value" : "Solenn"
+    "@value" : "Charly"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.umr-lastig.fr/charly-bernard/"
   } ],
   "http://xmlns.com/foaf/0.1/mbox" : [ {
-    "@id" : "mailto:solenn.tual@inria.fr"
+    "@id" : "mailto:charly.bernard@ign.fr"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Solenn Tual"
-  } ],
-  "http://xmlns.com/foaf/0.1/workInfoHomepage" : [ {
-    "@id" : "https://www.umr-lastig.fr/solenn-tual/"
+    "@value" : "Charly Bernard"
   } ],
   "https://schema.org/affiliation" : [ {
-    "@id" : "_:genid15"
-  } ],
-  "https://schema.org/identifier" : [ {
-    "@id" : "https://www.wikidata.org/wiki/Q122457645"
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
     }, {
-      "@id" : "https://w3id.org/tabulae#NamedEntity"
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordPart"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid95",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Record"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordSet"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid98",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
+    }, {
+      "@id" : "https://www.ica.org/standards/RiC/ontology#RecordResource"
     } ]
   } ]
 }, {
@@ -493,9 +617,6 @@
 }, {
   "@id" : "http://data.ign.fr/def/geofla#Departement",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
-  "@id" : "http://org.semanticweb.owlapi/error#Error1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -540,6 +661,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/replacedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/rights",
@@ -769,14 +893,17 @@
   "@id" : "http://xmlns.com/foaf/0.1/firstName",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://xmlns.com/foaf/0.1/mbox",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://xmlns.com/foaf/0.1/workInfoHomepage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@id" : "https://schema.org/Grant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://schema.org/Organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -785,6 +912,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/codeRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/fundedItem",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/funding",
@@ -797,6 +927,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/parentOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/sponsor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/url",
@@ -820,26 +953,6 @@
   }, {
     "@language" : "fr",
     "@value" : "Adresse"
-  } ]
-}, {
-  "@id" : "https://w3id.org/PeGazUs#Attribute",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An attribute is a property of a geographic entity."
-  }, {
-    "@language" : "fr",
-    "@value" : "Un attribut est une propriété d'une entité géographique."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/PeGazUs#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Attribut"
-  }, {
-    "@language" : "en",
-    "@value" : "Attribute"
   } ]
 }, {
   "@id" : "https://w3id.org/PeGazUs#AttributeType",
@@ -885,26 +998,6 @@
     "@value" : "Version de l'attribut"
   } ]
 }, {
-  "@id" : "https://w3id.org/PeGazUs#Change",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A change is any modification made to a geographic feature or its attributes, or to a relationship between features."
-  }, {
-    "@language" : "fr",
-    "@value" : "Un changement est toute modification appliquée à une entité géographique ou à ses attributs ou bien à une relation entre entités."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/PeGazUs#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Change"
-  }, {
-    "@language" : "fr",
-    "@value" : "Changement"
-  } ]
-}, {
   "@id" : "https://w3id.org/PeGazUs#Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -926,7 +1019,37 @@
   } ]
 }, {
   "@id" : "https://w3id.org/PeGazUs#Landmark",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A landmark is a geographic entity. It can be a street, a building, a country, or any other point of reference in space."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un repère est une entité géographique. Elle peut être une rue, un bâtiment, un pays ou tout autre point de référence dans l'espace."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/PeGazUs#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Landmark"
+  }, {
+    "@language" : "fr",
+    "@value" : "Repère"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Entité géographique"
+  }, {
+    "@language" : "fr",
+    "@value" : "Entité spatiale"
+  }, {
+    "@language" : "en",
+    "@value" : "Geographic entity"
+  }, {
+    "@language" : "en",
+    "@value" : "Spatial entity"
+  } ]
 }, {
   "@id" : "https://w3id.org/PeGazUs#LandmarkRelation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -971,6 +1094,9 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
+  "@id" : "https://w3id.org/PeGazUs#LandmarkVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://w3id.org/PeGazUs#hasTrace",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -980,12 +1106,18 @@
     "@language" : "fr",
     "@value" : "Décrit qu'un élément a pour trace un autre élément"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/PeGazUs#"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "a pour trace"
   }, {
     "@language" : "en",
     "@value" : "has trace"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/tabulae#sourcedFrom"
   } ]
 }, {
   "@id" : "https://w3id.org/PeGazUs#isTraceOf",
@@ -996,6 +1128,9 @@
   }, {
     "@language" : "fr",
     "@value" : "Décrit qu'un élément est la trace d'un autre élément"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/PeGazUs#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -1032,9 +1167,11 @@
     "@id" : "_:genid5"
   }, {
     "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid9"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "_:genid9"
+    "@id" : "_:genid11"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "fr",
@@ -1059,13 +1196,10 @@
     "@value" : "2025-07-12"
   }, {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-04-17"
-  }, {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-06-14"
+    "@value" : "2026-06-17"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
-    "@id" : "_:genid16"
+    "@id" : "_:genid22"
   } ],
   "http://purl.org/dc/terms/rights" : [ {
     "@value" : "Copyright 2024-2026, IGN"
@@ -1111,9 +1245,18 @@
   "https://schema.org/codeRepository" : [ {
     "@id" : "https://github.com/solenn-tl/tabulae-ontology"
   } ],
-  "https://schema.org/funding" : [ {
-    "@value" : "Agence d'Innovation de Défense (AID) - Ministère des Armées"
+  "https://schema.org/fundedItem" : [ {
+    "@id" : "https://w3id.org/tabulae#_:genid-nodeid-node1jrbh181cx26"
   }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid26"
+  } ],
+  "https://schema.org/funding" : [ {
+    "@language" : "fr",
+    "@value" : "Defense Innovation Agency (AID) - French Ministry of Army"
+  }, {
+    "@language" : "en",
     "@value" : "Institut National de l'Information Géographique et Forestière (IGN)"
   } ],
   "https://w3id.org/widoco/vocab#introduction" : [ {
@@ -1128,10 +1271,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class (in the sense of annotation) used to characterize a document or text, resulting from an automatic or manual annotation process."
+    "@value" : "An annotation class is used to characterise a document or text. It is assigned as a result of an automatic or manual annotation process."
   }, {
     "@language" : "fr",
-    "@value" : "Classe (au sens de l'annotation) utilisée pour caractériser pour un document ou un texte, résultant d'un processus d'annotation automatique ou manuel."
+    "@value" : "Une classe d'annotation est utilisée pour caractériser pour un document ou un texte. Son attribution résulte d'un processus d'annotation automatique ou manuel."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1152,9 +1295,11 @@
   }, {
     "@id" : "https://w3id.org/tabulae#Nature"
   }, {
-    "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
+    "@id" : "https://w3id.org/tabulae#SourceChange"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
@@ -1207,11 +1352,11 @@
   "@id" : "https://w3id.org/tabulae#AnnotationClassType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class type provided by an annotation process to an image (document) or to a text or excerpt of text, manually or automatically."
-  }, {
     "@language" : "fr",
-    "@value" : "Type de classe attribuée manuellement ou automatiquement à une image (document) ou à un texte ou extrait de texte."
+    "@value" : "Cette classe permet de décrire les différents types de classes attribuées lors de processus d'annotation."
+  }, {
+    "@language" : "en",
+    "@value" : "This class is used to describe the different types of classes assigned during annotation processes."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1233,9 +1378,11 @@
   }, {
     "@id" : "https://w3id.org/tabulae#Nature"
   }, {
-    "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
+    "@id" : "https://w3id.org/tabulae#SourceChange"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
@@ -1254,11 +1401,11 @@
   "@id" : "https://w3id.org/tabulae#EventType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A specific type of event."
-  }, {
     "@language" : "fr",
-    "@value" : "Un type d'évènement caractérise un évènement de nature spécifique."
+    "@value" : "Cette classe permet de décrire les différents types d'évènements."
+  }, {
+    "@language" : "en",
+    "@value" : "This class allows describing different types of events."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1278,9 +1425,11 @@
   }, {
     "@id" : "https://w3id.org/tabulae#Nature"
   }, {
-    "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
+    "@id" : "https://w3id.org/tabulae#SourceChange"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
@@ -1379,11 +1528,14 @@
   "@id" : "https://w3id.org/tabulae#LandRegistryChangeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A specific type of change affecting a resource in the land registry corpus."
-  }, {
     "@language" : "fr",
-    "@value" : "Cette classe représente un type spécifique de changement affectant un document du corpus cadastral."
+    "@value" : "Cette classe permet de décrire les différents types de changements affectant un document du corpus cadastral."
+  }, {
+    "@language" : "en",
+    "@value" : "This class allows describing different types of changes affecting a document in the land registry corpus."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -1487,11 +1639,11 @@
   "@id" : "https://w3id.org/tabulae#NamedEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Entité nommée mentionnée dans une source transcrite (textuelle), identifiée par un processus manuel ou automatique. Une entité nommée peut contenir d'autres entités nommées imbriquées."
-  }, {
     "@language" : "en",
-    "@value" : "Named entity mentioned in a transcribed source (text), identified by a manual or automatic process. A named entity may contain other named entities."
+    "@value" : "A named entity is a string of characters that refers to an entity. It is identified through a manual or automatic annotation process. A named entity may contain other nested named entities."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une entité nommée est correspond à une chaîne de caractères qui fait référence à une entité. Elle est identifiée par un processus manuel ou automatique d'annotation. Une entité nommée peut contenir d'autres entités nommées imbriquées."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1506,9 +1658,11 @@
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/tabulae#Nature"
   }, {
-    "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
+    "@id" : "https://w3id.org/tabulae#SourceChange"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
@@ -1531,7 +1685,7 @@
     "@value" : "A plot nature corresponds to a land use or occupation."
   }, {
     "@language" : "fr",
-    "@value" : "La nature de parcelle correspond à une occupation ou un usage du sol."
+    "@value" : "Une nature de parcelle correspond à une occupation ou un usage du sol."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1547,9 +1701,11 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/tabulae#PropertyAccountChange"
+    "@id" : "https://w3id.org/tabulae#SourceChange"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
   }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
@@ -1592,26 +1748,14 @@
     "@value" : "Liste des natures de parcelles"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae#PropertyAccountChange",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/tabulae#SourceChangeType"
-  }, {
-    "@id" : "https://w3id.org/tabulae#SourceType"
-  }, {
-    "@id" : "https://w3id.org/tabulae#SpecialCellValue"
-  }, {
-    "@id" : "https://w3id.org/tabulae#Taxpayer"
-  } ]
-}, {
   "@id" : "https://w3id.org/tabulae#SourceChange",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette classe représente tout changement au sein d'un document d'archive (source)."
+    "@value" : "Cette classe représente tout changement qui implique un source."
   }, {
     "@language" : "en",
-    "@value" : "This class represents any change within an archival document (source)."
+    "@value" : "This class represents any change within a source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1622,16 +1766,27 @@
   }, {
     "@language" : "en",
     "@value" : "Source change"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceChangeType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SourceType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SpecialCellValue"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Taxpayer"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#SourceChangeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette classe représente un type spécifique de changement affectant une source."
+    "@value" : "Cette classe permet de décrire les différents types de changements affectant une source."
   }, {
     "@language" : "en",
-    "@value" : "This class represents a specific type of change affecting a source."
+    "@value" : "This class allows describing different types of changes affecting a source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1647,6 +1802,8 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceEvent"
+  }, {
     "@id" : "https://w3id.org/tabulae#SourceType"
   }, {
     "@id" : "https://w3id.org/tabulae#SpecialCellValue"
@@ -1663,20 +1820,46 @@
 }, {
   "@id" : "https://w3id.org/tabulae#SourceEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://org.semanticweb.owlapi/error#Error1"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette classe représente tout évènement spécifiquement associé à une source et impliquant un changement dans celle-ci."
   }, {
-    "@id" : "https://w3id.org/PeGazUs#Event"
+    "@language" : "en",
+    "@value" : "This class represents any event that is specifically associated with a source and involves a change to that source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Event in a source"
+  }, {
+    "@language" : "fr",
+    "@value" : "Evènement dans une source"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/tabulae#SourceType"
+  }, {
+    "@id" : "https://w3id.org/tabulae#SpecialCellValue"
+  }, {
+    "@id" : "https://w3id.org/tabulae#Taxpayer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Event in a source"
+  }, {
+    "@language" : "fr",
+    "@value" : "Evènement dans une source"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#SourceType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Type d'une source dont est issue une information."
+    "@value" : "Cette classe permet de décrire les différents types de sources."
   }, {
     "@language" : "en",
-    "@value" : "Type of a source from which information originates."
+    "@value" : "This class allows describing different types of sources."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1708,10 +1891,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Special value related to the operation of cadastral documents, for example the mentions of construction, destruction, modifications of buildings indicated in the columns intended for folio numbers."
+    "@value" : "A specific cell value relates to the functioning of cadastral documents. These are mainly found in the ‘Taken from’ and ‘Updated to’ columns of cadastral registers, for example to record construction, demolition or extensions to buildings."
   }, {
     "@language" : "fr",
-    "@value" : "Valeur spéciale liée au fonctionnement des documents cadastraux, par exemple les mentions de construction, destruction, augmentation de bâtiments indiquées dans les colonnes destinées aux numéros de folio."
+    "@value" : "Une valeur spéciale de cellule est liée au fonctionnement des documents cadastraux. Elles sont principalement observées dans les colonnes 'Tiré de' et 'Porté à' des matrices cadastrales, par exemple pour mentionner les actions de construction, destruction, augmentation de bâtiments."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1801,10 +1984,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Natural or legal person liable for property tax for land for which they have full ownership or usufruct."
+    "@value" : "A taxpayer is a natural or legal person liable for property tax for land for which they have full ownership or usufruct."
   }, {
     "@language" : "fr",
-    "@value" : "Personne physique ou morale redevable de l'impôt foncier pour les terres dont elle a la pleine propriété ou l'usufruit."
+    "@value" : "Un contribuable est une personne physique ou morale redevable de l'impôt foncier pour les terres dont elle a la pleine propriété ou l'usufruit."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -1861,10 +2044,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété relie un changement à la version d'un élément qu'il rend active/ajoutée dans une source."
+    "@value" : "Cette propriété relie un changement dans une source à un élément qu'il ajoute à cette source."
   }, {
     "@language" : "en",
-    "@value" : "This property links a change to the version of an element that it makes active/added in a source."
+    "@value" : "This property links a change in a source to an element that it adds to that source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#SourceChange"
@@ -1909,7 +2092,7 @@
     "@value" : "changement appliqué à la source"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#coordinatesInImageSystem",
@@ -1942,10 +2125,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété relie un changement à la version d'un élément (comme une mention ou un contribuable) qu'il rature, supprime ou rend obsolète dans la source."
+    "@value" : "Cette propriété relie un changement à un élément qu'il supprime ou rend obsolète dans une source."
   }, {
     "@language" : "en",
-    "@value" : "This property links a change to the version of an element that it crosses out, deletes, or makes obsolete in the source."
+    "@value" : "This property links a change to an element that it removes or renders obsolete in a source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#SourceChange"
@@ -1977,7 +2160,7 @@
     "@value" : "Numéro de folio alternatif (ex: ancien numéro)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid86"
+    "@id" : "_:genid98"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -1988,10 +2171,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/tabulae#hasAlternativeNumFolio"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasAlternativeNumFolio",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/replacedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#hasAlternativeFolioNumber"
+  } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
     "@id" : "https://w3id.org/tabulae#hasAlternativeFolioNumber"
   } ],
@@ -2003,11 +2192,11 @@
   "@id" : "https://w3id.org/tabulae#hasClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Classe attribuée à un élément suivant un processus d'annotation manuellement ou automatique."
-  }, {
     "@language" : "en",
-    "@value" : "Indicates that a document or a document area has at least one class assigned manually or automatically."
+    "@value" : "Links a thing (for example: a document) to an annotation class."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relie une chose (par exemple : un document) à une classe d'annotation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2030,10 +2219,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Valeur d'une classe assignée à un document ou à une zone de document."
+    "@value" : "Cette propriété relie une classe d'annotation à une type de classe."
   }, {
     "@language" : "en",
-    "@value" : "Value of a class assigned to a document or a document area."
+    "@value" : "This property links an annotation class to a class type."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#AnnotationClass"
@@ -2056,13 +2245,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété permet d'attribuer d'associer deux comptes fonciers d'un même contribuable dans une même commune dont l'un est la continuation de l'autre."
+    "@value" : "Cette propriété associe deux folios issus d'une ou deux matrices du cadastre d'une une même commune existant sucessivement ou parallèlement."
   }, {
     "@language" : "en",
-    "@value" : "This property allows to associate two land registry folios of the same taxpayer in the same municipality, one being the continuation of the other."
+    "@value" : "This property links two folios from one or two mutation registers of a same municipality – whether they existed successively or in parallel."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid21"
+    "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2075,7 +2264,11 @@
     "@value" : "has equivalent folio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid24"
+    "@id" : "_:genid34"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasFolioNumber",
@@ -2088,7 +2281,7 @@
     "@value" : "folio number (associated to a mutation register page or part of page)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid89"
+    "@id" : "_:genid101"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -2099,16 +2292,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/tabulae#hasNumFolio"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#hasNamedEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A text contains a named entity identified by a manual or automatic process."
-  }, {
     "@language" : "fr",
-    "@value" : "Un texte contient une entité nommée identifiée par un processus manuel ou automatique."
+    "@value" : "Cette propriété relie un élément (par exemple une source) à une entité nommée identifiée dans celle-ci."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links an element (for example a source) to a named entity identified within it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2131,10 +2327,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."
+    "@value" : "Cette propriété indique qu'une version d'une chose suit la version considérée selon les ordres temporel et documentaire. Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS."
   }, {
     "@language" : "en",
-    "@value" : "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."
+    "@value" : "This property indicates that a version of an entity follows it in both chronological and documentary order. This property is used in the PeGaZuS ontology population algorithm."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2158,6 +2354,9 @@
 }, {
   "@id" : "https://w3id.org/tabulae#hasNumFolio",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/replacedBy" : [ {
+    "@id" : "https://w3id.org/tabulae#hasFolioNumber"
+  } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
     "@id" : "https://w3id.org/tabulae#hasFolioNumber"
   } ],
@@ -2170,10 +2369,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."
+    "@value" : "Cette propriété indique qu'une version considérée d'une entité recouvre partiellement une autre version selon les ordres temporel et documentaire. Cette propriété est utilisée dans l'algorithme de remplissage de l'ontologie PeGaZuS."
   }, {
     "@language" : "en",
-    "@value" : "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."
+    "@value" : "This property indicates that a version of an entity has an overlapping version according to the temporal and documentary orders. This property is used in the PeGaZuS ontology population algorithm."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2199,10 +2398,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links an attribute version to an address or a spatial relation with other geographical landmarks."
+    "@value" : "Links an attribute version of a plot to an address or a spatial relation or a landmark."
   }, {
     "@language" : "fr",
-    "@value" : "Relie une version d'attribut à une adresse ou une relation spatiale avec d'autres repères géographiques."
+    "@value" : "Relie une version d'attribut d'une parcelle à une adresse ou une relation spatiale ou un repère géographique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
@@ -2218,7 +2417,7 @@
     "@value" : "parcelle a pour adresse"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid37"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#isPlotAddressOf"
@@ -2271,10 +2470,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."
+    "@value" : "Cette propriété indique qu'une version d'une chose précéde la version considérée selon les ordres temporel et documentaire. Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS."
   }, {
     "@language" : "en",
-    "@value" : "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."
+    "@value" : "This property indicates that a version of an entity precedes it in both chronological and documentary order. This property is used in the PeGaZuS ontology population algorithm."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2326,13 +2525,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links an attribute version of a plot or a document (Folio) to a taxpayer."
+    "@value" : "Links an attribute version of a plot to a taxpayer."
   }, {
     "@language" : "fr",
-    "@value" : "Relie une version d'attribut d'une parcelle ou un document (Folio) à un contribuable."
+    "@value" : "Relie une version d'attribut d'une parcelle à un contribuable."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid31"
+    "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2351,11 +2550,11 @@
   "@id" : "https://w3id.org/tabulae#imageURL",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "URL d'une image représentant un document ou une partie de document."
-  }, {
     "@language" : "en",
-    "@value" : "URL of an image representing a document or part of a document."
+    "@value" : "Indicates the URL of an image representing a document or part of a document."
+  }, {
+    "@language" : "fr",
+    "@value" : "Renseigne l'URL d'une image représentant un document ou une partie de document."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#Instantiation"
@@ -2374,11 +2573,11 @@
   "@id" : "https://w3id.org/tabulae#indexOfFirstCharacter",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Cette propriété permet d'indiquer l'index du premier caractère d'une sous-chaine de caractères dans un texte. Index à partir de 0."
-  }, {
     "@language" : "en",
-    "@value" : "This property allows to indicate the index of the first character of a substring. Index starts from 0."
+    "@value" : "Indicates the index of the first character of a substring. Index starts from 0."
+  }, {
+    "@language" : "fr",
+    "@value" : "Indiquer l'index du premier caractère d'une sous-chaîne de caractères dans un texte. Index à partir de 0."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2397,11 +2596,11 @@
   "@id" : "https://w3id.org/tabulae#indexOfLastCharacter",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Cette propriété permet d'indiquer l'index du dernier caractère d'une sous-chaine de caractères dans un texte. Index à partir de 0."
-  }, {
     "@language" : "en",
-    "@value" : "This property allows to indicate the index of the last character of a substring. Index starts from 0."
+    "@value" : "Indicates the index of the last character of a substring. Index starts from 0."
+  }, {
+    "@language" : "fr",
+    "@value" : "Indique l'index du dernier caractère d'une sous-chaîne de caractères dans un texte. Index à partir de 0."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2421,10 +2620,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété relie la version d'un élément au changement qui l'a introduite dans la source."
+    "@value" : "Cette propriété relie un élément au changement qui l'a associé à une source."
   }, {
     "@language" : "en",
-    "@value" : "This property links an element version to the change that introduced it into the source."
+    "@value" : "This property links an element to the change that associated it with a source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2447,10 +2646,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links an address or a spatial relation with other geographical landmarks to a taxpayer. For the addresses provided as strings, see tbl:taxpayerAddress."
+    "@value" : "Links an address or a landmark to a taxpayer. For the addresses provided as strings, see tbl:taxpayerAddress."
   }, {
     "@language" : "fr",
-    "@value" : "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à un contribuable. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."
+    "@value" : "Relie une adresse ou un repère géographique à un contribuable. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2474,6 +2673,13 @@
 }, {
   "@id" : "https://w3id.org/tabulae#isClassOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an annotation class to a thing (for example: a document)."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relie une classe d'annotation à une chose (par exemple : un document)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#AnnotationClass"
   } ],
@@ -2496,6 +2702,13 @@
 }, {
   "@id" : "https://w3id.org/tabulae#isClassValueOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie une valeur de classe à la classe à laquelle elle est attribuée."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a class value to the class to which it is assigned."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#AnnotationClassType"
   } ],
@@ -2514,16 +2727,23 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#hasClassValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "est la valeur de classe attribuée à"
+  }, {
+    "@language" : "en",
+    "@value" : "is class value of"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#isDeletedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété relie la version d'un élément au changement qui l'a raturée ou retirée de la source."
+    "@value" : "Cette propriété relie un élément au changement qui l'a rendu obsolète (ou supprimé) dans une source."
   }, {
     "@language" : "en",
-    "@value" : "This property links an element version to the change that crossed it out or removed it from the source."
+    "@value" : "This property links an element to the change that rendered it obsolete (or deleted) in the source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2544,6 +2764,13 @@
 }, {
   "@id" : "https://w3id.org/tabulae#isEventType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie un événement à son type."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links an event to its type."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/PeGazUs#Event"
   } ],
@@ -2565,10 +2792,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Une entité (entité géographique, contribuable) est mentionnée dans une source."
+    "@value" : "Cette propriété relie une entité (telle qu'une entité géographique ou un contribuable) ou information à la source dans laquelle elle est mentionnée."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links an entity (as a geographical entity or a taxpayer) or information to the source in which it is mentioned."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid35"
+    "@id" : "_:genid41"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2581,17 +2811,17 @@
     "@value" : "is mentionned in"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid46"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#isNamedEntityOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A named entity is contained in a text."
-  }, {
     "@language" : "fr",
-    "@value" : "Une entité nommée est contenue dans un texte."
+    "@value" : "Cette propriété relie une entité nommée identifiée dans celle-ci à l'élément qui la contient."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a named entity identified within it to the element that contains it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#NamedEntity"
@@ -2615,6 +2845,13 @@
 }, {
   "@id" : "https://w3id.org/tabulae#isNamedEntityType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cette propriété relie une entité nommée à son type."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a named entity to a named entity type."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#NamedEntity"
   } ],
@@ -2639,10 +2876,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."
+    "@value" : "Cette propriété indique qu'une version donnée d'une entité est partiellement recouverte par une autre version selon les ordres temporel et documentaire. Cette propriété est utilisée dans l'algorithme de peuplage de l'ontologie PeGaZuS."
   }, {
     "@language" : "en",
-    "@value" : "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."
+    "@value" : "This property indicates that a version of an entity is partially overlapped by another version according to the temporal and documentary orders. This property is used in the PeGaZuS ontology population algorithm."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2665,13 +2902,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links an address or a spatial relation with other geographical landmarks to an attribute version."
+    "@value" : "Links an address, a spatial relationship or a geographical reference to an attribute version of a plot."
   }, {
     "@language" : "fr",
-    "@value" : "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à une version d'attribut."
+    "@value" : "Relie une adresse ou une relation spatiale ou un repère géographique à une version d'attribut d'une parcelle."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid42"
+    "@id" : "_:genid49"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2720,10 +2957,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Cette propriété permet d'associer un type à un changement impliquant une source."
+    "@value" : "Cette propriété permet d'associer un type de changement impliquant une source à un changement."
   }, {
     "@language" : "en",
-    "@value" : "This property allows to associate a type with a change involving a source."
+    "@value" : "This property allows you to associate a type of change involving a source with a change."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#SourceChangeType"
@@ -2739,7 +2976,7 @@
     "@value" : "is source change type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "https://w3id.org/tabulae#SourceChange"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#isSourceType",
@@ -2749,7 +2986,7 @@
     "@value" : "Cette propriété permet d'associer une source à un type de source."
   }, {
     "@language" : "en",
-    "@value" : "This property allows to associate a source to à source type."
+    "@value" : "This property allows to associate a source to a source type."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2772,10 +3009,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a taxpayer to an attribute version of a plot or a document (Folio)."
+    "@value" : "Links a taxpayer to an attribute version of a plot."
   }, {
     "@language" : "fr",
-    "@value" : "Relie un contribuable à une version d'attribut d'une parcelle ou un document (Folio)."
+    "@value" : "Relie un contribuable à une version d'attribut d'une parcelle."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#Taxpayer"
@@ -2791,7 +3028,7 @@
     "@value" : "is associated taxpayer of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid46"
+    "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#hasTaxpayer"
@@ -2834,10 +3071,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Une source mentionne une ou plusieurs entités (entité géographique, contribuable)."
+    "@value" : "Cette propriété relie une source à une entité (telle qu'une entité géographique ou un contribuable) ou information qu'elle mentionne."
+  }, {
+    "@language" : "en",
+    "@value" : "This property links a source to an entity (as a geographical entity or a taxpayer) or information that it mentions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid50"
+    "@id" : "_:genid53"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2850,7 +3090,7 @@
     "@value" : "mentions"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid53"
+    "@id" : "_:genid56"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tabulae#isMentionnedIn"
@@ -2860,26 +3100,26 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Folio où est décrit l'état de parcelle suivant OU autre information sur l'état suivant d'une parcelle."
+    "@value" : "Cette propriété relie un repère, une version de repère ou d'attribut à son état suivant ou à la localisation documentaire de sa description suivante."
   }, {
     "@language" : "en",
-    "@value" : "Folio where the following plot state is described OR other information about the previous or following state of a plot."
+    "@value" : "This property links a reference, a version of a reference or an attribute to its next state or to the documentary location of its next description."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
+    "@id" : "_:genid61"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "next state or folio"
+    "@value" : "next state or location in document"
   }, {
     "@language" : "fr",
-    "@value" : "état ou folio suivant"
+    "@value" : "état ou localisation documentaire suivant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid57"
+    "@id" : "_:genid65"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -2890,10 +3130,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "next state or folio"
+    "@value" : "next state or location in document"
   }, {
     "@language" : "fr",
-    "@value" : "état ou folio suivant"
+    "@value" : "état ou localisation documentaire suivant"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#sourceChangeDependsOn",
@@ -2920,9 +3160,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/tabulae#SourceEvent"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/tabulae#sourceEventAppliedTo"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#sourceChangedBy",
@@ -2932,10 +3169,10 @@
     "@value" : "Cette propriété relie une source à un changement qui la modifie."
   }, {
     "@language" : "en",
-    "@value" : "This property links a source to a change."
+    "@value" : "This property links a source to a change that modifies it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid61"
+    "@id" : "_:genid69"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
@@ -2954,17 +3191,17 @@
     "@id" : "https://w3id.org/tabulae#appliedToSource"
   } ]
 }, {
-  "@id" : "https://w3id.org/tabulae#sourceEventAppliedTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
   "@id" : "https://w3id.org/tabulae#sourcedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isReplacedBy" : [ {
     "@id" : "https://w3id.org/PeGazUs#hasTrace"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A statement is sourced from a source."
+  }, {
     "@language" : "fr",
-    "@value" : "Une affirmation est sourcée à partir d'une source ."
+    "@value" : "Une affirmation est issue d'une source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2993,14 +3230,14 @@
   "@id" : "https://w3id.org/tabulae#spanValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Cette propriété permet d'indiquer la valeur d'une sous-chaine de caractères."
-  }, {
     "@language" : "en",
-    "@value" : "This property allows to indicate the value of a substring."
+    "@value" : "Indicates the value of a substring."
+  }, {
+    "@language" : "fr",
+    "@value" : "Indiquer la valeur d'une sous-chaîne de caractères."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid92"
+    "@id" : "_:genid104"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3017,26 +3254,26 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Folio où est décrit l'état de parcelle précédent OU information sur l'état précédent d'une parcelle."
+    "@value" : "Cette propriété relie un repère, une version de repère ou d'attribut à son état précédent ou à la localisation documentaire de sa dernière description."
   }, {
     "@language" : "en",
-    "@value" : "Folio where the previous plot state is described OR other information about the previous state of a plot."
+    "@value" : "This property links a reference, a version of a reference or an attribute to its previous state or to the documentary location of its most recent description."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/PeGazUs#AttributeVersion"
+    "@id" : "_:genid72"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tabulae#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "previous state or folio"
+    "@value" : "previous state or location in document"
   }, {
     "@language" : "fr",
-    "@value" : "état ou folio précédent"
+    "@value" : "état ou localisation documentaire précédent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid64"
+    "@id" : "_:genid76"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -3047,10 +3284,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "previous state or folio"
+    "@value" : "previous state or location in document"
   }, {
     "@language" : "fr",
-    "@value" : "état ou folio précédent"
+    "@value" : "état ou localisation documentaire précédent"
   } ]
 }, {
   "@id" : "https://w3id.org/tabulae#taxpayerActivity",
@@ -3224,10 +3461,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a taxpayer to an address or a spatial relation with other geographical landmarks. For the addresses provided as strings, see tbl:taxpayerAddress."
+    "@value" : "Links a taxpayer to an address or a landmark. For the addresses provided as strings, see tbl:taxpayerAddress."
   }, {
     "@language" : "fr",
-    "@value" : "Relie un contribuable à une adresse ou une relation spatiale avec d'autres repères géographiques. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."
+    "@value" : "Relie un contribuable à une adresse ou à un repère géographique. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tabulae#Taxpayer"
@@ -4903,7 +5140,7 @@
     "@value" : "Cet évènement correspond à une évolution de la nature ou de la valeur d'une parcelle spécifiquement liée à l'apparition, la mutation ou la disparition d'un bâtiment sur celle-ci."
   }, {
     "@language" : "en",
-    "@value" : "This event refers to a change in the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."
+    "@value" : "This event refers to a change on the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://w3id.org/tabulae#LandRegistryEventList"
@@ -5403,7 +5640,7 @@
     "@value" : "Cet évènement est associé à un changement de contribuable associé à une parcelle ou à un compte foncier."
   }, {
     "@language" : "en",
-    "@value" : "This event relates to a change in the taxpayer associated with a plot of land or a land account."
+    "@value" : "This event relates to a change on the taxpayer associated with a plot of land or a land account."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://w3id.org/tabulae#LandRegistryEventList"
@@ -11630,7 +11867,7 @@
     "@value" : "Connects a Record or Record Part to a Record or Record part that\r\n         is or was a constituent of that Record or Record Part."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid68"
+    "@id" : "_:genid80"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#"
@@ -11643,7 +11880,7 @@
     "@value" : "has or had constituent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid71"
+    "@id" : "_:genid83"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#hasOrHadPart"
@@ -11772,7 +12009,7 @@
     "@value" : "inclut ou a inclus"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid74"
+    "@id" : "_:genid86"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#hasOrHadPart"
@@ -11821,7 +12058,7 @@
     "@value" : "Inverse of 'has or had constituent' object\r\n         property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid77"
+    "@id" : "_:genid89"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#"
@@ -11834,7 +12071,7 @@
     "@value" : "is or was constituent of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid80"
+    "@id" : "_:genid92"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#isOrWasPartOf"
@@ -11906,7 +12143,7 @@
     "@value" : "Inverse of 'includes or included' object property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid83"
+    "@id" : "_:genid95"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://www.ica.org/standards/RiC/ontology#"

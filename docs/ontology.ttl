@@ -15,8 +15,9 @@
                              <http://purl.org/dc/terms/contributor> _:genid1 ,
                                                                     _:genid3 ,
                                                                     _:genid5 ,
-                                                                    _:genid7 ;
-                             <http://purl.org/dc/terms/creator> _:genid9 ;
+                                                                    _:genid7 ,
+                                                                    _:genid9 ;
+                             <http://purl.org/dc/terms/creator> _:genid11 ;
                              <http://purl.org/dc/terms/description> "Ontologie pour décrire les informations sur les parcelles, et les entités liées, présentes dans le cadastre ancien. Extension de l'ontologie PeGaZus."@fr ,
                                                                     "Ontology to describe the information about land plots and associated entities evocated in the old land registry documents. Extension of the PeGazUs ontology."@en ;
                              <http://purl.org/dc/terms/issued> "2024-01-24"^^xsd:date ;
@@ -24,9 +25,8 @@
                                                                 <http://creativecommons.org/licenses/by/2.0/> ,
                                                                 <http://www.data.gouv.fr/Licence-Ouverte-1.0> ;
                              <http://purl.org/dc/terms/modified> "2025-07-12"^^xsd:date ,
-                                                                 "2026-04-17"^^xsd:date ,
-                                                                 "2026-06-14"^^xsd:date ;
-                             <http://purl.org/dc/terms/publisher> _:genid16 ;
+                                                                 "2026-06-17"^^xsd:date ;
+                             <http://purl.org/dc/terms/publisher> _:genid22 ;
                              <http://purl.org/dc/terms/rights> "Copyright 2024-2026, IGN" ;
                              <http://purl.org/dc/terms/title> "Ontologie TABULAE"@fr ,
                                                               "TABULAE ontology"@en ;
@@ -41,95 +41,141 @@
                                           <https://www.w3.org/TR/owl-time/> ;
                              owl:versionInfo "2.0.0" ;
                              <https://schema.org/codeRepository> <https://github.com/solenn-tl/tabulae-ontology> ;
-                             <https://schema.org/funding> "Agence d'Innovation de Défense (AID) - Ministère des Armées" ,
-                                                          "Institut National de l'Information Géographique et Forestière (IGN)" ;
+                             <https://schema.org/fundedItem> _:genid-nodeid-node1jrbh181cx26 ,
+                                                             _:genid24 ,
+                                                             _:genid26 ;
+                             <https://schema.org/funding> "Defense Innovation Agency (AID) - French Ministry of Army"@fr ,
+                                                          "Institut National de l'Information Géographique et Forestière (IGN)"@en ;
                              <https://w3id.org/widoco/vocab#introduction> "L'ontologie TABULAE est une extension de l'ontologie PeGazUs dédiée à la représentation des informations relatives aux parcelles contenues dans les documents du cadastre ancien français (XIXe siècle). Elle permet de décrire les parcelles (Plot), leurs contribuables (Taxpayer), leur nature d'occupation du sol (Nature, avec plus de 150 valeurs contrôlées) et leur adresse, ainsi que les événements et changements qui affectent ces parcelles au fil du temps. Leur évolution est décrite à l'échelle des attributs. L'ontologie modélise également les sources documentaires mobilisées (matrices cadastrales, états de sections, plans parcellaires) et intègre des concepts et propriétés utiles à la traçabilité des processus de traitement (manuel ou automatique) réalisés pour extraire des informations des documents (classification des images, extraction d'information, reconnaissance des entités nommées). L'ontologie TABULAE s'appuie sur les ontologies PeGazUs, RiC-O, Time et PROV-O."@fr ,
                                                                           "The TABULAE ontology is an extension of the PeGazUs vocabulary dedicated to the representation of information about land plots contained in the French 19th-century land registry documents. It enables the description of land plots, their nature (with over 150 controlled values) and addresses, of the associated taxpayers, and the changes and events affecting these plots over time. Their evolution is described at the attribute level. The ontology also models the sources involved (mutation registers, section registers, cadastral index maps) and provides support to described the processing of the documents, by hand or automatically, including images classification, information extraction and named entity recognition in digitised documents. The TABULAE ontology re-uses concepts and properties of the PeGazUs, Time, RiC-O, and PROV-O ontologies."@en .
 
 _:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
           <http://xmlns.com/foaf/0.1/familyName> "Abadie" ;
           <http://xmlns.com/foaf/0.1/firstName> "Nathalie" ;
+          <http://xmlns.com/foaf/0.1/homepage> <https://www.umr-lastig.fr/nathalie-abadie/> ;
           <http://xmlns.com/foaf/0.1/mbox> <mailto:nathalie-f.abadie@ign.fr> ;
           <http://xmlns.com/foaf/0.1/name> "Nathalie Abadie" ;
-          <http://xmlns.com/foaf/0.1/workInfoHomepage> <https://www.umr-lastig.fr/nathalie-abadie/> ;
           <https://schema.org/affiliation> _:genid2 .
 
 _:genid3 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
-          <http://xmlns.com/foaf/0.1/familyName> "Duménieu" ;
-          <http://xmlns.com/foaf/0.1/firstName> "Bertrand" ;
-          <http://xmlns.com/foaf/0.1/mbox> <mailto:bertrand.dumenieu@ehess.fr> ;
-          <http://xmlns.com/foaf/0.1/name> "Bertrand Duménieu" ;
+          <http://xmlns.com/foaf/0.1/familyName> "Chazalon" ;
+          <http://xmlns.com/foaf/0.1/firstName> "Joseph" ;
+          <http://xmlns.com/foaf/0.1/homepage> <https://jchazalon.github.io/> ;
+          <http://xmlns.com/foaf/0.1/mbox> <mailto:joseph.chazalon@epita.fr> ;
+          <http://xmlns.com/foaf/0.1/name> "Joseph Chazalon" ;
           <https://schema.org/affiliation> _:genid4 .
 
 _:genid5 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
-          <http://xmlns.com/foaf/0.1/familyName> "Chazalon" ;
-          <http://xmlns.com/foaf/0.1/firstName> "Joseph" ;
-          <http://xmlns.com/foaf/0.1/mbox> <mailto:joseph.chazalon@epita.fr> ;
-          <http://xmlns.com/foaf/0.1/name> "Joseph Chazalon" ;
+          <http://xmlns.com/foaf/0.1/familyName> "Duménieu" ;
+          <http://xmlns.com/foaf/0.1/firstName> "Bertrand" ;
+          <http://xmlns.com/foaf/0.1/homepage> <https://ladehis.ehess.fr/index.php?625> ;
+          <http://xmlns.com/foaf/0.1/mbox> <mailto:bertrand.dumenieu@ehess.fr> ;
+          <http://xmlns.com/foaf/0.1/name> "Bertrand Duménieu" ;
           <https://schema.org/affiliation> _:genid6 .
 
 _:genid7 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
           <http://xmlns.com/foaf/0.1/familyName> "Perret" ;
           <http://xmlns.com/foaf/0.1/firstName> "Julien" ;
+          <http://xmlns.com/foaf/0.1/homepage> <https://www.umr-lastig.fr/julien-perret/> ;
           <http://xmlns.com/foaf/0.1/mbox> <mailto:julien.perret@ign.fr> ;
           <http://xmlns.com/foaf/0.1/name> "Julien Perret" ;
-          <http://xmlns.com/foaf/0.1/workInfoHomepage> <https://www.umr-lastig.fr/julien-perret/> ;
           <https://schema.org/affiliation> _:genid8 .
 
 _:genid9 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
-          <http://www.w3.org/ns/org#hasMembership> _:genid10 ;
-          <http://xmlns.com/foaf/0.1/familyName> "Tual" ;
-          <http://xmlns.com/foaf/0.1/firstName> "Solenn" ;
-          <http://xmlns.com/foaf/0.1/mbox> <mailto:solenn.tual@inria.fr> ;
-          <http://xmlns.com/foaf/0.1/name> "Solenn Tual" ;
-          <http://xmlns.com/foaf/0.1/workInfoHomepage> <https://www.umr-lastig.fr/solenn-tual/> ;
-          <https://schema.org/affiliation> _:genid15 ;
-          <https://schema.org/identifier> <https://www.wikidata.org/wiki/Q122457645> .
+          <http://xmlns.com/foaf/0.1/familyName> "Bernard" ;
+          <http://xmlns.com/foaf/0.1/firstName> "Charly" ;
+          <http://xmlns.com/foaf/0.1/homepage> <https://www.umr-lastig.fr/charly-bernard/> ;
+          <http://xmlns.com/foaf/0.1/mbox> <mailto:charly.bernard@ign.fr> ;
+          <http://xmlns.com/foaf/0.1/name> "Charly Bernard" ;
+          <https://schema.org/affiliation> _:genid10 .
 
-_:genid16 rdf:type <https://schema.org/Organization> ;
+_:genid11 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+           <http://www.w3.org/ns/org#hasMembership> _:genid12 ,
+                                                    _:genid17 ;
+           <http://xmlns.com/foaf/0.1/familyName> "Tual" ;
+           <http://xmlns.com/foaf/0.1/firstName> "Solenn" ;
+           <http://xmlns.com/foaf/0.1/homepage> <https://www.umr-lastig.fr/solenn-tual/> ;
+           <http://xmlns.com/foaf/0.1/mbox> <mailto:solenn.tual@inria.fr> ;
+           <http://xmlns.com/foaf/0.1/name> "Solenn Tual" ;
+           <https://schema.org/affiliation> _:genid21 ;
+           <https://schema.org/identifier> <https://www.wikidata.org/wiki/Q122457645> .
+
+_:genid22 rdf:type <https://schema.org/Organization> ;
            <https://schema.org/name> "UMR LASTIG" ;
-           <https://schema.org/parentOrganization> _:genid17 ;
-           <https://schema.org/url> <https://www.wikidata.org/wiki/Q124526085> .
+           <https://schema.org/parentOrganization> _:genid23 ;
+           <https://schema.org/url> <https://www.umr-lastig.fr/> .
+
+_:genid24 rdf:type <https://schema.org/Grant> ;
+           <https://schema.org/sponsor> _:genid25 .
+
+_:genid26 rdf:type <https://schema.org/Grant> ;
+           <https://schema.org/sponsor> _:genid27 .
 
 _:genid2 rdf:type <https://schema.org/Organization> ;
           <https://schema.org/name> "UMR LASTIG, IGN-Géodata Paris, Université Gustave Eiffel" .
 
 _:genid4 rdf:type <https://schema.org/Organization> ;
-          <https://schema.org/name> "CRH, EHESS-CNRS" .
+          <https://schema.org/name> "LRE, EPITA" .
 
 _:genid6 rdf:type <https://schema.org/Organization> ;
-          <https://schema.org/name> "LRE, EPITA" .
+          <https://schema.org/name> "CRH, EHESS-CNRS" .
 
 _:genid8 rdf:type <https://schema.org/Organization> ;
           <https://schema.org/name> "UMR LASTIG, IGN-Géodata Paris, Université Gustave Eiffel" .
 
-_:genid10 rdf:type <http://www.w3.org/ns/org#Membership> ;
-           <http://www.w3.org/ns/org#memberDuring> _:genid11 .
+_:genid10 rdf:type <https://schema.org/Organization> ;
+           <https://schema.org/name> "IGN" .
 
-_:genid15 rdf:type <https://schema.org/Organization> ;
+_:genid12 rdf:type <http://www.w3.org/ns/org#Membership> ;
+           <http://www.w3.org/ns/org#memberDuring> _:genid13 .
+
+_:genid17 rdf:type <http://www.w3.org/ns/org#Membership> ;
+           <http://www.w3.org/ns/org#memberDuring> _:genid18 ;
+           <http://www.w3.org/ns/org#organization> <https://moex.inria.fr/> ;
+           <http://www.w3.org/ns/org#role> _:genid20 .
+
+_:genid21 rdf:type <https://schema.org/Organization> ;
            <https://schema.org/name> "MOEX, Inria" ;
-           <https://schema.org/url> <https://www.wikidata.org/wiki/Q52607062> .
+           <https://schema.org/url> <https://moex.inria.fr/> .
 
-_:genid17 rdf:type <https://schema.org/Organization> ;
+_:genid23 rdf:type <https://schema.org/Organization> ;
            <https://schema.org/name> "IGN" ;
-           <https://schema.org/url> <https://www.wikidata.org/wiki/Q1665102> .
+           <https://schema.org/url> <https://www.umr-lastig.fr/> .
 
-_:genid11 rdf:type <http://www.w3.org/2006/time#Interval> ;
-           <http://www.w3.org/2006/time#hasBeginning> _:genid12 ;
-           <http://www.w3.org/2006/time#hasEnd> _:genid13 ;
+_:genid25 rdf:type <https://schema.org/Organization> ;
+           <https://schema.org/name> "Institut National de l'Information Géographique et Forestière (IGN)" ;
+           <https://schema.org/url> <https://www.ign.fr/> .
+
+_:genid27 rdf:type <https://schema.org/Organization> ;
+           <https://schema.org/name> "Agence d'Innovation de Défense (AID) - Ministère des Armées" ;
+           <https://schema.org/url> <https://www.defense.gouv.fr/aid> .
+
+_:genid13 rdf:type <http://www.w3.org/2006/time#Interval> ;
+           <http://www.w3.org/2006/time#hasBeginning> _:genid14 ;
+           <http://www.w3.org/2006/time#hasEnd> _:genid15 ;
            <http://www.w3.org/ns/org#organization> <http://www.ign.fr/> ,
                                                    <http://www.umr-lastig.fr/> ;
-           <http://www.w3.org/ns/org#role> _:genid14 .
+           <http://www.w3.org/ns/org#role> _:genid16 .
 
-_:genid12 rdf:type <http://www.w3.org/2006/time#Instant> ;
+_:genid18 rdf:type <http://www.w3.org/2006/time#Interval> ;
+           <http://www.w3.org/2006/time#hasBeginning> _:genid19 .
+
+_:genid20 rdf:type <http://www.w3.org/ns/org#Role> ;
+           rdfs:label "Postdoctoral fellow"@en ,
+                      "Postdoctorante"@fr .
+
+_:genid14 rdf:type <http://www.w3.org/2006/time#Instant> ;
            <http://www.w3.org/2006/time#inXSDDateTimeStamp> "2022-04-04"^^xsd:dateTimeStamp .
 
-_:genid13 rdf:type <http://www.w3.org/2006/time#Instant> ;
+_:genid15 rdf:type <http://www.w3.org/2006/time#Instant> ;
            <http://www.w3.org/2006/time#inXSDDateTimeStamp> "2025-10-23"^^xsd:dateTimeStamp .
 
-_:genid14 rdf:type <http://www.w3.org/ns/org#Role> ;
+_:genid16 rdf:type <http://www.w3.org/ns/org#Role> ;
            rdfs:label "Doctorante en Sciences et Technologies de l'Information Géographique"@fr ,
                       "PhD candidate in Sciences and Technologies of Geographic Information"@en .
+
+_:genid19 rdf:type <http://www.w3.org/2006/time#Instant> ;
+           <http://www.w3.org/2006/time#inXSDDateTimeStamp> "2026-05-01"^^xsd:dateTimeStamp .
 
 #################################################################
 #    Annotation properties
@@ -173,6 +219,10 @@ _:genid14 rdf:type <http://www.w3.org/ns/org#Role> ;
 
 ###  http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/replacedBy
+<http://purl.org/dc/terms/replacedBy> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/rights
@@ -264,6 +314,10 @@ owl:deprecated rdf:type owl:AnnotationProperty ;
 <http://xmlns.com/foaf/0.1/firstName> rdf:type owl:AnnotationProperty .
 
 
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
 ###  http://xmlns.com/foaf/0.1/mbox
 <http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
 
@@ -272,16 +326,16 @@ owl:deprecated rdf:type owl:AnnotationProperty ;
 <http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
 
 
-###  http://xmlns.com/foaf/0.1/workInfoHomepage
-<http://xmlns.com/foaf/0.1/workInfoHomepage> rdf:type owl:AnnotationProperty .
-
-
 ###  https://schema.org/affiliation
 <https://schema.org/affiliation> rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/codeRepository
 <https://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/fundedItem
+<https://schema.org/fundedItem> rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/funding
@@ -298,6 +352,10 @@ owl:deprecated rdf:type owl:AnnotationProperty ;
 
 ###  https://schema.org/parentOrganization
 <https://schema.org/parentOrganization> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/sponsor
+<https://schema.org/sponsor> rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/url
@@ -367,8 +425,10 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/PeGazUs#hasTrace
 <https://w3id.org/PeGazUs#hasTrace> rdf:type owl:ObjectProperty ;
+                                    owl:equivalentProperty :sourcedFrom ;
                                     rdfs:comment "Describes that an element has another element as its trace"@en ,
                                                  "Décrit qu'un élément a pour trace un autre élément"@fr ;
+                                    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> ;
                                     rdfs:label "a pour trace"@fr ,
                                                "has trace"@en .
 
@@ -378,6 +438,7 @@ xsd:date rdf:type rdfs:Datatype .
                                      owl:inverseOf <https://w3id.org/PeGazUs#hasTrace> ;
                                      rdfs:comment "Describes that an element is the trace of another element"@en ,
                                                   "Décrit qu'un élément est la trace d'un autre élément"@fr ;
+                                     rdfs:isDefinedBy <https://w3id.org/PeGazUs#> ;
                                      rdfs:label "est une trace de"@fr ,
                                                 "is trace of"@en .
 
@@ -387,8 +448,8 @@ xsd:date rdf:type rdfs:Datatype .
       owl:inverseOf :isAddedBy ;
       rdfs:domain :SourceChange ;
       rdfs:range owl:Thing ;
-      rdfs:comment "Cette propriété relie un changement à la version d'un élément qu'il rend active/ajoutée dans une source."@fr ,
-                   "This property links a change to the version of an element that it makes active/added in a source."@en ;
+      rdfs:comment "Cette propriété relie un changement dans une source à un élément qu'il ajoute à cette source."@fr ,
+                   "This property links a change in a source to an element that it adds to that source."@en ;
       rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
       rdfs:label "adds"@en ,
                  "ajoute"@fr .
@@ -414,8 +475,8 @@ xsd:date rdf:type rdfs:Datatype .
          owl:inverseOf :isDeletedBy ;
          rdfs:domain :SourceChange ;
          rdfs:range owl:Thing ;
-         rdfs:comment "Cette propriété relie un changement à la version d'un élément (comme une mention ou un contribuable) qu'il rature, supprime ou rend obsolète dans la source."@fr ,
-                      "This property links a change to the version of an element that it crosses out, deletes, or makes obsolete in the source."@en ;
+         rdfs:comment "Cette propriété relie un changement à un élément qu'il supprime ou rend obsolète dans une source."@fr ,
+                      "This property links a change to an element that it removes or renders obsolete in a source."@en ;
          rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
          rdfs:label "deletes"@en ,
                     "supprime"@fr .
@@ -425,8 +486,8 @@ xsd:date rdf:type rdfs:Datatype .
 :hasClass rdf:type owl:ObjectProperty ;
           rdfs:domain owl:Thing ;
           rdfs:range :AnnotationClass ;
-          rdfs:comment "Classe attribuée à un élément suivant un processus d'annotation manuellement ou automatique."@fr ,
-                       "Indicates that a document or a document area has at least one class assigned manually or automatically."@en ;
+          rdfs:comment "Links a thing (for example: a document) to an annotation class."@en ,
+                       "Relie une chose (par exemple : un document) à une classe d'annotation."@fr ;
           rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
           rdfs:label "a pour classe"@fr ,
                      "has class"@en .
@@ -436,8 +497,8 @@ xsd:date rdf:type rdfs:Datatype .
 :hasClassValue rdf:type owl:ObjectProperty ;
                rdfs:domain :AnnotationClass ;
                rdfs:range :AnnotationClassType ;
-               rdfs:comment "Valeur d'une classe assignée à un document ou à une zone de document."@fr ,
-                            "Value of a class assigned to a document or a document area."@en ;
+               rdfs:comment "Cette propriété relie une classe d'annotation à une type de classe."@fr ,
+                            "This property links an annotation class to a class type."@en ;
                rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                rdfs:label "a pour valeur de classe"@fr ,
                           "has class value"@en .
@@ -456,19 +517,20 @@ xsd:date rdf:type rdfs:Datatype .
                                                <https://www.ica.org/standards/RiC/ontology#RecordResource>
                                              )
                                ] ;
-                    rdfs:comment "Cette propriété permet d'attribuer d'associer deux comptes fonciers d'un même contribuable dans une même commune dont l'un est la continuation de l'autre."@fr ,
-                                 "This property allows to associate two land registry folios of the same taxpayer in the same municipality, one being the continuation of the other."@en ;
+                    rdfs:comment "Cette propriété associe deux folios issus d'une ou deux matrices du cadastre d'une une même commune existant sucessivement ou parallèlement."@fr ,
+                                 "This property links two folios from one or two mutation registers of a same municipality – whether they existed successively or in parallel."@en ;
                     rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                     rdfs:label "a pour folio équivalent"@fr ,
-                               "has equivalent folio"@en .
+                               "has equivalent folio"@en ;
+                    owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/tabulae#hasNamedEntity
 :hasNamedEntity rdf:type owl:ObjectProperty ;
                 rdfs:domain owl:Thing ;
                 rdfs:range :NamedEntity ;
-                rdfs:comment "A text contains a named entity identified by a manual or automatic process."@en ,
-                             "Un texte contient une entité nommée identifiée par un processus manuel ou automatique."@fr ;
+                rdfs:comment "Cette propriété relie un élément (par exemple une source) à une entité nommée identifiée dans celle-ci."@fr ,
+                             "This property links an element (for example a source) to a named entity identified within it."@en ;
                 rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                 rdfs:label "includes named entity"@en ,
                            "possède l'entité nommée"@fr .
@@ -479,8 +541,8 @@ xsd:date rdf:type rdfs:Datatype .
                           owl:inverseOf :hasPreviousVersionInSRCOrder ;
                           rdfs:domain owl:Thing ;
                           rdfs:range owl:Thing ;
-                          rdfs:comment "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."@fr ,
-                                       "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en ;
+                          rdfs:comment "Cette propriété indique qu'une version d'une chose suit la version considérée selon les ordres temporel et documentaire. Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS."@fr ,
+                                       "This property indicates that a version of an entity follows it in both chronological and documentary order. This property is used in the PeGaZuS ontology population algorithm."@en ;
                           rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                           rdfs:label "a pour version suivante dans les documents"@fr ,
                                      "has next version in the source order"@en .
@@ -491,8 +553,8 @@ xsd:date rdf:type rdfs:Datatype .
                                  owl:inverseOf :isOverlappedByVersionInSRCOrder ;
                                  rdfs:domain owl:Thing ;
                                  rdfs:range owl:Thing ;
-                                 rdfs:comment "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."@fr ,
-                                              "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en ;
+                                 rdfs:comment "Cette propriété indique qu'une version considérée d'une entité recouvre partiellement une autre version selon les ordres temporel et documentaire. Cette propriété est utilisée dans l'algorithme de remplissage de l'ontologie PeGaZuS."@fr ,
+                                              "This property indicates that a version of an entity has an overlapping version according to the temporal and documentary orders. This property is used in the PeGaZuS ontology population algorithm."@en ;
                                  rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                                  rdfs:label "a pour version qui se chevauche dans les documents"@fr ,
                                             "has overlapping version in the source order"@en .
@@ -508,8 +570,8 @@ xsd:date rdf:type rdfs:Datatype .
                                            <https://w3id.org/PeGazUs#LandmarkRelation>
                                          )
                            ] ;
-                rdfs:comment "Links an attribute version to an address or a spatial relation with other geographical landmarks."@en ,
-                             "Relie une version d'attribut à une adresse ou une relation spatiale avec d'autres repères géographiques."@fr ;
+                rdfs:comment "Links an attribute version of a plot to an address or a spatial relation or a landmark."@en ,
+                             "Relie une version d'attribut d'une parcelle à une adresse ou une relation spatiale ou un repère géographique."@fr ;
                 rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                 rdfs:label "has plot address"@en ,
                            "parcelle a pour adresse"@fr ;
@@ -535,8 +597,8 @@ xsd:date rdf:type rdfs:Datatype .
 :hasPreviousVersionInSRCOrder rdf:type owl:ObjectProperty ;
                               rdfs:domain owl:Thing ;
                               rdfs:range owl:Thing ;
-                              rdfs:comment "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."@fr ,
-                                           "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en ;
+                              rdfs:comment "Cette propriété indique qu'une version d'une chose précéde la version considérée selon les ordres temporel et documentaire. Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS."@fr ,
+                                           "This property indicates that a version of an entity precedes it in both chronological and documentary order. This property is used in the PeGaZuS ontology population algorithm."@en ;
                               rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                               rdfs:label "a pour version précédente dans les documents"@fr ,
                                          "has previous version in the source order"@en .
@@ -556,15 +618,10 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#hasTaxpayer
 :hasTaxpayer rdf:type owl:ObjectProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( <https://w3id.org/PeGazUs#AttributeVersion>
-                                         <https://www.ica.org/standards/RiC/ontology#Instantiation>
-                                         <https://www.ica.org/standards/RiC/ontology#RecordResource>
-                                       )
-                         ] ;
+             rdfs:domain <https://w3id.org/PeGazUs#AttributeVersion> ;
              rdfs:range :Taxpayer ;
-             rdfs:comment "Links an attribute version of a plot or a document (Folio) to a taxpayer."@en ,
-                          "Relie une version d'attribut d'une parcelle ou un document (Folio) à un contribuable."@fr ;
+             rdfs:comment "Links an attribute version of a plot to a taxpayer."@en ,
+                          "Relie une version d'attribut d'une parcelle à un contribuable."@fr ;
              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
              rdfs:label "a pour contribuable"@fr ,
                         "has taxpayer"@en .
@@ -574,8 +631,8 @@ xsd:date rdf:type rdfs:Datatype .
 :isAddedBy rdf:type owl:ObjectProperty ;
            rdfs:domain owl:Thing ;
            rdfs:range :SourceChange ;
-           rdfs:comment "Cette propriété relie la version d'un élément au changement qui l'a introduite dans la source."@fr ,
-                        "This property links an element version to the change that introduced it into the source."@en ;
+           rdfs:comment "Cette propriété relie un élément au changement qui l'a associé à une source."@fr ,
+                        "This property links an element to the change that associated it with a source."@en ;
            rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
            rdfs:label "est ajouté par"@fr ,
                       "is added by"@en .
@@ -586,8 +643,8 @@ xsd:date rdf:type rdfs:Datatype .
                            owl:inverseOf :taxpayerHasAddressEntity ;
                            rdfs:domain owl:Thing ;
                            rdfs:range :Taxpayer ;
-                           rdfs:comment "Links an address or a spatial relation with other geographical landmarks to a taxpayer. For the addresses provided as strings, see tbl:taxpayerAddress."@en ,
-                                        "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à un contribuable. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."@fr ;
+                           rdfs:comment "Links an address or a landmark to a taxpayer. For the addresses provided as strings, see tbl:taxpayerAddress."@en ,
+                                        "Relie une adresse ou un repère géographique à un contribuable. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."@fr ;
                            rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                            rdfs:label "adresse (entité) du contribuable"@fr ,
                                       "is address (entity) of a taxpayer"@en .
@@ -598,6 +655,8 @@ xsd:date rdf:type rdfs:Datatype .
            owl:inverseOf :hasClass ;
            rdfs:domain :AnnotationClass ;
            rdfs:range owl:Thing ;
+           rdfs:comment "Links an annotation class to a thing (for example: a document)."@en ,
+                        "Relie une classe d'annotation à une chose (par exemple : un document)."@fr ;
            rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
            rdfs:label "classe attribuée à"@fr ,
                       "is class of"@en .
@@ -608,17 +667,21 @@ xsd:date rdf:type rdfs:Datatype .
                 owl:inverseOf :hasClassValue ;
                 rdfs:domain :AnnotationClassType ;
                 rdfs:range :AnnotationClass ;
+                rdfs:comment "Cette propriété relie une valeur de classe à la classe à laquelle elle est attribuée."@fr ,
+                             "This property links a class value to the class to which it is assigned."@en ;
                 rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                 rdfs:label "est la valeur de classe attribuée à"@fr ,
-                           "is class value of"@en .
+                           "is class value of"@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "est la valeur de classe attribuée à"@fr ,
+                                                                "is class value of"@en .
 
 
 ###  https://w3id.org/tabulae#isDeletedBy
 :isDeletedBy rdf:type owl:ObjectProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range :SourceChange ;
-             rdfs:comment "Cette propriété relie la version d'un élément au changement qui l'a raturée ou retirée de la source."@fr ,
-                          "This property links an element version to the change that crossed it out or removed it from the source."@en ;
+             rdfs:comment "Cette propriété relie un élément au changement qui l'a rendu obsolète (ou supprimé) dans une source."@fr ,
+                          "This property links an element to the change that rendered it obsolete (or deleted) in the source."@en ;
              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
              rdfs:label "est supprimé par"@fr ,
                         "is deleted by"@en .
@@ -628,6 +691,8 @@ xsd:date rdf:type rdfs:Datatype .
 :isEventType rdf:type owl:ObjectProperty ;
              rdfs:domain <https://w3id.org/PeGazUs#Event> ;
              rdfs:range :EventType ;
+             rdfs:comment "Cette propriété relie un événement à son type."@fr ,
+                          "This property links an event to its type."@en ;
              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
              rdfs:label "est un événement de type"@fr ,
                         "is event type"@en .
@@ -636,8 +701,9 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/tabulae#isMentionnedIn
 :isMentionnedIn rdf:type owl:ObjectProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
-                              owl:unionOf ( owl:Thing
-                                            <https://w3id.org/PeGazUs#AttributeVersion>
+                              owl:unionOf ( <https://w3id.org/PeGazUs#AttributeVersion>
+                                            <https://w3id.org/PeGazUs#Landmark>
+                                            <https://w3id.org/PeGazUs#LandmarkVersion>
                                             :Taxpayer
                                           )
                             ] ;
@@ -646,7 +712,8 @@ xsd:date rdf:type rdfs:Datatype .
                                            <https://www.ica.org/standards/RiC/ontology#RecordResource>
                                          )
                            ] ;
-                rdfs:comment "Une entité (entité géographique, contribuable) est mentionnée dans une source."@fr ;
+                rdfs:comment "Cette propriété relie une entité (telle qu'une entité géographique ou un contribuable) ou information à la source dans laquelle elle est mentionnée."@fr ,
+                             "This property links an entity (as a geographical entity or a taxpayer) or information to the source in which it is mentioned."@en ;
                 rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                 rdfs:label "est mentionné dans"@fr ,
                            "is mentionned in"@en .
@@ -657,8 +724,8 @@ xsd:date rdf:type rdfs:Datatype .
                  owl:inverseOf :hasNamedEntity ;
                  rdfs:domain :NamedEntity ;
                  rdfs:range owl:Thing ;
-                 rdfs:comment "A named entity is contained in a text."@en ,
-                              "Une entité nommée est contenue dans un texte."@fr ;
+                 rdfs:comment "Cette propriété relie une entité nommée identifiée dans celle-ci à l'élément qui la contient."@fr ,
+                              "This property links a named entity identified within it to the element that contains it."@en ;
                  rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                  rdfs:label "est une entité nommée de"@fr ,
                             "is named entity of"@en .
@@ -669,6 +736,8 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:subPropertyOf :hasClassValue ;
                    rdfs:domain :NamedEntity ;
                    rdfs:range :AnnotationClass ;
+                   rdfs:comment "Cette propriété relie une entité nommée à son type."@fr ,
+                                "This property links a named entity to a named entity type."@en ;
                    rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                    rdfs:label "est une entité nommée de type"@fr ,
                               "is named entity type"@en .
@@ -678,8 +747,8 @@ xsd:date rdf:type rdfs:Datatype .
 :isOverlappedByVersionInSRCOrder rdf:type owl:ObjectProperty ;
                                  rdfs:domain owl:Thing ;
                                  rdfs:range owl:Thing ;
-                                 rdfs:comment "Cette propriété est utilisée dans l'algorithme de peuplement de l'ontologie PeGaZuS. Elle n'est pas utilisée dans le graphe final."@fr ,
-                                              "This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph."@en ;
+                                 rdfs:comment "Cette propriété indique qu'une version donnée d'une entité est partiellement recouverte par une autre version selon les ordres temporel et documentaire. Cette propriété est utilisée dans l'algorithme de peuplage de l'ontologie PeGaZuS."@fr ,
+                                              "This property indicates that a version of an entity is partially overlapped by another version according to the temporal and documentary orders. This property is used in the PeGaZuS ontology population algorithm."@en ;
                                  rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                                  rdfs:label "est chevauchée par la version dans les documents"@fr ,
                                             "is overlapped by version in the source order"@en .
@@ -694,8 +763,8 @@ xsd:date rdf:type rdfs:Datatype .
                                            )
                              ] ;
                  rdfs:range <https://w3id.org/PeGazUs#AttributeVersion> ;
-                 rdfs:comment "Links an address or a spatial relation with other geographical landmarks to an attribute version."@en ,
-                              "Relie une adresse ou une relation spatiale avec d'autres repères géographiques à une version d'attribut."@fr ;
+                 rdfs:comment "Links an address, a spatial relationship or a geographical reference to an attribute version of a plot."@en ,
+                              "Relie une adresse ou une relation spatiale ou un repère géographique à une version d'attribut d'une parcelle."@fr ;
                  rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                  rdfs:label "est l'adresse associée à"@fr ,
                             "is plot address of"@en .
@@ -715,9 +784,9 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/tabulae#isSourceChangeType
 :isSourceChangeType rdf:type owl:ObjectProperty ;
                     rdfs:domain :SourceChangeType ;
-                    rdfs:range owl:Thing ;
-                    rdfs:comment "Cette propriété permet d'associer un type à un changement impliquant une source."@fr ,
-                                 "This property allows to associate a type with a change involving a source."@en ;
+                    rdfs:range :SourceChange ;
+                    rdfs:comment "Cette propriété permet d'associer un type de changement impliquant une source à un changement."@fr ,
+                                 "This property allows you to associate a type of change involving a source with a change."@en ;
                     rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                     rdfs:label "est le type de changement dans une source"@fr ,
                                "is source change type"@en .
@@ -728,7 +797,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:domain owl:Thing ;
               rdfs:range :SourceType ;
               rdfs:comment "Cette propriété permet d'associer une source à un type de source."@fr ,
-                           "This property allows to associate a source to à source type."@en ;
+                           "This property allows to associate a source to a source type."@en ;
               rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
               rdfs:label "est une source de type"@fr ,
                          "is source type"@en .
@@ -738,14 +807,9 @@ xsd:date rdf:type rdfs:Datatype .
 :isTaxpayerOf rdf:type owl:ObjectProperty ;
               owl:inverseOf :hasTaxpayer ;
               rdfs:domain :Taxpayer ;
-              rdfs:range [ rdf:type owl:Class ;
-                           owl:unionOf ( <https://w3id.org/PeGazUs#AttributeVersion>
-                                         <https://www.ica.org/standards/RiC/ontology#Instantiation>
-                                         <https://www.ica.org/standards/RiC/ontology#RecordResource>
-                                       )
-                         ] ;
-              rdfs:comment "Links a taxpayer to an attribute version of a plot or a document (Folio)."@en ,
-                           "Relie un contribuable à une version d'attribut d'une parcelle ou un document (Folio)."@fr ;
+              rdfs:range <https://w3id.org/PeGazUs#AttributeVersion> ;
+              rdfs:comment "Links a taxpayer to an attribute version of a plot."@en ,
+                           "Relie un contribuable à une version d'attribut d'une parcelle."@fr ;
               rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
               rdfs:label "est le contribuable associé à"@fr ,
                          "is associated taxpayer of"@en ;
@@ -762,12 +826,14 @@ xsd:date rdf:type rdfs:Datatype .
                                     )
                       ] ;
           rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( owl:Thing
-                                     <https://w3id.org/PeGazUs#AttributeVersion>
+                       owl:unionOf ( <https://w3id.org/PeGazUs#AttributeVersion>
+                                     <https://w3id.org/PeGazUs#Landmark>
+                                     <https://w3id.org/PeGazUs#LandmarkVersion>
                                      :Taxpayer
                                    )
                      ] ;
-          rdfs:comment "Une source mentionne une ou plusieurs entités (entité géographique, contribuable)."@fr ;
+          rdfs:comment "Cette propriété relie une source à une entité (telle qu'une entité géographique ou un contribuable) ou information qu'elle mentionne."@fr ,
+                       "This property links a source to an entity (as a geographical entity or a taxpayer) or information that it mentions."@en ;
           rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
           rdfs:label "mentionne"@fr ,
                      "mentions"@en .
@@ -775,27 +841,31 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#passedTo
 :passedTo rdf:type owl:ObjectProperty ;
-          rdfs:domain <https://w3id.org/PeGazUs#AttributeVersion> ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( <https://w3id.org/PeGazUs#AttributeVersion>
+                                      <https://w3id.org/PeGazUs#Landmark>
+                                      <https://w3id.org/PeGazUs#LandmarkVersion>
+                                    )
+                      ] ;
           rdfs:range [ rdf:type owl:Class ;
                        owl:unionOf ( :SpecialCellValue
                                      <https://www.ica.org/standards/RiC/ontology#Instantiation>
                                      <https://www.ica.org/standards/RiC/ontology#RecordResource>
                                    )
                      ] ;
-          rdfs:comment "Folio où est décrit l'état de parcelle suivant OU autre information sur l'état suivant d'une parcelle."@fr ,
-                       "Folio where the following plot state is described OR other information about the previous or following state of a plot."@en ;
+          rdfs:comment "Cette propriété relie un repère, une version de repère ou d'attribut à son état suivant ou à la localisation documentaire de sa description suivante."@fr ,
+                       "This property links a reference, a version of a reference or an attribute to its next state or to the documentary location of its next description."@en ;
           rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
-          rdfs:label "next state or folio"@en ,
-                     "état ou folio suivant"@fr ;
+          rdfs:label "next state or location in document"@en ,
+                     "état ou localisation documentaire suivant"@fr ;
           <http://www.w3.org/2004/02/skos/core#altLabel> "passed to"@en ,
                                                          "passé à"@fr ;
-          <http://www.w3.org/2004/02/skos/core#prefLabel> "next state or folio"@en ,
-                                                          "état ou folio suivant"@fr .
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "next state or location in document"@en ,
+                                                          "état ou localisation documentaire suivant"@fr .
 
 
 ###  https://w3id.org/tabulae#sourceChangeDependsOn
 :sourceChangeDependsOn rdf:type owl:ObjectProperty ;
-                       owl:inverseOf :sourceEventAppliedTo ;
                        rdfs:domain :SourceChange ;
                        rdfs:range :SourceEvent ;
                        rdfs:comment "Cette propriété relie un changement modifiant une source à l'évènement dont il dépend."@fr ,
@@ -815,14 +885,10 @@ xsd:date rdf:type rdfs:Datatype .
                              ] ;
                  rdfs:range :SourceChange ;
                  rdfs:comment "Cette propriété relie une source à un changement qui la modifie."@fr ,
-                              "This property links a source to a change."@en ;
+                              "This property links a source to a change that modifies it."@en ;
                  rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                  rdfs:label "source changed by"@en ,
                             "source changée par"@fr .
-
-
-###  https://w3id.org/tabulae#sourceEventAppliedTo
-:sourceEventAppliedTo rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/tabulae#sourcedFrom
@@ -830,7 +896,8 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:domain owl:Thing ;
              rdfs:range owl:Thing ;
              <http://purl.org/dc/terms/isReplacedBy> <https://w3id.org/PeGazUs#hasTrace> ;
-             rdfs:comment "Une affirmation est sourcée à partir d'une source ."@fr ;
+             rdfs:comment "A statement is sourced from a source."@en ,
+                          "Une affirmation est issue d'une source."@fr ;
              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
              rdfs:label "a pour source"@fr ,
                         "sourced from"@en ;
@@ -840,30 +907,35 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#takenFrom
 :takenFrom rdf:type owl:ObjectProperty ;
-           rdfs:domain <https://w3id.org/PeGazUs#AttributeVersion> ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( <https://w3id.org/PeGazUs#AttributeVersion>
+                                       <https://w3id.org/PeGazUs#Landmark>
+                                       <https://w3id.org/PeGazUs#LandmarkVersion>
+                                     )
+                       ] ;
            rdfs:range [ rdf:type owl:Class ;
                         owl:unionOf ( :SpecialCellValue
                                       <https://www.ica.org/standards/RiC/ontology#Instantiation>
                                       <https://www.ica.org/standards/RiC/ontology#RecordResource>
                                     )
                       ] ;
-           rdfs:comment "Folio où est décrit l'état de parcelle précédent OU information sur l'état précédent d'une parcelle."@fr ,
-                        "Folio where the previous plot state is described OR other information about the previous state of a plot."@en ;
+           rdfs:comment "Cette propriété relie un repère, une version de repère ou d'attribut à son état précédent ou à la localisation documentaire de sa dernière description."@fr ,
+                        "This property links a reference, a version of a reference or an attribute to its previous state or to the documentary location of its most recent description."@en ;
            rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
-           rdfs:label "previous state or folio"@en ,
-                      "état ou folio précédent"@fr ;
+           rdfs:label "previous state or location in document"@en ,
+                      "état ou localisation documentaire précédent"@fr ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "taken from"@en ,
                                                           "tiré de"@fr ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "previous state or folio"@en ,
-                                                           "état ou folio précédent"@fr .
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "previous state or location in document"@en ,
+                                                           "état ou localisation documentaire précédent"@fr .
 
 
 ###  https://w3id.org/tabulae#taxpayerHasAddressEntity
 :taxpayerHasAddressEntity rdf:type owl:ObjectProperty ;
                           rdfs:domain :Taxpayer ;
                           rdfs:range owl:Thing ;
-                          rdfs:comment "Links a taxpayer to an address or a spatial relation with other geographical landmarks. For the addresses provided as strings, see tbl:taxpayerAddress."@en ,
-                                       "Relie un contribuable à une adresse ou une relation spatiale avec d'autres repères géographiques. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."@fr ;
+                          rdfs:comment "Links a taxpayer to an address or a landmark. For the addresses provided as strings, see tbl:taxpayerAddress."@en ,
+                                       "Relie un contribuable à une adresse ou à un repère géographique. Pour les adresses renseignées sous la forme de chaînes de caractères, voir tbl:taxpayerAddress."@fr ;
                           rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                           rdfs:label "contribuable a pour adresse (entité)"@fr ,
                                      "taxpayer has address (entity)"@en .
@@ -1153,6 +1225,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#hasAlternativeFolioNumber
 :hasAlternativeFolioNumber rdf:type owl:DatatypeProperty ;
+                           owl:equivalentProperty :hasAlternativeNumFolio ;
                            rdfs:domain [ rdf:type owl:Class ;
                                          owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
                                                        <https://www.ica.org/standards/RiC/ontology#RecordResource>
@@ -1167,12 +1240,14 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#hasAlternativeNumFolio
 :hasAlternativeNumFolio rdf:type owl:DatatypeProperty ;
+                        <http://purl.org/dc/terms/replacedBy> :hasAlternativeFolioNumber ;
                         owl:backwardCompatibleWith :hasAlternativeFolioNumber ;
                         owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/tabulae#hasFolioNumber
 :hasFolioNumber rdf:type owl:DatatypeProperty ;
+                owl:equivalentProperty :hasNumFolio ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( <https://www.ica.org/standards/RiC/ontology#Instantiation>
                                             <https://www.ica.org/standards/RiC/ontology#RecordResource>
@@ -1187,6 +1262,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#hasNumFolio
 :hasNumFolio rdf:type owl:DatatypeProperty ;
+             <http://purl.org/dc/terms/replacedBy> :hasFolioNumber ;
              owl:backwardCompatibleWith :hasFolioNumber ;
              owl:deprecated "true"^^xsd:boolean .
 
@@ -1195,8 +1271,8 @@ xsd:date rdf:type rdfs:Datatype .
 :imageURL rdf:type owl:DatatypeProperty ;
           rdfs:domain <https://www.ica.org/standards/RiC/ontology#Instantiation> ;
           rdfs:range xsd:anyURI ;
-          rdfs:comment "URL d'une image représentant un document ou une partie de document."@fr ,
-                       "URL of an image representing a document or part of a document."@en ;
+          rdfs:comment "Indicates the URL of an image representing a document or part of a document."@en ,
+                       "Renseigne l'URL d'une image représentant un document ou une partie de document."@fr ;
           rdfs:label "URL d'image"@fr ,
                      "image URL"@en .
 
@@ -1205,8 +1281,8 @@ xsd:date rdf:type rdfs:Datatype .
 :indexOfFirstCharacter rdf:type owl:DatatypeProperty ;
                        rdfs:domain owl:Thing ;
                        rdfs:range xsd:nonNegativeInteger ;
-                       rdfs:comment "Cette propriété permet d'indiquer l'index du premier caractère d'une sous-chaine de caractères dans un texte. Index à partir de 0."@fr ,
-                                    "This property allows to indicate the index of the first character of a substring. Index starts from 0."@en ;
+                       rdfs:comment "Indicates the index of the first character of a substring. Index starts from 0."@en ,
+                                    "Indiquer l'index du premier caractère d'une sous-chaîne de caractères dans un texte. Index à partir de 0."@fr ;
                        rdfs:label "index du premier caractère"@fr ,
                                   "index of first character"@en .
 
@@ -1215,8 +1291,8 @@ xsd:date rdf:type rdfs:Datatype .
 :indexOfLastCharacter rdf:type owl:DatatypeProperty ;
                       rdfs:domain owl:Thing ;
                       rdfs:range xsd:nonNegativeInteger ;
-                      rdfs:comment "Cette propriété permet d'indiquer l'index du dernier caractère d'une sous-chaine de caractères dans un texte. Index à partir de 0."@fr ,
-                                   "This property allows to indicate the index of the last character of a substring. Index starts from 0."@en ;
+                      rdfs:comment "Indicates the index of the last character of a substring. Index starts from 0."@en ,
+                                   "Indique l'index du dernier caractère d'une sous-chaîne de caractères dans un texte. Index à partir de 0."@fr ;
                       rdfs:label "index du dernier caractère"@fr ,
                                  "index of last character"@en .
 
@@ -1240,8 +1316,8 @@ xsd:date rdf:type rdfs:Datatype .
                                      )
                        ] ;
            rdfs:range xsd:string ;
-           rdfs:comment "Cette propriété permet d'indiquer la valeur d'une sous-chaine de caractères."@fr ,
-                        "This property allows to indicate the value of a substring."@en ;
+           rdfs:comment "Indicates the value of a substring."@en ,
+                        "Indiquer la valeur d'une sous-chaîne de caractères."@fr ;
            rdfs:label "span value"@en ,
                       "valeur de la sous-chaîne"@fr .
 
@@ -1418,10 +1494,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://org.semanticweb.owlapi/error#Error1
-<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
-
-
 ###  http://purl.org/vocommons/voaf#Vocabulary
 <http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
 
@@ -1483,6 +1555,10 @@ xsd:date rdf:type rdfs:Datatype .
 <http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
 
 
+###  https://schema.org/Grant
+<https://schema.org/Grant> rdf:type owl:Class .
+
+
 ###  https://schema.org/Organization
 <https://schema.org/Organization> rdf:type owl:Class .
 
@@ -1494,15 +1570,6 @@ xsd:date rdf:type rdfs:Datatype .
                                    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> ;
                                    rdfs:label "Address"@en ,
                                               "Adresse"@fr .
-
-
-###  https://w3id.org/PeGazUs#Attribute
-<https://w3id.org/PeGazUs#Attribute> rdf:type owl:Class ;
-                                     rdfs:comment "An attribute is a property of a geographic entity."@en ,
-                                                  "Un attribut est une propriété d'une entité géographique."@fr ;
-                                     rdfs:isDefinedBy <https://w3id.org/PeGazUs#> ;
-                                     rdfs:label "Attribut"@fr ,
-                                                "Attribute"@en .
 
 
 ###  https://w3id.org/PeGazUs#AttributeType
@@ -1524,15 +1591,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                        "Version de l'attribut"@fr .
 
 
-###  https://w3id.org/PeGazUs#Change
-<https://w3id.org/PeGazUs#Change> rdf:type owl:Class ;
-                                  rdfs:comment "A change is any modification made to a geographic feature or its attributes, or to a relationship between features."@en ,
-                                               "Un changement est toute modification appliquée à une entité géographique ou à ses attributs ou bien à une relation entre entités."@fr ;
-                                  rdfs:isDefinedBy <https://w3id.org/PeGazUs#> ;
-                                  rdfs:label "Change"@en ,
-                                             "Changement"@fr .
-
-
 ###  https://w3id.org/PeGazUs#Event
 <https://w3id.org/PeGazUs#Event> rdf:type owl:Class ;
                                  rdfs:comment "Event describing a development involving one or more resources at a given time."@en ,
@@ -1543,7 +1601,16 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/PeGazUs#Landmark
-<https://w3id.org/PeGazUs#Landmark> rdf:type owl:Class .
+<https://w3id.org/PeGazUs#Landmark> rdf:type owl:Class ;
+                                    rdfs:comment "A landmark is a geographic entity. It can be a street, a building, a country, or any other point of reference in space."@en ,
+                                                 "Un repère est une entité géographique. Elle peut être une rue, un bâtiment, un pays ou tout autre point de référence dans l'espace."@fr ;
+                                    rdfs:isDefinedBy <https://w3id.org/PeGazUs#> ;
+                                    rdfs:label "Landmark"@en ,
+                                               "Repère"@fr ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "Entité géographique"@fr ,
+                                                                                   "Entité spatiale"@fr ,
+                                                                                   "Geographic entity"@en ,
+                                                                                   "Spatial entity"@en .
 
 
 ###  https://w3id.org/PeGazUs#LandmarkRelation
@@ -1574,19 +1641,24 @@ xsd:date rdf:type rdfs:Datatype .
                                                    "Type of landmark"@en .
 
 
+###  https://w3id.org/PeGazUs#LandmarkVersion
+<https://w3id.org/PeGazUs#LandmarkVersion> rdf:type owl:Class .
+
+
 ###  https://w3id.org/tabulae#AnnotationClass
 :AnnotationClass rdf:type owl:Class ;
                  owl:disjointWith :AnnotationClassType ,
                                   :EventType ,
                                   :NamedEntity ,
                                   :Nature ,
-                                  :PropertyAccountChange ,
+                                  :SourceChange ,
                                   :SourceChangeType ,
+                                  :SourceEvent ,
                                   :SourceType ,
                                   :SpecialCellValue ,
                                   :Taxpayer ;
-                 rdfs:comment "Class (in the sense of annotation) used to characterize a document or text, resulting from an automatic or manual annotation process."@en ,
-                              "Classe (au sens de l'annotation) utilisée pour caractériser pour un document ou un texte, résultant d'un processus d'annotation automatique ou manuel."@fr ;
+                 rdfs:comment "An annotation class is used to characterise a document or text. It is assigned as a result of an automatic or manual annotation process."@en ,
+                              "Une classe d'annotation est utilisée pour caractériser pour un document ou un texte. Son attribution résulte d'un processus d'annotation automatique ou manuel."@fr ;
                  rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                  rdfs:label "Class provided by an annotation process"@en ,
                             "Classe issue d'un processus d'annotation"@fr ;
@@ -1602,13 +1674,14 @@ xsd:date rdf:type rdfs:Datatype .
                      owl:disjointWith :EventType ,
                                       :NamedEntity ,
                                       :Nature ,
-                                      :PropertyAccountChange ,
+                                      :SourceChange ,
                                       :SourceChangeType ,
+                                      :SourceEvent ,
                                       :SourceType ,
                                       :SpecialCellValue ,
                                       :Taxpayer ;
-                     rdfs:comment "Class type provided by an annotation process to an image (document) or to a text or excerpt of text, manually or automatically."@en ,
-                                  "Type de classe attribuée manuellement ou automatiquement à une image (document) ou à un texte ou extrait de texte."@fr ;
+                     rdfs:comment "Cette classe permet de décrire les différents types de classes attribuées lors de processus d'annotation."@fr ,
+                                  "This class is used to describe the different types of classes assigned during annotation processes."@en ;
                      rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                      rdfs:label "Type de classe d'annotation"@fr ,
                                 "Type of annotation class"@en ;
@@ -1621,13 +1694,14 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
            owl:disjointWith :NamedEntity ,
                             :Nature ,
-                            :PropertyAccountChange ,
+                            :SourceChange ,
                             :SourceChangeType ,
+                            :SourceEvent ,
                             :SourceType ,
                             :SpecialCellValue ,
                             :Taxpayer ;
-           rdfs:comment "A specific type of event."@en ,
-                        "Un type d'évènement caractérise un évènement de nature spécifique."@fr ;
+           rdfs:comment "Cette classe permet de décrire les différents types d'évènements."@fr ,
+                        "This class allows describing different types of events."@en ;
            rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
            rdfs:label "Type d'évènement"@fr ,
                       "Type of event"@en ;
@@ -1638,8 +1712,9 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/tabulae#LandRegistryChangeType
 :LandRegistryChangeType rdf:type owl:Class ;
                         rdfs:subClassOf :SourceChangeType ;
-                        rdfs:comment "A specific type of change affecting a resource in the land registry corpus."@en ,
-                                     "Cette classe représente un type spécifique de changement affectant un document du corpus cadastral."@fr ;
+                        rdfs:comment "Cette classe permet de décrire les différents types de changements affectant un document du corpus cadastral."@fr ,
+                                     "This class allows describing different types of changes affecting a document in the land registry corpus."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                         rdfs:label "Type de changement sur un document cadastral"@fr ,
                                    "Type of change on a land registry document"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Type de changement sur un document cadastral"@fr ,
@@ -1649,13 +1724,14 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/tabulae#NamedEntity
 :NamedEntity rdf:type owl:Class ;
              owl:disjointWith :Nature ,
-                              :PropertyAccountChange ,
+                              :SourceChange ,
                               :SourceChangeType ,
+                              :SourceEvent ,
                               :SourceType ,
                               :SpecialCellValue ,
                               :Taxpayer ;
-             rdfs:comment "Entité nommée mentionnée dans une source transcrite (textuelle), identifiée par un processus manuel ou automatique. Une entité nommée peut contenir d'autres entités nommées imbriquées."@fr ,
-                          "Named entity mentioned in a transcribed source (text), identified by a manual or automatic process. A named entity may contain other named entities."@en ;
+             rdfs:comment "A named entity is a string of characters that refers to an entity. It is identified through a manual or automatic annotation process. A named entity may contain other nested named entities."@en ,
+                          "Une entité nommée est correspond à une chaîne de caractères qui fait référence à une entité. Elle est identifiée par un processus manuel ou automatique d'annotation. Une entité nommée peut contenir d'autres entités nommées imbriquées."@fr ;
              rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
              rdfs:label "Entité nommée"@fr ,
                         "Named entity"@en ;
@@ -1666,13 +1742,14 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/tabulae#Nature
 :Nature rdf:type owl:Class ;
         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-        owl:disjointWith :PropertyAccountChange ,
+        owl:disjointWith :SourceChange ,
                          :SourceChangeType ,
+                         :SourceEvent ,
                          :SourceType ,
                          :SpecialCellValue ,
                          :Taxpayer ;
         rdfs:comment "A plot nature corresponds to a land use or occupation."@en ,
-                     "La nature de parcelle correspond à une occupation ou un usage du sol."@fr ;
+                     "Une nature de parcelle correspond à une occupation ou un usage du sol."@fr ;
         rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
         rdfs:label "Nature de parcelle"@fr ,
                    "Plot nature"@en ;
@@ -1680,18 +1757,15 @@ xsd:date rdf:type rdfs:Datatype .
                                                         "Plot nature"@en .
 
 
-###  https://w3id.org/tabulae#PropertyAccountChange
-:PropertyAccountChange rdf:type owl:Class ;
-                       owl:disjointWith :SourceChangeType ,
-                                        :SourceType ,
-                                        :SpecialCellValue ,
-                                        :Taxpayer .
-
-
 ###  https://w3id.org/tabulae#SourceChange
 :SourceChange rdf:type owl:Class ;
-              rdfs:comment "Cette classe représente tout changement au sein d'un document d'archive (source)."@fr ,
-                           "This class represents any change within an archival document (source)."@en ;
+              owl:disjointWith :SourceChangeType ,
+                               :SourceEvent ,
+                               :SourceType ,
+                               :SpecialCellValue ,
+                               :Taxpayer ;
+              rdfs:comment "Cette classe représente tout changement qui implique un source."@fr ,
+                           "This class represents any change within a source."@en ;
               rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
               rdfs:label "Changement dans une source"@fr ,
                          "Source change"@en .
@@ -1700,11 +1774,12 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/tabulae#SourceChangeType
 :SourceChangeType rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                  owl:disjointWith :SourceType ,
+                  owl:disjointWith :SourceEvent ,
+                                   :SourceType ,
                                    :SpecialCellValue ,
                                    :Taxpayer ;
-                  rdfs:comment "Cette classe représente un type spécifique de changement affectant une source."@fr ,
-                               "This class represents a specific type of change affecting a source."@en ;
+                  rdfs:comment "Cette classe permet de décrire les différents types de changements affectant une source."@fr ,
+                               "This class allows describing different types of changes affecting a source."@en ;
                   rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                   rdfs:label "Type de changement dans une source"@fr ,
                              "Type of change in a source"@en ;
@@ -1714,8 +1789,16 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#SourceEvent
 :SourceEvent rdf:type owl:Class ;
-             rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error1> ,
-                             <https://w3id.org/PeGazUs#Event> .
+             owl:disjointWith :SourceType ,
+                              :SpecialCellValue ,
+                              :Taxpayer ;
+             rdfs:comment "Cette classe représente tout évènement spécifiquement associé à une source et impliquant un changement dans celle-ci."@fr ,
+                          "This class represents any event that is specifically associated with a source and involves a change to that source."@en ;
+             rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
+             rdfs:label "Event in a source"@en ,
+                        "Evènement dans une source"@fr ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Event in a source"@en ,
+                                                             "Evènement dans une source"@fr .
 
 
 ###  https://w3id.org/tabulae#SourceType
@@ -1723,8 +1806,8 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
             owl:disjointWith :SpecialCellValue ,
                              :Taxpayer ;
-            rdfs:comment "Type d'une source dont est issue une information."@fr ,
-                         "Type of a source from which information originates."@en ;
+            rdfs:comment "Cette classe permet de décrire les différents types de sources."@fr ,
+                         "This class allows describing different types of sources."@en ;
             rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
             rdfs:label "Type de source"@fr ,
                        "Type of source"@en ;
@@ -1736,8 +1819,8 @@ xsd:date rdf:type rdfs:Datatype .
 :SpecialCellValue rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                   owl:disjointWith :Taxpayer ;
-                  rdfs:comment "Special value related to the operation of cadastral documents, for example the mentions of construction, destruction, modifications of buildings indicated in the columns intended for folio numbers."@en ,
-                               "Valeur spéciale liée au fonctionnement des documents cadastraux, par exemple les mentions de construction, destruction, augmentation de bâtiments indiquées dans les colonnes destinées aux numéros de folio."@fr ;
+                  rdfs:comment "A specific cell value relates to the functioning of cadastral documents. These are mainly found in the ‘Taken from’ and ‘Updated to’ columns of cadastral registers, for example to record construction, demolition or extensions to buildings."@en ,
+                               "Une valeur spéciale de cellule est liée au fonctionnement des documents cadastraux. Elles sont principalement observées dans les colonnes 'Tiré de' et 'Porté à' des matrices cadastrales, par exemple pour mentionner les actions de construction, destruction, augmentation de bâtiments."@fr ;
                   rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
                   rdfs:label "Special value of cadastral tables"@en ,
                              "Valeur spéciale des tables cadastrales"@fr ;
@@ -1747,8 +1830,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tabulae#Taxpayer
 :Taxpayer rdf:type owl:Class ;
-          rdfs:comment "Natural or legal person liable for property tax for land for which they have full ownership or usufruct."@en ,
-                       "Personne physique ou morale redevable de l'impôt foncier pour les terres dont elle a la pleine propriété ou l'usufruit."@fr ;
+          rdfs:comment "A taxpayer is a natural or legal person liable for property tax for land for which they have full ownership or usufruct."@en ,
+                       "Un contribuable est une personne physique ou morale redevable de l'impôt foncier pour les terres dont elle a la pleine propriété ou l'usufruit."@fr ;
           rdfs:isDefinedBy <https://w3id.org/tabulae#> ;
           rdfs:label "Contribuable"@fr ,
                      "Taxpayer"@en ;
@@ -2529,7 +2612,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                             :EventType ;
                                                                    <http://www.w3.org/2004/02/skos/core#definition> "Cet évènement correspond à une évolution de la nature ou de la valeur d'une parcelle spécifiquement liée à l'apparition, la mutation ou la disparition d'un bâtiment sur celle-ci."@fr ,
-                                                                                                                    "This event refers to a change in the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."@en ;
+                                                                                                                    "This event refers to a change on the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."@en ;
                                                                    <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryEventList ;
                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Event involving a building"@en ,
                                                                                                                    "Evènement impliquant un bâtiment"@fr .
@@ -2743,7 +2826,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                         :EventType ;
                                                                <http://www.w3.org/2004/02/skos/core#definition> "Cet évènement est associé à un changement de contribuable associé à une parcelle ou à un compte foncier."@fr ,
-                                                                                                                "This event relates to a change in the taxpayer associated with a plot of land or a land account."@en ;
+                                                                                                                "This event relates to a change on the taxpayer associated with a plot of land or a land account."@en ;
                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :LandRegistryEventList ;
                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Modification of taxpayer"@en ,
                                                                                                                "Mutation de contribuable"@fr .

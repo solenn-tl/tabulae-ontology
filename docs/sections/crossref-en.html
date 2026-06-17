@@ -6,26 +6,24 @@ This section provides details for each class and property defined by TABULAE Ont
   <li><a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a></li>
   <li><a href="#https://w3id.org/PeGazUs#Address" title="https://w3id.org/PeGazUs#Address">Address</a></li>
   <li><a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a></li>
-  <li><a href="#https://w3id.org/PeGazUs#Attribute" title="https://w3id.org/PeGazUs#Attribute">Attribute</a></li>
   <li><a href="#https://w3id.org/PeGazUs#AttributeType" title="https://w3id.org/PeGazUs#AttributeType">Attribute type</a></li>
   <li><a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a></li>
-  <li><a href="#https://w3id.org/PeGazUs#Change" title="https://w3id.org/PeGazUs#Change">Change</a></li>
   <li><a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept scheme</a></li>
   <li><a href="#https://w3id.org/PeGazUs#Event" title="https://w3id.org/PeGazUs#Event">Event</a></li>
+  <li><a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a></li>
   <li><a href="#https://www.ica.org/standards/RiC/ontology#Instantiation" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a></li>
+  <li><a href="#https://w3id.org/PeGazUs#Landmark" title="https://w3id.org/PeGazUs#Landmark">Landmark</a></li>
   <li><a href="#https://w3id.org/PeGazUs#LandmarkRelation" title="https://w3id.org/PeGazUs#LandmarkRelation">Landmark relation</a></li>
   <li><a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a></li>
   <li><a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a></li>
-  <li><a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange"> <span>Property Account Change</span> </a></li>
   <li><a href="#https://www.ica.org/standards/RiC/ontology#Record" title="https://www.ica.org/standards/RiC/ontology#Record">Record</a></li>
   <li><a href="#https://www.ica.org/standards/RiC/ontology#RecordPart" title="https://www.ica.org/standards/RiC/ontology#RecordPart">Record Part</a></li>
   <li><a href="#https://www.ica.org/standards/RiC/ontology#RecordResource" title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a></li>
   <li><a href="#https://www.ica.org/standards/RiC/ontology#RecordSet" title="https://www.ica.org/standards/RiC/ontology#RecordSet">Record Set</a></li>
   <li><a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">SoftwareAgent</a></li>
   <li><a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a></li>
-  <li><a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent"> <span>Source Event</span> </a></li>
   <li><a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a></li>
   <li><a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a></li>
   <li><a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a></li>
@@ -104,21 +102,6 @@ This section provides details for each class and property defined by TABULAE Ont
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/PeGazUs#Attribute">
-  <h3>Attribute<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/PeGazUs#Attribute</p>
-  <div class="comment">
-   <span class="markdown">An attribute is a property of a geographic entity.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/PeGazUs#">https://w3id.org/PeGazUs#</a>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="https://w3id.org/PeGazUs#AttributeType">
   <h3>Attribute type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/PeGazUs#AttributeType</p>
@@ -167,7 +150,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is in domain of
    </dt>
    <dd>
-    <a href="#hasPlotAddress" title="https://w3id.org/tabulae#hasPlotAddress">has plot address</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPlotNature" title="https://w3id.org/tabulae#hasPlotNature">has plot nature</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTaxpayer" title="https://w3id.org/tabulae#hasTaxpayer">has taxpayer</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">is mentionned in</a> <sup class="type-op" title="object property">op</sup>, <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or folio</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasPlotAddress" title="https://w3id.org/tabulae#hasPlotAddress">has plot address</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPlotNature" title="https://w3id.org/tabulae#hasPlotNature">has plot nature</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTaxpayer" title="https://w3id.org/tabulae#hasTaxpayer">has taxpayer</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">is mentionned in</a> <sup class="type-op" title="object property">op</sup>, <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or location in document</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or location in document</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -177,26 +160,11 @@ This section provides details for each class and property defined by TABULAE Ont
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/PeGazUs#Change">
-  <h3>Change<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/PeGazUs#Change</p>
-  <div class="comment">
-   <span class="markdown">A change is any modification made to a geographic feature or its attributes, or to a relationship between features.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/PeGazUs#">https://w3id.org/PeGazUs#</a>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="AnnotationClass">
   <h3>Class provided by an annotation process<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#AnnotationClass</p>
   <div class="comment">
-   <span class="markdown">Class (in the sense of annotation) used to characterize a document or text, resulting from an automatic or manual annotation process.</span>
+   <span class="markdown">An annotation class is used to characterise a document or text. It is assigned as a result of an automatic or manual annotation process.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -223,7 +191,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -289,16 +257,45 @@ This section provides details for each class and property defined by TABULAE Ont
   </dl>
   <dl class="description">
    <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Source Event</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
     is in domain of
    </dt>
    <dd>
     <a href="#isEventType" title="https://w3id.org/tabulae#isEventType">is event type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SourceEvent">
+  <h3>Event in a source<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/tabulae#SourceEvent</p>
+  <div class="comment">
+   <span class="markdown">This class represents any event that is specifically associated with a source and involves a change to that source.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/tabulae#">https://w3id.org/tabulae#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSourceChange" title="https://w3id.org/tabulae#hasSourceChange">creates source change</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#sourceChangeDependsOn" title="https://w3id.org/tabulae#sourceChangeDependsOn">source change depends on</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -321,13 +318,42 @@ This section provides details for each class and property defined by TABULAE Ont
     is in domain of
    </dt>
    <dd>
-    <a href="#IIIFImageUrl" title="https://w3id.org/tabulae#IIIFImageUrl">IIIF image URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#coordinatesInImageSystem" title="https://w3id.org/tabulae#coordinatesInImageSystem">coordinates in image</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAlternativeFolioNumber" title="https://w3id.org/tabulae#hasAlternativeFolioNumber">has alternative folio number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFolioNumber" title="https://w3id.org/tabulae#hasFolioNumber">has folio number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadComponent" title="https://www.ica.org/standards/RiC/ontology#hasOrHadComponent">has or had component</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation">has or had derived instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTaxpayer" title="https://w3id.org/tabulae#hasTaxpayer">has taxpayer</a> <sup class="type-op" title="object property">op</sup>, <a href="#imageURL" title="https://w3id.org/tabulae#imageURL">image URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf">is or was component of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation" title="https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation">is or was derived from instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf">is or was digital instantiation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf">is or was instantiation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="https://w3id.org/tabulae#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#lineOrderInArea" title="https://w3id.org/tabulae#lineOrderInArea">row order in area</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#xywhCoordinates" title="https://w3id.org/tabulae#xywhCoordinates">xywh coordinates in image</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#IIIFImageUrl" title="https://w3id.org/tabulae#IIIFImageUrl">IIIF image URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#coordinatesInImageSystem" title="https://w3id.org/tabulae#coordinatesInImageSystem">coordinates in image</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAlternativeFolioNumber" title="https://w3id.org/tabulae#hasAlternativeFolioNumber">has alternative folio number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFolioNumber" title="https://w3id.org/tabulae#hasFolioNumber">has folio number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadComponent" title="https://www.ica.org/standards/RiC/ontology#hasOrHadComponent">has or had component</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation">has or had derived instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#imageURL" title="https://w3id.org/tabulae#imageURL">image URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf">is or was component of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation" title="https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation">is or was derived from instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf">is or was digital instantiation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf">is or was instantiation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="https://w3id.org/tabulae#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#lineOrderInArea" title="https://w3id.org/tabulae#lineOrderInArea">row order in area</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#xywhCoordinates" title="https://w3id.org/tabulae#xywhCoordinates">xywh coordinates in image</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#appliedToSource" title="https://w3id.org/tabulae#appliedToSource">change applied to source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadComponent" title="https://www.ica.org/standards/RiC/ontology#hasOrHadComponent">has or had component</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation">has or had derived instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation">has or had digital instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation">has or had instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#isTaxpayerOf" title="https://w3id.org/tabulae#isTaxpayerOf">is associated taxpayer of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">is mentionned in</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf">is or was component of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation" title="https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation">is or was derived from instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or folio</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#appliedToSource" title="https://w3id.org/tabulae#appliedToSource">change applied to source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadComponent" title="https://www.ica.org/standards/RiC/ontology#hasOrHadComponent">has or had component</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation">has or had derived instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation">has or had digital instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation">has or had instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">is mentionned in</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf">is or was component of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation" title="https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation">is or was derived from instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or location in document</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or location in document</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/PeGazUs#Landmark">
+  <h3>Landmark<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/PeGazUs#Landmark</p>
+  <div class="comment">
+   <span class="markdown">A landmark is a geographic entity. It can be a street, a building, a country, or any other point of reference in space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/PeGazUs#">https://w3id.org/PeGazUs#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">is mentionned in</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPlotAddressOf" title="https://w3id.org/tabulae#isPlotAddressOf">is plot address of</a> <sup class="type-op" title="object property">op</sup>, <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or location in document</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or location in document</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasPlotAddress" title="https://w3id.org/tabulae#hasPlotAddress">has plot address</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="https://w3id.org/tabulae#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -364,7 +390,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Named entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#NamedEntity</p>
   <div class="comment">
-   <span class="markdown">Named entity mentioned in a transcribed source (text), identified by a manual or automatic process. A named entity may contain other named entities.</span>
+   <span class="markdown">A named entity is a string of characters that refers to an entity. It is identified through a manual or automatic annotation process. A named entity may contain other nested named entities.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -391,7 +417,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -438,19 +464,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="PropertyAccountChange">
-  <h3>Property Account Change<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/tabulae#PropertyAccountChange</p>
-  <dl class="description">
-   <dt>
-    is disjoint with
-   </dt>
-   <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -549,13 +563,13 @@ This section provides details for each class and property defined by TABULAE Ont
     is in domain of
    </dt>
    <dd>
-    <a href="#hasAlternativeFolioNumber" title="https://w3id.org/tabulae#hasAlternativeFolioNumber">has alternative folio number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFolioNumber" title="https://w3id.org/tabulae#hasFolioNumber">has folio number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation">has or had digital instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation">has or had instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTaxpayer" title="https://w3id.org/tabulae#hasTaxpayer">has taxpayer</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="https://w3id.org/tabulae#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changed by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasAlternativeFolioNumber" title="https://w3id.org/tabulae#hasAlternativeFolioNumber">has alternative folio number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFolioNumber" title="https://w3id.org/tabulae#hasFolioNumber">has folio number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation">has or had digital instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation" title="https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation">has or had instantiation</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="https://w3id.org/tabulae#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changed by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#appliedToSource" title="https://w3id.org/tabulae#appliedToSource">change applied to source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#isTaxpayerOf" title="https://w3id.org/tabulae#isTaxpayerOf">is associated taxpayer of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">is mentionned in</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf">is or was digital instantiation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf">is or was instantiation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or folio</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#appliedToSource" title="https://w3id.org/tabulae#appliedToSource">change applied to source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEquivalentFolio" title="https://w3id.org/tabulae#hasEquivalentFolio">has equivalent folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMentionnedIn" title="https://w3id.org/tabulae#isMentionnedIn">is mentionned in</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf">is or was digital instantiation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf" title="https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf">is or was instantiation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or location in document</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or location in document</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -618,7 +632,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Source change<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#SourceChange</p>
   <div class="comment">
-   <span class="markdown">This class represents any change within an archival document (source).</span>
+   <span class="markdown">This class represents any change within a source.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -639,31 +653,13 @@ This section provides details for each class and property defined by TABULAE Ont
     is in range of
    </dt>
    <dd>
-    <a href="#hasSourceChange" title="https://w3id.org/tabulae#hasSourceChange">creates source change</a> <sup class="type-op" title="object property">op</sup>, <a href="#isAddedBy" title="https://w3id.org/tabulae#isAddedBy">is added by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDeletedBy" title="https://w3id.org/tabulae#isDeletedBy">is deleted by</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changed by</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="SourceEvent">
-  <h3>Source Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/tabulae#SourceEvent</p>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="http://org.semanticweb.owlapi/error#Error1" target="_blank" title="http://org.semanticweb.owlapi/error#Error1">Error1</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/PeGazUs#Event" title="https://w3id.org/PeGazUs#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    <a href="#hasSourceChange" title="https://w3id.org/tabulae#hasSourceChange">creates source change</a> <sup class="type-op" title="object property">op</sup>, <a href="#isAddedBy" title="https://w3id.org/tabulae#isAddedBy">is added by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDeletedBy" title="https://w3id.org/tabulae#isDeletedBy">is deleted by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSourceChangeType" title="https://w3id.org/tabulae#isSourceChangeType">is source change type</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changed by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
-    is in domain of
+    is disjoint with
    </dt>
    <dd>
-    <a href="#hasSourceChange" title="https://w3id.org/tabulae#hasSourceChange">creates source change</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#sourceChangeDependsOn" title="https://w3id.org/tabulae#sourceChangeDependsOn">source change depends on</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -671,7 +667,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Special value of cadastral tables<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#SpecialCellValue</p>
   <div class="comment">
-   <span class="markdown">Special value related to the operation of cadastral documents, for example the mentions of construction, destruction, modifications of buildings indicated in the columns intended for folio numbers.</span>
+   <span class="markdown">A specific cell value relates to the functioning of cadastral documents. These are mainly found in the ‘Taken from’ and ‘Updated to’ columns of cadastral registers, for example to record construction, demolition or extensions to buildings.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -692,7 +688,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is in range of
    </dt>
    <dd>
-    <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or folio</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or folio</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or location in document</a> <sup class="type-op" title="object property">op</sup>, <a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or location in document</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     has members
@@ -704,7 +700,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -712,7 +708,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Taxpayer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#Taxpayer</p>
   <div class="comment">
-   <span class="markdown">Natural or legal person liable for property tax for land for which they have full ownership or usufruct.</span>
+   <span class="markdown">A taxpayer is a natural or legal person liable for property tax for land for which they have full ownership or usufruct.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -739,7 +735,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -747,7 +743,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Type of annotation class<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#AnnotationClassType</p>
   <div class="comment">
-   <span class="markdown">Class type provided by an annotation process to an image (document) or to a text or excerpt of text, manually or automatically.</span>
+   <span class="markdown">This class is used to describe the different types of classes assigned during annotation processes.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -786,7 +782,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -794,7 +790,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Type of change in a source<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#SourceChangeType</p>
   <div class="comment">
-   <span class="markdown">This class represents a specific type of change affecting a source.</span>
+   <span class="markdown">This class allows describing different types of changes affecting a source.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -827,7 +823,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -835,8 +831,16 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Type of change on a land registry document<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#LandRegistryChangeType</p>
   <div class="comment">
-   <span class="markdown">A specific type of change affecting a resource in the land registry corpus.</span>
+   <span class="markdown">This class allows describing different types of changes affecting a document in the land registry corpus.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/tabulae#">https://w3id.org/tabulae#</a>
+   </dd>
+  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -856,7 +860,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Type of event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#EventType</p>
   <div class="comment">
-   <span class="markdown">A specific type of event.</span>
+   <span class="markdown">This class allows describing different types of events.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -889,7 +893,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceType" title="https://w3id.org/tabulae#SourceType">Type of source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -926,7 +930,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Type of source<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#SourceType</p>
   <div class="comment">
-   <span class="markdown">Type of a source from which information originates.</span>
+   <span class="markdown">This class allows describing different types of sources.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -959,7 +963,7 @@ This section provides details for each class and property defined by TABULAE Ont
     is disjoint with
    </dt>
    <dd>
-    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#PropertyAccountChange" title="https://w3id.org/tabulae#PropertyAccountChange">Property Account Change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AnnotationClass" title="https://w3id.org/tabulae#AnnotationClass">Class provided by an annotation process</a> <sup class="type-c" title="class">c</sup>, <a href="#AnnotationClassType" title="https://w3id.org/tabulae#AnnotationClassType">Type of annotation class</a> <sup class="type-c" title="class">c</sup>, <a href="#EventType" title="https://w3id.org/tabulae#EventType">Type of event</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedEntity" title="https://w3id.org/tabulae#NamedEntity">Named entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Nature" title="https://w3id.org/tabulae#Nature">Plot nature</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceChangeType" title="https://w3id.org/tabulae#SourceChangeType">Type of change in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialCellValue" title="https://w3id.org/tabulae#SpecialCellValue">Special value of cadastral tables</a> <sup class="type-c" title="class">c</sup>, <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1014,8 +1018,8 @@ This section provides details for each class and property defined by TABULAE Ont
   <li><a href="#https://w3id.org/PeGazUs#isTraceOf" title="https://w3id.org/PeGazUs#isTraceOf">is trace of</a></li>
   <li><a href="#mentions" title="https://w3id.org/tabulae#mentions">mentions</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower"> <span>narrower</span> </a></li>
-  <li><a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or folio</a></li>
-  <li><a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or folio</a></li>
+  <li><a href="#passedTo" title="https://w3id.org/tabulae#passedTo">next state or location in document</a></li>
+  <li><a href="#takenFrom" title="https://w3id.org/tabulae#takenFrom">previous state or location in document</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related"> <span>related</span> </a></li>
   <li><a href="#sourceChangeDependsOn" title="https://w3id.org/tabulae#sourceChangeDependsOn">source change depends on</a></li>
   <li><a href="#sourceChangedBy" title="https://w3id.org/tabulae#sourceChangedBy">source changed by</a></li>
@@ -1029,7 +1033,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>adds<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#adds</p>
   <div class="comment">
-   <span class="markdown">This property links a change to the version of an element that it makes active/added in a source.</span>
+   <span class="markdown">This property links a change in a source to an element that it adds to that source.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1153,7 +1157,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has domain
     </dt>
     <dd>
-     <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Source Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1174,7 +1178,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>deletes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#deletes</p>
   <div class="comment">
-   <span class="markdown">This property links a change to the version of an element that it crosses out, deletes, or makes obsolete in the source.</span>
+   <span class="markdown">This property links a change to an element that it removes or renders obsolete in a source.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1223,7 +1227,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>has class<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasClass</p>
   <div class="comment">
-   <span class="markdown">Indicates that a document or a document area has at least one class assigned manually or automatically.</span>
+   <span class="markdown">Links a thing (for example: a document) to an annotation class.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1260,7 +1264,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>has class value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasClassValue</p>
   <div class="comment">
-   <span class="markdown">Value of a class assigned to a document or a document area.</span>
+   <span class="markdown">This property links an annotation class to a class type.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1303,7 +1307,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>has equivalent folio<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasEquivalentFolio</p>
   <div class="comment">
-   <span class="markdown">This property allows to associate two land registry folios of the same taxpayer in the same municipality, one being the continuation of the other.</span>
+   <span class="markdown">This property links two folios from one or two mutation registers of a same municipality – whether they existed successively or in parallel.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1311,6 +1315,14 @@ This section provides details for each class and property defined by TABULAE Ont
    </dt>
    <dd>
     <a href="https://w3id.org/tabulae#">https://w3id.org/tabulae#</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
    </dd>
   </dl>
   <div class="description">
@@ -1335,7 +1347,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>has next version in the source order<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasNextVersionInSRCOrder</p>
   <div class="comment">
-   <span class="markdown">This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph.</span>
+   <span class="markdown">This property indicates that a version of an entity follows it in both chronological and documentary order. This property is used in the PeGaZuS ontology population algorithm.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1593,7 +1605,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>has overlapping version in the source order<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasOverlappingVersionInSRCOrder</p>
   <div class="comment">
-   <span class="markdown">This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph.</span>
+   <span class="markdown">This property indicates that a version of an entity has an overlapping version according to the temporal and documentary orders. This property is used in the PeGaZuS ontology population algorithm.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1630,7 +1642,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>has plot address<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasPlotAddress</p>
   <div class="comment">
-   <span class="markdown">Links an attribute version to an address or a spatial relation with other geographical landmarks.</span>
+   <span class="markdown">Links an attribute version of a plot to an address or a spatial relation or a landmark.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1652,7 +1664,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/PeGazUs#Address" title="https://w3id.org/PeGazUs#Address">Address</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/PeGazUs#Landmark" target="_blank" title="https://w3id.org/PeGazUs#Landmark">Landmark</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#LandmarkRelation" title="https://w3id.org/PeGazUs#LandmarkRelation">Landmark relation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/PeGazUs#Address" title="https://w3id.org/PeGazUs#Address">Address</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#Landmark" title="https://w3id.org/PeGazUs#Landmark">Landmark</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#LandmarkRelation" title="https://w3id.org/PeGazUs#LandmarkRelation">Landmark relation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -1704,7 +1716,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>has previous version in the source order<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasPreviousVersionInSRCOrder</p>
   <div class="comment">
-   <span class="markdown">This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph.</span>
+   <span class="markdown">This property indicates that a version of an entity precedes it in both chronological and documentary order. This property is used in the PeGaZuS ontology population algorithm.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1741,7 +1753,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>has taxpayer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasTaxpayer</p>
   <div class="comment">
-   <span class="markdown">Links an attribute version of a plot or a document (Folio) to a taxpayer.</span>
+   <span class="markdown">Links an attribute version of a plot to a taxpayer.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1757,7 +1769,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://www.ica.org/standards/RiC/ontology#Instantiation" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://www.ica.org/standards/RiC/ontology#RecordResource" title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1780,8 +1792,22 @@ This section provides details for each class and property defined by TABULAE Ont
   <div class="comment">
    <span class="markdown">Describes that an element has another element as its trace</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/PeGazUs#">https://w3id.org/PeGazUs#</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#sourcedFrom" title="https://w3id.org/tabulae#sourcedFrom">sourced from</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
     <dt>
      is inverse of
     </dt>
@@ -1795,7 +1821,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>includes named entity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#hasNamedEntity</p>
   <div class="comment">
-   <span class="markdown">A text contains a named entity identified by a manual or automatic process.</span>
+   <span class="markdown">This property links an element (for example a source) to a named entity identified within it.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1875,7 +1901,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is added by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isAddedBy</p>
   <div class="comment">
-   <span class="markdown">This property links an element version to the change that introduced it into the source.</span>
+   <span class="markdown">This property links an element to the change that associated it with a source.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1912,7 +1938,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is address (entity) of a taxpayer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isAddressEntityOfTaxpayer</p>
   <div class="comment">
-   <span class="markdown">Links an address or a spatial relation with other geographical landmarks to a taxpayer. For the addresses provided as strings, see tbl:taxpayerAddress.</span>
+   <span class="markdown">Links an address or a landmark to a taxpayer. For the addresses provided as strings, see tbl:taxpayerAddress.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1949,7 +1975,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is associated taxpayer of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isTaxpayerOf</p>
   <div class="comment">
-   <span class="markdown">Links a taxpayer to an attribute version of a plot or a document (Folio).</span>
+   <span class="markdown">Links a taxpayer to an attribute version of a plot.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1971,7 +1997,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://www.ica.org/standards/RiC/ontology#Instantiation" title="https://www.ica.org/standards/RiC/ontology#Instantiation">Instantiation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://www.ica.org/standards/RiC/ontology#RecordResource" title="https://www.ica.org/standards/RiC/ontology#RecordResource">Record Resource</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -1985,6 +2011,9 @@ This section provides details for each class and property defined by TABULAE Ont
  <div class="entity" id="isClassOf">
   <h3>is class of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isClassOf</p>
+  <div class="comment">
+   <span class="markdown">Links an annotation class to a thing (for example: a document).</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -2019,6 +2048,9 @@ This section provides details for each class and property defined by TABULAE Ont
  <div class="entity" id="isClassValueOf">
   <h3>is class value of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isClassValueOf</p>
+  <div class="comment">
+   <span class="markdown">This property links a class value to the class to which it is assigned.</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -2054,7 +2086,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is deleted by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isDeletedBy</p>
   <div class="comment">
-   <span class="markdown">This property links an element version to the change that crossed it out or removed it from the source.</span>
+   <span class="markdown">This property links an element to the change that rendered it obsolete (or deleted) in the source.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2090,6 +2122,9 @@ This section provides details for each class and property defined by TABULAE Ont
  <div class="entity" id="isEventType">
   <h3>is event type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isEventType</p>
+  <div class="comment">
+   <span class="markdown">This property links an event to its type.</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -2119,7 +2154,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is mentionned in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isMentionnedIn</p>
   <div class="comment">
-   <span class="markdown">Une entité (entité géographique, contribuable) est mentionnée dans une source.</span>
+   <span class="markdown">This property links an entity (as a geographical entity or a taxpayer) or information to the source in which it is mentioned.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2135,7 +2170,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has domain
     </dt>
     <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#Landmark" title="https://w3id.org/PeGazUs#Landmark">Landmark</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/PeGazUs#LandmarkVersion" target="_blank" title="https://w3id.org/PeGazUs#LandmarkVersion">Landmark Version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2156,7 +2191,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is named entity of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isNamedEntityOf</p>
   <div class="comment">
-   <span class="markdown">A named entity is contained in a text.</span>
+   <span class="markdown">This property links a named entity identified within it to the element that contains it.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2192,6 +2227,9 @@ This section provides details for each class and property defined by TABULAE Ont
  <div class="entity" id="isNamedEntityType">
   <h3>is named entity type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isNamedEntityType</p>
+  <div class="comment">
+   <span class="markdown">This property links a named entity to a named entity type.</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -2528,7 +2566,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is overlapped by version in the source order<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isOverlappedByVersionInSRCOrder</p>
   <div class="comment">
-   <span class="markdown">This property is used in the population algorithm of the PeGaZuS ontology. It is not used in the final graph.</span>
+   <span class="markdown">This property indicates that a version of an entity is partially overlapped by another version according to the temporal and documentary orders. This property is used in the PeGaZuS ontology population algorithm.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2565,7 +2603,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is plot address of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isPlotAddressOf</p>
   <div class="comment">
-   <span class="markdown">Links an address or a spatial relation with other geographical landmarks to an attribute version.</span>
+   <span class="markdown">Links an address, a spatial relationship or a geographical reference to an attribute version of a plot.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2581,7 +2619,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/PeGazUs#Address" title="https://w3id.org/PeGazUs#Address">Address</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/PeGazUs#Landmark" target="_blank" title="https://w3id.org/PeGazUs#Landmark">Landmark</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#LandmarkRelation" title="https://w3id.org/PeGazUs#LandmarkRelation">Landmark relation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/PeGazUs#Address" title="https://w3id.org/PeGazUs#Address">Address</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#Landmark" title="https://w3id.org/PeGazUs#Landmark">Landmark</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#LandmarkRelation" title="https://w3id.org/PeGazUs#LandmarkRelation">Landmark relation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2602,7 +2640,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is source change type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isSourceChangeType</p>
   <div class="comment">
-   <span class="markdown">This property allows to associate a type with a change involving a source.</span>
+   <span class="markdown">This property allows you to associate a type of change involving a source with a change.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2624,7 +2662,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SourceChange" title="https://w3id.org/tabulae#SourceChange">Source change</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2633,7 +2671,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>is source type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#isSourceType</p>
   <div class="comment">
-   <span class="markdown">This property allows to associate a source to à source type.</span>
+   <span class="markdown">This property allows to associate a source to a source type.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2666,6 +2704,14 @@ This section provides details for each class and property defined by TABULAE Ont
   <div class="comment">
    <span class="markdown">Describes that an element is the trace of another element</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/PeGazUs#">https://w3id.org/PeGazUs#</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -2681,7 +2727,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>mentions<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#mentions</p>
   <div class="comment">
-   <span class="markdown">Une source mentionne une ou plusieurs entités (entité géographique, contribuable).</span>
+   <span class="markdown">This property links a source to an entity (as a geographical entity or a taxpayer) or information that it mentions.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2703,7 +2749,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#Landmark" title="https://w3id.org/PeGazUs#Landmark">Landmark</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/PeGazUs#LandmarkVersion" target="_blank" title="https://w3id.org/PeGazUs#LandmarkVersion">Landmark Version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxpayer" title="https://w3id.org/tabulae#Taxpayer">Taxpayer</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -2737,10 +2783,10 @@ This section provides details for each class and property defined by TABULAE Ont
   </div>
  </div>
  <div class="entity" id="passedTo">
-  <h3>next state or folio<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <h3>next state or location in document<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#passedTo</p>
   <div class="comment">
-   <span class="markdown">Folio where the following plot state is described OR other information about the previous or following state of a plot.</span>
+   <span class="markdown">This property links a reference, a version of a reference or an attribute to its next state or to the documentary location of its next description.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2756,7 +2802,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#Landmark" title="https://w3id.org/PeGazUs#Landmark">Landmark</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/PeGazUs#LandmarkVersion" target="_blank" title="https://w3id.org/PeGazUs#LandmarkVersion">Landmark Version</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2768,10 +2814,10 @@ This section provides details for each class and property defined by TABULAE Ont
   </div>
  </div>
  <div class="entity" id="takenFrom">
-  <h3>previous state or folio<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <h3>previous state or location in document<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#takenFrom</p>
   <div class="comment">
-   <span class="markdown">Folio where the previous plot state is described OR other information about the previous state of a plot.</span>
+   <span class="markdown">This property links a reference, a version of a reference or an attribute to its previous state or to the documentary location of its most recent description.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2787,7 +2833,7 @@ This section provides details for each class and property defined by TABULAE Ont
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/PeGazUs#AttributeVersion" title="https://w3id.org/PeGazUs#AttributeVersion">Attribute version</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/PeGazUs#Landmark" title="https://w3id.org/PeGazUs#Landmark">Landmark</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/PeGazUs#LandmarkVersion" target="_blank" title="https://w3id.org/PeGazUs#LandmarkVersion">Landmark Version</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2836,13 +2882,13 @@ This section provides details for each class and property defined by TABULAE Ont
      has range
     </dt>
     <dd>
-     <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Source Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SourceEvent" title="https://w3id.org/tabulae#SourceEvent">Event in a source</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#hasSourceChange" title="https://w3id.org/tabulae#hasSourceChange">creates source change</a> <sup class="type-op" title="object property">op</sup>, <a href="https://w3id.org/tabulae#sourceEventAppliedTo" target="_blank" title="https://w3id.org/tabulae#sourceEventAppliedTo">source Event Applied To</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasSourceChange" title="https://w3id.org/tabulae#hasSourceChange">creates source change</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -2851,7 +2897,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>source changed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#sourceChangedBy</p>
   <div class="comment">
-   <span class="markdown">This property links a source to a change.</span>
+   <span class="markdown">This property links a source to a change that modifies it.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2888,7 +2934,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>sourced from<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#sourcedFrom</p>
   <div class="comment">
-   <span class="markdown">Une affirmation est sourcée à partir d'une source .</span>
+   <span class="markdown">A statement is sourced from a source.</span>
   </div>
   <dl>
    <dt>
@@ -2917,6 +2963,12 @@ This section provides details for each class and property defined by TABULAE Ont
   <div class="description">
    <dl>
     <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/PeGazUs#hasTrace" title="https://w3id.org/PeGazUs#hasTrace">has trace</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
      has domain
     </dt>
     <dd>
@@ -2935,7 +2987,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>taxpayer has address (entity)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#taxpayerHasAddressEntity</p>
   <div class="comment">
-   <span class="markdown">Links a taxpayer to an address or a spatial relation with other geographical landmarks. For the addresses provided as strings, see tbl:taxpayerAddress.</span>
+   <span class="markdown">Links a taxpayer to an address or a landmark. For the addresses provided as strings, see tbl:taxpayerAddress.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -3203,6 +3255,12 @@ This section provides details for each class and property defined by TABULAE Ont
   <div class="description">
    <dl>
     <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#hasAlternativeNumFolio" title="https://w3id.org/tabulae#hasAlternativeNumFolio">has Alternative Num Folio</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
      has domain
     </dt>
     <dd>
@@ -3236,6 +3294,16 @@ This section provides details for each class and property defined by TABULAE Ont
     true
    </dd>
   </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#hasAlternativeFolioNumber" title="https://w3id.org/tabulae#hasAlternativeFolioNumber">has alternative folio number</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
  </div>
  <div class="entity" id="hasFolioNumber">
   <h3>has folio number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
@@ -3245,6 +3313,12 @@ This section provides details for each class and property defined by TABULAE Ont
   </div>
   <div class="description">
    <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#hasNumFolio" title="https://w3id.org/tabulae#hasNumFolio">has Num Folio</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
     <dt>
      has domain
     </dt>
@@ -3279,6 +3353,16 @@ This section provides details for each class and property defined by TABULAE Ont
     true
    </dd>
   </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#hasFolioNumber" title="https://w3id.org/tabulae#hasFolioNumber">has folio number</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
  </div>
  <div class="entity" id="http://www.wikidata.org/prop/P8422">
   <h3>identifiant Ldh/EHESS/Cassini<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
@@ -3349,7 +3433,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>image URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#imageURL</p>
   <div class="comment">
-   <span class="markdown">URL of an image representing a document or part of a document.</span>
+   <span class="markdown">Indicates the URL of an image representing a document or part of a document.</span>
   </div>
   <div class="description">
    <dl>
@@ -3378,7 +3462,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>index of first character<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#indexOfFirstCharacter</p>
   <div class="comment">
-   <span class="markdown">This property allows to indicate the index of the first character of a substring. Index starts from 0.</span>
+   <span class="markdown">Indicates the index of the first character of a substring. Index starts from 0.</span>
   </div>
   <div class="description">
    <dl>
@@ -3401,7 +3485,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>index of last character<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#indexOfLastCharacter</p>
   <div class="comment">
-   <span class="markdown">This property allows to indicate the index of the last character of a substring. Index starts from 0.</span>
+   <span class="markdown">Indicates the index of the last character of a substring. Index starts from 0.</span>
   </div>
   <div class="description">
    <dl>
@@ -3534,7 +3618,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>span value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae#spanValue</p>
   <div class="comment">
-   <span class="markdown">This property allows to indicate the value of a substring.</span>
+   <span class="markdown">Indicates the value of a substring.</span>
   </div>
   <div class="description">
    <dl>
@@ -6615,7 +6699,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Event involving a building<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae/id/codes/eventType/BuildingRelatedEvent</p>
   <div class="comment">
-   <span class="markdown">This event refers to a change in the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot.</span>
+   <span class="markdown">This event refers to a change on the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot.</span>
   </div>
   <dl class="description">
    <dt>
@@ -6634,7 +6718,7 @@ This section provides details for each class and property defined by TABULAE Ont
     <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cet évènement correspond à une évolution de la nature ou de la valeur d'une parcelle spécifiquement liée à l'apparition, la mutation ou la disparition d'un bâtiment sur celle-ci."@fr</span>
    </dd>
    <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This event refers to a change in the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."@en</span>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This event refers to a change on the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."@en</span>
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#LandRegistryEventList" title="https://w3id.org/tabulae#LandRegistryEventList">List of types of events related to the land registry.</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -9711,7 +9795,7 @@ This section provides details for each class and property defined by TABULAE Ont
   <h3>Modification of taxpayer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/tabulae/id/codes/eventType/TaxpayerMutation</p>
   <div class="comment">
-   <span class="markdown">This event relates to a change in the taxpayer associated with a plot of land or a land account.</span>
+   <span class="markdown">This event relates to a change on the taxpayer associated with a plot of land or a land account.</span>
   </div>
   <dl class="description">
    <dt>
@@ -9730,7 +9814,7 @@ This section provides details for each class and property defined by TABULAE Ont
     <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cet évènement est associé à un changement de contribuable associé à une parcelle ou à un compte foncier."@fr</span>
    </dd>
    <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This event relates to a change in the taxpayer associated with a plot of land or a land account."@en</span>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This event relates to a change on the taxpayer associated with a plot of land or a land account."@en</span>
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#LandRegistryEventList" title="https://w3id.org/tabulae#LandRegistryEventList">List of types of events related to the land registry.</a> <sup class="type-ni" title="named individual">ni</sup>

@@ -11,7 +11,7 @@ tblatype:PlotAddress a owl:NamedIndividual,
         "Localisation de la parcelle"@fr ;
     skos:definition "Address of the plot, usually corresponding to a local place name, a road or street, or possibly a house number."@en,
         "Adresse de la parcelle concernée, correspondant généralement à un lieu-dit, à une voie ou rue ou éventuellement à un numéro d'adresse."@fr ;
-    skos:inScheme tbl:PlotAttributeList ;
+    skos:inScheme tbl:LandRegistryAttributeList ;
     skos:prefLabel "Plot Address"@en,
         "Adresse de la parcelle"@fr .
 
@@ -20,7 +20,7 @@ tblatype:PlotMention a owl:NamedIndividual,
         peg:AttributeType ;
     skos:definition "Reference to the plot in the registers. This usually involves stating the current folio of the plot, enabling it to be located in the documents."@en,
         "Mention de la parcelle dans un document. Correspond généralement à l'indication du folio permettant de la retrouver dans les documents."@fr ;
-    skos:inScheme tbl:PlotAttributeList ;
+    skos:inScheme tbl:LandRegistryAttributeList ;
     skos:prefLabel "Mention of the plot"@en,
         "Mention de la parcelle"@fr .
 
@@ -29,18 +29,15 @@ tblatype:PlotNature a owl:NamedIndividual,
         peg:AttributeType ;
     skos:definition "Nature of the plot, in relation to the soil type or its use."@en,
         "Nature de la parcelle concernée, associée au type de sol ou à l'usage de celui-ci."@fr ;
-    skos:inScheme tbl:PlotAttributeList ;
+    skos:inScheme tbl:LandRegistryAttributeList ;
     skos:prefLabel "Plot Nature"@en,
         "Nature de la parcelle"@fr .
 
 tblatype:PlotTaxpayer a owl:NamedIndividual,
         skos:Concept,
         peg:AttributeType ;
-    skos:altLabel "Taxpayer","Owner or usufructuary"@en,
-        "Contribuable","Propriétaire ou usufruitier"@fr ;
     skos:definition "A natural or legal person liable for council tax on the plot in question."@en,
         "Personne physique ou morale redevable de l'impôt foncier pour la parcelle concernée."@fr ;
-    skos:inScheme tbl:PlotAttributeList ;
+    skos:inScheme tbl:LandRegistryAttributeList ;
     skos:prefLabel "Plot Taxpayer"@en,
-        "Contribuable associé à la parcelle"@fr .
-
+        "Contribuable associé à une parcelle"@fr .

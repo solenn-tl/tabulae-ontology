@@ -185,7 +185,7 @@ tbletype:LandmarkEvent a owl:NamedIndividual,
 tbletype:TaxpayerMutation a owl:NamedIndividual,
         skos:Concept,
         tbl:EventType ;
-    skos:definition "This event relates to a change in the taxpayer associated with a plot of land or a land account."@en,
+    skos:definition "This event relates to a change on the taxpayer associated with a plot of land or a land account."@en,
         "Cet évènement est associé à un changement de contribuable associé à une parcelle ou à un compte foncier."@fr ;
     skos:inScheme tbl:LandRegistryEventList ;
     skos:prefLabel "Modification of taxpayer"@en,
@@ -194,9 +194,8 @@ tbletype:TaxpayerMutation a owl:NamedIndividual,
 tbletype:BuildingRelatedEvent a owl:NamedIndividual,
         skos:Concept,
         tbl:EventType ;
-    skos:definition "This event refers to a change in the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."@en,
+    skos:definition "This event refers to a change on the nature or value of a plot of land specifically linked to the construction, alteration or demolition of a building on that plot."@en,
         "Cet évènement correspond à une évolution de la nature ou de la valeur d'une parcelle spécifiquement liée à l'apparition, la mutation ou la disparition d'un bâtiment sur celle-ci."@fr ;
     skos:inScheme tbl:LandRegistryEventList ;
     skos:prefLabel "Event involving a building"@en,
         "Evènement impliquant un bâtiment"@fr .
-
