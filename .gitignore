@@ -1,9 +1,15 @@
 /scripts/land-registry/TO_CORRECT.md
 /scripts/land-registry/4_BUILD_KG_old.md
 /scripts/land-registry/notes.md
-/ontology/documentation/taxpayers/NOTES.md
 /ontology/others.ttl
-/ontology/eng-documentation/
+/ontology/eng-documentation/land_registry_documents_use/land_registry_documents_use_sparql_queries.md
+/ontology/eng-documentation/land_registry_documents_use/land_registry_documents_use_schema.md
+/ontology/eng-documentation/landmarks/plots_motivation_schema.md
+/ontology/eng-documentation/landmarks/sparql_queries.md
+/ontology/eng-documentation/sources/sources_schema.md
+/ontology/eng-documentation/taxpayers/NOTES.md
+/ontology/eng-documentation/taxpayers/taxpayers_sparql_queries.md
+/ontology/eng-documentation/taxpayers/taxpayers_schema.md
 /ontology/fr-documentation/
 /scripts/
 /scripts/dev/
@@ -11,7 +17,7 @@
 /data/skos/csv/
 /data/skos/csv-test/
 /ontology/
-/ontology/ontology-land-registry_without_skos.ttl
+/ontology/ontology.ttl
 /other/
 /docs/sections-backup/
 # Byte-compiled / optimized / DLL files
