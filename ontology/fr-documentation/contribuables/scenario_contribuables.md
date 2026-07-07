@@ -6,14 +6,14 @@ Contribuables
 
 ## Description
 
-Le cadastre napoléonien a été établi en 1807 pour définir précisement et équitablement l'alivrement de chaque parcelle. Le cadastre ne permet pas de certifier la propriété d'une parcelle par une personne, seuls les actes notariés le peuvent. 
+Le cadastre ancien a été établi en 1807 pour définir précisement et équitablement l'alivrement de chaque parcelle. Le cadastre ne permet pas de certifier la propriété d'une parcelle par une personne, seuls les actes notariés le peuvent. 
 
 ><i>Le véritable intérêt qu'a le Gouvernement au cadastre, c'est que par-tout la vérité soit connue , c'est que toutes les propriétés soient évaluées dans une juste proportion. Cet intérêt se fonde sur deux considérations : l'une, que plus l'impôt est également réparti, plus il se perçoit avec facilité ; l'autre , bien plus puissante à ses yeux, que l'égalité de la répartition est un grand acte de justice qu'il devait à tous les Français. Ainsi l'intérêt du Gouvernement n'est autre que celui des propriétaires eux-mêmes.</i> 
 >>Extrait du <i>Recueil méthodique des lois, décrets, réglmens, instructions et décisions sur le cadastre de la France</i>, 1811
 
 Les **contribuables** (propriétaires ou usufruitiers) des parcelles sont indiqués dans les registres du cadastre (états de sections et matrices). Il peut s'agir de personnes physiques ou morales, imposables pour les parcelles pour lesquelles elles possèdent le droit de propriété et/ou l'usufruit et sont donc généralement redevables de la contribution foncière.
 
-Remarque : Certains propriétaires et usufruitiers mentionnés dans les matrices et états de sections ne sont pas imposables (exemple : les communes).
+Remarque : Certains propriétaires et usufruitiers mentionnés dans les matrices et états de sections ne sont pas imposables (exemple : les communes, l'Etat, le Génie militaire).
 
 - Un **contribuable** est caractérisé par :
     - {*obligatoire*} un **libellé**
@@ -22,10 +22,15 @@ Remarque : Certains propriétaires et usufruitiers mentionnés dans les matrices
     - {*optionnel*} un **type de contribuable foncier** (Propriétaire,Nu-propriétaire,Usufruitier)
 
 - La propriété **libellé** peut être décomposée en plusieurs autres propriétés :
-    - {*obligatoire*} un **nom** ou une **raison sociale** ou une **expression référentielle** pour désigner un groupe de personnes (*Héritiers + Nom de famille*,*Prince de ...*)
+    - {*obligatoire*} un **nom** ou une **raison sociale** ou une **expression référentielle** pour désigner un groupe de personnes (*Héritiers + Nom de famille*,*Veuve et enfants...*)
     - {*optionnel*} un ou plusieurs **prénoms**
     - {*optionnel*} un **titre** (*Monsieur,Madame,Mademoiselle,Monseigneur,Général*)
     - {*optionnel*} un **statut familial** (*Demoiselle, Veuve, Père, Fils, Fille, Mineur*)
+
+Dans les registres d'états de sections, chaque parcelle listée est associée à un contribuable dans la ligne de tableau qui la décrit. 
+Dans les matrices cadastrales, les états/mentions des parcelles (aussi appelés articles de classement) sont regroupés par contribuable (dans la grande majorité des communes).
+
+Un contribuable peut succéder à un autre contribuable dans un même compte foncier, par exemple en cas de succession (probable).
 
 ## Exemples
 

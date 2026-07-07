@@ -56,13 +56,3 @@ Liste des propriétaires correspondants
 * Galland Louis nicolas vig<sup>on</sup> à id
 * Mazarot Ve Pierre vig<up>one</sup> à id
 * Lefèvre Jacques vig<up>on</sup> et adjoint à id
-
-## Question 5
-### Question
-Qui hérite des parcelles du propriétaire X?
-### Résultat attendu
-Liste des toutes personnes ayant hérité du propriétaire X (propriété ou usufruit).
-
-<p style="color: green">Les noms des héritiers peuvent être aggrégés sous la mention héritiers XX</p>
-
-### Exemple de réponse
