@@ -100,6 +100,7 @@
 ## Liste non exhaustive des natures de parcelles
 
 ### Propriétés bâties
+
 <table>
   <tr>
     <th>Nature</th>
@@ -124,7 +125,7 @@
   <tr>
     <td>Fabrique</td>
     <td></td>
-    <td>il peut être précisé la nature des productions de la fabrique.</td>
+    <td>Il peut être précisé la nature des productions de la fabrique.</td>
   </tr>
 </table>
 
