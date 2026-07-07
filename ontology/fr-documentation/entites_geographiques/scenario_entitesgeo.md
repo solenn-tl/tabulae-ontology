@@ -30,19 +30,24 @@ Une **entité géographique** est caractérisée par:
 <ul>
     <li>Numéro : A-207</li>
     <li>Type : Parcelle</li>
-    <li>Localisation : Lieu-dit Le Village, Section A, Commune de Boissy-Saint-Léger</li>
+    <li>Localisation : Section A, Commune de Boissy-Saint-Léger</li>
+    <li>Adresse : Le Village</li>
     <li>Propriétaire : Charlier</li>
     <li>Nature : Pâture</li>
 </ul>
- - FRA094_3P_000065_01_0030, Etats de sections de Boissy-Saint-Léger, 1810
+ - <a href="https://archives.valdemarne.fr/ark:71138/s005b9bb13d5a621/5b9bb13d6b508.fiche=arko_fiche_6363bdb8af050.moteur=arko_default_6363c10d3b88b">Cote FRA094_3P_000065_01_0030</a>, Etats de sections de Boissy-Saint-Léger, 1810
+
+ <img src="./imgs/ex_1_boissy_A207.jpg">
 
  ### Exemple 2 [Objet du domaine non cadastré]
 <ul>
-    <li>Nom : Grande route de Paris à Provins</li>
+    <li>Nom : Allée des Chasseurs</li>
     <li>Type : route</li>
-    <li>Localisation : Section A, Commune de Boissy-Saint-Léger</li>
+    <li>Localisation : Section C, Commune de Boissy-Saint-Léger</li>
 </ul>
- - FRA094_3P_000851, Plan parcellaire de la section C de Boissy-Saint-Léger, 1810
+ - <a href="https://archives.valdemarne.fr/ark:71138/s005b9bb295ebae2/5b9bb295eca23.fiche=arko_fiche_6363bdbb1c511.moteur=arko_default_6363c10d3b88b">Cote FRA094_3P_000853</a>, Plan parcellaire de la section  de Boissy-Saint-Léger, 1810
+
+<img src="./imgs/ex-2-allee.jpg" width=500>
 
 ### Exemple 3 [Section]
 <ul>
@@ -51,7 +56,9 @@ Une **entité géographique** est caractérisée par:
     <li>Type : Section cadastrale</li>
     <li>Localisation : Commune de Boissy-Saint-Léger, Justice de Paix de Boissy-Saint-Léger, Arrondissement de Corbeil, Département de Seine-et-Oise</li>
 </ul>
- - FRA094_3P_000065_01_0001, Etats de sections de Boissy-Saint-Léger, 1810
+ - <a href="https://archives.valdemarne.fr/ark:71138/s005b9bb13d5a621/5b9bb13d5c67f.fiche=arko_fiche_6363bdb8af050.moteur=arko_default_6363c10d3b88b">Cote FRA094_3P_000065_01_0001</a>, d'après la page de couverture, Etats de sections de Boissy-Saint-Léger, 1810
+
+<img src="./imgs/ex_3-section.jpg" width=500>
 
 ### Exemple 4 [Commune]
 <ul>
@@ -59,4 +66,4 @@ Une **entité géographique** est caractérisée par:
     <li>Type : Commune</li>
     <li>Localisation : Justice de Paix de Boissy-Saint-Léger, Arrondissement de Corbeil, Département de Seine-et-Oise</li>
 </ul>
- - FRA094_3P_000065_01_0001, Etats de sections de Boissy-Saint-Léger, 1810
+ - <a href="https://archives.valdemarne.fr/ark:71138/s005b9bb13d5a621/5b9bb13d5c67f.fiche=arko_fiche_6363bdb8af050.moteur=arko_default_6363c10d3b88b">Cote FRA094_3P_000065_01_0001</a>, d'après la page de couverture, Etats de sections de Boissy-Saint-Léger, 1810 (<i>cf. image précédente</i>)
