@@ -263,6 +263,7 @@ tbl:EventType a owl:Class ;
     rdfs:isDefinedBy tbl: .
 
 tbl:SourceEvent a owl:Class ;
+    rdfs:subClassOf peg:Event ;
     rdfs:label "Evènement dans une source"@fr, "Event in a source"@en ;
     skos:prefLabel "Evènement dans une source"@fr, "Event in a source"@en ;
     rdfs:comment "Cette classe représente tout évènement spécifiquement associé à une source et impliquant un changement dans celle-ci."@fr,

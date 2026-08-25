@@ -6,14 +6,25 @@
 tblctype:TaxpayerAppearance a owl:NamedIndividual ,
                                           tbl:LandRegistryChangeType ,
                                           skos:Concept ;
-                                 skos:definition "Changement décrivant l'apparition d'un contribuable."@fr ;
+                                 skos:definition "Changement décrivant l'apparition d'un contribuable."@fr ,
+                                    "Change describing the appearance of a taxpayer."@en ;
                                  skos:inScheme tbl:LandRegistryChangeList ;
                                  skos:prefLabel "Apparition d'un contribuable"@fr ,
                                                 "Appearance of a taxpayer"@en .
 tblctype:TaxpayerDisappearance a owl:NamedIndividual ,
                                           tbl:LandRegistryChangeType ,
                                           skos:Concept ;
-                                 skos:definition "Changement décrivant la disparition d'un contribuable."@fr ;
+                                 skos:definition "Changement décrivant la disparition d'un contribuable."@fr ,
+                                    "Change describing the disappearance of a taxpayer."@en ;
                                  skos:inScheme tbl:LandRegistryChangeList ;
                                  skos:prefLabel "Disparition d'un contribuable"@fr ,
                                                 "Disappearance of a taxpayer"@en .
+
+tblctype:TaxpayerTransition a owl:NamedIndividual ,
+                                          tbl:LandRegistryChangeType ,
+                                          skos:Concept ;
+                                 skos:definition "Changement décrivant la disparition puis l'apparition d'un contribuable."@fr ,
+                                    "Change describing the transition between taxpayers (disappearance of one taxpayer followed by the appearance of another)."@en ;
+                                 skos:inScheme tbl:LandRegistryChangeList ;
+                                 skos:prefLabel "Transition de contribuables"@fr ,
+                                                "Transition between taxpayers"@en .
