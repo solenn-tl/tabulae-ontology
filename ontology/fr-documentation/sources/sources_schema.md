@@ -146,9 +146,9 @@ graph
     AnnotationClassInstBN((" "))
     tblAnnotationClass((tbl:AnnotationClass))
     SKOSPageClass(("anclass:MATMainTable<br><small>a "))
-    TreatedImageNode("Page de registre transcrite"<br><small>a rico:Instantiation</small>)
+    TreatedImageNode("Page de registre transcrite<br><small>a rico:Instantiation</small>")
     TreatedImageNodeUUID["Identifiant UUID"^^xsd:literal]
-    IIIFImageUrlLiteral["https://archives.valdemarne.fr/_recherche-images/show/229155/image/66653/2/info.json"^^xsd:string]
+    IIIFImageUrlLiteral["https://archives.valdemarne.fr/_recherche-images/show/229155/image/66653/2/info.json^^xsd:string"]
 
     ClassificationActivity["000005<br><small>a prov:Activity</small>"]
     SoftwareAgentYolo["Modèle de classification<br><small>a prov:SoftwareAgent"]
@@ -157,15 +157,15 @@ graph
     %%NERActivity["000002<br><small>a prov:Activity</small>"]
     %%SoftwareAgentCamembert["NER<br><small>a prov:SoftwareAgent"]
 
-    FolioInst("Folio"<br><small>a rico:Instantiation</small>)
-    FolioNum[3^^xsd:string]
+    FolioInst("Folio<br><small>a rico:Instantiation</small>")
+    FolioNum["3^^xsd:string"]
     
-    CF("Compte foncier"<br><small>a rico:Instantiation<small>)
+    CF("Compte foncier<br><small>a rico:Instantiation<small>")
 
-    MATArticleDeMutation("Article de mutation"<br><small> a rico:Instantiation)
-    MATArticleDeMutationTr["Berthier Alexandre Prince de Neuchâtel à Gros Bois"^^xsd:string]
+    MATArticleDeMutation("Article de mutation<br><small> a rico:Instantiation")
+    MATArticleDeMutationTr["Berthier Alexandre Prince de Neuchâtel à Gros Bois^^xsd:string"]
 
-    RowNode["Ligne de registre<br><small> a rico:Instanciation</small>"]
+    RowNode["Article de classement<br>(ligne de registre)<br><small> a rico:Instanciation</small>"]
     LiteralFullRow["A 1 Bois du Pont d'encre Bois $empty$ 74"^^xsd:string]
     RowInteger[10^^xsd:integer]
     CoordsFullRow[1160,1103,1529,1421^^xsd:string]
@@ -254,10 +254,10 @@ graph
     class SKOSPageClass,SKOSEntityType,RowNodeClassValue vowlClassInstance;
 ```
 ### Notes
-* The Folio ```rico:Instantitation``` and the Compte foncier ```rico:Instantiation``` have corresponding  ```rico:RecordPart``` that are produced after refining the extracted informations attached to the ```rico:Instantitation```s elements.
-* The ```prov:Activity``` individuals may be added on different elments depending on the workflow used to extract information from the documents.
-* We have not added ```tbl:AnnotationClass``` on the scheme for Folio, Compte foncier and Article de Mutation but they also have one as well as coordinates in the image and uuid to identify them.
-* Ligne de tableau also contains several ```tbl:NamedEntity``` that we have not added here for lisibility purpose.
+* Comme précédement, les instances de la classe ```rico:Instantitation``` pour les **folios** et les **comptes fonciers** ont théoriquement une instance de ```rico:RecordPart``` associées commune aux versions communales et départementales du cadastre de la commune traitée.
+* Des instances de ```prov:Activity``` supplémentaires pourraient être ajoutées selon la chaîne de traitement utilisées pour traiter le corpus (ex : étape de NER supplémentaire pour segmenter les descriptions de contribuables).
+* Dans ce schéma, nous n'avons pas représenté les  ```tbl:AnnotationClass``` associées aux instances de ```rico:Instantiation``` correspondant aux Folio, Compte foncier, Article de Mutation pour des questions de lisibilité. Elles en ont une en pratique, associée, entre autres, aux coordonnées des zones correspondantes dans l'image source. Un exemple est proposé pour l'instance de ```rico:Instantiation``` correspondant à une ligne de tableau/article de classement.
+* L'instance de ```rico:Instantiation``` correspondant à une Ligne de tableau est associée en pratique à plusieurs ```tbl:NamedEntity``` non représentées pour des questions de lisibilité.
 
 ## Taxonomies
 ### Type des sources
