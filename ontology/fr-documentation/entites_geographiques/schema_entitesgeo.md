@@ -193,79 +193,8 @@ graph
 * Les instances de classes issues de SKOS Concept schemes sont représentées par des cercles mauves.
 * Les autres instances de classes sont représentées par des rectangles mauves.
 
-## Exemple
-```mermaid
-graph
-    %% ----- Noeuds -----
-    %% 1. Syntaxe : ID("Nom affiché <br> <i>[Type de la classe]</i>")
-    PlotInst("landmark:C_191_marolles<br><small>a peg:Landmark</small>")
-    cadLtypePlot(("tblltype:Plot"))
-    TaxpayerInstEx("taxpayer:")
-
-    PlotAddressAttT(("tblatype:PlotAddress"))
-    PlotTaxpayerAttT(("tblatype:PlotTaxpayer"))
-    PlotNatureAttT(("tblatype:PlotNature"))
-
-    PlotAddressAtt(("&nbsp;"))
-    PlotNatureAtt(("&nbsp;"))
-    PlotTaxpayerAtt(("&nbsp;"))
-
-    PlotAddressAttV(("&nbsp;"))
-    PlotNatureAttV(("&nbsp;"))
-    PlotTaxpayerAttV(("&nbsp;"))
-
-    %% Littéraux (Valeurs concrètes de Datatype Properties)
-    Label["'Parcelle C-191, Marolles-en-Brie (94)'^^xsd:string"]
-    Identifier["'C-191'^^xsd:string"]
-
-    %% ------ Relations -------
-    %% Datatype Properties
-    PlotInst -- "rdfs:label" --> Label
-    PlotInst -- "dcterms:identifier" --> Identifier
-
-    %% Object Property (Lien entre individus) : Ligne pleine
-    PlotInst -- "peg:isLandmarkType" --> cadLtypePlot
-
-    PlotInst -- "peg:hasAttribute" --> PlotAddressAtt
-    PlotAddressAtt -- "peg:isAttributeType" --> PlotAddressAttT
-    PlotAddressAtt -- "peg:hasAttributeVersion" --> PlotAddressAttV
-
-    PlotInst -- "peg:hasAttribute" --> PlotNatureAtt
-    PlotNatureAtt -- "peg:isAttributeType" --> PlotNatureAttT
-    PlotNatureAtt -- "peg:hasAttributeVersion" --> PlotNatureAttV
-
-    PlotInst -- "peg:hasAttribute" --> PlotTaxpayerAtt
-    PlotTaxpayerAtt -- "peg:isAttributeType" --> PlotTaxpayerAttT
-    PlotTaxpayerAtt -- "peg:hasAttributeVersion" --> PlotTaxpayerAttV
-
-    %% ------- STYLES ------
-    %% Instances
-    classDef vowlInstance fill:#ece0f8,stroke:#d397d3,stroke-width:2px,color:#000;
-
-    %% Literals
-    classDef vowlValue fill:#ffffcc,stroke:#ffcc00,stroke-width:1px,color:#000,font-family:monospace;
-
-    %% Blank nodes
-    classDef blankNode fill:#ffffff,stroke:#888888,stroke-width:2px,stroke-dasharray: 4;
-
-    %% Skos
-    classDef vowlClassInstance fill:#CB8DD6,stroke:#5F2569,stroke-width:2px,color:#000,font-weight:bold;
-
-    class PlotInst,InstanceNode vowlInstance;
-
-    class Label,Identifier vowlValue;
-
-    class cadLtypePlot,PlotAddressAttT,PlotNatureAttT,PlotTaxpayerAttT, vowlClassInstance;
-
-    class PlotAddressAtt,PlotTaxpayerAtt,PlotNatureAtt,PlotAddressAttV,PlotNatureAttV,PlotTaxpayerAttV, blankNode;
-
-    %% Couleur violette pour les flèches d'Object Properties (Liens entre instances)
-    %% Index 0 (hasAddress) et Index 2 (Légende Object Property)
-    %% linkStyle 0,2 stroke:#b573b5,stroke-width:2px;
-```
-
 ## Taxonomies
-### Land registry landmark types
+### Types d'entités géographiques
 * URI : ```https://w3id.org/tabulae#LandRegistryLandmarkList```
 ```mermaid
 graph TD
@@ -282,7 +211,7 @@ graph TD
     AdministrativeUnity -->|broader| Departement
     AdministrativeUnity -->|broader| Arrondissement
 ```
-### Land registry attributes types
+### Types d'attributs des parcelles
 * URI : ```https://w3id.org/tabulae#LandRegistryAttributeList```
 ```mermaid
 graph TD
@@ -292,7 +221,7 @@ graph TD
     PlotNature["Nature"]
     PlotTaxpayer["Contribuable"]
 ```
-### Plot natures
+### Natures de parcelles
 * URI : ```https://w3id.org/tabulae#NatureList```
 ```mermaid
 graph LR
