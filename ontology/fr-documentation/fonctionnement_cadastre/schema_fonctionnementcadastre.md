@@ -1,6 +1,6 @@
 # Schéma représentants le modelet "Fonctionnement des documents cadastraux"
 
-## Exemple 1: Mentions d'une parcelle dans des comptes fonciers
+## 1. Mentions d'une parcelle dans des comptes fonciers
 * Le schéma illustre les valeurs associées aux mentions précédentes, courantes et suivantes d'une parcelle dans un compte foncier. Des valeurs spéciales associées à une parcelle au fil du temps peuvent également apparaître.
 * Si la cellule associée à la colonne "Tiré de" est vide, la valeur de la propriété ```tbl:takenFrom``` est ```spval:CelluleVide``` par défaut.
 * Si la cellule associée à la colonne "Tiré de" est vide, la valeur de la propriété ```tbl:passedTo``` est ```spval:CelluleVide``` est vide par défaut. 
@@ -84,7 +84,7 @@ graph
 * On ne traite pas ici de changements liés à des versions d'attributs de ```peg:Landmark```. Le concept ```peg:Change``` ne peut donc pas être utilisé (voir *domains* et *ranges* définis dans l'ontologie PeGazUs).
 * L'ontologie TABULAE introduit le concept de ```tbl:SourceChange``` qui permet de représenter un changement directement lié à un document. Il dépend dans évènement de type ```tbl:SourceEvent``` qui est une sous-classe de ```peg:Event```.
 
-**Pour des raisons de lisibilité, les changements 3  (disparition du 2ème contribuable/apparition du 3ème contribuable) et 4 (disparition du 3ème contribuable) ne sont pas affichés dans la figure.
+*Pour des raisons de lisibilité, les changements 3  (disparition du 2ème contribuable/apparition du 3ème contribuable) et 4 (disparition du 3ème contribuable) ne sont pas affichés dans la figure.*
 
 ```mermaid
 graph
