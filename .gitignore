@@ -32,6 +32,7 @@ NOTES.md
 prepare.htaccess
 # C extensions
 *.so
+*brouillon.md
 
 # Distribution / packaging
 .venv/
