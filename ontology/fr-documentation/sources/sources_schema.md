@@ -131,10 +131,10 @@ Comme dans l'exemple précédent concernant les états de sections, ce graphe il
 graph 
     %% 1. Nodes
     LRConceptNode("Cadastre (corpus)<br><small>a rico:RecordSet</small>")
-    LRInstantiationNode("Cadastre (corpus) édition départementale<br><small>a rico:Instantiation</small>")
+    LRInstantiationNode("Cadastre (corpus) collection départementale<br><small>a rico:Instantiation</small>")
 
     RegisterConceptNode("Matrice des propriétés bâties et non bâties de Marolles<br><small>a rico:RecordSet</small>")
-    PhysicalRegisterNode("Matrice des propriétés bâties et non bâties de Marolles (physique), édition départementale<br><small>a rico:Instanciation</small>")
+    PhysicalRegisterNode("Matrice des propriétés bâties et non bâties de Marolles (physique), collection départementale<br><small>a rico:Instanciation</small>")
     ArchLocationLit["Archives départementales du Val-de-Marne"^^xsd:string]
     PubDate["1812"^^xsd:date]
     ArchivalReferenceLit["3P 388"^^xsd:string]
@@ -144,8 +144,8 @@ graph
     ImageNode("Page de registre numérisée<br><small>a rico:Instanciation</small>")
     RefImageNode["FRAD094-3P-000388-0003"^^xsd:string]
     AnnotationClassInstBN((" "))
-    tblAnnotationClass((tbl:AnnotationClass))
-    SKOSPageClass(("anclass:MATMainTable<br><small>a "))
+    tblAnnotationClass(("tbl:AnnotationClass"))
+    SKOSPageClass(("anclass:MATMainTable<br><small>a tbl:AnnotationClassType"))
     TreatedImageNode("Page de registre transcrite<br><small>a rico:Instantiation</small>")
     TreatedImageNodeUUID["Identifiant UUID"^^xsd:literal]
     IIIFImageUrlLiteral["https://archives.valdemarne.fr/_recherche-images/show/229155/image/66653/2/info.json^^xsd:string"]
@@ -167,19 +167,19 @@ graph
 
     RowNode["Article de classement<br>(ligne de registre)<br><small> a rico:Instanciation</small>"]
     LiteralFullRow["A 1 Bois du Pont d'encre Bois $empty$ 74"^^xsd:string]
-    RowInteger[10^^xsd:integer]
-    CoordsFullRow[1160,1103,1529,1421^^xsd:string]
+    RowInteger["10^^xsd:integer"]
+    CoordsFullRow["1160,1103,1529,1421^^xsd:string"]
     RowNodeClassBN((" "))
-    RowNodeClass((tbl:AnnotationClass))
-    RowNodeClassValue((anclass:TableRow))
-    RowIdentifier["Identifiant UUID"^^xsd:string]
+    RowNodeClass(("tbl:AnnotationClass"))
+    RowNodeClassValue(("anclass:TableRow<br><small>a tbl:AnnotationClassType</small>"))
+    RowIdentifier["Identifiant UUID^^xsd:string"]
 
     NamedEntityBN((" "))
     tblNamedEntity(("tbl:NamedEntity"))
     LiteralText["Berthier Alexandre Prince de Neuchâtel à Gros Bois"^^xsd:string]
-    LiteralStartChar["0"^^xsd:integer]
-    LiteralStopChar["50"^^xsd:integer]
-    SKOSEntityType(("anclass:NETaxpayer"))
+    LiteralStartChar["0^^xsd:integer"]
+    LiteralStopChar["50^^xsd:integer"]
+    SKOSEntityType(("anclass:NETaxpayer<br><small>a tbl:AnnotationClassType</small>"))
 
     %% 2. Edges
     LRConceptNode == rico:includesOrIncluded ==> RegisterConceptNode
