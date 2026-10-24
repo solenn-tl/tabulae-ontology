@@ -1183,7 +1183,29 @@ tbl:taxpayerSpouseOrChildrenFirstNames a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:comment "Prénom(s) de l'époux/épouse ou d'un enfant dans un libellé de compte foncier. Généralement indiqués en seconde partie de libellé en complémenant de l'identité d'un contribuable 'racine' (le titulaire initial du compte foncier)."@fr,
                     "First name(s) of the spouse or a child in a land registry folio label, generally indicated in the second part of the label."@en ;
-    rdfs:label "prénom(s) de l'époux/épouse ou d'un enfant"@fr, "spouse or children first name(s)"@en .
+    rdfs:label "prénom(s) de l'époux/épouse ou d'un enfant"@fr, "spouse or children first name(s)"@en ;
+    owl:deprecated true .
+
+tbl:taxpayerSpouseFirstNames a owl:DatatypeProperty ;
+    rdfs:domain tbl:Taxpayer ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Prénom.s de l'époux/épouse dans un libellé de compte foncier. Généralement indiqué en seconde partie de libellé en complémenant de l'identité d'un contribuable 'racine' (le titulaire initial du compte foncier)."@fr,
+                    "First name.s of the spouse in a land registry folio label, generally indicated in the second part of the label."@en ;
+    rdfs:label "prénom de l'époux/épouse"@fr, "spouse first name"@en .
+
+tbl:taxpayerParentFirstNames a owl:DatatypeProperty ;
+    rdfs:domain tbl:Taxpayer ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Prénom(s) du père ou de la mère d'un contribuable dans un libellé de compte foncier. Généralement indiqué en seconde partie de libellé en complémenant de l'identité d'un contribuable 'racine' (le titulaire initial du compte foncier)."@fr,
+                    "First name(s) of the father or mother of a taxpayer in a land registry folio label, generally indicated in the second part of the label."@en ;
+    rdfs:label "prénom(s) du père ou de la mère"@fr, "parent first name(s)"@en .
+
+tbl:taxpayerChildrenFirstNames a owl:DatatypeProperty ;
+    rdfs:domain tbl:Taxpayer ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Prénom(s) d'un ou plusieurs enfants d'un contribuable dans un libellé de compte foncier. Généralement indiqué en seconde partie de libellé en complémenant de l'identité d'un contribuable 'racine' (le titulaire initial du compte foncier)."@fr,
+                    "First name(s) of one or more children of a taxpayer in a land registry folio label, generally indicated in the second part of the label."@en ;
+    rdfs:label "prénom(s) d'un ou plusieurs enfants"@fr, "children first name(s)"@en .
 
 tbl:taxpayerOrganisationName a owl:DatatypeProperty ;
     rdfs:subPropertyOf tbl:taxpayerLabel ;
