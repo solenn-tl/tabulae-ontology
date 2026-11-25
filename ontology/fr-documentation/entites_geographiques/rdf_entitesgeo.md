@@ -17,8 +17,6 @@ classDiagram
     }
     class LandmarkType["peg:LandmarkType"]
     class Concept["skos:Concept"]
-    class Plot["tblltype:Plot"]
-    <<SKOSConcept>> Plot
 
     %% 2. Patron attribut / version d'attribut (PeGazUs)
     class Attribute["peg:Attribute"]
@@ -27,14 +25,29 @@ classDiagram
         peg:versionValue : rdfs:Literal
     }
 
-    class PlotTaxpayer["tblatype:PlotTaxpayer"]
-    <<SKOSConcept>> PlotTaxpayer
-    class PlotNature["tblatype:PlotNature"]
-    <<SKOSConcept>> PlotNature
-    class PlotAddress["tblatype:PlotAddress"]
-    <<SKOSConcept>> PlotAddress
-    class PlotMention["tblatype:PlotMention"]
-    <<SKOSConcept>> PlotMention
+    %% Schémas de concepts SKOS (TABULAE) : valeurs listées pour les petits schémas uniquement
+    class LandmarkTypeList["tbl:LandRegistryLandmarkList"] {
+        tblltype:Plot
+        tblltype:Section
+        tblltype:Commune
+        tblltype:Canton
+        tblltype:Arrondissement
+        tblltype:Departement
+        tblltype:FrenchAdministrativeUnit
+        tblltype:UnregisteredLand
+    }
+    <<ConceptScheme>> LandmarkTypeList
+    class AttributeTypeList["tbl:LandRegistryAttributeList"] {
+        tblatype:PlotAddress
+        tblatype:PlotMention
+        tblatype:PlotNature
+        tblatype:PlotTaxpayer
+    }
+    <<ConceptScheme>> AttributeTypeList
+    class NatureList["tbl:NatureList"]
+    <<ConceptScheme>> NatureList
+    class SpecialCellValueList["tbl:SpecialCellValueList"]
+    <<ConceptScheme>> SpecialCellValueList
 
     %% 3. Relations entre repères et adresses (PeGazUs)
     class LandmarkRelation["peg:LandmarkRelation"]
@@ -44,7 +57,7 @@ classDiagram
     %% 4. Classes des valeurs (TABULAE, RiC-O)
     class Taxpayer["tbl:Taxpayer"]
     class Nature["tbl:Nature"]
-    class RecordResource["rico:RecordResource"]
+    %%class RecordResource["rico:RecordResource"]
     class Instantiation["rico:Instantiation"]
     class SpecialCellValue["tbl:SpecialCellValue"]
 
@@ -52,19 +65,21 @@ classDiagram
     Concept <|-- LandmarkType
     Concept <|-- AttributeType
     Concept <|-- LandmarkRelationType
+    Concept <|-- Nature
+    Concept <|-- SpecialCellValue
+
+    %% Concepts des schémas SKOS : type des concepts (rdf:type)
+    LandmarkTypeList ..> LandmarkType : rdf#58;type des concepts
+    AttributeTypeList ..> AttributeType : rdf#58;type des concepts
+    NatureList ..> Nature : rdf#58;type des concepts
+    SpecialCellValueList ..> SpecialCellValue : rdf#58;type des concepts
 
     %% 7. Repère et attributs
     Landmark --> LandmarkType : <span style='background-color#58;#DCE8F7'>peg#58;isLandmarkType</span>
-    Plot ..> LandmarkType : rdf#58;type
 
     Landmark --> Attribute : <span style='background-color#58;#DCE8F7'>peg#58;hasAttribute</span>
     Attribute --> AttributeType : <span style='background-color#58;#DCE8F7'>peg#58;isAttributeType</span>
     Attribute --> AttributeVersion : <span style='background-color#58;#DCE8F7'>peg#58;hasAttributeVersion</span>
-
-    PlotTaxpayer ..> AttributeType : rdf#58;type
-    PlotNature ..> AttributeType : rdf#58;type
-    PlotAddress ..> AttributeType : rdf#58;type
-    PlotMention ..> AttributeType : rdf#58;type
 
     %% 8. Propriétés de valeur TABULAE (un range en owl:unionOf = une flèche par classe membre)
     AttributeVersion --> Taxpayer : <span style='background-color#58;#5CB85C'>tbl#58;hasTaxpayer</span>
@@ -74,7 +89,7 @@ classDiagram
     AttributeVersion --> LandmarkRelation : <span style='background-color#58;#5CB85C'>tbl#58;hasPlotAddress</span>
     AttributeVersion --> Landmark : <span style='background-color#58;#5CB85C'>tbl#58;hasPlotAddress</span>
 
-    AttributeVersion --> RecordResource : <span style='background-color#58;#5CB85C'>tbl#58;isMentionnedIn</span> / <span style='background-color#58;#5CB85C'>tbl#58;takenFrom</span> / <span style='background-color#58;#5CB85C'>tbl#58;passedTo</span>
+    %%AttributeVersion --> RecordResource : <span style='background-color#58;#5CB85C'>tbl#58;isMentionnedIn</span> / <span style='background-color#58;#5CB85C'>tbl#58;takenFrom</span> / <span style='background-color#58;#5CB85C'>tbl#58;passedTo</span>
     AttributeVersion --> Instantiation : <span style='background-color#58;#5CB85C'>tbl#58;isMentionnedIn</span> / <span style='background-color#58;#5CB85C'>tbl#58;takenFrom</span> / <span style='background-color#58;#5CB85C'>tbl#58;passedTo</span>
     AttributeVersion --> SpecialCellValue : <span style='background-color#58;#5CB85C'>tbl#58;takenFrom</span> / <span style='background-color#58;#5CB85C'>tbl#58;passedTo</span>
 
@@ -84,12 +99,11 @@ classDiagram
 
     %% 10. Structure d'une adresse
     Address --> "1" Landmark : <span style='background-color#58;#DCE8F7'>peg#58;targets</span>
-    LandmarkRelation <|-- AddressSegment
 
     %% 11. Styles par ontologie (palette : ../styles_mermaid.md)
     %% use-style tbl: Taxpayer, Nature, SpecialCellValue
-    %% use-style tblConcept: Plot, PlotTaxpayer, PlotNature, PlotAddress, PlotMention
-    %% use-style peg: Landmark, LandmarkVersion, LandmarkType, Attribute, AttributeType, AttributeVersion, LandmarkRelation, LandmarkRelationType, Address, AddressSegment, FinalAddressSegment
+    %% use-style tblConcept: LandmarkTypeList, AttributeTypeList, NatureList, SpecialCellValueList
+    %% use-style peg: Landmark, LandmarkType, Attribute, AttributeType, AttributeVersion, LandmarkRelation, LandmarkRelationType, Address
     %% use-style skos: Concept
     %% use-style rico: RecordResource, Instantiation
     %% style-labels
@@ -98,13 +112,11 @@ classDiagram
     style Taxpayer fill:#5CB85C,stroke:#1E5E20,stroke-width:3px,color:#000
     style Nature fill:#5CB85C,stroke:#1E5E20,stroke-width:3px,color:#000
     style SpecialCellValue fill:#5CB85C,stroke:#1E5E20,stroke-width:3px,color:#000
-    style Plot fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
-    style PlotTaxpayer fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
-    style PlotNature fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
-    style PlotAddress fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
-    style PlotMention fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
+    style LandmarkTypeList fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
+    style AttributeTypeList fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
+    style NatureList fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
+    style SpecialCellValueList fill:#CDEBC5,stroke:#1E5E20,stroke-width:2px,stroke-dasharray:5 3,color:#000
     style Landmark fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
-    style LandmarkVersion fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
     style LandmarkType fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
     style Attribute fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
     style AttributeType fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
@@ -112,8 +124,6 @@ classDiagram
     style LandmarkRelation fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
     style LandmarkRelationType fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
     style Address fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
-    style AddressSegment fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
-    style FinalAddressSegment fill:#DCE8F7,stroke:#3366CC,stroke-width:1px,color:#000
     style Concept fill:#FCD9B0,stroke:#B5520B,stroke-width:1px,color:#000
     style RecordResource fill:#ECE3F5,stroke:#7A4E9C,stroke-width:1px,color:#000
     style Instantiation fill:#ECE3F5,stroke:#7A4E9C,stroke-width:1px,color:#000
@@ -136,7 +146,7 @@ Un ```peg:Attribute``` d'une parcelle a pour type (```peg:isAttributeType```) l'
 * ```peg:hasAttribute``` a pour domaine ```owl:Thing``` : tout repère (et toute relation entre repères) peut porter des attributs.
 * ```peg:versionValue``` porte la valeur littérale d'une version d'attribut lorsqu'elle n'est pas une ressource (par exemple une géométrie en ```geo:wktLiteral```). Elle n'a pas de range dans PeGazUs.
 * Une ```peg:LandmarkRelation``` pointe vers les repères qu'elle relie : ```peg:locatum``` désigne le repère localisé, ```peg:relatum``` le repère de référence.
-* Une ```peg:Address``` vise exactement un repère (```peg:targets```) et commence par exactement un segment (```peg:firstStep```, sous-propriété de ```peg:hasStep```, transitive). Un ```peg:AddressSegment``` est une relation entre repères avec exactement un ```peg:locatum``` et au moins un ```peg:relatum```. Le dernier segment est un ```peg:FinalAddressSegment```, sans ```peg:nextStep```.
+* Une ```peg:Address``` vise exactement un repère (```peg:targets```).
 * Inverses déclarés : ```peg:isAttributeOf``` (de ```peg:hasAttribute```), ```peg:isAttributeVersionOf``` (de ```peg:hasAttributeVersion```), ```peg:isStepOf``` (de ```peg:hasStep```).
 * Hors du périmètre de ce schéma : la temporalité des versions (```peg:hasTime```, ```peg:hasNextVersion```, …) et les changements (```peg:Change```, ```peg:AttributeChange```, …) sont traités dans le modelet « Évolution temporelle ».
 
@@ -144,7 +154,7 @@ Un ```peg:Attribute``` d'une parcelle a pour type (```peg:isAttributeType```) l'
 * ```rdfs:label``` peut être utilisé pour renseigner un label complet, lisible de la parcelle, comprenant l'identifiant de la parcelle, de la section et le nom de la commune (ex : C-119, Section C, Marolles-en-Brie).
 * ```dcterms:identifier``` est utilisé pour fournir l'identifiant complet de la parcelle (ex : C-119). 
 * De nombreuses instances de la classe ```tbl:Nature``` sont définies dans le schémas de concepts SKOS ```tbl:NatureList```.
-* De nombreuses instances de la classe ```tbl:SpecialCellValue``` sont définies dans le schéma de concepts SKOS ```tbl:SpecialCellValuesList```.
+* De nombreuses instances de la classe ```tbl:SpecialCellValue``` sont définies dans le schéma de concepts SKOS ```tbl:SpecialCellValueList```.
 * L'attribut ```tblatype:PlotMention``` est lié au modelet "Fonctionnement des documents cadatsraux". Il permet (1) de représenter les valeurs spéciales que l'on trouve dans les colonnes "Tiré de" et "Porté à" (reports de folios et indications de construction, destruction de bâtiments ou encore de réévaluations de parcelles).
 
 ## ABox
