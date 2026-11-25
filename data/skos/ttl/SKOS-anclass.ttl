@@ -3,7 +3,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tbl: <https://w3id.org/tabulae#> .
 
-
 anclass:BlankPage a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
@@ -25,7 +24,7 @@ anclass:CrossedOut a owl:NamedIndividual,
     skos:hiddenLabel "~~~~" ;
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Crossed-out text"@en,
-        "Texte barré/rayé"@fr .
+        "Entité nommée : Texte barré/rayé"@fr .
 
 anclass:DocumentType a owl:NamedIndividual,
         skos:Concept,
@@ -106,26 +105,34 @@ anclass:MATAlphabeticTable a owl:NamedIndividual,
         "Table alphabétique"@fr ;
     skos:related anclass:Page .
 
-anclass:MATPropertyTaxAccount a owl:NamedIndividual,
+anclass:MATAugmentation a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:definition "Image area corresponding to a list of 1 to n taxpayers associated with the same property taxes account."@en,
-        "Zone d'image correspond à une liste de 1..n contribuables associés au même compte foncier."@fr ;
+    skos:broader anclass:PageClasses ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "List of successive taxpayers"@en,
-        "Liste de contribuables successifs"@fr .
+    skos:related anclass:Page .
 
-anclass:MATCompteFoncier a owl:NamedIndividual,
+anclass:MATCover a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
-    skos:altLabel "Ligne de tableau décrivant un état de parcelle"@fr ;
-    skos:broader anclass:DocumentsTypes ;
-    skos:definition "Image area corresponding to a group of lines delineating parcels associated with a list of 1 to n taxpayers located in a folio of a register."@en,
-        "Zone d'une image correspondant à un groupe de lignes décrivant des parcelles associé à une liste de 1..n contribuable situé dans un folio d'une matrice."@fr ;
+    skos:broader anclass:PageClasses ;
     skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Area corresponding to a property tax account"@en,
-        "Zone correspondant à un compte foncier"@fr .
+    skos:related anclass:Page .
+
+anclass:MATDiminution a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:related anclass:Page .
+
+anclass:MATFolioArea a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Zone d'une image correspondant à un folio/article/case numéroté."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Zone de page correspondant à un folio numéroté."@fr .
 
 anclass:MATMainTable a owl:NamedIndividual,
         skos:Concept,
@@ -139,6 +146,80 @@ anclass:MATMainTable a owl:NamedIndividual,
         "Page correspondant à un ou plusieurs folios"@fr ;
     skos:related anclass:Page .
 
+anclass:MATNumFolioArea a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Zone d'une image où est indiquée un numéro de folio/article/case. Ce numéro est associé à un folio qui peut contenir 1...n compte foncier."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Zone correspondant au numéro de folio"@fr .
+
+anclass:MATPricesByNatureSummary a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:PageClasses ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:related anclass:Page .
+
+anclass:MATPropertyTaxAccount a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:altLabel "Ligne de tableau décrivant un état de parcelle"@fr ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Image area corresponding to a group of lines delineating parcels associated with a list of 1 to n taxpayers located in a folio of a register."@en,
+        "Zone d'une image correspondant à un groupe de lignes décrivant des parcelles associé à une liste de 1..n contribuable situé dans un folio d'une matrice."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Area corresponding to a property tax account"@en,
+        "Zone correspondant à un compte foncier"@fr .
+
+anclass:MATTaxpayerArea a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:DocumentsTypes ;
+    skos:definition "Zone d'une image décrivant un contribuable associé à un compte foncier."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Zone de page décrivant un contribuable."@fr .
+
+anclass:NEArrondissement a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList .
+
+anclass:NECanton a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList .
+
+anclass:NEClassificationAsLetters a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity: Fiscal classification (as letters)"@en,
+        "Entité nommée: Classement fiscal (en lettres)"@fr .
+
+anclass:NEClassificationAsNumber a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity: Fiscal classification (as a number)"@en,
+        "Entité nommée: Classement fiscal (en chiffres)"@fr .
+
+anclass:NECommune a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList .
+
+anclass:NEDepartement a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList .
+
 anclass:NEEndTime a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
@@ -149,6 +230,15 @@ anclass:NEEndTime a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Named entity : End date"@en,
         "Entité nommée : Date de sortie"@fr .
+
+anclass:NEFormalDateCol a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Valeur de colonne formelle indiquant une date dont l'interprétation est floue et doit être déduite (début ou fin)."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity: Date from formal column"@en,
+        "Entité nommée: Date issue d'une colonne formelle."@fr .
 
 anclass:NENature a owl:NamedIndividual,
         skos:Concept,
@@ -216,16 +306,46 @@ anclass:NEPreviousPlotNumber a owl:NamedIndividual,
     skos:prefLabel "Named entity : Former Plot Number"@en,
         "Entité nommée : Ancien numéro de parcelle"@fr .
 
+anclass:NERegisterModel a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList .
+
+anclass:NERegisterTitle a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList .
+
 anclass:NESectionIdentifier a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
     skos:definition "Column value containing the ID of the section in which the plot is located."@en,
-        "Valeur d'une colonne contenant l'identifiant de la section dans laquelle se trouve la parcelle."@fr ;
+        "Valeur d'une colonne contenant l'identifiant de la section dans laquelle se trouve la parcelle."@fr,
+        "Valeur de colonne indiquant la lettre qui identifie une section."@fr ;
     skos:hiddenLabel "section" ;
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Named entity : Section Identifier"@en,
-        "Entité nommée : Identifiant de section"@fr .
+        "Named entity: Section identifier"@en,
+        "Entité nommée : Identifiant de section"@fr,
+        "Entité nommée: Identifiant de section"@fr .
+
+anclass:NESectionTitle a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList .
+
+anclass:NESpecialValue a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Valeur de colonne ou partie de valeur de colonne indiquant un état spécial de la parcelle (détails dans le schéma de concepts SKOS AnnotationTypesList."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity: Special value related to plot"@en,
+        "Entité nommée: Valeur spéciale liée à l'état de la parcelle"@fr .
 
 anclass:NEStartTime a owl:NamedIndividual,
         skos:Concept,
@@ -282,6 +402,13 @@ anclass:NETaxpayerBirthName a owl:NamedIndividual,
         "Entité nommée : Nom de naissance"@fr ;
     skos:related anclass:NETaxpayer .
 
+anclass:NETaxpayerChildrenFirstNames a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:related anclass:NETaxpayer .
+
 anclass:NETaxpayerFamilyStatus a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
@@ -315,7 +442,14 @@ anclass:NETaxpayerLastName a owl:NamedIndividual,
         "Entité nommée : Nom de famille"@fr ;
     skos:related anclass:NETaxpayer .
 
-anclass:NETaxpayerNumber a owl:NamedIndividual,
+anclass:NETaxpayerNickname a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerNumberInOtherDoc a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
     skos:broader anclass:NamedEntityTypes ;
@@ -324,7 +458,8 @@ anclass:NETaxpayerNumber a owl:NamedIndividual,
     skos:hiddenLabel "numero_proprietaire" ;
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Named entity : Folio Number"@en,
-        "Entité nommée : Numéro de folio du propriétaire"@fr .
+        "Entité nommée : Numéro de folio du propriétaire"@fr ;
+    skos:related anclass:NETaxpayer .
 
 anclass:NETaxpayerOrganisationName a owl:NamedIndividual,
         skos:Concept,
@@ -337,15 +472,37 @@ anclass:NETaxpayerOrganisationName a owl:NamedIndividual,
         "Entité nommée : Raison sociale"@fr ;
     skos:related anclass:NETaxpayer .
 
+anclass:NETaxpayerParentFirstNames a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerSpouseFirstNames a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:related anclass:NETaxpayer .
+
 anclass:NETaxpayerSpouseOrChildrenFirstNames a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
+    owl:deprecated "TRUE" ;
     skos:broader anclass:NamedEntityTypes ;
     skos:definition "Named entity that can be extracted fril within a value in the taxpayer column."@en,
         "Entité nommée identifiable dans une valeur de la colonne relative au contribuable."@fr ;
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Named entity : First name.s of the spouse or children"@en,
         "Entité nommée : Prénom.s de l'époux/épouse ou des enfants"@fr ;
+    skos:related anclass:NETaxpayer .
+
+anclass:NETaxpayerStatus a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:inScheme tbl:AnnotationClassList ;
     skos:related anclass:NETaxpayer .
 
 anclass:NETaxpayerTitle a owl:NamedIndividual,
@@ -358,6 +515,15 @@ anclass:NETaxpayerTitle a owl:NamedIndividual,
     skos:prefLabel "Named entity : Title"@en,
         "Entité nommée : Titre"@fr ;
     skos:related anclass:NETaxpayer .
+
+anclass:NEUnformalDateCol a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Valeur de colonne informelle (ajoutée manuellement) indiquant une date dont l'interprétation est floue et doit être déduite (début ou fin)."@fr ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity: Date from unformal column"@en,
+        "Entité nommée: Date issue d'une colonne informelle."@fr .
 
 anclass:TableHeader a owl:NamedIndividual,
         skos:Concept,
@@ -411,17 +577,6 @@ anclass:TextStyles a owl:NamedIndividual,
     skos:prefLabel "Text style"@en,
         "Entité nommée : Style du texte"@fr .
 
-anclass:NETaxpayer a owl:NamedIndividual,
-        skos:Concept,
-        tbl:AnnotationClassType ;
-    skos:broader anclass:NamedEntityTypes ;
-    skos:definition "Column value corresponding to the taxpayer."@en,
-        "Valeur de colonne correspondant au contribuable."@fr ;
-    skos:hiddenLabel "identite" ;
-    skos:inScheme tbl:AnnotationClassList ;
-    skos:prefLabel "Named entity : Taxpayer"@en,
-        "Entité nommée : Contribuable"@fr .
-
 anclass:PageClasses a owl:NamedIndividual,
         skos:Concept,
         tbl:AnnotationClassType ;
@@ -441,6 +596,17 @@ anclass:Page a owl:NamedIndividual,
     skos:inScheme tbl:AnnotationClassList ;
     skos:prefLabel "Simple-page"@en,
         "Page simple"@fr .
+
+anclass:NETaxpayer a owl:NamedIndividual,
+        skos:Concept,
+        tbl:AnnotationClassType ;
+    skos:broader anclass:NamedEntityTypes ;
+    skos:definition "Column value corresponding to the taxpayer."@en,
+        "Valeur de colonne correspondant au contribuable."@fr ;
+    skos:hiddenLabel "identite" ;
+    skos:inScheme tbl:AnnotationClassList ;
+    skos:prefLabel "Named entity : Taxpayer"@en,
+        "Entité nommée : Contribuable"@fr .
 
 anclass:NamedEntityTypes a owl:NamedIndividual,
         skos:Concept,

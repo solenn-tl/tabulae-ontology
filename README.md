@@ -52,17 +52,14 @@ Each modelet documentation has 3 to 5 files:
 ### `docs` folder
 This folder contains the official documentation of the ontology generated with Widoco. It also contains the OOPS! report associated.
 
-## Used vocabularies
-Following the recommandations of the W3C, this ontology reused concepts and properties of several pre-existant ontologies. It is also and extension of the PeGazUs ontology.
-* PeGazUs
-* Prov-O
-* RiC-O
-* Time
-
 ## Acknowledgements
 This work was supported by the IGN and the AID.
 
-## See also
+## References
+* Peroni 2017, SAMOD
+* Bernard, Charly et al. 2024, EGC
+
+## To cite the ontology
 * Detail description of the Tabulae ontology as well as the kg population algorithm for the land registry.
 ```
 @phdthesis{tual:tel-05603252,

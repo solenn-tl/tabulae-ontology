@@ -5,7 +5,7 @@ Entités géographiques
 
 ## Description
 
-La **parcelle** est l'**entité géographique** élémentaire utilisée pour définir le montant de l'allivrement (impôt foncier). Elle est caractérisée par son **identifiant** (section+numéro), sa **nature**, son ou ses **contribuables** associés (conjoints ou sucessifs), sa localisation/son adresse dans la commune, sa contenance et ses revenus.
+Dans le cadastre, la **parcelle** est l'**entité géographique** élémentaire utilisée pour définir le montant de l'allivrement (impôt foncier). Elle est caractérisée par son **identifiant** (section+numéro), sa **nature**, son ou ses **contribuables** associés (conjoints ou sucessifs), sa localisation/son adresse dans la commune, sa contenance et ses revenus.
 
 Une parcelle est localisée dans une section cadastrale. La numérotation des parcelles était réalisée par section.
 La **section** se trouve elle-même dans une commune. Cette commune est rattachée aux différentes **circonscriptions administratives/électorales françaises** : cantons, arrondissements et départements. 
